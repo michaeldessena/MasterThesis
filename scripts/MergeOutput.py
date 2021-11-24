@@ -4,7 +4,7 @@ import glob
 import shutil
 
 pathMAIN = os.getcwd()
-pathDESTINATION = os.path.join(pathMAIN, 'outputTOTALE_5_more')
+pathDESTINATION = os.path.join(pathMAIN, 'outputTOTALE_5_more')  ### SET NAME OUTPUT DIRECTORY
 
 def PreSet(dir=[]):
     for item in dir:    # {PATH}/output*
@@ -139,7 +139,7 @@ def Merge():
         print(cmd+'\n')
         os.system(cmd)
 
-PreSet(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])
-SetOUTPUT(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])
+PreSet(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])    ### ADD YOU OUTPUTS NAME
+SetOUTPUT(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])  ### ADD YOU OUTPUTS NAME
 Merge()
     
