@@ -1,0 +1,102 @@
+
+### STANDARD CMSSW SETUP
+
+cmsrel CMSSW_11_2_4   (just the first time)
+cd CMSSW_11_2_4/src
+cmsenv
+
+### RIVET/YODA SETUP (just the first time) 
+
+Run instructions at:
+https://twiki.cern.ch/twiki/bin/view/CMS/Rivet#Setting_Rivet_in_CMSSW
+
+(except CMSSW setup, already done)
+
+mkdir Configuration/GenProduction
+mkdir Configuration/GenProduction/python
+cp rivet_customize.py Configuration/GenProduction/python
+
+### MCNNTUNES INSTALLATION (EVERY TIME!)
+
+pip3 install --user mcnntunes
+export PATH=${PATH}:${USER}/.local/bin
+(or setenv PATH ${PATH}:${USER}/.local/bin)
+
+### SCRIPT
+
+cp /afs/cern.ch/user/m/mdessena/public/scripts/* .
+
+### GENERATION TEMPLATES and RUNNING on CONDOR queue
+
+mcnntemplate combinations runcard_template.dat variation.yml (we need to use combinations, not sampling, because we want simulate different distributions but with the same values of the parameters)
+./newAnalysis NAME_OF_ANAlYSIS -data DATA -queue N_CONDOR_RUNS (./newAnalysis -h to print help)
+[the script generates all the file for the simulation runRivet.sh condor.sub cmsDriverMulti.sh rivet_customize.py]
+source cmsDriverMulti{NAME_OF_ANAlYSIS}.sh   (produces many rivet_cfg.py files)
+condor_submit condor{NAME_OF_ANAlYSIS}.sub       (runs the MC on the condor queues)
+
+[... wait many hours ...]
+
+mv Configuration/GenProduction/python/output* .
+(now we have a lot of output{NAME_OF_ANAlYSIS} folders)
+
+### CHECK and MERGE all output
+
+python3 MergeOutput.py
+[ Now in outputTOTALE there is a result.yoda file with all the histos ]
+
+### ADD RIVET PLUGINs (just the first time)
+
+Copy the rivet folder from GitLab (NOT CMS internal rivet)
+git clone https://gitlab.com/hepcedar/rivet.git
+
+cp -r rivet/analysis/pluginCMS rivet/analysis/pluginCDF Rivet
+
+add the following lines at the rivetSetup.sh file:
+
+for ITEM in pluginCMS pluginCDF
+do
+  export RIVET_REF_PATH=$RIVET_REF_PATH:$CMSSW_BASE/src/Rivet/${ITEM}
+  export RIVET_INFO_PATH=$RIVET_INFO_PATH:$CMSSW_BASE/src/Rivet/${ITEM}
+  export RIVET_PLOT_PATH=$RIVET_PLOT_PATH:$CMSSW_BASE/src/Rivet/${ITEM}
+done
+
+...after the first for loop (after done at line 7)
+then run: 
+source Rivet/rivetSetup.sh
+
+### RUN MCNNTUNES
+
+for build the runs:
+
+mcnntunes-buildruns -n 90 -d outputTOTALE_2params -f result.yoda -p params.dat --patterns CMS_2015_I1384119/d01-x01-y01 CMS_2015_PAS_FSQ_15_007/d01-x01-y01 CMS_2015_PAS_FSQ_15_007/d02-x01-y01 CMS_2015_PAS_FSQ_15_007/d05-x01-y01 CMS_2015_PAS_FSQ_15_007/d06-x01-y01 CMS_2012_PAS_FSQ_12_020/d05-x01-y01 CMS_2012_PAS_FSQ_12_020/d06-x01-y01 CMS_2012_PAS_FSQ_12_020/d08-x01-y01 CMS_2012_PAS_FSQ_12_020/d09-x01-y01 CDF_2015_I1388868/d01-x01-y01 CDF_2015_I1388868/d02-x01-y01 CDF_2015_I1388868/d05-x01-y01 CDF_2015_I1388868/d06-x01-y01 --unpatterns RAW -o training_set_2params
+mcnntunes-buildruns -n 225 -d outputTOTALE_5_noEmpty -f result.yoda -p params.dat --patterns CMS_2015_I1384119/d01-x01-y01 CMS_2015_PAS_FSQ_15_007/d01-x01-y01 CMS_2015_PAS_FSQ_15_007/d02-x01-y01 CMS_2015_PAS_FSQ_15_007/d05-x01-y01 CMS_2015_PAS_FSQ_15_007/d06-x01-y01 CMS_2012_PAS_FSQ_12_020/d05-x01-y01 CMS_2012_PAS_FSQ_12_020/d06-x01-y01 CMS_2012_PAS_FSQ_12_020/d08-x01-y01 CMS_2012_PAS_FSQ_12_020/d09-x01-y01 CDF_2015_I1388868/d01-x01-y01 CDF_2015_I1388868/d02-x01-y01 CDF_2015_I1388868/d05-x01-y01 CDF_2015_I1388868/d06-x01-y01 --unpatterns RAW -o training_set_5params
+
+[  all patterns used: (missing CMS_2018_I1680318 ...Diffractive event...)]
+CMS_2015_I1384119/d01-x01-y01 
+CMS_2015_PAS_FSQ_15_007/d01-x01-y01
+CMS_2015_PAS_FSQ_15_007/d02-x01-y01
+CMS_2015_PAS_FSQ_15_007/d05-x01-y01
+CMS_2015_PAS_FSQ_15_007/d06-x01-y01
+CMS_2012_PAS_FSQ_12_020/d05-x01-y01
+CMS_2012_PAS_FSQ_12_020/d06-x01-y01
+CMS_2012_PAS_FSQ_12_020/d08-x01-y01
+CMS_2012_PAS_FSQ_12_020/d09-x01-y01
+CDF_2015_I1388868/d01-x01-y01
+CDF_2015_I1388868/d02-x01-y01
+CDF_2015_I1388868/d05-x01-y01
+CDF_2015_I1388868/d06-x01-y01
+
+./runTuningProcess2 -d outputTOTALE -o training_set --runcard MyRuncard.yml (use ./runTuningProcess2 -h for help)
+[./runTuningProcess2 -d outputTOTALE -o training_set --runcard MyRuncard.yml --validation validation_set4 --hyperpar]
+(this command run MCNNTUNES: preprocess, model, tune)
+-->output: Simulazione_DATE_TIME
+
+### RUNNING TUNING on CONDOR (not sure)
+
+need to prepare runcards named:
+MyRuncard_${ProcId}.yml (starting from 0)
+and need to change path in runTuningCondor.sh  ---> cd <PATH_TO CMSSW src DIRECOTRY>
+
+instead of the last command, in previous section, use:
+condor_submit tuningCondor.sub
+[ this invoke the runTuningCondor.sh, that invoke runTuningCondor.py ]

@@ -1,0 +1,72 @@
+############################
+
+# STANDARD RUNCARD for the 
+# TUNING process using 
+# MCNNTUNES
+
+############################
+input:
+  folders:
+    - ./training_set
+  patterns:
+    - 'CMS_2015_I1384119/d01-x01-y01'
+    - 'CMS_2015_PAS_FSQ_15_007/d01-x01-y01'
+    - 'CMS_2015_PAS_FSQ_15_007/d02-x01-y01'
+    - 'CMS_2015_PAS_FSQ_15_007/d05-x01-y01'
+    - 'CMS_2015_PAS_FSQ_15_007/d06-x01-y01'
+    - 'CMS_2012_PAS_FSQ_12_020/d05-x01-y01'
+    - 'CMS_2012_PAS_FSQ_12_020/d06-x01-y01'
+    - 'CMS_2012_PAS_FSQ_12_020/d08-x01-y01'
+    - 'CMS_2012_PAS_FSQ_12_020/d09-x01-y01'
+    - 'CDF_2015_I1388868/d01-x01-y01'
+    - 'CDF_2015_I1388868/d02-x01-y01'
+    - 'CDF_2015_I1388868/d05-x01-y01'
+    - 'CDF_2015_I1388868/d06-x01-y01'
+  unpatterns:
+    - 'None'
+  expfiles:
+    - './Rivet/pluginCMS/CMS_2015_I1384119.yoda'
+    - './Rivet/FSQ/data/CMS_2015_PAS_FSQ_15_007.yoda'
+    - './Rivet/pluginCMS/CMS_2012_PAS_FSQ_12_020.yoda'
+    - './Rivet/pluginCDF/CDF_2015_I1388868.yoda'
+  benchmark_folders:
+    - ./validation_set
+#  weightrules:
+#    - pattern: '/ATLAS_2014_I1300647/d01-x01-y01'
+#      condition: [26,'+inf']
+#      weight: 0
+
+############################
+model:
+  type: 'InverseModel'
+  seed: 10
+  noscan_setup:
+    architecture: [4,20,16]
+    actfunction: 'sigmoid'
+    optimizer: 'nadam'
+#    optimizer_lr: (optional)
+#    initializer: (optional, default "glorot_uniform")
+    epochs: 15000
+    batch_size: 200
+#    data_augmentation: (optional, default False, only for 'InverseModel')
+#    param_estimator: (optional, only for 'InverseModel', 'SimpleInference', 'Median', 'Mean', default 'SimpleInference')
+
+############################
+minimizer:
+  type: 'CMAES'
+  bounds: on
+  restarts: 2
+
+###########################
+
+hyperparameter_scan:
+  max_evals: 1000
+  model:
+    architecture: "hp.choice('layers', [[hp.quniform(f'size_2_{_}',8,50,2) for _ in range(2)],[hp.quniform(f'size3_{_}',8,50,2) for _ in range(3)],[hp.quniform(f'size4_{_}',8,50,2) for _ in range(4)]])"
+    actfunction: "hp.choice('model_actfunction', ['sigmoid'])"
+    optimizer: "hp.choice('model_optimizer', ['nadam'])"
+#    otimizer_lr: "hp.loguniform(’learning_rate’, -10, -1)"
+    epochs: "hp.choice('nb_epochs', [2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 10500, 11000, 11500, 12000, 12500, 13000, 13500, 14000, 14500, 15000])"
+    batch_size: "hp.choice('model_batch_size', [64, 100, 200])"
+    data_augmentation: "hp.choice('data_augmentation', [True, False])"
+#    param_estimator: "hp.choice('param_estimator', ['SimpleInference', 'Median', 'Mean'])"

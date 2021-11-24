@@ -1,0 +1,7 @@
+# variations.yml
+# Parameter: [min, max]
+pT0isr: [1.0, 3.0]
+emcPowisr: [0.0, 0.3]
+coreRad: [0.1, 0.95]
+coreFrac: [0.1, 0.8]
+crRange: [1.0, 9.0]

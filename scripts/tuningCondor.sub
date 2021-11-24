@@ -1,0 +1,10 @@
+executable            = runTuningCondor.sh
+getenv                = True
+arguments             = $(ProcId)
+output                = output_logs_tuning/tuning.$(ClusterId).$(ProcId).out
+error                 = output_logs_tuning/tuning.$(ClusterId).$(ProcId).err
+log                   = output_logs_tuning/tuning.$(ClusterId).log
++JobFlavour           = "tomorrow"
+should_transfer_files = YES
+
+queue 1
