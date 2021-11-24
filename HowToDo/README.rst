@@ -40,4 +40,4 @@ now run the following commands:
 RIVET and YODA setup
 -------------------------------------
 
-in order to initialize RIVET/YODA follow the instruction at: `<https://twiki.cern.ch/twiki/bin/view/CMS/Rivet#Setting_Rivet_in_CMSSW>`_
+in order to initialize RIVET/YODA follow the instruction at: `This link <https://twiki.cern.ch/twiki/bin/view/CMS/Rivet#Setting_Rivet_in_CMSSW>`_
