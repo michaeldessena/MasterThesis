@@ -44,14 +44,16 @@ cat << here > ./cmsDriverMulti${1}.sh
 i=0
 eval \`scram runtime -sh\`
 
-for file in \`ls Configuration/GenProduction/python/output${1}/0*/runcard.dat\`; do
+for file in \`ls Configuration/GenProduction/python/output${1}/*/runcard.dat\`; do
   
   if [[ \$i -lt 10 ]]; then
     cp \$file Configuration/GenProduction/python/MinBias_${1}_000\${i}.py
   elif [[ \$i -lt 100 ]]; then
     cp \$file Configuration/GenProduction/python/MinBias_${1}_00\${i}.py
-  else
+  elif [[ \$i -lt 1000 ]]; then
     cp \$file Configuration/GenProduction/python/MinBias_${1}_0\${i}.py
+  else
+    cp \$file Configuration/GenProduction/python/MinBias_${1}_\${i}.py
   fi
   
   sed "s#result${1}.yoda#result${1}_\${i}.yoda#g" Configuration/GenProduction/python/rivet_customize${1}.py > Configuration/GenProduction/python/rivet_customize${1}_\${i}.py    
@@ -95,8 +97,10 @@ if [[ \${1} -lt 10 ]]; then
   cp result${1}_\${1}.yoda Configuration/GenProduction/python/output${1}/000\${1}/result.yoda
 elif [[ \${1} -lt 100 ]]; then 
   cp result${1}_\${1}.yoda Configuration/GenProduction/python/output${1}/00\${1}/result.yoda
-else
+elif [[ \${1} -lt 1000 ]]; then 
   cp result${1}_\${1}.yoda Configuration/GenProduction/python/output${1}/0\${1}/result.yoda
+else
+  cp result${1}_\${1}.yoda Configuration/GenProduction/python/output${1}/\${1}/result.yoda
 fi
 
 here
