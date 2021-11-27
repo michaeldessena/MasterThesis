@@ -11,7 +11,8 @@ Content:
 * `New branches`_
 * `Merge branches`_
 * `Push an existing repository to Github`_
-
+* `Git global config`_
+* `Git pull from a remote repository branch`_
 
 
 ______________________________________________________________
@@ -167,6 +168,8 @@ NOTE: before if you are not sure you are on the master branch (or the other bran
 	git checkout <master_branch>
 
 
+.. _Git global config:
+
 Git global config
 ---------------
 
@@ -179,6 +182,8 @@ Now, you can configure your global options using:
 
 MYNAME is the name that the other user can see and identify me!
 
+
+.. _Git pull from a remote repository branch:
 
 Git pull from a remote repository branch
 ---------------------
@@ -199,4 +204,4 @@ anyway if you want to do the push:
 
 .. code-block:: bash
 
-	git push -u origin <branch>
+	git push -u origin <branch> --force
