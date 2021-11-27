@@ -4,7 +4,7 @@ How to use Git
 Content:
 
 * `Git vs Github`_
-* `Git Hub Work Flow`_
+* `GitHub Workflow`_
 * `Git and Github minimal guide`_
 * `Setup Git`_
 * `Git commit`_
@@ -24,9 +24,9 @@ Git vs Github
 Git and Github are not the same thing. Github si just a website it give a UI to what Git does. Git controll stuff, your codes, your files...
 
 
-.. _Github Work Flow:
+.. _GitHub Workflow:
 
-Git Hub Workflow
+GitHub Workflow
 ------------------
 
 Github work as a remote repository where all the users can upload/download their files and submit their changes to existing files.
@@ -146,7 +146,57 @@ now you can switch on your master again and see the changes:
 Push an existing repository to Github
 ----------------------------------------
 
+Now if you want to add a remote repository (github repository on server), use:
+
 .. code-block:: bash
 
 	git remote add origin <Github link>
+
+
+(you can chenage the name from origin to another one, the url is stored with the name you choose).
+Now you can do the push: 
+
+.. code-block:: bash
+
 	git push -u origin master
+
+NOTE: before if you are not sure you are on the master branch (or the other branch you want):
+
+.. code-block:: bash
+
+	git checkout <master_branch>
+
+
+Git global config
+---------------
+
+Now, you can configure your global options using:
+
+.. code-block:: bash
+
+	git config --global user.name "MYNAME"
+	git config --global user.email "myemail"
+
+MYNAME is the name that the other user can see and identify me!
+
+
+Git pull from a remote repository branch
+---------------------
+
+.. code-block:: bash
+	
+	git pull origin <branch>
+
+for example:
+
+.. code-block:: bash
+
+	git pull origin <branch>
+
+IMPORTANT: if you do some change in your local repository and you don't have the latest version of the remote repository if you try to do the push you get an error!
+
+anyway if you want to do the push:
+
+.. code-block:: bash
+
+	git push -u origin <branch>
