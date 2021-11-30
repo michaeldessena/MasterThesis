@@ -7,6 +7,7 @@ Content:
 * `Create python3 virtual environment`_
 * `Install YODA from source`_
 * `Activate your venv and add yoda path to PYTHONPATH`_
+* `Install RIVET`_
 * `run MCNNTUNES`_
 ___________________________________
 
@@ -91,6 +92,56 @@ Now need to append output path to the $PYTHONPATH variable
 .. code-block:: bash
 
 	export PYTHONPATH=${PYTHONPATH}:/home/michael/myEnv/lib/python3.8/site-packages
+
+.. _Install RIVET:
+
+Install RIVET
+---------------------
+
+In order to install Rivet on your pc use the following commands (`rivet installation <https://gitlab.com/hepcedar/rivet/-/blob/release-3-1-x/doc/tutorials/installation.md>`_):
+
+.. code-block:: bash
+
+	mkdir myEnvNAME/rivet
+	cd myEnvNAME/rivet
+	wget https://gitlab.com/hepcedar/rivetbootstrap/raw/3.1.4/rivet-bootstrap
+	chmod +x rivet-bootstrap
+
+now, to install locally:
+	
+.. code-block:: bash
+
+	./rivet-bootstrap
+
+to change location and install options use:
+
+.. code-block:: bash
+
+	INSTALL_PREFIX=${PATH_TO_myEnvNAME}/myEnvNAME/rivet MAKE="make -j8" ./rivet-bootstrap
+
+wait a lot of time when installation ended a command to use to set all the variables is displayed, for example:
+
+.. code-block:: bash
+
+	source ${PATH_TO_myEnvNAME}/myEnvNAME/rivet/rivetenv.sh
+
+you can add this line to your *myEnvNAME/bin/activate* file, and to reset when deactivate the **$PYTHONPATH** add the following lines to the file:
+
+.. code-block:: bash
+
+	_OLD_VIRTUAL_PYTHONPATH="$PYTHONPATH"
+
+this one before the changes to $PYTHONPATH to store the paths. AND, in the deactivate function add:
+
+.. code-block:: bash
+
+	if [ -n "${_OLD_VIRTUAL_PYTHONPATH:-}" ] ; then
+        PYTHONPATH="${_OLD_VIRTUAL_PYTHONPATH:-}"
+        export PYTHONPATH
+        unset _OLD_VIRTUAL_PYTHONPATH
+    fi
+
+try tipe **rivet + TAB** if completetion is avaiable everythings go well!
 
 .. _run MCNNTUNES:
 
