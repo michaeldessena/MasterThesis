@@ -1,25 +1,24 @@
+#!/usr/bin/env python3
+
 import yoda, pickle
 import numpy as np
 import argparse
 import glob
 import os
 import shutil
-
-
 import numpy as np
 
 
 patterns=['CMS_2015_I1384119/d01-x01-y01', 'CMS_2015_PAS_FSQ_15_007/d01-x01-y01', 'CMS_2015_PAS_FSQ_15_007/d02-x01-y01', 'CMS_2015_PAS_FSQ_15_007/d05-x01-y01', 'CMS_2015_PAS_FSQ_15_007/d06-x01-y01', 'CMS_2012_PAS_FSQ_12_020/d05-x01-y01', 'CMS_2012_PAS_FSQ_12_020/d06-x01-y01', 'CMS_2012_PAS_FSQ_12_020/d08-x01-y01', 'CMS_2012_PAS_FSQ_12_020/d09-x01-y01', 'CDF_2015_I1388868/d01-x01-y01', 'CDF_2015_I1388868/d02-x01-y01', 'CDF_2015_I1388868/d05-x01-y01', 'CDF_2015_I1388868/d06-x01-y01']
 unpatterns=['RAW']
 
-parser = argparse.ArgumentParser()
-parser.add_argument("output", help="output folder to check",
-                    type=str)
-args=parser.parse_args()
+pars = argparse.ArgumentParser()
+pars.add_argument("output", help="output folder to check")
+args=pars.parse_args()
 print(args)
 
 outDir = args.output
-outDirContent = glob.glob(os.path.join(outDir,'0*'))
+outDirContent = glob.glob(os.path.join(outDir,'[0-9]*'))
 files=[]
 for sub in outDirContent:
     files.append(os.path.join(sub,'result.yoda'))
@@ -82,5 +81,5 @@ for i, file in enumerate(yoda_histograms):
                                   'weight': data_weight})
 
 
-cmd = './checkMySimulation2.sh {}'.format(outDir) 
+cmd = './checkMySimulation.py {}'.format(outDir) 
 os.system(cmd)
