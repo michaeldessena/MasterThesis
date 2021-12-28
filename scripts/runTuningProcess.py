@@ -154,11 +154,12 @@ Info:
     os.system(cmd)
 
     ### Remove data folders from output folder
-    dataSubdirList = glob.glob(os.path.join(outputDir, '[0-9]*',os.pathsep))
+    dataSubdirList = glob.glob(os.path.join(outputDir, '[0-9]*'))
     
     print('\n\nRemoving data folders from {}'.format(outputDir))
     for subdir in dataSubdirList:
         shutil.rmtree(subdir)
+
     print('Data folders removed from {}'.format(outputDir))
 
     toc=timeit.default_timer() ### final time
@@ -168,4 +169,3 @@ Info:
             TUNE ENDED
 ########################################
         Total time = {total_time} sec''')
-    

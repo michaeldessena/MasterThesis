@@ -7,6 +7,70 @@
 \usepackage{amssymb}
 \usepackage{geometry}
 \geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref} %to use autoref
 %%%%%-------------------------
 
+\begin{document}
+
 \section{Hadron-Hadron Scattering}
+
+In a proton-proton collision, in addition to the main hard scattering, also other scattering processes are possible. To well understood the proton-proton collision we need to describe the \textbf{Multi Parton Interaction} (MPI) and the \textbf{Beam Beam Remnants} (BBR) 
+
+\subsection{Multiple Parton Interaction}
+
+The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in  \texttt{Pythia}.
+
+\subsubsection{Basic Concepts}
+
+The main hypothesis of the multiple interaction models is that the QCD factorization is true not only for the hard process but also for the other scatters.
+
+So, we can write:
+
+\begin{equation}
+	\frac{d\sigma_{\text{int}}}{dp_\perp}=\displaystyle\sum_{i,j,k,l}\displaystyle\int dx_1 \displaystyle\int dx_2 \displaystyle\int d\hat{t}\, f_i(x_1,Q^2)f_j(x_2,Q^2)\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}\delta\left( p_\perp^2-\frac{\hat{t}\hat{u}}{\hat{s}} \right)
+	\label{eq:sigma_int1}
+\end{equation}
+
+
+This is the differential cross section for QCD hard $2\ \rightarrow 2$ processes, this processes are the one reported in \mbox{Table \ref{table:partonic_cross_sections}}. In eq. (\ref{eq:sigma_int1}) we use the Mandelstam variables associated to the partonic system:
+
+\begin{align}
+	&\hat{s}=(p_1+p_2)^2=(p_3+p_4)^2=x_1x_2s\\
+	&\hat{t}=(p_1-p_3)^2=(p_2-p_4)^2\\
+	&\hat{u}=(p_1-p_4)^2=(p_2-p_3)^2
+\end{align} 
+wherer $p_1$, $p_2$ are the four-momenta of the incoming partons and $p_3$, $p_4$ the four-momenta of the outgoing partons. 
+Note that in equation (\ref{eq:sigma_int1}) the jet cross section is twice as large $\sigma_{\ \text{jet}}=2\sigma_{\text{int}}$, because at first approximation each interaction give rise to two jets.
+
+We assume also that the "hardness" of processes is defined by the $p_\perp$ scale of the interaction ($Q^2=p_\perp^2$).
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l | c}\rule{0pt}{3ex} 
+	Process & Partonic cross section \rule{0pt}{3.5ex}\\   \hline\hline 
+	$q\,q'\ \rightarrow\ q\,q'$ & $\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+	$q\,q\ \rightarrow\ q\,q$ & $\frac{4}{9}\left(\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}+\frac{\hat{s}^2+\hat{t}^2}{\hat{u}^2}\right) -\frac{8}{27}\frac{\hat{s}^2}{\hat{u}\hat{t}}$\rule{0pt}{3.5ex}\\
+	$q\,\overline{q}\ \rightarrow\ q'\,\overline{q}'$ & $\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+	$q\,\overline{q}\ \rightarrow\ q\,\overline{q}$ & $\frac{4}{9}\left(\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}+\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}\right) -\frac{8}{27}\frac{\hat{u}^2}{\hat{s}\hat{t}}$\rule{0pt}{3.5ex}\\
+	$q\,\overline{q}\ \rightarrow\ g\,g$ & $\frac{32}{27}\frac{\hat{t}^2+\hat{u}^2}{\hat{t}\hat{u}}-\frac{8}{3}\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}$\rule{0pt}{3.5ex}\\
+	$g\,g\ \rightarrow\ q\,\overline{q}$ & $\frac{1}{6}\frac{\hat{t}^2+\hat{u}^2}{\hat{t}\hat{u}}-\frac{8}{3}\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}$\rule{0pt}{3.5ex}\\
+	$g\,q\ \rightarrow\ g\,q$ & $-\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{s}\hat{u}}-\frac{\hat{u}^2+\hat{s}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+	$g\,g\ \rightarrow\ g\,g$ & $\frac{9}{2}\left( 3-\frac{\hat{t}\hat{u}}{\hat{s}^2} -\frac{\hat{s}\hat{u}}{\hat{t}^2} - \frac{\hat{s}\hat{t}}{\hat{u}^2} \right)$\rule{0pt}{3.5ex}
+	\end{tabular}
+	\caption{Parton-Parton differential cross sections ($2\ \rightarrow\ 2$ QCD process), can beh calculated in pQCD evaluating the matrix element for each process involving quark, antiquark and gluon.}
+	\label{table:partonic_cross_sections}
+\end{table}
+
+\subsection{Impact Parameter Dependence}
+
+The simplest hypothesis for the multiple interaction simulation, it is to assume the same initial state for all hadron collisions without dependencies on the impact parameter. 
+
+The more realistic scenario it is to include the possibility that each collision could be characterized by a different impact parameter $b$, where a small $b$ value correspond to a large overlap between the two hadrons this is related to the probability of parton-parton interaction to take place.
+
+It is neccesary to make some assumption on the matter distribution inside the proton. A possibility is to assume a spherically simmetric distribution inside a hadron at rest $\rho(\mathbf{x})\,d^3x=\rho(r)\,d^3x$. A Gaussian ansatz is the most simple choice but it appears to lead to a narrow multiplicity distribution and too little of a pedestal effect. So the coiche is a double Gaussian:
+\begin{equation}
+	\rho(r)\propto \frac{1-\beta}{a_1^3}\exp\left\{-\frac{r^2}{a_1^2}}
+\end{equation}
+
+\end{document}
