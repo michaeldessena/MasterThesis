@@ -4,12 +4,12 @@
 eval `scram runtime -sh`
 i=0
 
-list=$(find ${1} -name "00*" -type d)
+list=$(find ${1} -name "[0-9]*" -type d)
 
 array=()
 while IFS=  read -r -d $'\0'; do
     array+=("$REPLY")
-done < <(find ${1} -name "00*" -type d -print0)
+done < <(find ${1} -name "[0-9]*" -type d -print0)
 
 for file in $list; do
     result=${file}/result.yoda

@@ -2,20 +2,23 @@ import os
 import sys
 import glob
 import shutil
+import argparse
 
-pathMAIN = os.getcwd()
-pathDESTINATION = os.path.join(pathMAIN, 'outputTOTALE_5_more')  ### SET NAME OUTPUT DIRECTORY
+
 
 def PreSet(dir=[]):
     for item in dir:    # {PATH}/output*
         path=os.path.join(pathMAIN, item)
-        subdir=glob.glob(os.path.join(path, '0*'))
+        subdir=glob.glob(os.path.join(path, '*/'))
         for sub in subdir:  #{PATH}/output{name}/00*
             result=os.path.join(sub, 'result.yoda')
             if os.path.exists(result)==False:
                 for i in dir:
-                    aa = os.path.split(sub)
-                    a = aa[-1]
+                    head_tail= os.path.split(sub)
+                    aa = head_tail[0]
+                    a = os.path.normpath(aa)
+                    a = a.split(os.sep)
+                    a = a[-1]
                     subb = os.path.join(pathMAIN, i, a)
                     try:
                         shutil.rmtree(subb)
@@ -26,7 +29,7 @@ def PreSet(dir=[]):
     number=[]
     for item in dir:
         path=os.path.join(pathMAIN, item)
-        subdir=glob.glob(os.path.join(path, '0*'))
+        subdir=glob.glob(os.path.join(path, '*/'))
         k=0
         for sub in subdir:
             k=k+1
@@ -53,12 +56,20 @@ def PreSet(dir=[]):
     #                #pass
     #
     for item in dir:
-        subdir=glob.glob(os.path.join(path, '0*'))
+        path=os.path.join(pathMAIN, item)
+        subdir=glob.glob(os.path.join(path, '*/'))
         for sub in subdir:
-            aa = os.path.split(sub)
-            a = aa[-1]
-            maxim= str(maxim).zfill(4)
+            head_tail= os.path.split(sub)
+            aa = head_tail[0]
+            a = os.path.normpath(aa)
+            a = a.split(os.sep)
+            a = a[-1]
+
+            #print(a)
+            maxim = str(maxim).zfill(4)
+            
             subb = os.path.join(pathMAIN, item, a)
+            #print('if ', a, ' > ', maxim)
             if int(a)>int(maxim):
                 try:
                     shutil.rmtree(subb)
@@ -98,13 +109,13 @@ def SetOUTPUT(directories = []):
             name='13TeV'
 
         names.append(name)
-        dirContent = glob.glob(os.path.join(item, '0*'))
+        dirContent = glob.glob(os.path.join(item, '*/'))
         print(dirContent)
         if kk==0:
             #for j in dirContent:
 
             shutil.copytree(os.path.join(item), pathDESTINATION)
-            dirContent=glob.glob(os.path.join(item, '0*'))
+            dirContent=glob.glob(os.path.join(item, '*/'))
             k=0
             for j in dirContent:
                 k_filled = str(k).zfill(4)
@@ -129,7 +140,7 @@ def SetOUTPUT(directories = []):
 
 def Merge():
     
-    dirContent=glob.glob(os.path.join(pathDESTINATION, '0*'))
+    dirContent=glob.glob(os.path.join(pathDESTINATION, '*/'))
     for item in dirContent:
         cmd = 'yodamerge --output {}'
         cmd = cmd.format(os.path.join(item, 'result.yoda'))
@@ -139,7 +150,21 @@ def Merge():
         print(cmd+'\n')
         os.system(cmd)
 
-PreSet(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])    ### ADD YOU OUTPUTS NAME
-SetOUTPUT(['output13TeV_5', 'output13TeV2_5', 'output7TeV_5', 'output1TeV_5'])  ### ADD YOU OUTPUTS NAME
-Merge()
+if __name__=='__main__':
+
+    parser = argparse.ArgumentParser(description='Run all the MCNNTUNES tuning program')
+    parser.add_argument("data_folders", nargs='+', metavar='DATA FOLDER', type=str,help="input data folder")
+    parser.add_argument("-o","--output", help="output folder", type=str, default='output_merger')
+    args = parser.parse_args()
+
+    NAMEOUTPUT=args.output
+    NAMELIST=args.data_folders
+
+    pathMAIN = os.getcwd()
+    pathDESTINATION = os.path.join(pathMAIN, NAMEOUTPUT)
+    
+    PreSet(NAMELIST)
+    SetOUTPUT(NAMELIST)
+    Merge()
+    
     
