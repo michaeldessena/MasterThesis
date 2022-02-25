@@ -88,6 +88,8 @@ def main(args):
     poss=['sampling','combination']
     if mcnntemplate_type not in poss:
         print(f'"mcnntemplate": "type" not in {poss}')
+        print('Programm terminated...')
+        sys.exit(0)
     if mcnntemplate_type == 'sampling':
         mcnntemplate_number=str(MyYml.getYML('mcnntemplate','number'))
         mcnntemplate_seed=str(MyYml.getYML('mcnntemplate','seed'))
@@ -262,7 +264,7 @@ EOF
     dir_work=CURRENT_DIR
     if run_on_eos:
         dir_work=run_on_eos
-        
+
     runRivet_template=f'''#!/usr/bin/bash
 
 cd {dir_work}
