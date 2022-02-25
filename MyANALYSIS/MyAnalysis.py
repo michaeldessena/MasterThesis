@@ -142,8 +142,11 @@ condor:
 
     # Coping the RUNCARD TEMPLATE to    """dir_name='Configuration/GenProduction/python/'+name""" 
     try:
-        shutil.copy(runcard_template_name, dir_name)
-        tmp=os.path.join(dir_name,runcard_template_name)
+        
+        xxxx, tmp_runcard_name=os.path.split(runcard_template_name)
+        tmp=os.path.join(dir_name,tmp_runcard_name)
+        shutil.copy(runcard_template_name, tmp)
+        #tmp=os.path.join(dir_name,runcard_template_name)
         pre, ext = os.path.splitext(tmp)
         os.rename(tmp, pre + '.py')
         runcard=pre+'.py'
