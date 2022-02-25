@@ -5,7 +5,6 @@ import shutil
 import os
 import sys
 import glob
-from tkinter import CURRENT
 import yaml
 
 # NEW ANALYSIS, CONDOR_SUBMIT, 
@@ -68,7 +67,7 @@ def main(args):
     
     run_on_eos=MyYml.getYML('input','run_on_eos')
     if run_on_eos:
-        run_on_eos_path=MyYml.getYML('input','run_on_eos_path')
+        run_on_eos_path=str(MyYml.getYML('input','run_on_eos_path'))
 
     ### read 'cmsDriver_command'
     cmsDriver_seed=str(MyYml.getYML('cmsDriver_command', 'seed'))
@@ -277,9 +276,7 @@ source Rivet/rivetSetup.sh
 
 i=$(printf "%04d" ${{1}})
 
-file=$({output_path}/${{i}}/rivet{name}_cfg.py)
-echo $file
-cmsRun $file
+cmsRun {output_path}/${{i}}/rivet{name}_cfg.py
 '''
 #cp result${name}_\${{1}}.yoda ${output_path}/${{i}}/result.yoda
 #rm result${name}_\${{1}}.yoda
