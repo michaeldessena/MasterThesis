@@ -1,0 +1,37 @@
+input:
+  runcard_template:   # runcard name to use 
+  variations_file:    # variations.yml file for mcnntemplate 
+  save_eos:           # (True or False) if True save the output in the directory in path_eos
+  path_eos:           # different path to save the output
+
+cmsDriver_command: 
+  seed: GEN               # cmsDriver command
+  datatier: GEN-SIM-RAW   # cmsDriver command
+  conditions: auto:mc     # cmsDriver command
+  eventcontent: RAWSIM    # cmsDriver command
+  number_events: 3500000  # cmsDriver number of events
+
+parameters:
+  sed_command: # command to apply to add the parameters to change 
+    - sed -i "/ColourReconnection:range/a \ \ \ \ \ \ \ \ \ \ \ \ 'BeamRemnants:primordialKThard= {{primordialKThard}}',"
+    - sed -i "/ColourReconnection:range/a \ \ \ \ \ \ \ \ \ \ \ \ 'SpaceShower:pT0Ref= {{SpaceShowerPT0ReF}}',"
+  
+
+mcnntemplate:
+  type:         #(sampling or combinations)
+  number:       # only for sampling
+  seed:         # only for sampling 
+  output_name:  #output mcnntemplate name (default: output)
+  
+
+rivet_customize:
+  data:   # Rivet analysis routine!
+    - #CMS_2018...
+    - #CMS_2019...
+
+condor:
+  jobflavour: # condor jobflavour (default testmatch) 
+  queue: # condor queue
+
+
+  
