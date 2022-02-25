@@ -85,7 +85,7 @@ def main(args):
     mcnntemplate_type=mcnntemplate_type.lower()
     mcnntemplate_number=''
     mcnntemplate_seed=''
-    poss=['sampling','combination']
+    poss=['sampling','combinations']
     if mcnntemplate_type not in poss:
         print(f'"mcnntemplate": "type" not in {poss}')
         print('Programm terminated...')
@@ -263,7 +263,7 @@ EOF
     ### creating runRivet with every configuration in output 
     dir_work=CURRENT_DIR
     if run_on_eos:
-        dir_work=run_on_eos
+        dir_work=run_on_eos_path
 
     runRivet_template=f'''#!/usr/bin/bash
 
