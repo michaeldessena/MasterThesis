@@ -277,7 +277,7 @@ source Rivet/rivetSetup.sh
 
 i=$(printf "%04d" ${{1}})
 
-file={output_path}/${{i}}/rivet{name}_cfg.py
+file=$({output_path}/${{i}}/rivet{name}_cfg.py)
 echo $file
 cmsRun $file
 '''
