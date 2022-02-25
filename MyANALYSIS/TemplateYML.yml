@@ -3,6 +3,8 @@ input:
   variations_file:    # variations.yml file for mcnntemplate 
   save_eos:           # (True or False) if True save the output in the directory in path_eos
   path_eos:           # different path to save the output
+  run_on_eos:         # (True or False) if True cd /eos/..
+  run_on_eos_path:    # Path to a CMSSW/src in eos 
 
 cmsDriver_command: 
   seed: GEN               # cmsDriver command

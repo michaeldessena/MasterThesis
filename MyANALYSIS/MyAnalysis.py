@@ -5,6 +5,7 @@ import shutil
 import os
 import sys
 import glob
+from tkinter import CURRENT
 import yaml
 
 # NEW ANALYSIS, CONDOR_SUBMIT, 
@@ -64,6 +65,10 @@ def main(args):
     use_eos=MyYml.getYML('input', 'save_eos')
     if use_eos:
         path_eos = str(MyYml.getYML('input','path_eos'))
+    
+    run_on_eos=MyYml.getYML('input','run_on_eos')
+    if run_on_eos:
+        run_on_eos_path=MyYml.getYML('input','run_on_eos_path')
 
     ### read 'cmsDriver_command'
     cmsDriver_seed=str(MyYml.getYML('cmsDriver_command', 'seed'))
@@ -254,10 +259,13 @@ EOF
         shutil.move(tmp, dest)
 
     ### creating runRivet with every configuration in output 
-
+    dir_work=CURRENT_DIR
+    if run_on_eos:
+        dir_work=run_on_eos
+        
     runRivet_template=f'''#!/usr/bin/bash
 
-cd {CURRENT_DIR}
+cd {dir_work}
 
 eval `scram runtime -sh`
 source Rivet/rivetSetup.sh
