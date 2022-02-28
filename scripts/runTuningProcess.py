@@ -121,7 +121,7 @@ Info:
             sys.exit()
 
     print('Coping {data_folder} content'.format(data_folder=data_folder))
-    shutil.copytree(data_folder, outputDir)
+    #shutil.copytree(data_folder, outputDir)
     print('The content of {data_folder} has been copied in {outputDir}'.format(data_folder=data_folder, outputDir=outputDir))
 
     ### run preprocess
@@ -154,11 +154,11 @@ Info:
     os.system(cmd)
 
     ### Remove data folders from output folder
-    dataSubdirList = glob.glob(os.path.join(outputDir, '[0-9]*'))
+#    dataSubdirList = glob.glob(os.path.join(outputDir, '[0-9]*'))
     
-    print('\n\nRemoving data folders from {}'.format(outputDir))
-    for subdir in dataSubdirList:
-        shutil.rmtree(subdir)
+#    print('\n\nRemoving data folders from {}'.format(outputDir))
+#    for subdir in dataSubdirList:
+#        shutil.rmtree(subdir)
 
     print('Data folders removed from {}'.format(outputDir))
 
@@ -169,3 +169,4 @@ Info:
             TUNE ENDED
 ########################################
         Total time = {total_time} sec''')
+    
