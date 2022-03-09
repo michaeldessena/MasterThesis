@@ -208,10 +208,11 @@ EOF
     os.system(add1)
 
     ### add the parameter that have the variation
-    for item in parameters_sedCommand:
-        item=str(item)
-        item += f' rivet{name}_cfg.py'
-        os.system(item)
+    if parameters_sedCommand != None:
+        for item in parameters_sedCommand:
+            item=str(item)
+            item += f' rivet{name}_cfg.py'
+            os.system(item)
 
     ### MCNNTEMPLATE on the rivet{name}_cfg.py 
     mcnntemplate_command=''
@@ -255,7 +256,7 @@ EOF
         #print(int(FolderNumber))
         #shutil.copy(f'rivet{name}_cfg.py', os.path.join(output_path,str(FolderNumber).zfill(4)))
         tmp=os.path.join(output_path,str(FolderNumber).zfill(4), 'runcard.dat')
-        cmd=f'''sed -i "/process = customise(process)/a process.rivetAnalyzer.OutputFile = cms.string('{os.path.join(output_path,str(FolderNumber).zfill(4))}/result.yoda')" {tmp}''' 
+        cmd=f'''sed -i "/process = customise(process)/a process.rivetAnalyzer.OutputFile = cms.string('{os.path.join(output_path,str(FolderNumber).zfill(4),'result.yoda')}')" {tmp}''' 
         os.system(cmd)
 
         dest=os.path.join(output_path,str(FolderNumber).zfill(4), f'rivet{name}_cfg.py')

@@ -1,0 +1,40 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {british}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Hadron-Hadron Scattering}{5}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}QCD factorization theorem}{5}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Partonic cross section}{6}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Higher order calculations}{6}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Parton Showers}{9}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Multiple Parton Interactions}{11}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Basic Concepts}{11}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\texttt {Pythia8} Monte Carlo events generator}{13}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Parton Shower}{14}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Multiple Parton Interactions in \texttt {Pythia}}{14}{subsection.3.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Momentum and flavour conservation}{14}{subsection.3.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.4}Impact Parameter Dependence}{15}{subsection.3.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.5}Parton rescattering}{16}{subsection.3.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.6}Interleaving of Multiple Interaction and Parton Shower}{16}{subsection.3.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.7}Beam Beam Remnants and primordial $k_T$}{17}{subsection.3.2.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.8}Color Reconnection and Hadronization }{18}{subsection.3.2.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Observable to Study the Underlying Event}{19}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Minimum Bias Measurements and Underlying Event topology}{19}{section.4.1}%

@@ -1,0 +1,22 @@
+%abstract
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+
+\begin{document}
+\section*{Abstract}
+
+Soft QCD is not well understood starting from fundamental principles, the series expansion valid in the hard QCD is not suitable at low energies.
+
+Indeed, soft QCD studies require the use of Monte Carlo generators based on phenomenological models: these models introduce a lot of free parameters that have to be tuned with real data.
+Due to the high computational cost of running a generator the tuning requires a parametrization-based approach: the state-of-art is the use of a polynomial parametrization. 
+In this work, an alternative approach based on machine learning techniques, implemented in the Python package MCNNTUNES, is used to tune parameters. 
+
+Firstly, the parameters that describe Multi Parton Interactions and Color Reconnection, in Pythia event generator framework, are tuned: this is done employing observables sensible to  underlying events in minimum bias observation, as the charged particle density and the charged particle scalar momentum sum in the two transverse regions defined respectively to the direction of the leading object arising from the hard scattering of two partons. 
+The aim of this part is to reproduce the result obtained by CMS collaboration that employed the polynomial parametrization. 
+
+Lastly, the primordial $k_T$ is tuned in Z production observables as: Z production cross section at low $p_T$ with or without an associated jet in the event. It is investigate the the idea that the contribution of this primordial $k_T$ is decoupled from the contribution of Multi Parton Interaction in this low $p_T$ region.
+\end{document}

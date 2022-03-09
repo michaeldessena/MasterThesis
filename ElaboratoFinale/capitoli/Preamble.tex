@@ -1,0 +1,84 @@
+% Preamble Master Thesis
+\documentclass[12pt, a4paper, twoside, openright]{report} %REPORT %chapter, section, subsection
+
+% --------- Remove Chapter from Chapter report -----
+
+\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%  {\normalfont\bfseries}{}{0pt}{\Huge}
+
+\titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\huge}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % encoding used for .tex file
+\usepackage[british]{babel}	% can be omitted "utf8" encoding is the default
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools} % add tool like xrightarrow
+
+\usepackage{geometry} % margin and other page settings 
+\geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+
+\usepackage[autostyle=true]{csquotes} % to quote something!
+
+\usepackage[labelfont=bf,textfont=md]{caption} % caption options % Figure, Table in boldface and the text normal
+\captionsetup{format=hang}
+
+\usepackage{graphicx} % figure object 
+\graphicspath{{img}} 
+%FOR DIFFERNT PATHs
+% 
+%\graphicspath{{path1}}
+%\input{file1.tex}
+%\graphicspath{{path2}}
+%\input{file2.tex}
+%
+\usepackage{enumitem} % change the enumerate item [label=\arabic*)]
+
+\usepackage{float} % add options for floating object: \begin{figure}[H]
+
+
+%%% ----- To set header/ footer
+\usepackage{fancyhdr}
+%\fancyhead[LO]{\rightmark}
+%\fancyhead[RE]{\leftmark }
+\pagestyle{fancy}
+%\fancyhf{}
+\fancyhead{}
+\fancyhead[RO]{\rightmark}
+\fancyhead[LE]{\leftmark }
+%\rhead[RO]{\rightmark}
+%\lhead[LE]{\leftmark}
+
+\usepackage{emptypage} % include NOT TRIED
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref} %to use autoref
+
+\newcommand{\figRef}[1]{Fig. \ref{#1}}
+\newcommand{\tableRef}[1]{Table \ref{#1}}
+\newcommand{\eqRef}[1]{Eq. \ref{#1}}
+
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{{../biblio/biblio.bib}} %Import the bibliography file
+
+
+
+\begin{document}
+
+\tableofcontents
+
+	\input{{Introduction/c_introduction.tex}}
+	
+	\graphicspath{{Hadron_Hadron_scattering/}}
+	\input{{Hadron_Hadron_scattering/c_HadronHadronScattering.tex}}
+	
+	\graphicspath{{Multi_Parton_Interactions/}}
+	\input{{Multi_Parton_Interactions/c_Multi_Parton_Interactions}}
+	
+	\graphicspath{{ObservableToStudyTheUnderlyingEvent}}
+	\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent}}
+	
+\end{document}
