@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import os
-from posixpath import join
 import sys
 import shutil
 import glob
