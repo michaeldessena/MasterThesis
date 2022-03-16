@@ -1,0 +1,159 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Weinberg(1967)]{PhysRevLett.19.1264}
+Steven Weinberg.
+\newblock A model of leptons, Nov 1967.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.19.1264}.
+
+\bibitem[Drell and Yan(1971)]{DRELL1971578}
+Sidney~D Drell and Tung-Mow Yan.
+\newblock Partons and their applications at high energies, 1971.
+\newblock ISSN 0003-4916.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0003491671900716}.
+
+\bibitem[Campbell et~al.(2006)Campbell, Huston, and Stirling]{Campbell2006}
+J~M Campbell, J~W Huston, and W~J Stirling.
+\newblock Hard interactions of quarks and gluons: a primer for lhc physics, Dec
+  2006.
+\newblock ISSN 1361-6633.
+\newblock URL \url{http://dx.doi.org/10.1088/0034-4885/70/1/R02}.
+
+\bibitem[Lipatov(1975)]{Lipatov:400357}
+L~N Lipatov.
+\newblock {The parton model and perturbation theory}, 1975.
+\newblock URL \url{http://cds.cern.ch/record/400357}.
+
+\bibitem[Gribov and Lipatov(1972)]{Gribov:427157}
+Vladimir~Naumovich Gribov and L~N Lipatov.
+\newblock {Deep inelastic ep scattering in perturbation theory}, 1972.
+\newblock URL \url{https://cds.cern.ch/record/427157}.
+
+\bibitem[Altarelli and Parisi(1977)]{ALTARELLI1977298}
+G.~Altarelli and G.~Parisi.
+\newblock Asymptotic freedom in parton language, 1977.
+\newblock ISSN 0550-3213.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0550321377903844}.
+
+\bibitem[Dokshitzer(1977)]{Dokshitzer:1977sg}
+Yuri~L. Dokshitzer.
+\newblock {Calculation of the Structure Functions for Deep Inelastic Scattering
+  and e+ e- Annihilation by Perturbation Theory in Quantum Chromodynamics.},
+  1977.
+
+\bibitem[Stirling()]{StirlingPrivate}
+W.J. Stirling.
+\newblock {private communication}.
+\newblock URL \url{http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html}.
+
+\bibitem[Bloch and Nordsieck(1937)]{PhysRevBloch}
+F.~Bloch and A.~Nordsieck.
+\newblock Note on the radiation field of the electron, Jul 1937.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.52.54}.
+
+\bibitem[Kinoshita(1962)]{KinoshitaToichiro}
+Toichiro Kinoshita.
+\newblock Mass singularities of feynman amplitudes, 1962.
+\newblock URL \url{https://doi.org/10.1063/1.1724268}.
+
+\bibitem[Lee and Nauenberg(1964)]{PhysRevLee}
+T.~D. Lee and M.~Nauenberg.
+\newblock Degenerate systems and mass singularities, Mar 1964.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.133.B1549}.
+
+\bibitem[Kulesza et~al.(2002)Kulesza, Sterman, and
+  Vogelsang]{kulesza2002electroweak}
+A.~Kulesza, G.~Sterman, and W.~Vogelsang.
+\newblock Electroweak vector boson production in joint resummation, 2002.
+\newblock URL \url{https://arxiv.org/abs/hep-ph/0207148}.
+
+\bibitem[Sjöstrand et~al.(2015)Sjöstrand, Ask, Christiansen, Corke, Desai,
+  Ilten, Mrenna, Prestel, Rasmussen, and Skands]{PYTHIA2015}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock An introduction to pythia 8.2, Jun 2015.
+\newblock ISSN 0010-4655.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cpc.2015.01.024}.
+
+\bibitem[Bähr et~al.(2008)Bähr, Gieseke, Gigg, Grellscheid, Hamilton,
+  Latunde-Dada, Plätzer, Richardson, Seymour, Sherstnev, and
+  Webber]{Herwig2008}
+Manuel Bähr, Stefan Gieseke, Martyn~A. Gigg, David Grellscheid, Keith
+  Hamilton, Oluseyi Latunde-Dada, Simon Plätzer, Peter Richardson, Michael~H.
+  Seymour, Alexander Sherstnev, and Bryan~R. Webber.
+\newblock Herwig++ physics and manual, Nov 2008.
+\newblock ISSN 1434-6052.
+\newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-008-0798-9}.
+
+\bibitem[Gleisberg et~al.(2004)Gleisberg, Hoeche, Krauss, Schaelicke, Schumann,
+  and Winter]{SHERPA2004}
+T~Gleisberg, S~Hoeche, F~Krauss, A~Schaelicke, S~Schumann, and J~Winter.
+\newblock Sherpa 1. , a proof-of-concept version, Feb 2004.
+\newblock ISSN 1029-8479.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2004/02/056}.
+
+\bibitem[Boos et~al.(2001)Boos, Dobbs, Giele, Hinchliffe, Huston, Ilyin,
+  Kanzaki, Kato, Kurihara, Lonnblad, Mangano, Mrenna, Paige, Richter-Was,
+  Seymour, Sjostrand, Webber, and Zeppenfeld]{LesHouchesAccord}
+E.~Boos, M.~Dobbs, W.~Giele, I.~Hinchliffe, J.~Huston, V.~Ilyin, J.~Kanzaki,
+  K.~Kato, Y.~Kurihara, L.~Lonnblad, M.~Mangano, S.~Mrenna, F.~Paige,
+  E.~Richter-Was, M.~Seymour, T.~Sjostrand, B.~Webber, and D.~Zeppenfeld.
+\newblock Generic user process interface for event generators, 2001.
+
+\bibitem[Catani et~al.(2001)Catani, Krauss, Webber, and Kuhn]{CKKW2001}
+Stefano Catani, Frank Krauss, Bryan~R Webber, and Ralf Kuhn.
+\newblock Qcd matrix elements + parton showers.
+\newblock \emph{Journal of High Energy Physics}, 2001\penalty0 (11):\penalty0
+  063–063, Nov 2001.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1088/1126-6708/2001/11/063}.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2001/11/063}.
+
+\bibitem[Frixione and Webber(2002)]{FxFx1}
+Stefano Frixione and Bryan~R Webber.
+\newblock Matching nlo qcd computations and parton shower simulations.
+\newblock \emph{Journal of High Energy Physics}, 2002\penalty0 (06):\penalty0
+  029–029, Jun 2002.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1088/1126-6708/2002/06/029}.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2002/06/029}.
+
+\bibitem[Frixione et~al.(2003)Frixione, Nason, and Webber]{FxFx2}
+Stefano Frixione, Paolo Nason, and Bryan~R Webber.
+\newblock Matching nlo qcd and parton showers in heavy flavour production.
+\newblock \emph{Journal of High Energy Physics}, 2003\penalty0 (08):\penalty0
+  007–007, Aug 2003.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1088/1126-6708/2003/08/007}.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2003/08/007}.
+
+\bibitem[Frixione and Webber(2005)]{FxFx3}
+Stefano Frixione and Bryan~R. Webber.
+\newblock The mc@nlo 3.1 event generator, 2005.
+
+\bibitem[Ball et~al.(2017)Ball, Bertone, Carrazza, Debbio, Forte,
+  Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
+  Slade, and Ubiali]{NNPDF3.1}
+Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
+  Forte, Patrick Groth-Merrild, Alberto Guffanti, Nathan~P. Hartland, Zahari
+  Kassabov, José~I. Latorre, Emanuele~R. Nocera, Juan Rojo, Luca Rottoli, Emma
+  Slade, and Maria Ubiali.
+\newblock Parton distributions from high-precision collider data.
+\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct 2017.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
+\newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-017-5199-5}.
+
+\bibitem[SIEGERT(2010)]{SIEGERTthesis}
+FRANK SIEGERT.
+\newblock Monte-carlo event generation for the lhc, 2010.
+\newblock URL \url{http://etheses.dur.ac.uk/484/}.
+
+\end{thebibliography}

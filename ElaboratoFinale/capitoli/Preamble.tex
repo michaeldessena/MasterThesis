@@ -61,15 +61,21 @@
 \newcommand{\tableRef}[1]{Table \ref{#1}}
 \newcommand{\eqRef}[1]{Eq. \ref{#1}}
 
-\usepackage{biblatex} %Imports biblatex package
-\addbibresource{{../biblio/biblio.bib}} %Import the bibliography file
 
+
+\usepackage[nottoc]{tocbibind} %Includes "References" in the table of contents
+
+%\usepackage[backend=biber, style=numeric]{biblatex} %Imports biblatex package
+\usepackage[square,numbers]{natbib}
+%\addbibresource{{Introduction/biblio.bib}} %Import the bibliography file
+%\addbibresource{{/home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Introduction/biblio.bib}}
 
 
 \begin{document}
 
 \tableofcontents
 	
+
 	\graphicspath{{Introduction/}}
 	\input{{Introduction/c_introduction.tex}}
 	
@@ -81,5 +87,11 @@
 	
 	\graphicspath{{ObservableToStudyTheUnderlyingEvent/}}
 	\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent}}
-	
+
+%\bibliographystyle{plainnat}
+\bibliographystyle{unsrtnat} % citations ordered by appearance
+\bibliography{{/home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib}}
+
+
+
 \end{document}

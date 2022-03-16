@@ -120,9 +120,9 @@ Info:
             print('Killed')
             sys.exit()
 
-    print('Coping {data_folder} content'.format(data_folder=data_folder))
-    #shutil.copytree(data_folder, outputDir)
-    print('The content of {data_folder} has been copied in {outputDir}'.format(data_folder=data_folder, outputDir=outputDir))
+    #print('Coping {data_folder} content'.format(data_folder=data_folder))
+    ##shutil.copytree(data_folder, outputDir)
+    #print('The content of {data_folder} has been copied in {outputDir}'.format(data_folder=data_folder, outputDir=outputDir))
 
     ### run preprocess
     print('\n\nRun ---------> PREPROCESS')
@@ -160,13 +160,18 @@ Info:
 #    for subdir in dataSubdirList:
 #        shutil.rmtree(subdir)
 
-    print('Data folders removed from {}'.format(outputDir))
+#    print('Data folders removed from {}'.format(outputDir))
 
-    toc=timeit.default_timer() ### final time
-    total_time = toc-tic  ### elapsed time in second
+    toc=timeit.default_timer()  ### final time
+    total_time = toc-tic        ### elapsed time in second
+
+    h_m_s =str(datetime.timedelta(seconds=total_time))
+
+
 
     print(f'''########################################
             TUNE ENDED
 ########################################
-        Total time = {total_time} sec''')
+        Total time = {total_time} sec\n
+        Total time (h:m:s) = {h_m_s}''')
     

@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Preamble.aux
+The style file: unsrtnat.bst
+Database file #1: /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevLett.19.1264" isn't style-file defined
+--line 1 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "DRELL1971578" isn't style-file defined
+--line 16 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "kulesza2002electroweak" isn't style-file defined
+--line 40 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Campbell2006" isn't style-file defined
+--line 51 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Lipatov:400357" isn't style-file defined
+--line 66 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Gribov:427157" isn't style-file defined
+--line 77 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "ALTARELLI1977298" isn't style-file defined
+--line 88 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Dokshitzer:1977sg" isn't style-file defined
+--line 102 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "StirlingPrivate" isn't style-file defined
+--line 111 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevBloch" isn't style-file defined
+--line 117 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "KinoshitaToichiro" isn't style-file defined
+--line 132 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevLee" isn't style-file defined
+--line 145 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PYTHIA2015" isn't style-file defined
+--line 160 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Herwig2008" isn't style-file defined
+--line 174 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "SHERPA2004" isn't style-file defined
+--line 189 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "SIEGERTthesis" isn't style-file defined
+--line 204 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--empty year in StirlingPrivate
+You've used 22 entries,
+            2481 wiz_defined-function locations,
+            751 strings with 9644 characters,
+and the built_in function-call counts, 8248 in all, are:
+= -- 598
+> -- 612
+< -- 13
++ -- 230
+- -- 186
+* -- 669
+:= -- 1389
+add.period$ -- 81
+call.type$ -- 22
+change.case$ -- 44
+chr.to.int$ -- 22
+cite$ -- 23
+duplicate$ -- 327
+empty$ -- 690
+format.name$ -- 222
+if$ -- 1705
+int.to.chr$ -- 1
+int.to.str$ -- 23
+missing$ -- 4
+newline$ -- 133
+num.names$ -- 66
+pop$ -- 229
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 250
+stack$ -- 0
+substring$ -- 125
+swap$ -- 55
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 154
+warning$ -- 1
+while$ -- 47
+width$ -- 0
+write$ -- 304
+(There were 17 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  10 MAR 2022 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  15 MAR 2022 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,252 +419,47 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip68
 )
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+(/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
 
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count286
 
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip69
+\bibsep=\skip70
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count286
 )
-\c@tabx@nest=\count287
-\c@listtotal=\count288
-\c@listcount=\count289
-\c@liststart=\count290
-\c@liststop=\count291
-\c@citecount=\count292
-\c@citetotal=\count293
-\c@multicitecount=\count294
-\c@multicitetotal=\count295
-\c@instcount=\count296
-\c@maxnames=\count297
-\c@minnames=\count298
-\c@maxitems=\count299
-\c@minitems=\count300
-\c@citecounter=\count301
-\c@maxcitecounter=\count302
-\c@savedcitecounter=\count303
-\c@uniquelist=\count304
-\c@uniquename=\count305
-\c@refsection=\count306
-\c@refsegment=\count307
-\c@maxextratitle=\count308
-\c@maxextratitleyear=\count309
-\c@maxextraname=\count310
-\c@maxextradate=\count311
-\c@maxextraalpha=\count312
-\c@abbrvpenalty=\count313
-\c@highnamepenalty=\count314
-\c@lownamepenalty=\count315
-\c@maxparens=\count316
-\c@parenlevel=\count317
-\blx@tempcnta=\count318
-\blx@tempcntb=\count319
-\blx@tempcntc=\count320
-\blx@maxsection=\count321
-\blx@maxsegment@0=\count322
-\blx@notetype=\count323
-\blx@parenlevel@text=\count324
-\blx@parenlevel@foot=\count325
-\blx@sectionciteorder@0=\count326
-\blx@entrysetcounter=\count327
-\labelnumberwidth=\skip69
-\labelalphawidth=\skip70
-\biblabelsep=\skip71
-\bibitemsep=\skip72
-\bibnamesep=\skip73
-\bibinitsep=\skip74
-\bibparsep=\skip75
-\bibhang=\skip76
-\blx@bcfin=\read3
-\blx@bcfout=\write3
-\blx@langwohyphens=\language85
-\c@mincomprange=\count328
-\c@maxcomprange=\count329
-\c@mincompwidth=\count330
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count331
-\c@savedafterword=\count332
-\c@annotator=\count333
-\c@savedannotator=\count334
-\c@author=\count335
-\c@savedauthor=\count336
-\c@bookauthor=\count337
-\c@savedbookauthor=\count338
-\c@commentator=\count339
-\c@savedcommentator=\count340
-\c@editor=\count341
-\c@savededitor=\count342
-\c@editora=\count343
-\c@savededitora=\count344
-\c@editorb=\count345
-\c@savededitorb=\count346
-\c@editorc=\count347
-\c@savededitorc=\count348
-\c@foreword=\count349
-\c@savedforeword=\count350
-\c@holder=\count351
-\c@savedholder=\count352
-\c@introduction=\count353
-\c@savedintroduction=\count354
-\c@namea=\count355
-\c@savednamea=\count356
-\c@nameb=\count357
-\c@savednameb=\count358
-\c@namec=\count359
-\c@savednamec=\count360
-\c@translator=\count361
-\c@savedtranslator=\count362
-\c@shortauthor=\count363
-\c@savedshortauthor=\count364
-\c@shorteditor=\count365
-\c@savedshorteditor=\count366
-\c@labelname=\count367
-\c@savedlabelname=\count368
-\c@institution=\count369
-\c@savedinstitution=\count370
-\c@lista=\count371
-\c@savedlista=\count372
-\c@listb=\count373
-\c@savedlistb=\count374
-\c@listc=\count375
-\c@savedlistc=\count376
-\c@listd=\count377
-\c@savedlistd=\count378
-\c@liste=\count379
-\c@savedliste=\count380
-\c@listf=\count381
-\c@savedlistf=\count382
-\c@location=\count383
-\c@savedlocation=\count384
-\c@organization=\count385
-\c@savedorganization=\count386
-\c@origlocation=\count387
-\c@savedoriglocation=\count388
-\c@origpublisher=\count389
-\c@savedorigpublisher=\count390
-\c@publisher=\count391
-\c@savedpublisher=\count392
-\c@language=\count393
-\c@savedlanguage=\count394
-\c@origlanguage=\count395
-\c@savedoriglanguage=\count396
-\c@pageref=\count397
-\c@savedpageref=\count398
-\shorthandwidth=\skip77
-\shortjournalwidth=\skip78
-\shortserieswidth=\skip79
-\shorttitlewidth=\skip80
-\shortauthorwidth=\skip81
-\shorteditorwidth=\skip82
-\locallabelnumberwidth=\skip83
-\locallabelalphawidth=\skip84
-\localshorthandwidth=\skip85
-\localshortjournalwidth=\skip86
-\localshortserieswidth=\skip87
-\localshorttitlewidth=\skip88
-\localshortauthorwidth=\skip89
-\localshorteditorwidth=\skip90
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count399
-\c@textcitetotal=\count400
-\c@textcitemaxnames=\count401
-\c@biburlbigbreakpenalty=\count402
-\c@biburlbreakpenalty=\count403
-\c@biburlnumpenalty=\count404
-\c@biburlucpenalty=\count405
-\c@biburllcpenalty=\count406
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
-\c@smartand=\count407
-)
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count408
-\c@bbx:relatedtotal=\count409
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count410
+\l__kernel_color_stack_int=\count287
 \l__pdf_internal_box=\box51
 )
 (./Preamble.aux)
 \openout1 = `Preamble.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -706,21 +501,29 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count411
+\scratchcounter=\count288
 \scratchdimen=\dimen181
 \scratchbox=\box52
-\nofMPsegments=\count412
-\nofMParguments=\count413
+\nofMPsegments=\count289
+\nofMParguments=\count290
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count414
+\MPscratchCnt=\count291
 \MPscratchDim=\dimen182
-\MPnumerator=\count415
-\makeMPintoPDFobject=\count416
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -736,7 +539,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 69.
+Package hyperref Info: Link coloring ON on input line 74.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -747,56 +550,35 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count417
+\c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
 
 (./Preamble.out) (./Preamble.out)
-\@outlinefile=\write4
-\openout4 = `Preamble.out'.
+\@outlinefile=\write3
+\openout3 = `Preamble.out'.
 
-Package biblatex Info: Trying to load language 'british'...
-Package biblatex Info: ... file 'british.lbx' found.
+ (./Preamble.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
-File: british.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-))
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `Preamble.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Preamble.bbl' not found.
-
-No file Preamble.bbl.
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
-(./Preamble.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-0.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ))
-\tf@toc=\write5
-\openout5 = `Preamble.toc'.
+\tf@toc=\write4
+\openout4 = `Preamble.toc'.
 
 
 (./Introduction/c_introduction.tex [1
@@ -806,16 +588,12 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
 ]
 Chapter 1.
-
-LaTeX Warning: Citation 'PhysRevLett.19.1264' on page 3 undefined on input line
- 18.
-
 ) (./Hadron_Hadron_scattering/c_HadronHadronScattering.tex [3] [4
 
 ]
 Chapter 2.
 [5]
-<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=144, 661
+<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=174, 661
 .47125pt x 860.21375pt>
 File: Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png Graphic
  file (type png)
@@ -823,7 +601,7 @@ File: Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png Graphic
 Package pdftex.def Info: Hadron_Hadron_scattering/img/StandardModelCrossSection
 s_color.png  used on input line 86.
 (pdftex.def)             Requested size: 341.43306pt x 444.00603pt.
-<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=147, 650.43pt x 850.1762
+<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=180, 650.43pt x 850.1762
 5pt>
 File: Hadron_Hadron_scattering/img/xQ2planeCoverage.png Graphic file (type png)
 
@@ -840,112 +618,139 @@ This may cause the page layout to be inconsistent, however.
 
 [6] [7 <./Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png>]
 [8 <./Hadron_Hadron_scattering/img/xQ2planeCoverage.png>]
-<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=175, 875.27pt x 652.4375pt>
+<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=223, 875.27pt x 652.4375pt>
 File: Hadron_Hadron_scattering/img/pT_Z_CDF.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/pT_Z_CDF.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/pT_Z_CDF.png  used on inp
-ut line 170.
+ut line 164.
 (pdftex.def)             Requested size: 341.43306pt x 254.50932pt.
+ [9 <./Hadron_Hadron_scattering/img/pT_Z_CDF.png>]
+<Hadron_Hadron_scattering/img/DoubleCounting.png, id=247, 1239.63126pt x 481.8p
+t>
+File: Hadron_Hadron_scattering/img/DoubleCounting.png Graphic file (type png)
+<use Hadron_Hadron_scattering/img/DoubleCounting.png>
+Package pdftex.def Info: Hadron_Hadron_scattering/img/DoubleCounting.png  used 
+on input line 215.
+(pdftex.def)             Requested size: 341.43306pt x 132.69757pt.
+
+Overfull \hbox (7.34142pt too wide) in paragraph at lines 216--216
+[][]|\T1/cmr/m/n/12 See ht-tps://indico.cern.ch/event/221788/attachments/361954
+/503905/frederix.pdf| 
+ []
+
+[10]
+<Hadron_Hadron_scattering/img/NNPDF3.1.png, id=269, 1022.82124pt x 646.415pt>
+File: Hadron_Hadron_scattering/img/NNPDF3.1.png Graphic file (type png)
+<use Hadron_Hadron_scattering/img/NNPDF3.1.png>
+Package pdftex.def Info: Hadron_Hadron_scattering/img/NNPDF3.1.png  used on inp
+ut line 233.
+(pdftex.def)             Requested size: 341.43306pt x 215.78348pt.
+ [11 <./Hadron_Hadron_scattering/img/DoubleCounting.png>]
+<Hadron_Hadron_scattering/img/Processes.png, id=282, 1248.665pt x 624.3325pt>
+File: Hadron_Hadron_scattering/img/Processes.png Graphic file (type png)
+<use Hadron_Hadron_scattering/img/Processes.png>
+Package pdftex.def Info: Hadron_Hadron_scattering/img/Processes.png  used on in
+put line 258.
+(pdftex.def)             Requested size: 474.02086pt x 237.01065pt.
 )
-(./Multi_Parton_Interactions/c_Multi_Parton_Interactions.tex [9 <./Hadron_Hadro
-n_scattering/img/pT_Z_CDF.png>] [10
+(./Multi_Parton_Interactions/c_Multi_Parton_Interactions.tex [12 <./Hadron_Hadr
+on_scattering/img/NNPDF3.1.png>] [13 <./Hadron_Hadron_scattering/img/Processes.
+png>] [14
 
 ]
 Chapter 3.
-[11]
-<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=205, 880.28876pt x 774.
+<Multi_Parton_Interactions/img/Table_cross_sections.png, id=302, 524.96124pt x 
+823.075pt>
+File: Multi_Parton_Interactions/img/Table_cross_sections.png Graphic file (type
+ png)
+<use Multi_Parton_Interactions/img/Table_cross_sections.png>
+Package pdftex.def Info: Multi_Parton_Interactions/img/Table_cross_sections.png
+  used on input line 57.
+(pdftex.def)             Requested size: 386.95897pt x 606.72997pt.
+[15] [16 <./Multi_Parton_Interactions/img/Table_cross_sections.png>]
+<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=328, 880.28876pt x 774.
 895pt>
 File: Multi_Parton_Interactions/img/CrossSection_Tot.png Graphic file (type png
 )
 <use Multi_Parton_Interactions/img/CrossSection_Tot.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/CrossSection_Tot.png  us
-ed on input line 83.
+ed on input line 91.
 (pdftex.def)             Requested size: 341.43306pt x 300.55249pt.
- [12]
+ [17 <./Multi_Parton_Interactions/img/CrossSection_Tot.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 117.
- [13 <./Multi_Parton_Interactions/img/CrossSection_Tot.png>]
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 142.
- [14]
-[15]
-<Multi_Parton_Interactions/img/Rescattering.png, id=254, 616.3025pt x 212.795pt
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 135.
+ [18] [19]
+<Multi_Parton_Interactions/img/Rescattering.png, id=372, 616.3025pt x 212.795pt
 >
 File: Multi_Parton_Interactions/img/Rescattering.png Graphic file (type png)
 <use Multi_Parton_Interactions/img/Rescattering.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/Rescattering.png  used o
-n input line 213.
+n input line 223.
 (pdftex.def)             Requested size: 341.43306pt x 117.89156pt.
-<Multi_Parton_Interactions/img/PartonShower.png, id=255, 635.37375pt x 572.1375
+ [20]
+<Multi_Parton_Interactions/img/PartonShower.png, id=391, 635.37375pt x 572.1375
 pt>
 File: Multi_Parton_Interactions/img/PartonShower.png Graphic file (type png)
 <use Multi_Parton_Interactions/img/PartonShower.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/PartonShower.png  used o
-n input line 246.
+n input line 256.
 (pdftex.def)             Requested size: 341.43306pt x 307.45679pt.
- [16 <./Multi_Parton_Interactions/img/Rescattering.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 256.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 256.
+(hyperref)                removing `math shift' on input line 266.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 256.
+(hyperref)                removing `subscript' on input line 266.
 
-[17 <./Multi_Parton_Interactions/img/PartonShower.png>])
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+[21 <./Multi_Parton_Interactions/img/Rescattering.png>] [22 <./Multi_Parton_Int
+eractions/img/PartonShower.png>])
 (./ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent.te
-x [18]
+x [23] [24
+
+]
 Chapter 4.
 
-Overfull \hbox (30.18207pt too wide) in paragraph at lines 1--1
+Overfull \hbox (30.18207pt too wide) in paragraph at lines 2--2
 |[]\T1/cmr/bx/n/24.88 Observable to Study the Un-der-ly-ing Event| 
  []
 
-<ObservableToStudyTheUnderlyingEvent/img/Regions.png, id=285, 234.8775pt x 282.
-05376pt>
-File: ObservableToStudyTheUnderlyingEvent/img/Regions.png Graphic file (type pn
-g)
-<use ObservableToStudyTheUnderlyingEvent/img/Regions.png>
-Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Regions.png  u
-sed on input line 21.
-(pdftex.def)             Requested size: 164.41312pt x 197.43626pt.
-[19
+<ObservableToStudyTheUnderlyingEvent/img/Regions.pdf, id=418, 348.33339pt x 197
+.43663pt>
+File: ObservableToStudyTheUnderlyingEvent/img/Regions.pdf Graphic file (type pd
+f)
+<use ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Regions.pdf  u
+sed on input line 20.
+(pdftex.def)             Requested size: 386.95897pt x 219.34102pt.
+[25 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>]) (./Preamble.bbl
+[26] [27
 
- <./ObservableToStudyTheUnderlyingEvent/img/Regions.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 85.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
-
-(./Preamble.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+ [28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+ (./Preamble.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
 Package rerunfilecheck Info: File `Preamble.out' has not changed.
-(rerunfilecheck)             Checksum: 0974331D26BEB61ED7CC005160473E12;1455.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Preamble
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'Preamble.run.xml'.
-\openout1 = `Preamble.run.xml'.
-
+(rerunfilecheck)             Checksum: 486C6991D52FC2F7EFF759A53A6138F0;1766.
  ) 
 Here is how much of TeX's memory you used:
- 17762 strings out of 481239
- 299777 string characters out of 5920377
- 997404 words of memory out of 5000000
- 32645 multiletter control sequences out of 15000+600000
- 552473 words of font info for 76 fonts, out of 8000000 for 9000
+ 11735 strings out of 481239
+ 178208 string characters out of 5920377
+ 475843 words of memory out of 5000000
+ 26598 multiletter control sequences out of 15000+600000
+ 554958 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,45p,813b,2187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,16n,46p,797b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -954,26 +759,30 @@ public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sftt1728.pfb>
-Output written on Preamble.pdf (20 pages, 869597 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sftt1728.pfb>
+Output written on Preamble.pdf (28 pages, 1356019 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 95 named destinations out of 1000 (max. 500000)
- 188 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
