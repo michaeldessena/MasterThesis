@@ -7,8 +7,7 @@
 %\titleformat{\chapter}[display]
 %  {\normalfont\bfseries}{}{0pt}{\Huge}
 
-\titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\huge}
-
+%\titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\huge}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} % encoding used for .tex file
@@ -60,6 +59,7 @@
 \newcommand{\figRef}[1]{Fig. \ref{#1}}
 \newcommand{\tableRef}[1]{Table \ref{#1}}
 \newcommand{\eqRef}[1]{Eq. \ref{#1}}
+\newcommand{\chapRef}[1]{Chapter \ref{#1}}
 
 
 
@@ -70,8 +70,17 @@
 %\addbibresource{{Introduction/biblio.bib}} %Import the bibliography file
 %\addbibresource{{/home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Introduction/biblio.bib}}
 
+\title{Soft QCD parameter tuning using feed-forward neural networks}
+\author{Michael Dessena}
+\date{\today}
 
 \begin{document}
+
+\maketitle
+
+\abstract
+-----INSERIRE ABSTRACT------
+
 
 \tableofcontents
 	
@@ -87,6 +96,11 @@
 	
 	\graphicspath{{ObservableToStudyTheUnderlyingEvent/}}
 	\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent}}
+	
+	\graphicspath{{TuneProcedureAndMCNNTUNES/}}
+	\input{{TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex}}	
+	
+	
 
 %\bibliographystyle{plainnat}
 \bibliographystyle{unsrtnat} % citations ordered by appearance

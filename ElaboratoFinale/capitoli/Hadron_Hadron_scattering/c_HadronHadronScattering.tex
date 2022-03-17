@@ -22,6 +22,7 @@
 
 
 \chapter{Hadron-Hadron Scattering}
+\label{chap:Hadron-HadronScattering}
 
 In a high energy proton-proton collision we can have either soft or hard processes. Most of the time the hard processes are accompanied by soft interaction, occurring along the hadron interaction.
 The hard processes are well understood using perturbation theory, meanwhile the soft processes are not so well understood in fact these processes are described by non perturbative QCD. 
@@ -250,8 +251,7 @@ We have understood that the complexity in the description of a proton-proton col
 All these processes are important in the description of a real proton-proton collision but also the partons that are left unscattered are non-color singlet and contribute to the complex final state observed in the experiment, and additionally, as mentioned before, nothing prevent additional partons scatterings from taking place and growing more and more the complexity of the partons final state. 
 
 Than, another problem is related to the not-well-understood hadronization process.
-Hadronization is not known from first principles and different models are implemented in different programs: the \textit{cluster fragmentation model} implemented in \textsc{herwig} and the \textit{string fragmentation model} in \textsc{pythia} simulated this process of hadronization where the set of final-state partons are transformed into a set of hadrons.
-This is shown schematically in \figRef{fig:Processes}.
+Hadronization is not known from first principles and different models are implemented in different programs: the \textit{cluster fragmentation model} implemented in \textsc{herwig} and the \textit{string fragmentation model} in \textsc{pythia} simulated this process of hadronization where the set of final-state partons are transformed into a set of hadrons. All these processes are shown schematically in \figRef{fig:Processes}.
 
 \begin{figure}[!ht]
 	\centering
@@ -259,6 +259,9 @@ This is shown schematically in \figRef{fig:Processes}.
 	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea on the evolution of the system. The two incoming hadrons enter the scattering from the left side, the read line indicate the main hard scattering and the fuchsia one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Than the new formed hadrons (lightblue) can undergo to different decays.}
 	\label{fig:Processes}
 \end{figure}
+
+Next chapter describe the \textsc{pythia} Monte Carlo generator in more details. \textsc{pythia} introduce different free parameter that need to be tuned with experimental data from Tevatron and LHC. The tune methods are described in \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES}
+
 
 
 %%% ---

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  15 MAR 2022 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  17 MAR 2022 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,22 +444,22 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./Preamble.aux)
 \openout1 = `Preamble.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -539,7 +539,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -552,25 +552,36 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
 (./Preamble.out) (./Preamble.out)
 \@outlinefile=\write3
 \openout3 = `Preamble.out'.
 
- (./Preamble.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): dest
+ination with the same identifier (name{page.1}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.85 \tableofcontents
+                      [1] [2
+
+] (./Preamble.toc
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 3.
 
@@ -581,33 +592,30 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \openout4 = `Preamble.toc'.
 
 
-(./Introduction/c_introduction.tex [1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+(./Introduction/c_introduction.tex [3] [4
 
 ]
 Chapter 1.
-) (./Hadron_Hadron_scattering/c_HadronHadronScattering.tex [3] [4
+) (./Hadron_Hadron_scattering/c_HadronHadronScattering.tex [5] [6
 
 ]
 Chapter 2.
-[5]
-<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=174, 661
+[7]
+<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=201, 661
 .47125pt x 860.21375pt>
 File: Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png Graphic
  file (type png)
 <use Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/StandardModelCrossSection
-s_color.png  used on input line 86.
+s_color.png  used on input line 87.
 (pdftex.def)             Requested size: 341.43306pt x 444.00603pt.
-<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=180, 650.43pt x 850.1762
+<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=207, 650.43pt x 850.1762
 5pt>
 File: Hadron_Hadron_scattering/img/xQ2planeCoverage.png Graphic file (type png)
 
 <use Hadron_Hadron_scattering/img/xQ2planeCoverage.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/xQ2planeCoverage.png  use
-d on input line 105.
+d on input line 106.
 (pdftex.def)             Requested size: 341.43306pt x 446.29733pt.
 
 
@@ -616,50 +624,50 @@ Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[6] [7 <./Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png>]
-[8 <./Hadron_Hadron_scattering/img/xQ2planeCoverage.png>]
-<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=223, 875.27pt x 652.4375pt>
+[8] [9 <./Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png>]
+[10 <./Hadron_Hadron_scattering/img/xQ2planeCoverage.png>]
+<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=248, 875.27pt x 652.4375pt>
 File: Hadron_Hadron_scattering/img/pT_Z_CDF.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/pT_Z_CDF.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/pT_Z_CDF.png  used on inp
-ut line 164.
+ut line 165.
 (pdftex.def)             Requested size: 341.43306pt x 254.50932pt.
- [9 <./Hadron_Hadron_scattering/img/pT_Z_CDF.png>]
-<Hadron_Hadron_scattering/img/DoubleCounting.png, id=247, 1239.63126pt x 481.8p
+ [11 <./Hadron_Hadron_scattering/img/pT_Z_CDF.png>]
+<Hadron_Hadron_scattering/img/DoubleCounting.png, id=271, 1239.63126pt x 481.8p
 t>
 File: Hadron_Hadron_scattering/img/DoubleCounting.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/DoubleCounting.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/DoubleCounting.png  used 
-on input line 215.
+on input line 216.
 (pdftex.def)             Requested size: 341.43306pt x 132.69757pt.
 
-Overfull \hbox (7.34142pt too wide) in paragraph at lines 216--216
+Overfull \hbox (7.34142pt too wide) in paragraph at lines 217--217
 [][]|\T1/cmr/m/n/12 See ht-tps://indico.cern.ch/event/221788/attachments/361954
 /503905/frederix.pdf| 
  []
 
-[10]
-<Hadron_Hadron_scattering/img/NNPDF3.1.png, id=269, 1022.82124pt x 646.415pt>
+[12]
+<Hadron_Hadron_scattering/img/NNPDF3.1.png, id=294, 1022.82124pt x 646.415pt>
 File: Hadron_Hadron_scattering/img/NNPDF3.1.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/NNPDF3.1.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/NNPDF3.1.png  used on inp
-ut line 233.
+ut line 234.
 (pdftex.def)             Requested size: 341.43306pt x 215.78348pt.
- [11 <./Hadron_Hadron_scattering/img/DoubleCounting.png>]
-<Hadron_Hadron_scattering/img/Processes.png, id=282, 1248.665pt x 624.3325pt>
+ [13 <./Hadron_Hadron_scattering/img/DoubleCounting.png>]
+<Hadron_Hadron_scattering/img/Processes.png, id=307, 1248.665pt x 624.3325pt>
 File: Hadron_Hadron_scattering/img/Processes.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/Processes.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/Processes.png  used on in
 put line 258.
 (pdftex.def)             Requested size: 474.02086pt x 237.01065pt.
 )
-(./Multi_Parton_Interactions/c_Multi_Parton_Interactions.tex [12 <./Hadron_Hadr
-on_scattering/img/NNPDF3.1.png>] [13 <./Hadron_Hadron_scattering/img/Processes.
-png>] [14
+(./Multi_Parton_Interactions/c_Multi_Parton_Interactions.tex [14 <./Hadron_Hadr
+on_scattering/img/NNPDF3.1.png>] [15 <./Hadron_Hadron_scattering/img/Processes.
+png>] [16
 
 ]
 Chapter 3.
-<Multi_Parton_Interactions/img/Table_cross_sections.png, id=302, 524.96124pt x 
+<Multi_Parton_Interactions/img/Table_cross_sections.png, id=328, 524.96124pt x 
 823.075pt>
 File: Multi_Parton_Interactions/img/Table_cross_sections.png Graphic file (type
  png)
@@ -667,8 +675,8 @@ File: Multi_Parton_Interactions/img/Table_cross_sections.png Graphic file (type
 Package pdftex.def Info: Multi_Parton_Interactions/img/Table_cross_sections.png
   used on input line 57.
 (pdftex.def)             Requested size: 386.95897pt x 606.72997pt.
-[15] [16 <./Multi_Parton_Interactions/img/Table_cross_sections.png>]
-<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=328, 880.28876pt x 774.
+[17] [18 <./Multi_Parton_Interactions/img/Table_cross_sections.png>]
+<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=353, 880.28876pt x 774.
 895pt>
 File: Multi_Parton_Interactions/img/CrossSection_Tot.png Graphic file (type png
 )
@@ -676,53 +684,55 @@ File: Multi_Parton_Interactions/img/CrossSection_Tot.png Graphic file (type png
 Package pdftex.def Info: Multi_Parton_Interactions/img/CrossSection_Tot.png  us
 ed on input line 91.
 (pdftex.def)             Requested size: 341.43306pt x 300.55249pt.
- [17 <./Multi_Parton_Interactions/img/CrossSection_Tot.png>]
+ [19 <./Multi_Parton_Interactions/img/CrossSection_Tot.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 125.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 135.
- [18] [19]
-<Multi_Parton_Interactions/img/Rescattering.png, id=372, 616.3025pt x 212.795pt
+ [20] [21]
+<Multi_Parton_Interactions/img/Rescattering.png, id=397, 616.3025pt x 212.795pt
 >
 File: Multi_Parton_Interactions/img/Rescattering.png Graphic file (type png)
 <use Multi_Parton_Interactions/img/Rescattering.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/Rescattering.png  used o
 n input line 223.
 (pdftex.def)             Requested size: 341.43306pt x 117.89156pt.
- [20]
-<Multi_Parton_Interactions/img/PartonShower.png, id=391, 635.37375pt x 572.1375
+ [22]
+<Multi_Parton_Interactions/img/PartonShower.png, id=416, 635.37375pt x 572.1375
 pt>
 File: Multi_Parton_Interactions/img/PartonShower.png Graphic file (type png)
 <use Multi_Parton_Interactions/img/PartonShower.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/PartonShower.png  used o
-n input line 256.
+n input line 257.
 (pdftex.def)             Requested size: 341.43306pt x 307.45679pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
+(hyperref)                removing `math shift' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 266.
+(hyperref)                removing `subscript' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
+(hyperref)                removing `math shift' on input line 267.
 
-[21 <./Multi_Parton_Interactions/img/Rescattering.png>] [22 <./Multi_Parton_Int
-eractions/img/PartonShower.png>])
+[23 <./Multi_Parton_Interactions/img/Rescattering.png>] [24 <./Multi_Parton_Int
+eractions/img/PartonShower.png>]
+<Multi_Parton_Interactions/img/StringBreakings.png, id=439, 687.56876pt x 353.3
+2pt>
+File: Multi_Parton_Interactions/img/StringBreakings.png Graphic file (type png)
+
+<use Multi_Parton_Interactions/img/StringBreakings.png>
+Package pdftex.def Info: Multi_Parton_Interactions/img/StringBreakings.png  use
+d on input line 321.
+(pdftex.def)             Requested size: 341.43306pt x 175.45193pt.
+ [25 <./Multi_Parton_Interactions/img/StringBreakings.png>])
 (./ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent.te
-x [23] [24
-
-]
+x [26]
 Chapter 4.
-
-Overfull \hbox (30.18207pt too wide) in paragraph at lines 2--2
-|[]\T1/cmr/bx/n/24.88 Observable to Study the Un-der-ly-ing Event| 
- []
-
-<ObservableToStudyTheUnderlyingEvent/img/Regions.pdf, id=418, 348.33339pt x 197
+<ObservableToStudyTheUnderlyingEvent/img/Regions.pdf, id=457, 348.33339pt x 197
 .43663pt>
 File: ObservableToStudyTheUnderlyingEvent/img/Regions.pdf Graphic file (type pd
 f)
@@ -730,27 +740,33 @@ f)
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Regions.pdf  u
 sed on input line 20.
 (pdftex.def)             Requested size: 386.95897pt x 219.34102pt.
-[25 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>]) (./Preamble.bbl
-[26] [27
+[27
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
- [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+]) (./TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex
+[28 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>]
+Chapter 5.
+) (./Preamble.bbl [29
+
+] [30
+
+] [31] [32])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./Preamble.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `Preamble.out' has not changed.
-(rerunfilecheck)             Checksum: 486C6991D52FC2F7EFF759A53A6138F0;1766.
+(rerunfilecheck)             Checksum: F1F0ECE31878B10B0B8F9A6994FA76B1;1901.
  ) 
 Here is how much of TeX's memory you used:
- 11735 strings out of 481239
- 178208 string characters out of 5920377
- 475843 words of memory out of 5000000
- 26598 multiletter control sequences out of 15000+600000
- 554958 words of font info for 82 fonts, out of 8000000 for 9000
+ 11801 strings out of 481239
+ 179664 string characters out of 5920377
+ 478037 words of memory out of 5000000
+ 26636 multiletter control sequences out of 15000+600000
+ 557799 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,46p,797b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,16n,46p,797b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -776,13 +792,17 @@ m-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb
 onts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sftt1728.pfb>
-Output written on Preamble.pdf (28 pages, 1356019 bytes).
+nts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sftt1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfxc2488.pfb>
+Output written on Preamble.pdf (34 pages, 1454955 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 527 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 710 PDF objects out of 1000 (max. 8388607)
+ 599 compressed objects within 6 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
