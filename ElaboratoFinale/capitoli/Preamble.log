@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  17 MAR 2022 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  17 MAR 2022 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -742,28 +742,38 @@ sed on input line 20.
 (pdftex.def)             Requested size: 386.95897pt x 219.34102pt.
 [27
 
-]) (./TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex
-[28 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>]
+]
+<ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png, id=470, 
+768.8725pt x 388.45125pt>
+File: ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png Grap
+hic file (type png)
+<use ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/UEpredictions_
+in_regions.png  used on input line 51.
+(pdftex.def)             Requested size: 386.95897pt x 195.50543pt.
+) (./TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex
+[28 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>] [29 <./ObservableT
+oStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png>] [30
+
+]
 Chapter 5.
-) (./Preamble.bbl [29
+) (./Preamble.bbl [31] [32
 
-] [30
-
-] [31] [32])
+] [33] [34])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
- [33]
+ [35]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./Preamble.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `Preamble.out' has not changed.
-(rerunfilecheck)             Checksum: F1F0ECE31878B10B0B8F9A6994FA76B1;1901.
+(rerunfilecheck)             Checksum: 835104DFB78356B84EC2C3DC1699F1DE;1901.
  ) 
 Here is how much of TeX's memory you used:
- 11801 strings out of 481239
- 179664 string characters out of 5920377
- 478037 words of memory out of 5000000
- 26636 multiletter control sequences out of 15000+600000
+ 11811 strings out of 481239
+ 180080 string characters out of 5920377
+ 478075 words of memory out of 5000000
+ 26642 multiletter control sequences out of 15000+600000
  557799 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,16n,46p,797b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -799,10 +809,10 @@ ts/type1/public/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sftt1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfxc1728.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sfxc2488.pfb>
-Output written on Preamble.pdf (34 pages, 1454955 bytes).
+Output written on Preamble.pdf (36 pages, 1517533 bytes).
 PDF statistics:
- 710 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 156 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 608 compressed objects within 7 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 
