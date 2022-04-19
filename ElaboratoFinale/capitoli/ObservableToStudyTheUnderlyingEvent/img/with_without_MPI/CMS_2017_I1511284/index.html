@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Plots from Rivet analyses &ndash; CMS_2017_I1511284</title>
+<style>
+      html { font-family: sans-serif; }
+      img { border: 0; }
+      a { text-decoration: none; font-weight: bold; }
+    </style>
+            <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [["$","$"]]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        
+
+        <script type="text/javascript">
+            function filterPlots(ana, patt) {
+                var regex = new RegExp(patt);
+                var sec = document.getElementById('ana_'+ana);
+                var plots = sec.getElementsByClassName('plot');
+                var i; for (i = 0; i < plots.length; ++i) {
+                    // var viz = (regex.test(plots[i].id)) ? 'visible' : 'hidden';
+                    // plots[i].style.visibility = viz;
+                    var dis = (regex.test(plots[i].id)) ? 'block' : 'none';
+                    plots[i].style.display = dis;
+                }
+                return false;
+           }
+        </script>
+        </head>
+<body>
+<section id="ana_CMS_2017_I1511284">
+<h3>CMS_2017_I1511284</h3>
+<p><a href="../index.html">Back to index</a></p>
+<p>
+  The differential cross section for inclusive particle production as a function of energy in proton-proton collisions at a center-of-mass energy of 13 TeV is measured in the very forward region of the CMS detector. The measurement is based on data collected with the CMS apparatus at the LHC, and corresponds to an integrated luminosity of 0.35 inverse microbarns. The energy is measured in the CASTOR calorimeter, which covers the pseudorapidity region $-6.6 &lt; \eta &lt; -5.2$. The results are given as a function of the total energy deposited in CASTOR, as well as of its electromagnetic and hadronic components. The spectra are sensitive to the modeling of multiparton interactions in pp collisions, and provide new constraints for hadronic interaction models used in collider and in high energy cosmic ray physics.
+</p>
+<form onsubmit="var patt = document.getElementById('patt_CMS_2017_I1511284').value; filterPlots('CMS_2017_I1511284', patt); return false;">
+<span>Filter plots:&nbsp;</span><input id="patt_CMS_2017_I1511284" type="search">
+<input type="submit" value="Filter">
+</form>
+
+  <div class="plot" id="plot_d01-x01-y01" style="float:left; font-size:smaller; font-weight:bold;">
+    <a href="#CMS_2017_I1511284-d01-x01-y01">&#9875;</a><a href="d01-x01-y01.dat">&#8984</a> d01-x01-y01:<br/>
+    <a name="CMS_2017_I1511284-d01-x01-y01"><a href="d01-x01-y01.pdf">
+      <img src="d01-x01-y01.png">
+    </a></a>
+  </div>
+  <div class="plot" id="plot_d02-x01-y01" style="float:left; font-size:smaller; font-weight:bold;">
+    <a href="#CMS_2017_I1511284-d02-x01-y01">&#9875;</a><a href="d02-x01-y01.dat">&#8984</a> d02-x01-y01:<br/>
+    <a name="CMS_2017_I1511284-d02-x01-y01"><a href="d02-x01-y01.pdf">
+      <img src="d02-x01-y01.png">
+    </a></a>
+  </div>
+  <div class="plot" id="plot_d03-x01-y01" style="float:left; font-size:smaller; font-weight:bold;">
+    <a href="#CMS_2017_I1511284-d03-x01-y01">&#9875;</a><a href="d03-x01-y01.dat">&#8984</a> d03-x01-y01:<br/>
+    <a name="CMS_2017_I1511284-d03-x01-y01"><a href="d03-x01-y01.pdf">
+      <img src="d03-x01-y01.png">
+    </a></a>
+  </div>
+</section>
+
+<footer style="clear:both; margin-top:3em; padding-top:3em">
+<p>Generated at Wednesday, 13. April 2022 12:18AM</p>
+</footer>
+
+</body>
+</html>

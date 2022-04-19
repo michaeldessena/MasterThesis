@@ -18,7 +18,7 @@ folder=args.folder
 output_rivet_mkhtl=args.output
 nruns=args.nruns
 
-list_of_dirs = glob.glob(os.path.join(folder,'*[0-9]'))
+list_of_dirs = glob.glob(os.path.join(folder,'[0-9]'*4))
 print(len(list_of_dirs))
 
 max=len(list_of_dirs)-1
@@ -32,22 +32,30 @@ for run in range(nruns):
         number=random.randint(0,max)
         n_extraction+=1
     extract.append(number)
-    print(run, ' :', n_extraction)
+    
     number_str=str(number)
     number_folder=number_str.zfill(4)
+
     filename=FILENAME
     yodafile_path=os.path.join(folder, number_folder, filename)
-    yodafile_path+=' '
-    results_command+=yodafile_path
-    params_filename=PARAMS
-    paramsfile_path=os.path.join(folder, number_folder, params_filename)
     
-    parameters_used += f' \n----- FOLDER:{os.path.join(folder, number_folder)} -----\n' 
-    with open(paramsfile_path,'r') as file:
-        stream=file.readlines()
-        for line in stream:
-            parameters_used+=line
+    print(run, ') n_extractions: ', n_extraction, '\t folder: ', number_folder, yodafile_path, )    
+    
+    if os.path.exists(yodafile_path):
+        print(f'\tOk {yodafile_path} exist')
+        yodafile_path+=' '
+        results_command+=yodafile_path
+        params_filename=PARAMS
+        paramsfile_path=os.path.join(folder, number_folder, params_filename)
+    
+        parameters_used += f' \n----- FOLDER:{os.path.join(folder, number_folder)} -----\n\n' 
+        with open(paramsfile_path,'r') as file:
+            stream=file.readlines()
+            for line in stream:
+                parameters_used+=line
             parameters_used+='\n'
+    else:
+        print(f'\tNO {yodafile_path} does not exist!!! <---')
 
 cmd='rivet-mkhtml '
 cmd+=results_command

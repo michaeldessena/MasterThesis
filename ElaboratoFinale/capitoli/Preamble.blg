@@ -8,74 +8,75 @@ Warning--entry type for "PhysRevLett.19.1264" isn't style-file defined
 Warning--entry type for "DRELL1971578" isn't style-file defined
 --line 16 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "kulesza2002electroweak" isn't style-file defined
---line 40 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
-Warning--entry type for "Campbell2006" isn't style-file defined
 --line 51 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Campbell2006" isn't style-file defined
+--line 62 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "Lipatov:400357" isn't style-file defined
---line 66 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
-Warning--entry type for "Gribov:427157" isn't style-file defined
 --line 77 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
-Warning--entry type for "ALTARELLI1977298" isn't style-file defined
+Warning--entry type for "Gribov:427157" isn't style-file defined
 --line 88 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "ALTARELLI1977298" isn't style-file defined
+--line 99 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "Dokshitzer:1977sg" isn't style-file defined
---line 102 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 113 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "StirlingPrivate" isn't style-file defined
---line 111 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 122 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "PhysRevBloch" isn't style-file defined
---line 117 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 128 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "KinoshitaToichiro" isn't style-file defined
---line 132 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 143 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "PhysRevLee" isn't style-file defined
---line 145 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 156 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "PYTHIA2015" isn't style-file defined
---line 160 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 171 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "Herwig2008" isn't style-file defined
---line 174 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 185 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "SHERPA2004" isn't style-file defined
---line 189 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 200 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "SIEGERTthesis" isn't style-file defined
---line 204 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+--line 215 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--empty year in StirlingPrivate
 Warning--empty author in CMS-PAS-FSQ-15-007
-You've used 28 entries,
+Warning--empty journal in Perceptron
+You've used 42 entries,
             2481 wiz_defined-function locations,
-            803 strings with 10899 characters,
-and the built_in function-call counts, 10343 in all, are:
-= -- 798
-> -- 691
-< -- 17
-+ -- 264
-- -- 208
-* -- 824
-:= -- 1725
-add.period$ -- 106
-call.type$ -- 28
-change.case$ -- 57
-chr.to.int$ -- 28
-cite$ -- 31
-duplicate$ -- 436
-empty$ -- 888
-format.name$ -- 252
-if$ -- 2158
+            909 strings with 13981 characters,
+and the built_in function-call counts, 16209 in all, are:
+= -- 1247
+> -- 1109
+< -- 27
++ -- 422
+- -- 338
+* -- 1323
+:= -- 2749
+add.period$ -- 163
+call.type$ -- 42
+change.case$ -- 83
+chr.to.int$ -- 42
+cite$ -- 46
+duplicate$ -- 691
+empty$ -- 1351
+format.name$ -- 401
+if$ -- 3348
 int.to.chr$ -- 1
-int.to.str$ -- 29
-missing$ -- 9
-newline$ -- 170
-num.names$ -- 81
-pop$ -- 262
+int.to.str$ -- 43
+missing$ -- 22
+newline$ -- 255
+num.names$ -- 123
+pop$ -- 359
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 42
 quote$ -- 0
-skip$ -- 316
+skip$ -- 468
 stack$ -- 0
-substring$ -- 211
-swap$ -- 66
+substring$ -- 417
+swap$ -- 93
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 196
-warning$ -- 2
-while$ -- 63
+type$ -- 291
+warning$ -- 3
+while$ -- 104
 width$ -- 0
-write$ -- 397
-(There were 18 warnings)
+write$ -- 605
+(There were 19 warnings)

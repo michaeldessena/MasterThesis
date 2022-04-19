@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,12 @@
 Steven Weinberg.
 \newblock A model of leptons, Nov 1967.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.19.1264}.
+
+\bibitem[Bjorken(1969)]{Bjorken:1968dy}
+J.~D. Bjorken.
+\newblock {Asymptotic Sum Rules at Infinite Momentum}.
+\newblock \emph{Phys. Rev.}, 179:\penalty0 1547--1553, 1969.
+\newblock \doi{10.1103/PhysRev.179.1547}.
 
 \bibitem[Drell and Yan(1971)]{DRELL1971578}
 Sidney~D Drell and Tung-Mow Yan.
@@ -138,6 +144,23 @@ Stefano Frixione, Paolo Nason, and Bryan~R Webber.
 Stefano Frixione and Bryan~R. Webber.
 \newblock The mc@nlo 3.1 event generator, 2005.
 
+\bibitem[Frederix and Frixione(2012)]{FxFx4}
+Rikkert Frederix and Stefano Frixione.
+\newblock {Merging meets matching in MC@NLO}.
+\newblock \emph{JHEP}, 12:\penalty0 061, 2012.
+\newblock \doi{10.1007/JHEP12(2012)061}.
+
+\bibitem[Fadin(2000)]{BFKL1}
+Victor~S. Fadin.
+\newblock {BFKL resummation}.
+\newblock \emph{Nucl. Phys. A}, 666:\penalty0 155--164, 2000.
+\newblock \doi{10.1016/S0375-9474(00)00022-1}.
+
+\bibitem[Balitsky and Lipatov(1978)]{BFKL2}
+I.~I. Balitsky and L.~N. Lipatov.
+\newblock {The Pomeranchuk Singularity in Quantum Chromodynamics}.
+\newblock \emph{Sov. J. Nucl. Phys.}, 28:\penalty0 822--829, 1978.
+
 \bibitem[Ball et~al.(2017)Ball, Bertone, Carrazza, Debbio, Forte,
   Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
   Slade, and Ubiali]{NNPDF3.1}
@@ -198,5 +221,89 @@ Albert~M. Sirunyan et~al.
   $\mathrm {p}\mathrm {p}$ collisions at 13 $~\text {Te}\text {V}$}.
 \newblock \emph{Eur. Phys. J. C}, 79\penalty0 (2):\penalty0 123, 2019.
 \newblock \doi{10.1140/epjc/s10052-019-6620-z}.
+
+\bibitem[Bechtel(2009)]{Bechtel:2009zza}
+Florian Bechtel.
+\newblock \emph{{The underlying event in proton-proton collisions}}.
+\newblock PhD thesis, Hamburg U., 2009.
+
+\bibitem[Sirunyan et~al.(2020)]{CPtunes}
+Albert~M Sirunyan et~al.
+\newblock {Extraction and validation of a new set of CMS PYTHIA8 tunes from
+  underlying-event measurements}.
+\newblock \emph{Eur. Phys. J. C}, 80\penalty0 (1):\penalty0 4, 2020.
+\newblock \doi{10.1140/epjc/s10052-019-7499-4}.
+
+\bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
+  Seggern]{Buckley:2009bj}
+Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
+  Seggern.
+\newblock {Systematic event generator tuning for the LHC}.
+\newblock \emph{Eur. Phys. J. C}, 65:\penalty0 331--357, 2010.
+\newblock \doi{10.1140/epjc/s10052-009-1196-7}.
+
+\bibitem[Lazzarin et~al.(2021)Lazzarin, Alioli, and Carrazza]{MCNNTUNESarticle}
+Marco Lazzarin, Simone Alioli, and Stefano Carrazza.
+\newblock {MCNNTUNES: Tuning Shower Monte Carlo generators with machine
+  learning}.
+\newblock \emph{Comput. Phys. Commun.}, 263:\penalty0 107908, 2021.
+\newblock \doi{10.1016/j.cpc.2021.107908}.
+
+\bibitem[Abadi et~al.(2015)Abadi, Agarwal, Barham, Brevdo, Chen, Citro,
+  Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia,
+  Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah,
+  Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan,
+  Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu, and
+  Zheng]{tensorflow2015-whitepaper}
+Mart\'{i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
+  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
+  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
+  Levenberg, Dandelion Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris
+  Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal
+  Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas,
+  Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and
+  Xiaoqiang Zheng.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock URL \url{https://www.tensorflow.org/}.
+\newblock Software available from tensorflow.org.
+
+\bibitem[Rosenblatt(1958)]{Perceptron}
+F.~Rosenblatt.
+\newblock The perceptron: A probabilistic model for information storage and
+  organization in the brain.
+\newblock 1958.
+\newblock URL \url{https://doi.org/10.1037/h0042519}.
+
+\bibitem[Hornik(1991)]{HORNIK1991251}
+Kurt Hornik.
+\newblock Approximation capabilities of multilayer feedforward networks.
+\newblock \emph{Neural Networks}, 4\penalty0 (2):\penalty0 251--257, 1991.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/0893-6080(91)90009-T}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/089360809190009T}.
+
+\bibitem[Leshno et~al.(1993)Leshno, Lin, Pinkus, and Schocken]{LESHNO1993861}
+Moshe Leshno, Vladimir~Ya. Lin, Allan Pinkus, and Shimon Schocken.
+\newblock Multilayer feedforward networks with a nonpolynomial activation
+  function can approximate any function.
+\newblock \emph{Neural Networks}, 6\penalty0 (6):\penalty0 861--867, 1993.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/S0893-6080(05)80131-5}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0893608005801315}.
+
+\bibitem[Hansen(2016)]{CMAES}
+Nikolaus Hansen.
+\newblock The {CMA} evolution strategy: {A} tutorial.
+\newblock \emph{CoRR}, abs/1604.00772, 2016.
+\newblock URL \url{http://arxiv.org/abs/1604.00772}.
+
+\bibitem[Cowan(1998)]{cowan}
+G.~Cowan.
+\newblock \emph{Statistical data analysis}.
+\newblock Oxford University Press, USA, 1998.
 
 \end{thebibliography}

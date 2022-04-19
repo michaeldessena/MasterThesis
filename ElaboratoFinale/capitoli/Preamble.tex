@@ -1,4 +1,4 @@
-% Preamble Master Thesis
+%% Preamble Master Thesis
 \documentclass[12pt, a4paper, twoside, openright]{report} %REPORT %chapter, section, subsection
 
 % --------- Remove Chapter from Chapter report -----
@@ -18,13 +18,24 @@
 \usepackage{amssymb}
 \usepackage{mathtools} % add tool like xrightarrow
 
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  % Add the centering in the tabular with fixed colum width
+
 \usepackage{geometry} % margin and other page settings 
-\geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+%\geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+\geometry{
+	left=35mm,
+ 	top=30mm,
+ 	bottom=25mm,
+ 	right=25mm}
 
 \usepackage[autostyle=true]{csquotes} % to quote something!
 
 \usepackage[labelfont=bf,textfont=md]{caption} % caption options % Figure, Table in boldface and the text normal
-\captionsetup{format=hang}
+%\captionsetup{format=hang, font = small}
+\captionsetup{font = footnotesize}
+%\captionsetup{widht=0.8\textwidth}
 
 \usepackage{graphicx} % figure object 
 \graphicspath{{img}} 
@@ -56,10 +67,10 @@
 
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref} %to use autoref
 
-\newcommand{\figRef}[1]{Fig. \ref{#1}}
-\newcommand{\tableRef}[1]{Table \ref{#1}}
-\newcommand{\eqRef}[1]{Eq. \ref{#1}}
-\newcommand{\chapRef}[1]{Chapter \ref{#1}}
+\newcommand{\figRef}[1]{\mbox{Fig. \ref{#1}}}
+\newcommand{\tableRef}[1]{\mbox{Table \ref{#1}}}
+\newcommand{\eqRef}[1]{\mbox{Eq. \ref{#1}}}
+\newcommand{\chapRef}[1]{\mbox{Chapter \ref{#1}}}
 
 
 
@@ -75,6 +86,8 @@
 \date{\today}
 
 \begin{document}
+
+\captionsetup{width=0.9\textwidth}  % set the width of all the captions
 
 \maketitle
 
@@ -100,7 +113,8 @@
 	\graphicspath{{TuneProcedureAndMCNNTUNES/}}
 	\input{{TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex}}	
 	
-	
+	\graphicspath{{OurTune/}}
+	\input{{OurTune/c_ourTune}}
 
 %\bibliographystyle{plainnat}
 \bibliographystyle{unsrtnat} % citations ordered by appearance
