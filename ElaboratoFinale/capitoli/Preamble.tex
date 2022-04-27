@@ -1,6 +1,8 @@
 %% Preamble Master Thesis
 \documentclass[12pt, a4paper, twoside, openright]{report} %REPORT %chapter, section, subsection
 
+%\linespread{1.2} % INTERLINEA
+
 % --------- Remove Chapter from Chapter report -----
 
 \usepackage{titlesec}
@@ -38,6 +40,7 @@
 %\captionsetup{widht=0.8\textwidth}
 
 \usepackage{graphicx} % figure object 
+\usepackage{subcaption}
 \graphicspath{{img}} 
 %FOR DIFFERNT PATHs
 % 
@@ -71,6 +74,7 @@
 \newcommand{\tableRef}[1]{\mbox{Table \ref{#1}}}
 \newcommand{\eqRef}[1]{\mbox{Eq. \ref{#1}}}
 \newcommand{\chapRef}[1]{\mbox{Chapter \ref{#1}}}
+\newcommand{\secRef}[1]{\mbox{Section \ref{#1}}}
 
 
 
@@ -98,23 +102,32 @@
 \tableofcontents
 	
 
-	\graphicspath{{Introduction/}}
-	\input{{Introduction/c_introduction.tex}}
+\graphicspath{{Introduction/}}
+\input{{Introduction/c_introduction.tex}}
 	
-	\graphicspath{{Hadron_Hadron_scattering/}}
-	\input{{Hadron_Hadron_scattering/c_HadronHadronScattering.tex}}
+\graphicspath{{Hadron_Hadron_scattering/}}
+\input{{Hadron_Hadron_scattering/c_HadronHadronScattering.tex}}
 	
-	\graphicspath{{Multi_Parton_Interactions/}}
-	\input{{Multi_Parton_Interactions/c_Multi_Parton_Interactions}}
+\graphicspath{{Multi_Parton_Interactions/}}
+\input{{Multi_Parton_Interactions/c_Multi_Parton_Interactions}}
 	
 	\graphicspath{{ObservableToStudyTheUnderlyingEvent/}}
-	\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent}}
+\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent}}
 	
-	\graphicspath{{TuneProcedureAndMCNNTUNES/}}
-	\input{{TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex}}	
+\graphicspath{{TuneProcedureAndMCNNTUNES/}}
+\input{{TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex}}	
 	
-	\graphicspath{{OurTune/}}
-	\input{{OurTune/c_ourTune}}
+\graphicspath{{OurTune/}}
+\input{{OurTune/c_ourTune}}
+
+\graphicspath{{PrimordialkT_tune/}}
+\input{{PrimordialkT_tune/c_primordialkTTune.tex}}
+
+\graphicspath{{Conclusions/}}
+\input{{Conclusions/c_conclusions.tex}}
+
+\appendix 
+\chapter{Test with two free parameters for the Underlying Events}
 
 %\bibliographystyle{plainnat}
 \bibliographystyle{unsrtnat} % citations ordered by appearance

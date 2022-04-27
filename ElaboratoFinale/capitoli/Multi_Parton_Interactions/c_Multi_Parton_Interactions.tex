@@ -124,8 +124,8 @@ Furthermore, we have to consider the \textit{screening effect}: in fact the inco
 	\label{fig:ScreeningEffect}
 \end{figure}
 
-\noindent This cutoff is associated with color screening distance i.e. the average size of the region within the  compensation of color charge occurs.
-This cutoff is then introduced in the factor as
+\noindent So, this cutoff is associated with color screening distance i.e. the average size of the region within the  compensation of color charge occurs.
+This cutoff is then introduced in the factor as:
 \begin{equation}
 	\frac{\alpha_s^2\,(p_{T0}^2+p_{T}^2)}{\alpha_s^2\,(p_T^2)}\,\frac{p_T^4}{(p_{T0}^2+p_T^2)^2}\quad .
 \end{equation}
@@ -133,14 +133,12 @@ This factor contains the phenomenological regularization of the divergence, with
 \\
 Now the interaction cross section is smoothly regularized and therefore finite.
 \\
-To be notice that: parameter $p_{T0}$ do not have to be energy-independent, but since the energy is related with the sensibility of our probe, higher energy is related with the capacity of probing PDF to lower x values (as discussed previously, see \figRef{fig:NNPDF31}) and in this low x region the number of partons rapidly increases. So, the partons are closer packed in this regions and as a consequence the color screening distance decrease.
+To be notice that: parameter $p_{T0}$ do not have to be energy-independent, but since the energy is related with the sensibility of our probe, higher energy is related with the capacity of probing PDFs to lower x values (as discussed previously, see \figRef{fig:NNPDF31}) and in this low x region the number of partons rapidly increases. So, the partons are closer packed in this regions and as a consequence the color screening distance decrease.
 \\
 The number of partons is related to $x$ with a power low so, it is likely to have a dependence of the same form for $p_{T0}$ respect to the center-of-mass energy
 \begin{equation}
 	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
 \end{equation}
-	
-	
 In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
 	
 \section{\texttt{Pythia8} Monte Carlo events generator}	
@@ -249,30 +247,30 @@ so, this have modified the probability distribution of interactions number from 
 
 \subsection{Parton rescattering}
 
-It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}. 
-
+It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}.
+%
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=12cm]{{img/Rescattering.png}}
-	\caption{Add caption}
+	\includegraphics[width=0.95\textwidth]{{img/Rescattering_3casi.png}}
+	\caption{This figure shows parton rescattering. On the right image a double $2\,\rightarrow\,2$ scattering (no rescattering) is shown; on the middle a parton rescattering process where only one of the rescattered partons have already scattered; on the right image a parton rescattering with both the partons that undergo to rescattering have already been scattered. }
 	\label{fig:Rescattering}
 \end{figure}
-
+%
+\\
 We can have 3 type of MPI:
 \begin{enumerate}
-	\item No ones of the partons that enter in the second scattering undergoes to another scatter before
-	\item Only one of the two partons have alredy been scattered
-	\item Both the partons have alredy been scattered before.
+	\item No ones of the partons that enter in the second scattering undergoes to another scatter before (\figRef{fig:Rescattering} left);
+	\item Only one of the two partons has alredy been scattered (\figRef{fig:Rescattering} middle);
+	\item Both the partons have alredy been scattered before (\figRef{fig:Rescattering} right). 
 \end{enumerate}
 The second and the third are the rescatters the overall influence of rescatters in proton-proton interactions was estimated to be small respect to the first case with distinct $2\,\rightarrow\,2$  scatters. 
 
 The simulation of parton rescatters start from the evaluation of the parton density as:
 \begin{equation}
-	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_n \,\delta(x-x_n)}_{\text{scattered parton(s)}}
+	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_n \,\delta(x-x_n)}_{\text{scattered parton(s)}}\quad,
 \end{equation} 
-
-The $\delta$ take into account the scattered partons that have a fixed momentum fraction $x_n$. While the hadron remnant is still described by a continuous momentum density, rescaled to achieve momentum conservation:
-\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1
+where the $\delta(x-x_i)$ takes into account the already scattered partons that have a fixed momentum fraction $x_n$. While the hadron remnant is still described by a continuous momentum density, scaled to achieve momentum conservation:
+\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
 \end{equation}
 
 \subsection{Interleaving of Multiple Interaction and Parton Shower}
@@ -284,75 +282,80 @@ So we have that the total probability is given from the composition of the vario
 	&\times\exp\left\{ -\displaystyle\int_{p_T}^{p_T\,i-1} \left( \frac{d\mathcal{P}_{MPI}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T'} \right)\,dp_T' \right\}
 	\label{eq:common_pT_sequence}
 \end{align}
-
+%
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=12cm]{{img/PartonShower.png}}
-	\caption{add caption}
+	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
 	\label{fig:PartonShower}
 \end{figure}
-
-In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occur at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
-The scatterings that occur at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
-
+%
+\\
+In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occurs at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
+The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
+\\
 This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 \subsection{Beam Beam Remnants and primordial $k_T$}
+\label{sec:Beam Beam Remnants and primordial kT}
 
-What is left after that the evolution is end? the evolution in $p_T$ can create an arbitrary complicate final state. 
-
-This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last are the so called Beam Beam Remnants (BBR). 
-BBR take into account the number of valence quark remaining and the number of sea quark required for the overall flavour conservation.
-
+What is left after that the evolution is end?
+\\
+The evolution in $p_T$ can create an arbitrary complicate final state. 
+This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last are the so called \textit{Beam Beam Remnants} (BBR). 
+BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation.
+\\
 To ensure momentum conservation the BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators.
 
 \subsubsection*{Primordial $k_T$}
 
-We have considered only the longitudinal momentum. in a real scenario partons inside the hadrons are fermions so are expected to have a non zero initial transverse momentum arising from the Fermi motion inside the incoming hadrons. This is denoted as "Primordial $k_T$" this is different from the transverse momentum derived from DGLAP shower evolution or from the hard interaction.
+We have considered only the longitudinal momentum. In a real scenario partons, inside the hadrons, are fermions. So, are expected to have a non zero initial transverse momentum arising from the Fermi motion inside the incoming hadrons. This is denoted as \textit{primordial $k_T$}. This is different from the transverse momentum derived from DGLAP shower evolution or from the hard interaction.
 
 \bigskip
 
-Based on Fermi motion alone, one would expect a value of the primordial $k_T$ is estimate as: 
+\noindent Based on Fermi motion alone, one would expect a value of the primordial $k_T$ of the order of: 
 \begin{equation}
-	k_T\simeq\frac{\hbar}{r_p}\approx\frac{0.2\ \mathrm{GeV\cdot fm}}{0.7\ \mathrm{fm}}\approx0.3\ \mathrm{GeV}
+	k_T\simeq\frac{\hbar}{r_p}\approx\frac{0.2\ \mathrm{GeV\cdot fm}}{0.7\ \mathrm{fm}}\approx0.3\ \mathrm{GeV}\quad,
 \label{eq:PrimordialKT}
 \end{equation}
-but for example to reproduce the data for the the $p_T$ distributions of $Z$ bosons produced in hadron–hadron collisions, one need a larger contribution. This phenomenon has not a satisfactory explanation. Until an explanation is found the idea is to consider a effective primordial $k_T$ for the initiators larger than the one in \eqRef{eq:PrimordialKT}.
+but, as an example, to reproduce the data for the $p_T$ distributions of $Z$ bosons produced in hadron–hadron collisions, one need a larger contribution. This phenomenon has not a satisfactory phenomenological explanation. Until a convincing explanation is found the idea is to consider an effective primordial $k_T$ for the initiators larger than the one in \eqRef{eq:PrimordialKT}.
+
+\medskip
 
 In \texttt{Pythia} the primordial kT is assigned to initiators sampling a Gaussian distributions for $p_x$ and $p_y$ independently with variable width $\sigma$
-
 \begin{equation}
 	\sigma(Q,\widehat{m})=\frac{Q_{1/2}\,\sigma_{\text{soft}}+Q\,\sigma_{\text{soft}}}{Q_{1/2}+Q}\,\frac{\widehat{m}}{\widehat{m}_{1/2}+\widehat{m}}
 \end{equation}
- 
 Where $Q$ is the hard-process renormalization scale for the main hard process and the $p_T$ scale for subsequent MPI. $\sigma_{\text{soft}}$, $\sigma_{\text{hard}}$ are the minimum and maximum width, $\widehat{m}$ is the invariant mass, while $Q_{1/2}$ and $\widehat{m}_{1/2}$ the halfway values between the two extremes.
 
 \subsection{Color Reconnection and Hadronization }
 
-The last important step at parton level is the color reconnection. Color reconnection is motivated by that MPI leads to different color strings. In the previous step the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$ all this strings that can be overlapped in physical space can be reconnected. The basic idea is to reconnect strings in order to reduce the total string length; and thus the potential energy.
-
+The last important step at parton level is the \textit{color reconnection}. Color reconnection is motivated by the fact that MPI leads to different color strings. In the previous steps the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$ all this strings that can be overlapped in physical space can be reconnected. The basic idea is to reconnect strings in order to reduce the total string length; and thus the potential energy (Lund Model).
+\\
 In \textsc{pythia8} the reconnection is performed giving to each system a probability to reconnect given by:
 \begin{equation}
-	\mathcal{P}_{\text{rec}}=\frac{p_{T\,\text{rec}}^2}{\left(p_{T\,\text{rec}}^2 + p_T^2\right)} \qquad\quad p_{T\,\text{rec}}=R\times p_{T\,0}
+	\mathcal{P}_{\text{rec}}=\frac{p_{T\,\text{rec}}^2}{\left(p_{T\,\text{rec}}^2 + p_T^2\right)} \qquad\quad p_{T\,\text{rec}}=R\times p_{T\,0}\quad,
 \end{equation} 
 the \texttt{ColorReconnection:range} $R$ is a user-tunable parameter while $p_{T\,0}$ is the same parameter defined in MPI simulation.
+\\
+With this definition for the probability, it is clear that system with low $p_T$ are more likely reconnected to other. This idea find is justification in the fact that lower $p_T$ values correspond to larger spatial extension and so these strings have more chance to overlap with other and so to reconnect.
 
-Whit this definition for the probability it is clear that system with low $p_T$ are more likely that can reconnect to other, this idea find is justification in the fact that at low $p_T$ value correspond a larger spatial extension and so these strings have more chance to overlap with other and so to reconnect.
+\subsubsection*{Hadronization}
 
-The hadronization takes all these partons (color strings) and transform it in a set of color-neutral hadrons. Hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
-
-Lund model basic idea is to break the color line and to reduce the total string length the string is representative of the potential
+The hadronization takes all these partons (color strings) and transforms them in a set of color-neutral hadrons. Hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
+\\
+Lund model basic idea is to break the color line and to reduce the total string length, the string is representative of the potential
 \begin{equation}
-	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}
+	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}\quad,
 \end{equation}
 where $\kappa$ is the string tension.  This potential is a combination of an attractive (Coulomb) potential ad a linear potential that phenomenologically include quarks confinement. The linear potential is the dominating part at increasing distance values, so the energy increase with distance. 
-
+\\
 The simplest case is the one in \figRef{fig:StringBreakings}: The $q\overline{q}$ system evolves in space increasing the string length at some point the distance is to large and is convenient to break the string into two strings.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=12cm]{{img/StringBreakings.png}}
-	\caption{ADD}
+	\caption{The lund Model is schematically shown here. The string evolution in time is shown vertically while the spatial position horizontally. As the partons move apart at some point become convenient to break the string, in order to reduce the total potential energy, and a partons pair is produced.}
 	\label{fig:StringBreakings}
 \end{figure}
 
@@ -360,14 +363,14 @@ The simplest case is the one in \figRef{fig:StringBreakings}: The $q\overline{q}
 %\begin{equation}
 %	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}
 %\end{equation}
-The hadronization step confines the quark into hadrons, than hadrons can undergoes to hadron rescattering and decay. These are the hadrons that are revealed by the detector.
+The hadronization step confines the quark into hadrons, then these hadrons can undergoes to hadron rescattering and decay. These are the hadrons that are revealed by the detectors.
 
 \section{\textsc{pythia} summary}
 
-Tu summarize \textsc{pythia8} is able to simulate an high energy hadron-hadron collision. The evolution of the system is simulated in a common decreasing-$p_T$ sequence the master formula for the evolution is written in \eqRef{eq:common_pT_sequence}. 
-
+To summarize \textsc{pythia8} is able to simulate high energy hadron-hadron collisions. The evolution of the system is simulated in a common decreasing-$p_T$ sequence the master formula for the evolution is written in \eqRef{eq:common_pT_sequence}. 
+\\
 This evolution start from an hard scale that is the scale of the main parton hard scattering that is described by a fixed ME calculation, \textsc{pythia} can be interfaced with external frameworks for the ME step as \textsc{powheg} and \textsc{mad-graph5 amc@nlo}. Then the parton shower is started with the simulation of ISR, FSR and MPI also the parton rescattering is allowed. Once the evolution is ended the hadronization transform the partons in a set of final hadrons these hadron than decay and rescatters against each others before the detection.
 
-All these processes are describe mainly by phenomenological model, due to the not-known-by-first-principles softQCD description. The use of these phenomenological introduces lot of free parameters (some are been pointed out in the previously sections) that have to be tuned with data to give to \textsc{pythia} the ability of simulate real events.
+All these processes are describe mainly by phenomenological model, due to the not-known-by-first-principles soft QCD description. The use of these phenomenological models introduces lots of free parameters (some are been pointed out in the previously sections) that have to be tuned with data to give to \textsc{pythia} the ability of simulate real events.
 
-In the next chapter we are going to focus on the study of the underlying event and so on the soft events related to an hard scattering. 
+In the next chapter we are going to focus on the study of the underlying event and so on all the soft events related to an hard scattering in an hadron-hadron collision. 

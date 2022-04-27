@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  19 APR 2022 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  27 APR 2022 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -281,18 +281,23 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen177
 \Gin@req@width=\dimen178
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count273
+\c@subtable=\count274
+)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip62
 \enit@outerparindent=\dimen179
 \enit@toks=\toks26
 \enit@inbox=\box50
-\enit@count@id=\count273
-\enitdp@description=\count274
+\enit@count@id=\count275
+\enitdp@description=\count276
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count275
+\c@float@type=\count277
 \float@exts=\toks27
 \float@box=\box51
 \@float@everytoks=\toks28
@@ -354,8 +359,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen180
-\Hy@linkcounter=\count276
-\Hy@pagecounter=\count277
+\Hy@linkcounter=\count278
+\Hy@pagecounter=\count279
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -368,8 +373,8 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count278
-\pdfmajorversion=\count279
+\Hy@SavedSpaceFactor=\count280
+\pdfmajorversion=\count281
 Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
@@ -378,7 +383,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count280
+\c@Hy@tempcnt=\count282
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -394,7 +399,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count281
+\Fld@menulength=\count283
 \Field@Width=\dimen182
 \Fld@charsize=\dimen183
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -410,9 +415,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count282
-\c@Item=\count283
-\c@Hfootnote=\count284
+\Hy@abspage=\count284
+\c@Item=\count285
+\c@Hfootnote=\count286
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -422,8 +427,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 )
-\Fld@listcount=\count285
-\c@bookmark@seq@number=\count286
+\Fld@listcount=\count287
+\c@bookmark@seq@number=\count288
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -448,42 +453,35 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip73
 \bibsep=\skip74
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count287
+\c@NAT@ctr=\count289
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count288
+\l__kernel_color_stack_int=\count290
 \l__pdf_internal_box=\box53
 )
-(./Preamble.aux
-
-LaTeX Warning: Label `fig:MinBiasPerBinModelResults2' multiply defined.
-
-
-LaTeX Warning: Label `fig:MinBiasPerBinModelResults2' multiply defined.
-
-)
+(./Preamble.aux)
 \openout1 = `Preamble.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -525,16 +523,16 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
+\scratchcounter=\count291
 \scratchdimen=\dimen184
 \scratchbox=\box54
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count292
+\MPscratchCnt=\count294
 \MPscratchDim=\dimen185
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -563,7 +561,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 88.
+Package hyperref Info: Link coloring ON on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -574,23 +572,23 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 88.
-LaTeX Info: Redefining \pageref on input line 88.
-LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
 
 (./Preamble.out) (./Preamble.out)
 \@outlinefile=\write3
 \openout3 = `Preamble.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -602,8 +600,8 @@ ination with the same identifier (name{page.1}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.98 \tableofcontents
-                      [1] [2
+l.102 \tableofcontents
+                       [1] [2
 
 ] (./Preamble.toc
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
@@ -636,7 +634,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=264, 661
+<Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png, id=319, 661
 .47125pt x 860.21375pt>
 File: Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png Graphic
  file (type png)
@@ -648,7 +646,7 @@ s_color.png  used on input line 91.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./Hadron_Hadron_scattering/img/StandardModelCrossSections_color.png>]
-<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=297, 650.43pt x 850.1762
+<Hadron_Hadron_scattering/img/xQ2planeCoverage.png, id=353, 650.43pt x 850.1762
 5pt>
 File: Hadron_Hadron_scattering/img/xQ2planeCoverage.png Graphic file (type png)
 
@@ -660,7 +658,7 @@ d on input line 110.
 Underfull \vbox (badness 1377) has occurred while \output is active []
 
  [10 <./Hadron_Hadron_scattering/img/xQ2planeCoverage.png>]
-<Hadron_Hadron_scattering/img/feynman_ZpT.pdf, id=314, 329.6295pt x 145.99846pt
+<Hadron_Hadron_scattering/img/feynman_ZpT.pdf, id=370, 329.6295pt x 145.99846pt
 >
 File: Hadron_Hadron_scattering/img/feynman_ZpT.pdf Graphic file (type pdf)
 <use Hadron_Hadron_scattering/img/feynman_ZpT.pdf>
@@ -668,7 +666,7 @@ Package pdftex.def Info: Hadron_Hadron_scattering/img/feynman_ZpT.pdf  used on
 input line 149.
 (pdftex.def)             Requested size: 341.43306pt x 151.22662pt.
  [11]
-<Hadron_Hadron_scattering/img/ZRapidityDistributionLO_NLO_NNLO.png, id=330, 961
+<Hadron_Hadron_scattering/img/ZRapidityDistributionLO_NLO_NNLO.png, id=386, 961
 .5925pt x 724.7075pt>
 File: Hadron_Hadron_scattering/img/ZRapidityDistributionLO_NLO_NNLO.png Graphic
  file (type png)
@@ -681,7 +679,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./Hadron_Hadron_scattering/img/feynman_ZpT.pdf> <./Hadron_Hadron_scatteri
 ng/img/ZRapidityDistributionLO_NLO_NNLO.png>]
-<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=361, 875.27pt x 644.4075pt>
+<Hadron_Hadron_scattering/img/pT_Z_CDF.png, id=416, 875.27pt x 644.4075pt>
 File: Hadron_Hadron_scattering/img/pT_Z_CDF.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/pT_Z_CDF.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/pT_Z_CDF.png  used on inp
@@ -693,7 +691,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Hadron_Hadron_scattering/img/feynman_
 doubleCounting_FxFx_curved-cropped.pdf): PDF inclusion: found PDF version <1.7>
 , but at most version <1.5> allowed
 <Hadron_Hadron_scattering/img/feynman_doubleCounting_FxFx_curved-cropped.pdf, i
-d=400, 574.4662pt x 350.13809pt>
+d=455, 574.4662pt x 350.13809pt>
 File: Hadron_Hadron_scattering/img/feynman_doubleCounting_FxFx_curved-cropped.p
 df Graphic file (type pdf)
 <use Hadron_Hadron_scattering/img/feynman_doubleCounting_FxFx_curved-cropped.pd
@@ -708,7 +706,7 @@ on dis-tri-bu-tion $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; Q[
 ]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 .
  []
 
-<Hadron_Hadron_scattering/img/NNPDF3.1.png, id=406, 1022.82124pt x 646.415pt>
+<Hadron_Hadron_scattering/img/NNPDF3.1.png, id=461, 1022.82124pt x 646.415pt>
 File: Hadron_Hadron_scattering/img/NNPDF3.1.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/NNPDF3.1.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/NNPDF3.1.png  used on inp
@@ -716,7 +714,7 @@ ut line 247.
 (pdftex.def)             Requested size: 341.43306pt x 215.78348pt.
 [15 <./Hadron_Hadron_scattering/img/feynman_doubleCounting_FxFx_curved-cropped.
 pdf>] [16 <./Hadron_Hadron_scattering/img/NNPDF3.1.png>]
-<Hadron_Hadron_scattering/img/Processes.png, id=455, 1248.665pt x 624.3325pt>
+<Hadron_Hadron_scattering/img/Processes.png, id=511, 1248.665pt x 624.3325pt>
 File: Hadron_Hadron_scattering/img/Processes.png Graphic file (type png)
 <use Hadron_Hadron_scattering/img/Processes.png>
 Package pdftex.def Info: Hadron_Hadron_scattering/img/Processes.png  used on in
@@ -728,7 +726,7 @@ on_scattering/img/Processes.png>] [18
 
 ]
 Chapter 3.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_1.pdf, id=471
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_1.pdf, id=527
 , 143.69383pt x 92.7154pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_1.pdf Gr
 aphic file (type pdf)
@@ -736,7 +734,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_1.pdf  used on input line 58.
 (pdftex.def)             Requested size: 71.13188pt x 45.89778pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_2.pdf, id=472
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_2.pdf, id=528
 , 141.73955pt x 90.89859pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_2.pdf Gr
 aphic file (type pdf)
@@ -744,7 +742,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_2.pdf  used on input line 59.
 (pdftex.def)             Requested size: 71.13188pt x 45.61838pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_3.pdf, id=473
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_3.pdf, id=529
 , 141.73955pt x 90.89859pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_3.pdf Gr
 aphic file (type pdf)
@@ -752,7 +750,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_3.pdf  used on input line 59.
 (pdftex.def)             Requested size: 71.13188pt x 45.61838pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_4.pdf, id=474
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_4.pdf, id=530
 , 121.35338pt x 88.77165pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_4.pdf Gr
 aphic file (type pdf)
@@ -760,7 +758,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_4.pdf  used on input line 60.
 (pdftex.def)             Requested size: 71.13188pt x 52.03345pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_5.pdf, id=475
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_5.pdf, id=531
 , 119.95114pt x 86.57945pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_5.pdf Gr
 aphic file (type pdf)
@@ -768,7 +766,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_5.pdf  used on input line 61.
 (pdftex.def)             Requested size: 71.13188pt x 51.34433pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_6.pdf, id=476
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_6.pdf, id=532
 , 141.73955pt x 91.89833pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_6.pdf Gr
 aphic file (type pdf)
@@ -776,7 +774,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_6.pdf  used on input line 61.
 (pdftex.def)             Requested size: 71.13188pt x 46.12012pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_7.pdf, id=477
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_7.pdf, id=533
 , 120.1589pt x 85.64496pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_7.pdf Gr
 aphic file (type pdf)
@@ -784,7 +782,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_7.pdf  used on input line 62.
 (pdftex.def)             Requested size: 71.13188pt x 50.69995pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_8.pdf, id=478
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_8.pdf, id=534
 , 141.94832pt x 91.89833pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_8.pdf Gr
 aphic file (type pdf)
@@ -792,7 +790,7 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_8.pdf  used on input line 62.
 (pdftex.def)             Requested size: 71.13188pt x 46.0514pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_9.pdf, id=479
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_9.pdf, id=535
 , 141.94832pt x 91.89833pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_9.pdf Gr
 aphic file (type pdf)
@@ -800,80 +798,80 @@ aphic file (type pdf)
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_9.pdf  used on input line 62.
 (pdftex.def)             Requested size: 71.13188pt x 46.0514pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_10.pdf, id=48
-0, 120.1589pt x 85.64899pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_10.pdf, id=53
+6, 120.1589pt x 85.64899pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_10.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_10.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_10.pdf  used on input line 63.
 (pdftex.def)             Requested size: 71.13188pt x 50.70235pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_11.pdf, id=48
-1, 141.94832pt x 91.22983pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_11.pdf, id=53
+7, 141.94832pt x 91.22983pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_11.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_11.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_11.pdf  used on input line 63.
 (pdftex.def)             Requested size: 71.13188pt x 45.7164pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_12.pdf, id=48
-2, 141.94832pt x 91.22983pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_12.pdf, id=53
+8, 141.94832pt x 91.22983pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_12.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_12.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_12.pdf  used on input line 63.
 (pdftex.def)             Requested size: 71.13188pt x 45.7164pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_13.pdf, id=48
-3, 141.94832pt x 90.89859pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_13.pdf, id=53
+9, 141.94832pt x 90.89859pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_13.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_13.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_13.pdf  used on input line 64.
 (pdftex.def)             Requested size: 71.13188pt x 45.55042pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_14.pdf, id=48
-4, 119.95114pt x 84.64925pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_14.pdf, id=54
+0, 119.95114pt x 84.64925pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_14.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_14.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_14.pdf  used on input line 64.
 (pdftex.def)             Requested size: 71.13188pt x 50.19965pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_15.pdf, id=48
-5, 119.95114pt x 84.64925pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_15.pdf, id=54
+1, 119.95114pt x 84.64925pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_15.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_15.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_15.pdf  used on input line 64.
 (pdftex.def)             Requested size: 71.13188pt x 50.19965pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_16.pdf, id=48
-6, 120.36769pt x 84.64925pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_16.pdf, id=54
+2, 120.36769pt x 84.64925pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_16.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_16.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_16.pdf  used on input line 65.
 (pdftex.def)             Requested size: 71.13188pt x 50.02269pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_17.pdf, id=48
-7, 142.1571pt x 90.89859pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_17.pdf, id=54
+3, 142.1571pt x 90.89859pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_17.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_17.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_17.pdf  used on input line 65.
 (pdftex.def)             Requested size: 71.13188pt x 45.48245pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_18.pdf, id=48
-8, 142.1571pt x 90.89859pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_18.pdf, id=54
+4, 142.1571pt x 90.89859pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_18.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_18.pdf>
 Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_18.pdf  used on input line 65.
 (pdftex.def)             Requested size: 71.13188pt x 45.48245pt.
-<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_19.pdf, id=48
-9, 111.87296pt x 113.80417pt>
+<Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_19.pdf, id=54
+5, 111.87296pt x 113.80417pt>
 File: Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_19.pdf G
 raphic file (type pdf)
 <use Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_partonic_19.pdf>
@@ -881,7 +879,7 @@ Package pdftex.def Info: Multi_Parton_Interactions/img/DiagrammiPartonic/feynma
 n_partonic_19.pdf  used on input line 65.
 (pdftex.def)             Requested size: 71.13188pt x 72.36206pt.
 [19]
-<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=505, 880.28876pt x 774.
+<Multi_Parton_Interactions/img/CrossSection_Tot.png, id=561, 880.28876pt x 774.
 895pt>
 File: Multi_Parton_Interactions/img/CrossSection_Tot.png Graphic file (type png
 )
@@ -889,7 +887,7 @@ File: Multi_Parton_Interactions/img/CrossSection_Tot.png Graphic file (type png
 Package pdftex.def Info: Multi_Parton_Interactions/img/CrossSection_Tot.png  us
 ed on input line 105.
 (pdftex.def)             Requested size: 341.43306pt x 300.55249pt.
-<Multi_Parton_Interactions/img/ScreeningEffect.png, id=511, 596.2275pt x 220.82
+<Multi_Parton_Interactions/img/ScreeningEffect.png, id=567, 596.2275pt x 220.82
 5pt>
 File: Multi_Parton_Interactions/img/ScreeningEffect.png Graphic file (type png)
 
@@ -926,105 +924,106 @@ an_partonic_18.pdf> <./Multi_Parton_Interactions/img/DiagrammiPartonic/feynman_
 partonic_19.pdf>] [22 <./Multi_Parton_Interactions/img/CrossSection_Tot.png> <.
 /Multi_Parton_Interactions/img/ScreeningEffect.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 146.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 166.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 164.
  [23] [24]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 225.
+LaTeX Font Warning: Command \small invalid in math mode on input line 223.
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 228.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 226.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 228.
+(Font)              size <5> substituted on input line 226.
 
 [25]
-<Multi_Parton_Interactions/img/Rescattering.png, id=666, 616.3025pt x 212.795pt
->
-File: Multi_Parton_Interactions/img/Rescattering.png Graphic file (type png)
-<use Multi_Parton_Interactions/img/Rescattering.png>
-Package pdftex.def Info: Multi_Parton_Interactions/img/Rescattering.png  used o
-n input line 256.
-(pdftex.def)             Requested size: 341.43306pt x 117.89156pt.
- [26 <./Multi_Parton_Interactions/img/Rescattering.png>]
-<Multi_Parton_Interactions/img/PartonShower.png, id=679, 635.37375pt x 572.1375
+<Multi_Parton_Interactions/img/Rescattering_3casi.png, id=721, 922.44624pt x 21
+2.795pt>
+File: Multi_Parton_Interactions/img/Rescattering_3casi.png Graphic file (type p
+ng)
+<use Multi_Parton_Interactions/img/Rescattering_3casi.png>
+Package pdftex.def Info: Multi_Parton_Interactions/img/Rescattering_3casi.png  
+used on input line 254.
+(pdftex.def)             Requested size: 405.45047pt x 93.52942pt.
+ [26 <./Multi_Parton_Interactions/img/Rescattering_3casi.png>]
+<Multi_Parton_Interactions/img/PartonShower.png, id=737, 635.37375pt x 572.1375
 pt>
 File: Multi_Parton_Interactions/img/PartonShower.png Graphic file (type png)
 <use Multi_Parton_Interactions/img/PartonShower.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/PartonShower.png  used o
-n input line 290.
+n input line 288.
 (pdftex.def)             Requested size: 341.43306pt x 307.45679pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 300.
+(hyperref)                removing `math shift' on input line 299.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 300.
+(hyperref)                removing `subscript' on input line 299.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 300.
+(hyperref)                removing `math shift' on input line 299.
 
 [27 <./Multi_Parton_Interactions/img/PartonShower.png>] [28]
-<Multi_Parton_Interactions/img/StringBreakings.png, id=699, 687.56876pt x 353.3
+<Multi_Parton_Interactions/img/StringBreakings.png, id=757, 687.56876pt x 353.3
 2pt>
 File: Multi_Parton_Interactions/img/StringBreakings.png Graphic file (type png)
 
 <use Multi_Parton_Interactions/img/StringBreakings.png>
 Package pdftex.def Info: Multi_Parton_Interactions/img/StringBreakings.png  use
-d on input line 354.
+d on input line 357.
 (pdftex.def)             Requested size: 341.43306pt x 175.45193pt.
  [29 <./Multi_Parton_Interactions/img/StringBreakings.png>])
 (./ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent.te
 x [30]
 Chapter 4.
-<ObservableToStudyTheUnderlyingEvent/img/Regions.pdf, id=716, 348.33339pt x 197
+<ObservableToStudyTheUnderlyingEvent/img/Regions.pdf, id=775, 348.33339pt x 197
 .43663pt>
 File: ObservableToStudyTheUnderlyingEvent/img/Regions.pdf Graphic file (type pd
 f)
@@ -1035,7 +1034,7 @@ sed on input line 23.
 [31
 
 ]
-<ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png, id=729, 
+<ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png, id=788, 
 768.8725pt x 388.45125pt>
 File: ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png Grap
 hic file (type png)
@@ -1044,22 +1043,14 @@ Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/UEpredictions_
 in_regions.png  used on input line 52.
 (pdftex.def)             Requested size: 341.43437pt x 172.50165pt.
  [32 <./ObservableToStudyTheUnderlyingEvent/img/Regions.pdf>]
-<ObservableToStudyTheUnderlyingEvent/img/CPdistributions.png, id=769, 612.2875p
+<ObservableToStudyTheUnderlyingEvent/img/CPdistributions.png, id=827, 612.2875p
 t x 274.02374pt>
 File: ObservableToStudyTheUnderlyingEvent/img/CPdistributions.png Graphic file 
 (type png)
 <use ObservableToStudyTheUnderlyingEvent/img/CPdistributions.png>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CPdistribution
 s.png  used on input line 61.
-(pdftex.def)             Requested size: 341.43437pt x 152.80415pt.
-<ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf, id=773, 344.
-99991pt x 323.04187pt>
-File: ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf Graphic 
-file (type pdf)
-<use ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>
-Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CP5_with_witho
-ut_MPI.pdf  used on input line 70.
-(pdftex.def)             Requested size: 341.43437pt x 319.72862pt.
+(pdftex.def)             Requested size: 384.1096pt x 171.90414pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1069,38 +1060,89 @@ This may cause the page layout to be inconsistent, however.
 
 [33 <./ObservableToStudyTheUnderlyingEvent/img/UEpredictions_in_regions.png> <.
 /ObservableToStudyTheUnderlyingEvent/img/CPdistributions.png>]
-<ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf, id=789, 344.99991pt x 33
+<ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf, id=842, 344.
+99991pt x 235.63934pt>
+File: ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf Graphic 
+file (type pdf)
+<use ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CP5_with_witho
+ut_MPI.pdf  used on input line 73.
+(pdftex.def)             Requested size: 384.1096pt x 262.37177pt.
+<ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf, id=848, 344.99991pt x 33
 4.00883pt>
 File: ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf Graphic file (type p
 df)
 <use ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf  
-used on input line 79.
-(pdftex.def)             Requested size: 362.77525pt x 351.24457pt.
+used on input line 82.
+(pdftex.def)             Requested size: 384.1096pt x 371.90091pt.
+ [34 <./ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>]
+<ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf, id=869, 540.60239pt x 256.
+0748pt>
+File: ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf Graphic file (type pdf
 )
-(./TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex [34 <./Obse
-rvableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>] [35 <./Observabl
-eToStudyTheUnderlyingEvent/img/CPECMdep.pdf>] [36
+<use ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf  us
+ed on input line 106.
+(pdftex.def)             Requested size: 206.99406pt x 98.04791pt.
+<ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf, id=870, 523.53073pt x 344.
+27835pt>
+File: ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf Graphic file (type pdf
+)
+<use ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf  us
+ed on input line 110.
+(pdftex.def)             Requested size: 206.99406pt x 136.1224pt.
+ [35 <./ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf>]
+<ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_distributionUsed_noFxFx.p
+df, id=1059, 344.99991pt x 156.02089pt>
+File: ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_distributionUsed_noF
+xFx.pdf Graphic file (type pdf)
+<use ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_distributionUsed_noFx
+Fx.pdf>
+Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_d
+istributionUsed_noFxFx.pdf  used on input line 123.
+(pdftex.def)             Requested size: 384.1096pt x 173.72087pt.
+)
+(./TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex [36 <./Obse
+rvableToStudyTheUnderlyingEvent/img/Angle1.pdf> <./ObservableToStudyTheUnderlyi
+ngEvent/img/Angle2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./ObservableToStudyTheUnderlyingEvent/i
+mg/Angle2.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+> <./ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_distributionUsed_noFx
+Fx.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./ObservableToStudyTheUnderlyingEvent/i
+mg/PrimordialkT_distributionUsed_noFxFx.pdf): PDF inclusion: multiple pdfs with
+ page group included in a single page
+>]
+Chapter 5.
+[37
 
 ]
-Chapter 5.
-[37]
-<TuneProcedureAndMCNNTUNES/img/Perceptron2.pdf, id=1008, 224.77678pt x 270.3012
+Overfull \hbox (0.30862pt too wide) in paragraph at lines 31--36
+\T1/cmr/m/n/12 para-met-er-iz-a-tion we use the ma-chine learn-ing ap-proach im
+-ple-men-ted in \T1/cmr/m/sc/12 mcnntunes
+ []
+
+[38]
+<TuneProcedureAndMCNNTUNES/img/Perceptron2.pdf, id=1118, 224.77678pt x 270.3012
 pt>
 File: TuneProcedureAndMCNNTUNES/img/Perceptron2.pdf Graphic file (type pdf)
 <use TuneProcedureAndMCNNTUNES/img/Perceptron2.pdf>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/Perceptron2.pdf  used on
  input line 52.
 (pdftex.def)             Requested size: 157.34265pt x 189.20953pt.
-<TuneProcedureAndMCNNTUNES/img/XORproblem.pdf, id=1010, 355.65945pt x 85.35826p
+<TuneProcedureAndMCNNTUNES/img/XORproblem.pdf, id=1120, 355.65945pt x 85.35826p
 t>
 File: TuneProcedureAndMCNNTUNES/img/XORproblem.pdf Graphic file (type pdf)
 <use TuneProcedureAndMCNNTUNES/img/XORproblem.pdf>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/XORproblem.pdf  used on 
 input line 61.
 (pdftex.def)             Requested size: 398.33858pt x 95.60059pt.
- [38]
-<TuneProcedureAndMCNNTUNES/img/NNesample.png, id=1026, 687.56876pt x 395.4775pt
+<TuneProcedureAndMCNNTUNES/img/NNesample.png, id=1124, 687.56876pt x 395.4775pt
 >
 File: TuneProcedureAndMCNNTUNES/img/NNesample.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/NNesample.png>
@@ -1113,165 +1155,521 @@ UNES/img/XORproblem.pdf
 pdfTeX warning: /usr/bin/pdflatex (file ./TuneProcedureAndMCNNTUNES/img/XORprob
 lem.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
 e
->]
-<TuneProcedureAndMCNNTUNES/img/Training2.pdf, id=1069, 660.10396pt x 404.02913p
+>] [40 <./TuneProcedureAndMCNNTUNES/img/NNesample.png (PNG copy)>]
+<TuneProcedureAndMCNNTUNES/img/Training2.pdf, id=1176, 660.10396pt x 404.02913p
 t>
 File: TuneProcedureAndMCNNTUNES/img/Training2.pdf Graphic file (type pdf)
 <use TuneProcedureAndMCNNTUNES/img/Training2.pdf>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/Training2.pdf  used on i
-nput line 105.
+nput line 110.
 (pdftex.def)             Requested size: 398.33858pt x 243.81262pt.
- [40 <./TuneProcedureAndMCNNTUNES/img/NNesample.png (PNG copy)>] [41 <./TunePro
-cedureAndMCNNTUNES/img/Training2.pdf>]
-<TuneProcedureAndMCNNTUNES/img/CPtunes1.png, id=1133, 1532.72626pt x 697.60625p
+ [41 <./TuneProcedureAndMCNNTUNES/img/Training2.pdf>]
+<TuneProcedureAndMCNNTUNES/img/CPtunes1.png, id=1240, 1532.72626pt x 697.60625p
 t>
 File: TuneProcedureAndMCNNTUNES/img/CPtunes1.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/CPtunes1.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/CPtunes1.png  used on in
-put line 173.
+put line 179.
 (pdftex.def)             Requested size: 405.45047pt x 184.53479pt.
-<TuneProcedureAndMCNNTUNES/img/CPtunes2.png, id=1136, 1531.7225pt x 541.02126pt
+<TuneProcedureAndMCNNTUNES/img/CPtunes2.png, id=1243, 1531.7225pt x 541.02126pt
 >
 File: TuneProcedureAndMCNNTUNES/img/CPtunes2.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/CPtunes2.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/CPtunes2.png  used on in
-put line 180.
+put line 185.
 (pdftex.def)             Requested size: 405.45047pt x 143.20483pt.
-
-Underfull \vbox (badness 3838) has occurred while \output is active []
-
- [42 <./TuneProcedureAndMCNNTUNES/img/CPtunes1.png> <./TuneProcedureAndMCNNTUNE
-S/img/CPtunes2.png>]
-<TuneProcedureAndMCNNTUNES/img/PerBinModel.png, id=1152, 543.4704pt x 318.7107p
+ [42 <./TuneProcedureAndMCNNTUNES/img/CPtunes1.png>] [43 <./TuneProcedureAndMCN
+NTUNES/img/CPtunes2.png>]
+<TuneProcedureAndMCNNTUNES/img/PerBinModel.png, id=1268, 543.4704pt x 318.7107p
 t>
 File: TuneProcedureAndMCNNTUNES/img/PerBinModel.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/PerBinModel.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/PerBinModel.png  used on
- input line 215.
+ input line 226.
 (pdftex.def)             Requested size: 341.43437pt x 200.22952pt.
- [43]
-<TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png, id=1168, 578.16pt x 43
+ [44 <./TuneProcedureAndMCNNTUNES/img/PerBinModel.png>]
+<TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png, id=1287, 578.16pt x 43
 3.62pt>
 File: TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png Graphic file (type
  png)
 <use TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png
-  used on input line 253.
+  used on input line 266.
 (pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
 
-Underfull \hbox (badness 2951) in paragraph at lines 255--255
-[]\T1/cmr/bx/n/10 Figure 5.5: |\T1/cmr/m/n/10 This fig-ure shows the er-ror eva
+Underfull \hbox (badness 2951) in paragraph at lines 268--268
+[]\T1/cmr/bx/n/10 Figure 5.6: |\T1/cmr/m/n/10 This fig-ure shows the er-ror eva
 l-u-ation in \T1/cmtt/m/n/10 mcnntunes \T1/cmr/m/n/10 for the
  []
 
 
-Overfull \hbox (1.43947pt too wide) in paragraph at lines 261--262
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+ [45 <./TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png>]
+Overfull \hbox (1.43947pt too wide) in paragraph at lines 281--282
 \T1/cmr/m/n/12 The In-verse Model is the most in-nov-at-ive tun-ing pro-ced-ure
  in-tro-duced by \T1/cmtt/m/n/12 mcnntunes\T1/cmr/m/n/12 .
  []
 
-[44 <./TuneProcedureAndMCNNTUNES/img/PerBinModel.png>]
-<TuneProcedureAndMCNNTUNES/img/InverseModel.png, id=1181, 536.2434pt x 189.3474
+<TuneProcedureAndMCNNTUNES/img/InverseModel.png, id=1299, 536.2434pt x 189.3474
 pt>
 File: TuneProcedureAndMCNNTUNES/img/InverseModel.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/InverseModel.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/InverseModel.png  used o
-n input line 267.
+n input line 287.
 (pdftex.def)             Requested size: 341.43437pt x 120.56361pt.
- [45 <./TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png> <./TuneProcedur
-eAndMCNNTUNES/img/InverseModel.png>]
-<TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png, id=1193, 103
+<TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png, id=1304, 103
 4.86626pt x 753.81625pt>
 File: TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png Graphic 
 file (type png)
 <use TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/InverseModel_predictions
-Spread.png  used on input line 289.
+Spread.png  used on input line 309.
 (pdftex.def)             Requested size: 256.07741pt x 186.53271pt.
-) (./OurTune/c_ourTune.tex [46 <./TuneProcedureAndMCNNTUNES/img/InverseModel_pr
-edictionsSpread.png>]
+[46 <./TuneProcedureAndMCNNTUNES/img/InverseModel.png>]
+<TuneProcedureAndMCNNTUNES/img/workflow.pdf, id=1314, 600.35315pt x 415.41025pt
+>
+File: TuneProcedureAndMCNNTUNES/img/workflow.pdf Graphic file (type pdf)
+<use TuneProcedureAndMCNNTUNES/img/workflow.pdf>
+Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/workflow.pdf  used on in
+put line 330.
+(pdftex.def)             Requested size: 384.1096pt x 265.77924pt.
+)
+(./OurTune/c_ourTune.tex [47 <./TuneProcedureAndMCNNTUNES/img/InverseModel_pred
+ictionsSpread.png>] [48 <./TuneProcedureAndMCNNTUNES/img/workflow.pdf>]
 Chapter 6.
 
-LaTeX Warning: Reference `fig:MinBiasPerBinModelResults' on page 47 undefined o
-n input line 18.
+Overfull \hbox (99.33307pt too wide) in paragraph at lines 22--25
+\T1/cmr/m/n/12 para-meter chosen are the \T1/cmtt/m/n/12 MultipartonInteraction
+s:pT0Ref \T1/cmr/m/n/12 and \T1/cmtt/m/n/12 MultipartonInteractions:ecmPow\T1/c
+mr/m/n/12 .
+ []
 
-<OurTune/img/MinBiasPerBinModelResults1.pdf, id=1202, 344.99991pt x 316.52654pt
->
-File: OurTune/img/MinBiasPerBinModelResults1.pdf Graphic file (type pdf)
-<use OurTune/img/MinBiasPerBinModelResults1.pdf>
-Package pdftex.def Info: OurTune/img/MinBiasPerBinModelResults1.pdf  used on in
-put line 22.
-(pdftex.def)             Requested size: 341.43437pt x 313.2801pt.
-<OurTune/img/MinBiasPerBinModelResults4.pdf, id=1205, 344.99991pt x 316.52654pt
->
-File: OurTune/img/MinBiasPerBinModelResults4.pdf Graphic file (type pdf)
-<use OurTune/img/MinBiasPerBinModelResults4.pdf>
-Package pdftex.def Info: OurTune/img/MinBiasPerBinModelResults4.pdf  used on in
-put line 29.
-(pdftex.def)             Requested size: 341.43437pt x 313.2801pt.
-<OurTune/img/MinBiasPerBinModelResults5.pdf, id=1206, 344.99991pt x 316.52654pt
->
-File: OurTune/img/MinBiasPerBinModelResults5.pdf Graphic file (type pdf)
-<use OurTune/img/MinBiasPerBinModelResults5.pdf>
-Package pdftex.def Info: OurTune/img/MinBiasPerBinModelResults5.pdf  used on in
-put line 36.
-(pdftex.def)             Requested size: 341.43437pt x 313.2801pt.
-<OurTune/img/MinBiasPerBinModelResults2.pdf, id=1207, 344.99991pt x 155.76292pt
->
-File: OurTune/img/MinBiasPerBinModelResults2.pdf Graphic file (type pdf)
-<use OurTune/img/MinBiasPerBinModelResults2.pdf>
-Package pdftex.def Info: OurTune/img/MinBiasPerBinModelResults2.pdf  used on in
-put line 43.
-(pdftex.def)             Requested size: 341.43437pt x 154.16536pt.
-<OurTune/img/MinBiasPerBinModelResults3.pdf, id=1208, 172.50046pt x 155.76292pt
->
-File: OurTune/img/MinBiasPerBinModelResults3.pdf Graphic file (type pdf)
-<use OurTune/img/MinBiasPerBinModelResults3.pdf>
-Package pdftex.def Info: OurTune/img/MinBiasPerBinModelResults3.pdf  used on in
-put line 50.
-(pdftex.def)             Requested size: 179.25157pt x 161.85889pt.
-) (./Preamble.bbl [47
+[49
 
-] [48 <./OurTune/img/MinBiasPerBinModelResults1.pdf>]
-[49 <./OurTune/img/MinBiasPerBinModelResults4.pdf> <./OurTune/img/MinBiasPerBin
-ModelResults5.pdf>] [50 <./OurTune/img/MinBiasPerBinModelResults2.pdf> <./OurTu
-ne/img/MinBiasPerBinModelResults3.pdf>] [51
+]
+<OurTune/img/Plots_2params_Finale/chi2_0.jpg, id=1361, 578.16pt x 433.62pt>
+File: OurTune/img/Plots_2params_Finale/chi2_0.jpg Graphic file (type jpg)
+<use OurTune/img/Plots_2params_Finale/chi2_0.jpg>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/chi2_0.jpg  used on i
+nput line 54.
+(pdftex.def)             Requested size: 192.0548pt x 144.0412pt.
+<OurTune/img/Plots_2params_Finale/chi2_1.jpg, id=1362, 578.16pt x 433.62pt>
+File: OurTune/img/Plots_2params_Finale/chi2_1.jpg Graphic file (type jpg)
+<use OurTune/img/Plots_2params_Finale/chi2_1.jpg>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/chi2_1.jpg  used on i
+nput line 58.
+(pdftex.def)             Requested size: 192.0548pt x 144.0412pt.
 
-] [52] [53]
-Underfull \hbox (badness 1137) in paragraph at lines 299--303
+Overfull \hbox (26.89235pt too wide) in paragraph at lines 80--83
+\T1/cmtt/m/n/12 MultipartonInteractions:pT0Ref \T1/cmr/m/n/12 (top) re-spect to
+ \T1/cmtt/m/n/12 MultipartonInteractions:ecmPow
+ []
+
+[50 <./OurTune/img/Plots_2params_Finale/chi2_0.jpg> <./OurTune/img/Plots_2param
+s_Finale/chi2_1.jpg>]
+File: OurTune/img/Plots_2params_Finale/chi2_1.jpg Graphic file (type jpg)
+<use OurTune/img/Plots_2params_Finale/chi2_1.jpg>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/chi2_1.jpg  used on i
+nput line 89.
+(pdftex.def)             Requested size: 170.71393pt x 128.03589pt.
+<OurTune/img/blueRightarrow.pdf, id=1374, 170.71654pt x 113.81102pt>
+File: OurTune/img/blueRightarrow.pdf Graphic file (type pdf)
+<use OurTune/img/blueRightarrow.pdf>
+Package pdftex.def Info: OurTune/img/blueRightarrow.pdf  used on input line 93.
+
+(pdftex.def)             Requested size: 29.87851pt x 19.91896pt.
+<OurTune/img/Plots_pTzero/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf, id=1375, 337
+.16966pt x 304.4474pt>
+File: OurTune/img/Plots_pTzero/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf Graphic 
+file (type pdf)
+<use OurTune/img/Plots_pTzero/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_pTzero/CMS_2015_PAS_FSQ_15_007/d01-x
+01-y01.pdf  used on input line 97.
+(pdftex.def)             Requested size: 170.71393pt x 154.1512pt.
+File: OurTune/img/Plots_2params_Finale/chi2_0.jpg Graphic file (type jpg)
+<use OurTune/img/Plots_2params_Finale/chi2_0.jpg>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/chi2_0.jpg  used on i
+nput line 102.
+(pdftex.def)             Requested size: 170.71393pt x 128.03589pt.
+File: OurTune/img/blueRightarrow.pdf Graphic file (type pdf)
+<use OurTune/img/blueRightarrow.pdf>
+Package pdftex.def Info: OurTune/img/blueRightarrow.pdf  used on input line 106
+.
+(pdftex.def)             Requested size: 29.87851pt x 19.91896pt.
+<OurTune/img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf, id=1376, 337
+.16966pt x 304.4474pt>
+File: OurTune/img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf Graphic 
+file (type pdf)
+<use OurTune/img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_007/d01-x
+01-y01.pdf  used on input line 110.
+(pdftex.def)             Requested size: 170.71393pt x 154.1512pt.
+<OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg, id=1379, 1180.
+41pt x 449.7603pt>
+File: OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg Graphic fi
+le (type jpg)
+<use OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/2params_prediction_sp
+read.jpg  used on input line 144.
+(pdftex.def)             Requested size: 384.1096pt x 146.34879pt.
+
+Underfull \vbox (badness 1527) has occurred while \output is active []
+
+ [51 <./OurTune/img/blueRightarrow.pdf> <./OurTune/img/Plots_pTzero/CMS_2015_PA
+S_FSQ_15_007/d01-x01-y01.pdf> <./OurTune/img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_0
+07/d01-x01-y01.pdf>]
+<OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf, id=1
+430, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf 
+Graphic file (type pdf)
+<use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
+07/d01-x01-y01.pdf  used on input line 177.
+(pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
+<OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf, id=1
+431, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf 
+Graphic file (type pdf)
+<use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
+07/d02-x01-y01.pdf  used on input line 181.
+(pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
+<OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf, id=1
+432, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf 
+Graphic file (type pdf)
+<use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
+07/d05-x01-y01.pdf  used on input line 185.
+(pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
+<OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf, id=1
+433, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf 
+Graphic file (type pdf)
+<use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
+07/d06-x01-y01.pdf  used on input line 189.
+(pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52 <./OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg>]
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.png, i
+d=1446, 578.16pt x 433.62pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.p
+ng Graphic file (type png)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.pn
+g>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/chi2_0.png  used on input line 233.
+(pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.png, i
+d=1447, 578.16pt x 433.62pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.p
+ng Graphic file (type png)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.pn
+g>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/chi2_1.png  used on input line 238.
+(pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.png, i
+d=1448, 578.16pt x 433.62pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.p
+ng Graphic file (type png)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.pn
+g>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/chi2_2.png  used on input line 244.
+(pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.png, i
+d=1449, 578.16pt x 433.62pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.p
+ng Graphic file (type png)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.pn
+g>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/chi2_3.png  used on input line 249.
+(pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.png, i
+d=1450, 578.16pt x 433.62pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.p
+ng Graphic file (type png)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.pn
+g>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/chi2_4.png  used on input line 255.
+(pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
+ [53 <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pd
+f> <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf>
+ <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf> <
+./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>]
+Overfull \hbox (61.47975pt too wide) in paragraph at lines 279--287
+\T1/cmr/m/n/12 are com-pat-ible also in this case with CP5 ex-cept for the []
+ []
+
+[54]
+<OurTune/img/Plots_Totali_ext/prediction_spread.jpg, id=1534, 940.96024pt x 360
+.8666pt>
+File: OurTune/img/Plots_Totali_ext/prediction_spread.jpg Graphic file (type jpg
+)
+<use OurTune/img/Plots_Totali_ext/prediction_spread.jpg>
+Package pdftex.def Info: OurTune/img/Plots_Totali_ext/prediction_spread.jpg  us
+ed on input line 313.
+(pdftex.def)             Requested size: 384.1096pt x 147.31201pt.
+
+Underfull \vbox (badness 4156) has occurred while \output is active []
+
+ [55 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0
+.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_
+1.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2
+_2.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi
+2_3.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/ch
+i2_4.png>]
+<OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/d01-x
+01-y01.pdf, id=1545, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/
+d01-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/d
+01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2
+015_PAS_FSQ_15_007/d01-x01-y01.pdf  used on input line 339.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/d06-x
+01-y01.pdf, id=1546, 337.16966pt x 304.4474pt>
+File: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/
+d06-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/d
+06-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2
+012_PAS_FSQ_12_020/d06-x01-y01.pdf  used on input line 343.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+
+[56 <./OurTune/img/Plots_Totali_ext/prediction_spread.jpg>]
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
+FSQ_15_007/d01-x01-y01.pdf, id=1553, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
+_PAS_FSQ_15_007/d01-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
+PAS_FSQ_15_007/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf  used on input line 363.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
+FSQ_15_007/d02-x01-y01.pdf, id=1554, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
+_PAS_FSQ_15_007/d02-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
+PAS_FSQ_15_007/d02-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf  used on input line 367.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
+FSQ_15_007/d05-x01-y01.pdf, id=1555, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
+_PAS_FSQ_15_007/d05-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
+PAS_FSQ_15_007/d05-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf  used on input line 371.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
+FSQ_15_007/d06-x01-y01.pdf, id=1556, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
+_PAS_FSQ_15_007/d06-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
+PAS_FSQ_15_007/d06-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf  used on input line 375.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
+FSQ_12_020/d05-x01-y01.pdf, id=1560, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
+_PAS_FSQ_12_020/d05-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
+PAS_FSQ_12_020/d05-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d05-x01-y01.pdf  used on input line 391.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
+FSQ_12_020/d08-x01-y01.pdf, id=1561, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
+_PAS_FSQ_12_020/d08-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
+PAS_FSQ_12_020/d08-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf  used on input line 395.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
+FSQ_12_020/d06-x01-y01.pdf, id=1562, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
+_PAS_FSQ_12_020/d06-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
+PAS_FSQ_12_020/d06-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d06-x01-y01.pdf  used on input line 399.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
+FSQ_12_020/d09-x01-y01.pdf, id=1563, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
+_PAS_FSQ_12_020/d09-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
+PAS_FSQ_12_020/d09-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf  used on input line 403.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
+8868/d01-x01-y01.pdf, id=1566, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
+_I1388868/d01-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
+I1388868/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CDF_2015_I1388868/d01-x01-y01.pdf  used on input line 418.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
+8868/d05-x01-y01.pdf, id=1567, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
+_I1388868/d05-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
+I1388868/d05-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CDF_2015_I1388868/d05-x01-y01.pdf  used on input line 422.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
+8868/d02-x01-y01.pdf, id=1568, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
+_I1388868/d02-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
+I1388868/d02-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CDF_2015_I1388868/d02-x01-y01.pdf  used on input line 426.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
+8868/d06-x01-y01.pdf, id=1569, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
+_I1388868/d06-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
+I1388868/d06-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CDF_2015_I1388868/d06-x01-y01.pdf  used on input line 430.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I168
+0318/d01-x02-y01.pdf, id=1576, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018
+_I1680318/d01-x02-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_
+I1680318/d01-x02-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2018_I1680318/d01-x02-y01.pdf  used on input line 445.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I168
+0318/d01-x03-y01.pdf, id=1577, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018
+_I1680318/d01-x03-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_
+I1680318/d01-x03-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2018_I1680318/d01-x03-y01.pdf  used on input line 449.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+<OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_I138
+4119/d01-x01-y01.pdf, id=1580, 337.16966pt x 304.4474pt>
+File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
+_I1384119/d01-x01-y01.pdf Graphic file (type pdf)
+<use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
+I1384119/d01-x01-y01.pdf>
+Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
+hts_vs_CP5/CMS_2015_I1384119/d01-x01-y01.pdf  used on input line 457.
+(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+
+Overfull \hbox (32.76326pt too wide) in paragraph at lines 465--492
+\T1/cmr/m/n/12 On the other hand the small de-pend-ence on the vari-ation of th
+e \T1/cmtt/m/n/12 ColorReconnection:range
+ []
+
+[57 <./OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007
+/d01-x01-y01.pdf> <./OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_
+PAS_FSQ_12_020/d06-x01-y01.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
+15_PAS_FSQ_15_007/d01-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs
+_PerBinReweights_vs_CP5/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf> <./OurTune/img
+/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_FSQ_15_007/d
+05-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs
+_CP5/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>]
+Underfull \vbox (badness 6608) has occurred while \output is active []
+
+ [59 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
+12_PAS_FSQ_12_020/d05-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs
+_PerBinReweights_vs_CP5/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf> <./OurTune/img
+/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_FSQ_12_020/d
+06-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs
+_CP5/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf>]) (./PrimordialkT_tune/c_primordi
+alkTTune.tex [60 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_v
+s_CP5/CDF_2015_I1388868/d01-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_Per
+Bin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/d05-x01-y01.pdf> <./OurTune/img
+/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/d02-x01
+-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/C
+DF_2015_I1388868/d06-x01-y01.pdf>] [61 <./OurTune/img/rivet-plots-MinBias_PerBi
+n_vs_PerBinReweights_vs_CP5/CMS_2018_I1680318/d01-x02-y01.pdf> <./OurTune/img/r
+ivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I1680318/d01-x03-y
+01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS
+_2015_I1384119/d01-x01-y01.pdf>] [62
+
+]
+Chapter 7.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+) (./Conclusions/c_conclusions.tex [63] [64
+
+]
+Chapter 8.
+) [65] [66
+
+]
+Appendix A.
+(./Preamble.bbl [67] [68
+
+] [69] [70] [71]
+Underfull \hbox (badness 1137) in paragraph at lines 341--345
 []\T1/cmr/m/n/12 Nikolaus Hansen.  The CMA evol-u-tion strategy: A tu-torial.  
 \T1/cmr/m/it/12 CoRR\T1/cmr/m/n/12 ,
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
- [54]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
+[72])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+ [73]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  (./Preamble.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `Preamble.out' has not changed.
-(rerunfilecheck)             Checksum: 287E70CCAB0028ACC6F47C7B45EDC282;2860.
+(rerunfilecheck)             Checksum: AA76BD743370565A4F7B8D4D7235A79A;3706.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 12360 strings out of 481239
- 197954 string characters out of 5920377
- 497122 words of memory out of 5000000
- 27053 multiletter control sequences out of 15000+600000
- 564887 words of font info for 107 fonts, out of 8000000 for 9000
+ 12780 strings out of 481239
+ 217984 string characters out of 5920377
+ 510778 words of memory out of 5000000
+ 27360 multiletter control sequences out of 15000+600000
+ 571535 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,48p,895b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,20n,48p,1087b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -1290,30 +1688,35 @@ ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1728.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfxc1728.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfxc2488.pfb>
-Output written on Preamble.pdf (55 pages, 3820322 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sftt1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+ftt1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfxc1728.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfxc2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/p
+alatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr
+i8a.pfb>
+Output written on Preamble.pdf (74 pages, 5971595 bytes).
 PDF statistics:
- 1819 PDF objects out of 2073 (max. 8388607)
- 1405 compressed objects within 15 object streams
- 239 named destinations out of 1000 (max. 500000)
- 565 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2192 PDF objects out of 2487 (max. 8388607)
+ 1727 compressed objects within 18 object streams
+ 298 named destinations out of 1000 (max. 500000)
+ 813 words of extra memory for PDF output out of 10000 (max. 10000000)
 

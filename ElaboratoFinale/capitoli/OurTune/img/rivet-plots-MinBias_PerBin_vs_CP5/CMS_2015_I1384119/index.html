@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Plots from Rivet analyses &ndash; CMS_2015_I1384119</title>
+<style>
+      html { font-family: sans-serif; }
+      img { border: 0; }
+      a { text-decoration: none; font-weight: bold; }
+    </style>
+            <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [["$","$"]]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        
+
+        <script type="text/javascript">
+            function filterPlots(ana, patt) {
+                var regex = new RegExp(patt);
+                var sec = document.getElementById('ana_'+ana);
+                var plots = sec.getElementsByClassName('plot');
+                var i; for (i = 0; i < plots.length; ++i) {
+                    // var viz = (regex.test(plots[i].id)) ? 'visible' : 'hidden';
+                    // plots[i].style.visibility = viz;
+                    var dis = (regex.test(plots[i].id)) ? 'block' : 'none';
+                    plots[i].style.display = dis;
+                }
+                return false;
+           }
+        </script>
+        </head>
+<body>
+<section id="ana_CMS_2015_I1384119">
+<h3>CMS_2015_I1384119</h3>
+<p><a href="../index.html">Back to index</a></p>
+<p>
+  The pseudorapidity distribution of charged hadrons in $pp$ collisions at $\sqrt{s} =13$ TeV is measured using a data sample obtained with the CMS detector, operated at zero magnetic field, at the CERN LHC. The yield of primary charged long-lived hadrons produced in inelastic $pp$ collisions is determined in the central region of the CMS pixel detector ($|eta| &lt; 2$) using both hit pairs and reconstructed tracks.
+</p>
+<form onsubmit="var patt = document.getElementById('patt_CMS_2015_I1384119').value; filterPlots('CMS_2015_I1384119', patt); return false;">
+<span>Filter plots:&nbsp;</span><input id="patt_CMS_2015_I1384119" type="search">
+<input type="submit" value="Filter">
+</form>
+
+  <div class="plot" id="plot_d01-x01-y01" style="float:left; font-size:smaller; font-weight:bold;">
+    <a href="#CMS_2015_I1384119-d01-x01-y01">&#9875;</a><a href="d01-x01-y01.dat">&#8984</a> d01-x01-y01:<br/>
+    <a name="CMS_2015_I1384119-d01-x01-y01"><a href="d01-x01-y01.pdf">
+      <img src="d01-x01-y01.png">
+    </a></a>
+  </div>
+</section>
+
+<footer style="clear:both; margin-top:3em; padding-top:3em">
+<p>Generated at Thursday, 14. April 2022 11:55AM</p>
+</footer>
+
+</body>
+</html>

@@ -13,7 +13,7 @@ described with more details.
 
 \section{Minimum Bias Measurements and Underlying Event topology}
 
-A Minimum Bias (MB) measurement is a collection of inelastic events with a loose event selection. The events are collected requiring the minimal interaction with the detector (the smallest possible bias). The most of the interaction in MB observation are soft, $p_T\lesssim2\ \mathrm{GeV}$. The study of the UE require at least one hard scattering ($p_T\gtrsim2\ \mathrm{GeV}$) presence, in fact the UE is given by the underlying activity to an hard scatter.
+A Minimum Bias (MB) measurement is a collection of inelastic events with a loose event selection. The events are collected requiring the minimal interaction with the detector (the smallest possible bias). The most of the interaction in MB observation are soft, $p_T\lesssim2\ \mathrm{GeV}$. The study of the UE require at least one hard scattering ($p_T\gtrsim2\ \mathrm{GeV}$) presence, in fact the UE is given by the underlying activity to a primary hard scatter.
 \\
 To study the UE the topological structure of an hadron-hadron collision is used. The analysis is performed on an event-by-event basis. In the analysis the direction of the leading object is used to define regions in the $\eta-\phi$ space. Where $\eta$ is the pseudorapidity defined as $\eta=-\log{\tan\left(\frac{\theta}{2}\right)}$, while $\phi$ is the azimuthal angle in the $x-y$ plane. 
 The last one is defined from the direction of the leading object as $\Delta\phi=\phi-\phi_{\text{leading}}$ .
@@ -58,27 +58,75 @@ The evolution of these two quantities in transMAX region in function of the tran
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{{img/CPdistributions.png}}
+	\includegraphics[width=0.9\textwidth]{{img/CPdistributions.png}}
 	\caption{The evolution of the charged-particles density (left) and of the scalar-$p_T$ sum density of charged particles (right) as a function of the energy scale for the scattering (leading object $p_T$), the two distribution increase quite rapidly in the first bins than they saturate ($\approx 6-7\ \mathrm{GeV}$) the scalar-$p_T$ sum density increase a little bit more, for $p_T>$ but very slowly. The black dots are the experimental point and are compared to prediction with CMS \textsc{pythia} tunes: CP3, CP4 and CP5; they are described with more details in the next chapter. Figure from \cite{CPtunes}.}
 	\label{fig:CPtransmax_evolution_with_energy}
 \end{figure}
 
-Now we want to look for the sensitivity of these observables to some \textsc{Pythia8} parameters. In figure \figRef{fig:CP5onlyPT0} is shown the effect of the MPI on booth the distributions shown before. The amount of the MPI is related to the value of $p_{T0}$: an high value of $p_{T0}$ is related to less MPI (blue line) and an higher value to a major contribution from the the MPI (red line).
+Now we want to look for the sensitivity of these observables to some \textsc{Pythia8} parameters. In figure \figRef{fig:CP5onlyPT0} is shown the effect of the MPI on booth the distributions shown before separately for TransMAX and TransMIN regions. 
+%The amount of the MPI is related to the value of $p_{T0}$: an high value of $p_{T0}$ is related to less MPI (blue line) and an higher value to a major contribution from the the MPI (red line).
+The figure shows the case with MPI (red line) and the case when the MPI are switched off (blue line). As expected the MPI are needed to explain the activity in the transverse regions. When the MPI are on the number of particle produced is higher than the case when they are off. From this figure is clear that MPI are the main contribution in the activity of these TransMAX and TransMIN regions. It's obviously that the discrepancy increase as the hard scale of the interaction increase, in fact in low $p_T$ regions the $p_T$ evolution start at a lower value so the phase-space, for the extra collisions to occur, is smaller.
+
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{{img/CP5_with_without_MPI.pdf}}
+	\includegraphics[width=0.9\textwidth]{{img/CP5_with_without_MPI.pdf}}
 	\caption{This image shows the effect of the MPI in the transMAX and TransMin regions. The contribution of the parton shower alone can't explain the contributions of the underlying event in these two regions (blue line) the introduction of the contribution from the MPI is necessary (red line). The two simulations are compared to the data from \cite{CMS-PAS-FSQ-15-007}.}
 	\label{fig:CP5onlyPT0}
 \end{figure}
 
-Another important observation that was also pointed out in the \chapRef{sec:BasicConcepts} is that the amount of activity in the two transverse regions is also dependent on the center-of-mass energy. This evolution is shown in \figRef{fig:CPECMdep} for two different energy. The amount of MPI increase with $\sqrt{s}$ that was expected from the evolution of the PDF with the energy of the collision: the hadrons become denser-packed when probed to higher energies.
+Another important observation that was also pointed out in the \chapRef{sec:BasicConcepts} is that the amount of activity in the two transverse regions is also dependent on the center-of-mass energy. This evolution is shown in \figRef{fig:CPECMdep} for two different energy. The amount of MPI increase with $\sqrt{s}$ that was expected from the evolution of the PDF with the energy of the collision: the hadrons become denser-packed when probed to higher energies. In \figRef{fig:CPECMdep} the charged particle density and the scalar sum of the transverse momentum in the transverse regions data are compared for two different center-of-mass energies. The data are also compared to existing different CMS tuning.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.85\textwidth]{{img/CPECMdep.pdf}}
+	\includegraphics[width=0.9\textwidth]{{img/CPECMdep.pdf}}
 	\caption{The charged particle density in the transMAX (upper left) and transMIN (lower left) regions and of the charged particle $p_T$-sum in the transMAX (upper right) and the transMIN (lower right) regions evolution as function of the center-of-mass energy is shown. The red ones are the data for $\sqrt{s}=2.76$ and the blue ones for $\sqrt{s}=13$ and these are compare to different CMS tunes. Figure from \cite{CMS-PAS-FSQ-15-007}}
 	\label{fig:CPECMdep}
 \end{figure}
+
+\subsection{Observables in Z production processes}
+
+In the last part of this work we are going to tune the primordial $k_T$. Primordial $k_T$ required for the description of the observed cross section for the Z production is very large respect to the expected value. This is not understood by first principles so it require a tune of this parameters in the Monte Carlo generator in order to describe the data. 
+
+The observables to study the primordial $k_T$ are the differential cross section for Z production in proton-proton collision in Drell-Yan observation as a function of the transverse momentum of the Z boson (\figRef{fig:PrimordialkT_distributionUsed_noFxFx} left) and as a function of the $\phi^*_\eta$ angle (\figRef{fig:PrimordialkT_distributionUsed_noFxFx} right). Where the angle $\phi^*_\eta$ is defined as:
+\begin{equation}
+	\phi_\eta^*=\tan\left(\frac{\pi-\Delta\phi}{2}\right)\,\sin(\theta_\eta^*)\quad,
+\end{equation}
+where $\Delta\phi$ is the azimuthal angle between the two leptons. The angle $\theta_\eta^*$ instead is the angle measured respect to the beam direction in the rest frame of the dilepton system (frame with leptons emitted back-to-back), so is defined as: 
+\begin{equation}
+	\cos(\theta_\eta^*)=\tanh\left(\frac{\eta^--\eta^+}{2}	\right)\quad,
+\end{equation} 
+with $\eta^+$ and $\eta^-$ the pseudorapidities of the two leptons \cite{phistareta}.
+
+\begin{figure}[H]
+	\centering
+	\noindent
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.97\textwidth]{{img/Angle1.pdf}}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.97\textwidth]{{img/Angle2.pdf}}
+	\end{subfigure}
+	\caption{ADD}
+	\label{fig:angles}
+\end{figure}
+
+To full simulate the Z production spectrum we have to merge matrix element calculation and space shower to do this we used the FxFx merging scheme that have been introduced in \chapRef{chap:Hadron-HadronScattering}. 
+As shown in \figRef{fig:PrimordialkT_distributionUsed_noFxFx} the description with out FxFx is good only in the first bins. The strategy we follow for the tuning of the primordial kT is tu tune the Primordial $k_T$ in this low region. From these two distribution we take only the first 5 bins each.
+
+Than we are going to run the FxFx only for the comparison once the parameters are tuned. This is going to be discussed in \chapRef{chap:primordialkTtune} where we perform the primordial $k_T$ tune.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{{img/PrimordialkT_distributionUsed_noFxFx.pdf}}
+	\caption{ADD}
+	\label{fig:PrimordialkT_distributionUsed_noFxFx}
+\end{figure}
+
+\bigskip
+
+Next chapter discuss the general approaches to the tune and why we use machine learning and \textsc{mcnntunes}. \textsc{mcnntunes} is also introduced together with the already existing CP* tunes in particular the CP5 tune.
 
 

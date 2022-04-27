@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -161,7 +161,7 @@ I.~I. Balitsky and L.~N. Lipatov.
 \newblock {The Pomeranchuk Singularity in Quantum Chromodynamics}.
 \newblock \emph{Sov. J. Nucl. Phys.}, 28:\penalty0 822--829, 1978.
 
-\bibitem[Ball et~al.(2017)Ball, Bertone, Carrazza, Debbio, Forte,
+\bibitem[Ball et~al.(2017{\natexlab{a}})Ball, Bertone, Carrazza, Debbio, Forte,
   Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
   Slade, and Ubiali]{NNPDF3.1}
 Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
@@ -169,7 +169,8 @@ Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
   Kassabov, José~I. Latorre, Emanuele~R. Nocera, Juan Rojo, Luca Rottoli, Emma
   Slade, and Maria Ubiali.
 \newblock Parton distributions from high-precision collider data.
-\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct 2017.
+\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct
+  2017{\natexlab{a}}.
 \newblock ISSN 1434-6052.
 \newblock \doi{10.1140/epjc/s10052-017-5199-5}.
 \newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-017-5199-5}.
@@ -208,11 +209,11 @@ Serguei Chatrchyan et~al.
 \newblock \emph{Eur. Phys. J. C}, 72:\penalty0 2080, 2012.
 \newblock \doi{10.1140/epjc/s10052-012-2080-4}.
 
-\bibitem[Sirunyan et~al.(2018)]{CMS:2017ngy}
+\bibitem[Sirunyan et~al.(2018{\natexlab{a}})]{CMS:2017ngy}
 A.~M. Sirunyan et~al.
 \newblock {Measurement of the underlying event activity in inclusive Z boson
   production in proton-proton collisions at $ \sqrt{s}=13 $ TeV}.
-\newblock \emph{JHEP}, 07:\penalty0 032, 2018.
+\newblock \emph{JHEP}, 07:\penalty0 032, 2018{\natexlab{a}}.
 \newblock \doi{10.1007/JHEP07(2018)032}.
 
 \bibitem[Sirunyan et~al.(2019)]{CMS:2018mdd}
@@ -234,6 +235,14 @@ Albert~M Sirunyan et~al.
 \newblock \emph{Eur. Phys. J. C}, 80\penalty0 (1):\penalty0 4, 2020.
 \newblock \doi{10.1140/epjc/s10052-019-7499-4}.
 
+\bibitem[Banfi et~al.(2011)Banfi, Redford, Vesterinen, Waller, and
+  Wyatt]{phistareta}
+A.~Banfi, S.~Redford, M.~Vesterinen, P.~Waller, and T.~R. Wyatt.
+\newblock {Optimisation of variables for studying dilepton transverse momentum
+  distributions at hadron colliders}.
+\newblock \emph{Eur. Phys. J. C}, 71:\penalty0 1600, 2011.
+\newblock \doi{10.1140/epjc/s10052-011-1600-y}.
+
 \bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
   Seggern]{Buckley:2009bj}
 Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
@@ -241,6 +250,11 @@ Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
 \newblock {Systematic event generator tuning for the LHC}.
 \newblock \emph{Eur. Phys. J. C}, 65:\penalty0 331--357, 2010.
 \newblock \doi{10.1140/epjc/s10052-009-1196-7}.
+
+\bibitem[Carrazza and Lazzarin(2020)]{MCNNTUNESonGitHub}
+Stefano Carrazza and Marco Lazzarin.
+\newblock N3pdf/mcnntunes: mcnntunes 0.1.0, October 2020.
+\newblock URL \url{https://doi.org/10.5281/zenodo.4071125}.
 
 \bibitem[Lazzarin et~al.(2021)Lazzarin, Alioli, and Carrazza]{MCNNTUNESarticle}
 Marco Lazzarin, Simone Alioli, and Stefano Carrazza.
@@ -295,6 +309,34 @@ Moshe Leshno, Vladimir~Ya. Lin, Allan Pinkus, and Shimon Schocken.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/S0893608005801315}.
 
+\bibitem[Khachatryan et~al.(2015)]{CMS:2015zrm}
+Vardan Khachatryan et~al.
+\newblock {Pseudorapidity distribution of charged hadrons in proton-proton
+  collisions at $\sqrt{s}$ = 13 TeV}.
+\newblock \emph{Phys. Lett. B}, 751:\penalty0 143--163, 2015.
+\newblock \doi{10.1016/j.physletb.2015.10.004}.
+
+\bibitem[Aaltonen et~al.(2015)]{CDF:2015txs}
+Timo~Antero Aaltonen et~al.
+\newblock {Study of the energy dependence of the underlying event in
+  proton-antiproton collisions}.
+\newblock \emph{Phys. Rev. D}, 92\penalty0 (9):\penalty0 092009, 2015.
+\newblock \doi{10.1103/PhysRevD.92.092009}.
+
+\bibitem[CMS(2012)]{CMS-PAS-FSQ-12-020}
+{Measurement of the Underlying Event Activity at the LHC at 7 TeV and
+  Comparison with 0.9 TeV}.
+\newblock Technical report, CERN, Geneva, 2012.
+\newblock URL \url{http://cds.cern.ch/record/1478982}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2018nhd}
+Albert~M. Sirunyan et~al.
+\newblock {Measurement of charged particle spectra in minimum-bias events from
+  proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}.
+\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (9):\penalty0 697,
+  2018{\natexlab{b}}.
+\newblock \doi{10.1140/epjc/s10052-018-6144-y}.
+
 \bibitem[Hansen(2016)]{CMAES}
 Nikolaus Hansen.
 \newblock The {CMA} evolution strategy: {A} tutorial.
@@ -305,5 +347,12 @@ Nikolaus Hansen.
 G.~Cowan.
 \newblock \emph{Statistical data analysis}.
 \newblock Oxford University Press, USA, 1998.
+
+\bibitem[Ball et~al.(2017{\natexlab{b}})]{NNPDF:2017mvq}
+Richard~D. Ball et~al.
+\newblock {Parton distributions from high-precision collider data}.
+\newblock \emph{Eur. Phys. J. C}, 77\penalty0 (10):\penalty0 663,
+  2017{\natexlab{b}}.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
 
 \end{thebibliography}

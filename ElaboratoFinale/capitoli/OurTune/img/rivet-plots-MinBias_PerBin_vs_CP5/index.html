@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Plots from Rivet analyses</title>
+<style>
+      html { font-family: sans-serif; }
+      img { border: 0; }
+      a { text-decoration: none; font-weight: bold; }
+    </style>
+            <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [["$","$"]]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        
+
+        <script type="text/javascript">
+            function filterPlots(ana, patt) {
+                var regex = new RegExp(patt);
+                var sec = document.getElementById('ana_'+ana);
+                var plots = sec.getElementsByClassName('plot');
+                var i; for (i = 0; i < plots.length; ++i) {
+                    // var viz = (regex.test(plots[i].id)) ? 'visible' : 'hidden';
+                    // plots[i].style.visibility = viz;
+                    var dis = (regex.test(plots[i].id)) ? 'block' : 'none';
+                    plots[i].style.display = dis;
+                }
+                return false;
+           }
+        </script>
+        </head>
+<body><h2>Plots from Rivet analyses</h2>
+
+
+<h3><a href="CDF_2015_I1388868/index.html" style="text-decoration:none;">Studies of the underlying event at 300, 900 and 1960 GeV with leading charged particles (CDF_2015_I1388868)</a></h3>
+<p><a href="https://inspirehep.net/literature/1388868">Inspire</a> &#124; <a href="http://hepdata.net/record/ins1388868">HepData</a> &#124; Phys. Rev. D 92, 092009 (2015) &#124; <a href="https://arxiv.org/abs/1508.05340">arXiv:1508.05340</a></p>
+<p style="font-size:smaller;">We study charged particle production in proton--antiproton collisions at 300 GeV, 900 GeV, and 1.96 TeV. We use the direction of the charged particle with the largest transverse momentum in each event to define three regions of $\eta$--$\phi$ space; toward, away, and transverse. The average number and the average scalar pT sum of charged particles in the transverse region are sensitive to the modeling of the underlying event. The transverse region is divided into a MAX and MIN transverse region, which helps separate the hard component (initial and final-state radiation) from the beam-beam remnant and multiple parton interaction components of the scattering.</p>
+
+<h3><a href="CMS_2018_I1680318/index.html" style="text-decoration:none;">Charged particle distributions in different final states at 13 TeV (CMS_2018_I1680318)</a></h3>
+<p><a href="https://inspirehep.net/literature/1680318">Inspire</a> &#124; <a href="http://hepdata.net/record/ins1680318">HepData</a> &#124; Eur.Phys.J. C78 (2018) no.9, 697 &#124; DOI: 10.1140/epjc/s10052-018-6144-y &#124; <a href="https://arxiv.org/abs/1806.11245">arXiv:1806.11245</a> &#124; http://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-011/</p>
+<p style="font-size:smaller;">Charged particle distributions in different final states at $\sqrt{s} = 13$ TeV by the CMS experiment. Pseudorapidity, multiplicity and transverse momentum distributions of all charged particles. Also the $p_\perp$ leading charged particle spectrum and its integration as function of $p_\perp$. The distributions are presented for inelastic, non-single-diffractive and single-diffractive event selections. Please note, that the MC predictions are not scaled to the datapoints, in contrast to Figure 6 in the publication.</p>
+
+<h3><a href="CMS_2015_I1384119/index.html" style="text-decoration:none;">Pseudorapidity distribution of charged hadrons in proton--proton collisions at $\sqrt{s} = 13$ TeV (CMS_2015_I1384119)</a></h3>
+<p><a href="https://inspirehep.net/literature/1384119">Inspire</a> &#124; <a href="http://hepdata.net/record/ins1384119">HepData</a> &#124; <a href="https://arxiv.org/abs/1507.05915">arXiv:1507.05915</a></p>
+<p style="font-size:smaller;">The pseudorapidity distribution of charged hadrons in $pp$ collisions at $\sqrt{s} =13$ TeV is measured using a data sample obtained with the CMS detector, operated at zero magnetic field, at the CERN LHC. The yield of primary charged long-lived hadrons produced in inelastic $pp$ collisions is determined in the central region of the CMS pixel detector ($|eta| &lt; 2$) using both hit pairs and reconstructed tracks.</p>
+
+<h3><a href="CMS_2015_PAS_FSQ_15_007/index.html" style="text-decoration:none;">Underlying Event Measurements with Leading Particles and Jets in pp collisions at 13 TeV (CMS_2015_PAS_FSQ_15_007)</a></h3>
+<p>CMS-PAS-FSQ-15-007 &#124; <http://cds.cern.ch/record/2104473?ln=en></p>
+<p style="font-size:smaller;">A measurement of the underlying event (UE) activity is performed in proton-proton collisions at the centre-of-mass energy of 13 TeV with the CMS experiment at the LHC. The measurement is performed using leading charged-particles as well as lead- ing charged-particle jets as reference objects. A leading charged-particle or charged- particle jet is required to be produced in the central pseudorapidity region ( |eta| &lt; 2) jet and with transverse momentum pT greater than 0.5 (pT greater than 1) GeV for leading charged-particle (charge particle jet). The UE activity is measured in terms of the average multiplicity and scalar sum of pT of the charged-particles, in the azimuthal region transverse to the direction of the leading reference object.</p>
+
+<h3><a href="CMS_2012_PAS_FSQ_12_020/index.html" style="text-decoration:none;">Studies of the underlying event at 7 TeV with leading charged particles (CMS_2012_PAS_FSQ_12_020)</a></h3>
+<p>CERN-PH-EP-2015-291</p>
+<p style="font-size:smaller;">We study charged particle production in proton--proton collisions at 7 TeV. We use the direction of the charged particle with the largest transverse momentum in each event to define three regions of $\eta$--$\phi$ space: toward, away, and transverse. The average number and the average scalar pT sum of charged particles in the transverse region are sensitive to the modeling of the underlying event. The transverse region is divided into a MAX and MIN transverse region, which helps separate the hard component (initial and final-state radiation) from the beam--beam remnant and multiple parton interaction components of the scattering.</p>
+<footer style="clear:both; margin-top:3em; padding-top:3em">
+<p>Generated at Thursday, 14. April 2022 11:55AM</p>
+<p>Created with command: <pre>rivet-mkhtml --mc-errs -c ../ConfigurazionePlots_MinBias1.plot Tune_MinBias_CP5_Merged_1/CP5.yoda Tune_MinBias_PerBinModel_Merged_1/PerBin.yoda -o rivet-plots-MinBias_PerBin_vs_CP5</pre></p>
+</footer>
+
+</body>
+</html>
