@@ -23,28 +23,27 @@
 \contentsline {chapter}{\numberline {4}Observable to Study the Underlying Event}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Minimum Bias Measurements and Underlying Event topology}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Observables in Z production processes}{34}{subsection.4.1.1}%
-\contentsline {chapter}{\numberline {5}Tune procedure, CP5 Tune and \textsc {mcnntunes}}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Parametrization-based approach}{38}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Machine Learning and Neural Networks}{38}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Neural Networks - Perceptron}{38}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Feed-Forward Neural Networks}{39}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Previous Tune for the Underlying Event}{41}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}The distributions used}{41}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Pyhtia configuration and the tunes}{42}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}MCNNTUNES}{43}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Per Bin Model}{43}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Inverse Model}{46}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {6}Our Tune for the Underlying Event}{49}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{49}{section.6.1}%
-\contentsline {section}{\numberline {6.2}First test: only two parameters variation}{49}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Per Bin Model results}{50}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Inverse Model results}{51}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Overall results}{52}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Our tune for the UE in Minimum Bias observations}{53}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Per Bin Model results}{54}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Inverse Model results}{54}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Overall results}{56}{subsection.6.3.3}%
-\contentsline {chapter}{\numberline {7}Tune for the Primordial $k_T$}{63}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusions}{65}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Events}{67}{appendix.A}%
-\contentsline {chapter}{Bibliography}{69}{appendix*.57}%
+\contentsline {chapter}{\numberline {5}Tune procedure, CP5 Tune and \textsc {mcnntunes}}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Parametrization-based approach}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Machine Learning and Neural Networks}{40}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Neural Networks - Perceptron}{40}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Feed-Forward Neural Networks}{41}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Previous Tune for the Underlying Event}{43}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}The distributions used}{43}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Pyhtia configuration and the tunes}{44}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}MCNNTUNES}{45}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Per Bin Model}{45}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Inverse Model}{48}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Our Tune for the Underlying Event}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}First test: only two parameters variation}{51}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Per Bin Model results}{52}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Inverse Model results}{53}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Overall results}{54}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Our tune for the UE in Minimum Bias observations}{55}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Per Bin Model results}{56}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Inverse Model results}{56}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Overall results}{58}{subsection.6.3.3}%
+\contentsline {chapter}{\numberline {7}Tune for the Primordial $k_T$}{65}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusions}{67}{chapter.8}%
+\contentsline {chapter}{Bibliography}{69}{chapter*.57}%
