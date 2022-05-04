@@ -228,7 +228,7 @@ So the best estimation for the parameters is the configuration of parameters tha
 	\label{fig:PerBinModel_schematic}
 \end{figure}
 
-\subsubsection*{Errors evaluation}
+\subsubsection{Errors evaluation}
 
 \textsc{mcnntunes} PerBin model as introduced in \cite{MCNNTUNESarticle} do not have a proper error evaluation. In fact it was using as error the final width of the distribution of sampled point in the CMA-ES algorithm. But, this was not working. Thanks to M. Lazzarin and S. Carazza we can handle the code and add a proper errors estimation.
 
@@ -269,9 +269,9 @@ Then, the error is defined as the value of the parameters that give a deviation 
 	\label{fig:exampleChi2Variation}
 \end{figure}
 
-\subsection*{Negative aspects}
+\subsection{Negative aspects}
 
-One of the negative aspect is that this model is more computational expensive than the later discussed Inverse model. This is due to the large number of NNs built and trained from this model. 
+One of the negative aspect is that this model is more computational expensive than the below discussed Inverse model. This is due to the large number of NNs built and trained from this model. 
 The high cost in term of time required to get the model work do not give the possibility for a scan in the hyperparameters space in order to obtain the best configuration for the NN architecture. 
 \\
 This can impose some limitation on the model performance that cannot get its maximum  performance.
@@ -289,7 +289,7 @@ The model is build and then trained with the training set introduced before. Onc
 	\label{fig:InverseModel_schematic}
 \end{figure}
 
-\subsubsection*{Errors evaluation}
+\subsubsection{Errors evaluation}
 
 The errors are evaluated in a different way respect to PerBin Model in fact in the Inverse Model there is not a minimization step, and the error is evaluated by a re-sampling of the experimental data using a \textit{multivariate Gaussian Distribution}, as in \eqRef{eq:gaussianDristribution} with a diagonal covariance matrix that have experimental uncertainties on the main diagonal.
 \begin{equation}
@@ -316,7 +316,7 @@ Note that this is a new method for the tune. As we are going to see this method 
 Respect to the PerBin Model this method is faster. The NN trained is only one and is not needed a minimization so a scan in the hyperparameters can be performed in order to search for the best architecture. 
 
  
-\subsubsection*{Hyperparameters}
+\subsubsection{Hyperparameters}
 
 A really important step in the Inverse model is the \textit{hyperparameter optimization} it is required to get the method working. 
 
@@ -332,11 +332,25 @@ The hyperparameters scan is performed using the python package \texttt{hyperopt}
 	\label{fig:HyperParams}
 \end{figure} 
 
-\subsubsection*{Problems}
+\subsubsection{Problems}
 
 As we are going to see the main problem for the Inverse model is the stability in the results. The operation that this model is trying to do is very hard, learn the inverse response of the generator is not an easy task. This difficulties in some case leads to a bad prediction. 
 \\
 As we are going to see in the chapter on our tune the inverse model requires some more attention than the PerBin model to get it work properly and in some case when the number of parameters became large and maybe the correlation between the parameters are important this model fails. 
 \\
 But if more care are given to this model this can become a very powerful method for future tunes.
+
+
+\subsection{Weightrules in MCNNTUNES}
+
+\textsc{mcnntunes} as \textsc{professor} implement the possibility of change the weight of the singles bins in the distributions. This is a really useful feature. As we will discuss later we use these weightrules to get a results more similar to CP5 in our tune. Increasing the weight of a bin this bin became more important in the overall $\chi^2$ evaluation and it is better described by the simulations. An example is shown in \figRef{fig:CMS_weightrules} where the application of the weightrules takes us to a better description of the experimental data.
+
+\begin{figure}[!htb]
+\centering
+\noindent
+	\includegraphics[width=0.85\textwidth]{{img/CMS2015_weightrules.jpg}}
+	\caption{An example of weightrules application. Here the black point are the experimental data from the CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$ \cite{CMS:2015zrm} while the colored lines are the simulations, the vertical lines on MC points indicate the statistical uncertainties. It is easy to see that the distribution in the right panel is not well described from the tune, but thanks to the weightrules we can give to this distribution a greater importance in the tune and describes it better as shown in the left panel. This is better explained in the next chapter.}
+	\label{fig:CMS_weightrules}
+\end{figure}   
+
 

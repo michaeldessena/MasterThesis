@@ -8,6 +8,7 @@
 \usepackage{titlesec}
 %\titleformat{\chapter}[display]
 %  {\normalfont\bfseries}{}{0pt}{\Huge}
+%\usepackage{varwidth}
 
 %\titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\huge}
 
@@ -21,6 +22,7 @@
 \usepackage{mathtools} % add tool like xrightarrow
 
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{array}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  % Add the centering in the tabular with fixed colum width
 
@@ -93,14 +95,20 @@
 
 \captionsetup{width=0.9\textwidth}  % set the width of all the captions
 
-\maketitle
+\pagenumbering{gobble}
+\input{{Cover/cover}}
+
+\cleardoublepage
+\newpage
 
 {\Large\abstract}
+\setcounter{page}{1}
+\pagenumbering{roman}
 \input{{Abstract/abstract.tex}}
 
-
 \tableofcontents
-	
+
+
 
 \graphicspath{{Introduction/}}
 \input{{Introduction/c_introduction.tex}}
