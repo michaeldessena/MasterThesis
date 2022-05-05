@@ -155,6 +155,10 @@ In more detail the sampling start by mean of \textsc{mcnntunes} script called \t
 	\label{fig:worksampling}
 \end{figure}
 
+\medskip
+
+\textsc{mcnntunes} offer also the possibility of change the value of the hyperparameters. The value that can be modified for the Neural Network. It is possible to chose the NN architecture: the number of hidden layer, the number of neurons for each layer and the activation function used. It is also possible to set the number of epochs, the batch size and the learning rate in order to have the best train for the architecture selected and other choice are possible. This is really important in order to get the best possible results for the tune.
+
 \subsection{Per Bin Model}
 \label{sec:PerBinModel}
 
@@ -212,7 +216,9 @@ The variation is dependent on the number of parameters and on the chosen confide
 	\label{table:percentile}
 \end{table}
 
-\noindent Then, the error is defined as the value of the parameters that give a deviation from the minimum value of the $\chi^2/N_{dof}$ equal to the $Q_\gamma/N_{dof}$ value for a confidence level of $0.683$, as defined in \eqRef{eq:chi2_variation}. An example for the evaluation in \texttt{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the quantities defined here in \eqRef{eq:chi2_variation} and the errors are given by the intersections between this line and the blue line, that is the $\chi^2/N_{dof}$ for the different values of the parameter.
+\noindent Then, the error is defined as the value of the parameters that give a deviation from the minimum value of the $\chi^2/N_{dof}$ equal to the $Q_\gamma/N_{dof}$ value for a confidence level of $0.683$, as defined in \eqRef{eq:chi2_variation}.
+\\
+An example for the evaluation in \texttt{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the deviation from the minimum value of the $\chi^2$ defined in \eqRef{eq:chi2_variation} and the errors are given by the points where the $\chi^2/DoF$ reach these value. Therefore, the intersections between green and blue line that is the $\chi^2/N_{dof}$ for the different values of the parameter.
 
 \begin{figure}[!htb]
 	\centering

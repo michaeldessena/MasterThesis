@@ -33,13 +33,13 @@
 \contentsline {subsection}{\numberline {5.2.2}Feed-Forward Neural Networks}{40}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}MCNNTUNES}{42}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Sampling Phase and Training Set Generation}{42}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Per Bin Model}{43}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.2}Per Bin Model}{44}{subsection.5.3.2}%
 \contentsline {subsubsection}{Errors evaluation}{44}{subsubsection*.33}%
-\contentsline {subsection}{\numberline {5.3.3}Negative aspects}{46}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.3}Negative aspects}{45}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Inverse Model}{46}{subsection.5.3.4}%
 \contentsline {subsubsection}{Errors evaluation}{46}{subsubsection*.37}%
 \contentsline {subsubsection}{Hyperparameters}{47}{subsubsection*.39}%
-\contentsline {subsubsection}{Problems}{47}{subsubsection*.41}%
+\contentsline {subsubsection}{Problems}{48}{subsubsection*.41}%
 \contentsline {subsection}{\numberline {5.3.5}Weightrules in MCNNTUNES}{48}{subsection.5.3.5}%
 \contentsline {chapter}{\numberline {6}Our Tune for the Underlying Event}{51}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Introduction}{51}{section.6.1}%
