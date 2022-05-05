@@ -22,6 +22,8 @@ def main(args):
 
     name=args.name          ### name for the analysis
     yml_file=args.config    ### name for the configuration file
+    add_seed_for_LHE = args.randomseed
+    noCondor =args.nocondor
 
     # Creating a direcotry in the AFS folder where this script is executed (in Configuration/GenProduction/python)
     
@@ -228,7 +230,7 @@ def customise(process):
     ### run cmsDriver.py 
     #runcard= os.path.join(dir_name, runcard_template_name)
     cmd=f'cmsDriver.py {runcard} -s {cmsDriver_seed} --datatier={cmsDriver_datatier} --conditions {cmsDriver_conditions} --eventcontent {cmsDriver_eventcontent} --no_exec -n {cmsDriver_numberEvents} --python_filename=rivet{name}_cfg.py --customise=Configuration/GenProduction/rivet_customize{name}.py'
-    
+
     add1 =f'''cat << EOF >> rivet{name}_cfg.py
 
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
@@ -242,6 +244,9 @@ EOF
     os.system(cmd)
     print('ADD:\t'+add1)
     os.system(add1)
+
+    if run_on_eos_path is not None:
+        shutil.move(file_name_rivet_customize,f'{run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py')
 
     if use_FxFx:
         add_randomSeed=f'''sed -i "/process.source/a process.RandomNumberGeneratorService.generator.initialSeed = 1" rivet{name}_cfg.py'''
@@ -337,7 +342,7 @@ EOF
         print('')
 
     runRivet_template=''
-    if use_FxFx == True: 
+    if use_FxFx == True or add_seed_for_LHE == True: 
         runRivet_template=f'''#!/usr/bin/bash
 
 cd {dir_work}
@@ -433,6 +438,8 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Perform a new analysis, pythia8, rivet...')
     parser.add_argument("name", type=str, help='Name of the new Analysis (REQUIRED)')
     parser.add_argument("-c", "--config", help="configurations file YML format", required=True)
+    parser.add_argument("--randomseed", default=False, action='store_true', help="Add a random seed to the job to use if generating ME events")
+    parser.add_argument("--nocondor", default=False, action='store_true', help="build everything but not submit it to condor")
     args = parser.parse_args()
 
     main(args)

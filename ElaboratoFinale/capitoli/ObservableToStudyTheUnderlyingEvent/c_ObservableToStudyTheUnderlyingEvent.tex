@@ -1,5 +1,5 @@
 
-\chapter{Observable to Study the Underlying Event}
+\chapter{Observable to Study the Underlying Event and Existing Tune}
 \label{chap:ObservabletoStudytheUnderlyingEvent}
 
 The underlying events UE are all the processes not associated with the primary hard scatter in an hadron-hadron collision.
@@ -15,6 +15,7 @@ It is important to underline the fact that most of the observables to study the 
 In this chapter these observables sensible to the UE are introduced and described with more detail.
 
 \section{Minimum Bias Measurements and Underlying Event topology}
+\label{sec:Minimum Bias Measurements and Underlying Event topology}
 
 A Minimum Bias (MB) measurement is a collection of inelastic events with a loose event selection. Which means the events are collected requiring the minimal interaction with the detector (the smallest possible bias). The most of the interactions in MB observation are soft, $p_T\lesssim2\ \mathrm{GeV}$, but the study of the UE requires at least one hard scattering ($p_T\gtrsim2\ \mathrm{GeV}$) presence; in fact the UE is given by the underlying activity to a primary hard scatter.
 \\
@@ -130,12 +131,105 @@ Than we are going to run the FxFx only for the comparison once the parameters ar
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.9\textwidth]{{img/PrimordialkT_distributionUsed_noFxFx.pdf}}
-	\caption{Here are shown the distribution, from the \citep{ZpT_distributions} CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$, that we are going to use for the tune of the primordial $k_T$. The left one is the $Z$ boson production cross section as a function of the transverse momentum of the $Z$ boson. On the right the differential cross section for the $Z$ boson production as a function of the $\phi_\eta^*$ angle. The red line is the the \textsc{pythia8} description before the tune of the primordial $k_T$ and without the FxFx merging scheme so only the first bins have to be taken into account.}
+	\caption{Here are shown the distribution, from the \cite{ZpT_distributions} CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$, that we are going to use for the tune of the primordial $k_T$. The left one is the $Z$ boson production cross section as a function of the transverse momentum of the $Z$ boson. On the right the differential cross section for the $Z$ boson production as a function of the $\phi_\eta^*$ angle. The red line is the the \textsc{pythia8} description before the tune of the primordial $k_T$ and without the FxFx merging scheme so only the first bins have to be taken into account.}
 	\label{fig:PrimordialkT_distributionUsed_noFxFx}
 \end{figure}
 
-\bigskip
 
-Next chapter discusses the general approaches to the tune and why we use machine learning and \textsc{mcnntunes}. \textsc{mcnntunes} is also introduced together with the already existing CP* tunes in particular the CP5 tune.
+In the following section we will introduce the existing CMS tunes for the minimum bias and UE. These tunes are able to reproduce very well the observables described in \secRef{sec:Minimum Bias Measurements and Underlying Event topology} at $1.96$, $7$ and $13\ \mathrm{TeV}$. 
+But as we are going to see in \chapRef{chap:Hadron-HadronScattering} the tunes do not describe well the low region of the $Z$ boson production cross section so a further tune on these observable is performed.
 
 
+\section{Previous Tune for the Underlying Event}
+
+In the paper \cite{CPtunes} the CMS collaboration presents new \textsc{pythia8} tunes for the underlying event (UE). The tunes are called CP and a number from 1 to 5 where CP stands for \textsc{"cms pythia8"}. The tunes are performed changing the values of the coupling constant $\alpha_s$ for the ISR, FSR, hard scattering and MPI and changing the order of the evolution for the $\alpha_s$ with the $Q^2$ value of the interaction. Another difference among these tunes is the choice of the PDF set: CP1 and CP2 use a LO PDF, CP3 a NLO one, while CP4 and CP5 tunes use a NNLO PDF set. 
+
+The tuned parameters are shown in \tableRef{table:CP5variations} with the associated variation ranges and a recall on the definition of each one. 
+\begin{table}[H]
+	\centering
+	\resizebox{0.97\textwidth}{!}{
+	\begin{tabular}{l c c}
+		Parameter description & Name in PYTHIA8 & Range considered\\\hline\hline
+		\\[-8pt]
+		MPI threshold $[\mathrm{GeV}]$, \texttt{pT0Ref}, at $\sqrt{s}=\sqrt{s_0}$ \ & \texttt{MultipartonInteractions:pT0Ref} &  $1.0-3.0$ \\[3pt]
+		Exponent of $\sqrt{s}$ dependence, $\epsilon$ & \texttt{MultipartonInteractions:ecmPow} & $0.0-0.3$ \\[3pt]
+		Matter fraction contained in the core & \texttt{MultipartonInteractions:coreFraction} & $0.1-0.95$ \\[3pt]
+		Radius of the core & \texttt{MultipartonInteractions:coreRadius} & $0.1-0.8$ \\[3pt]
+		Range of color reconnection probability & \texttt{ColorReconnection:range} & $1.0-9.0$ \\[3pt]
+	\end{tabular}
+	}
+	\caption{This table report the five parameters tuned for the UE and Minimum Bias in CP* tunes, the variation ranges used for the sampling are shown in the last column. Table from \cite{CPtunes}}
+	\label{table:CP5variations}
+\end{table}
+
+\noindent These parameters are the ones that govern the number of MPI and the amount of Color Reconnections\footnote{Note that the parameters related to the simulation of the hadronization and beam remnant are set to the values of the Monash tune}. These CP* tunes want to be a general (multi-purpose) tunes for UE and minimum bias observables described above.
+
+These tunes are performed with the standard tool for the  high energy physics tune: \textsc{professor}. 
+
+
+
+\subsection{The distributions used for the Tune}
+\label{sec:Thedistributionsused}
+
+The observables distributions used for the tune are the following ones:
+
+%\begin{table}
+%	\centering
+%	%\resizebox{\textwidth}{!}{
+%	\begin{tabular}{l l}
+%	Rivet Analysis & Distribution\\\hline\hline
+%	\\[-8pt]
+%	CMS\_2015\_I1384119 & d01-x01-y01\\[2pt]
+%	CMS\_2015\_PAS\_FSQ\_15\_007 & d01-x01-y01\\[2pt]
+%	CMS\_2015\_PAS\_FSQ\_15\_007 & d02-x01-y01\\[2pt]
+%	CMS\_2015\_PAS\_FSQ\_15\_007 & d05-x01-y01\\[2pt]
+%	CMS\_2015\_PAS\_FSQ\_15\_007 & d06-x01-y01\\[2pt]
+%	CMS\_2012\_PAS\_FSQ\_12\_020 & d05-x01-y01\\[2pt]
+%	CMS\_2012\_PAS\_FSQ\_12\_020 & d06-x01-y01\\[2pt]
+%	CMS\_2012\_PAS\_FSQ\_12\_020 & d08-x01-y01\\[2pt]
+%	CMS\_2012\_PAS\_FSQ\_12\_020 & d09-x01-y01\\[2pt]
+%	CDF\_2015\_I1388868 & d01-x01-y01\\[2pt]
+%	CDF\_2015\_I1388868 & d02-x01-y01\\[2pt]
+%	CDF\_2015\_I1388868 & d05-x01-y01\\[2pt]
+%	CDF\_2015\_I1388868 & d06-x01-y01\\[2pt]
+%	CMS\_2018\_I1680318 & d01-x02-y01\\[2pt]
+%	CMS\_2018\_I1680318 & d01-x03-y01\\
+%	\end{tabular}
+%	%}	
+%\end{table}
+
+\begin{itemize}
+	\item The pseudorapidity distribution of charged hadrons ($p$, $K$ ,$\pi$) measured for an
+inclusive selection in inelastic proton-proton collisions \cite{CMS:2015zrm}; 
+\item Charged particle density and charged particle scalar $p_T^{sum}$ in TransMIN and TransMAX regions at different $\sqrt{s}$ ($1.96\ \mathrm{TeV}$ \cite{CDF:2015txs}, \, $7\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-12-020}, \, $13\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-15-007});
+\item The pseudorapidity distributions for single diffractive (\textsc{sd}) and non single diffractive (\textsc{nsd}) events selection \cite{CMS:2018nhd}.
+\end{itemize}
+In the next chapter we will describe our tune using \texttt{mcnntunes} and in it we used the same distribution listed here. All the graphs for these observables are then shown with the final tunes descriptions.
+
+
+
+\subsection{Pyhtia configuration and the tunes}
+
+On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are reported the values for the \texttt{pythia8} parameters used in the CP tunes and, on the bottom, the five parameters resulting from the tune.
+\begin{table}[!htb]
+	\centering
+	\includegraphics[width=0.95\textwidth]{{img/CPtunes1.png}}
+	\caption{CP1 and CP2 tunes settings are report here together with the values for the parameters tuned. CP1 and CP2 use a LO PDF set. CP1 $\alpha_s$ is different between matrix element calculation and MPI that use a value of 0.1365 ISR and FSR that instead use 0.130. While, CP2 use the same value for all processes, it is fixed at 0.130. In both cases $\alpha_s$ run with a LO evolution. Table from \cite{CPtunes}}
+	\label{fig:CPtunes1}
+\end{table}
+\begin{table}[!htb]
+	\centering
+	\includegraphics[width=0.95\textwidth]{{img/CPtunes2.png}}
+	\caption{here are reported CP3, CP4 and CP5 tunes settings, and the results for the tune. The three tunes use an equal $\alpha_s$ value for al the processes, $\alpha_s=0.118$ running with a NLO evolution. The difference between CP3 and the other two tune is that CP3 use a NLO PDF set while CP4 and CP5 a NNLO one. CP5 ISR emission is also ordered according to rapidity. Table from \cite{CPtunes}}
+	\label{fig:CPtunes2}
+\end{table}
+\\
+Below we are going to focus on CP5 tune. We are going to reproduce this tune using the same settings for \texttt{pythia8} but using a different tuning software: \texttt{mcnntunes}. 
+\\
+
+%%%% INTRODUCTION to the next chapter
+
+\medskip
+
+Next chapter discusses the general approaches to the tune and why we use machine learning and and on the description of the main tool used for the tuning in this work \textsc{mcnntunes}. 
+%\textsc{mcnntunes} is also introduced together with the already existing CP* tunes in particular the CP5 tune.

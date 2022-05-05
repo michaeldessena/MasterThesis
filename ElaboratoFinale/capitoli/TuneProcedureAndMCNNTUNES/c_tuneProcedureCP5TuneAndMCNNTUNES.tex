@@ -1,44 +1,47 @@
 \chapter{Tune procedure, CP5 Tune and \textsc{mcnntunes}}
 \label{chap:TuneprocedureCP5TuneandMCNNTUNES}
 
-The study of the underlying event, or more in general of softQCD processes require the use of Monte Carlo generator based on phenomenological model. These models introduce lots of free parameters that must be tuned on experimental data in order to obtain meaningful results. The procedure of estimate the best parameters values is called \textit{tune}. 
+The study of the underlying event, or more in general of softQCD processes require the use of Monte Carlo generator that often are based on phenomenological model with a lot of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure of estimate the best parameters values is called \textit{tune}. 
 \\
-The tune procedure can be really computational expensive,  can require to run the generator a very large amount of times. And usually these MC generators are really expansive in term of computation time required for a single job. 
+The tune procedure can be really computational expensive, in fact it requires to run the generator a very large amount of times, and usually these MC generators are really expansive in term of computational time required for just a single job.  
 \\
-To tune some parameters the number of jobs you have to run increase with the number of parameter you want to tune, in fact the parameter space dimension increase. Different approaches have been used in the past to tune these MC generators:
+To tune a certain number of parameters the number of jobs you have to run increase with this number of parameters, in fact the parameter space dimension increase with the number and the granularity of the sampling we want to perform. Different approaches have been developed and used in the past to tune these MC generators. A brief description is reported for each approach in the following list:
 \begin{enumerate}[label=\arabic*)]
-	\item \textbf{Manual tunes}: this approach is based on an optimization of the parameters made by eye. This is absolutely not the best way to tune some parameters, usually it requires a very large time for even semi-reasonable results since the process require a very large number of iterations.   
-	\item \textbf{Brute force tunes}: A better way would be to perform a very dense sampling in parameters space and run a generator with every configuration. This is very computational expensive and a scan in a $5$ parameters space with $10$ division each require $10^5=100000$ Monte Carlo runs this with a rising number of parameters becomes really impractical, also using computers batch systems as an example CondorHT (\textsc{cern}).   
-	\item \textbf{Parametrization-based tunes}: An even more better approach is to find a surrogate function to parameterize the response of the MC generator at different values of the parameters to tune and try to study (minimize) this surrogate function instead of the real response of the generator. This is the right approach.
+	\item \textbf{Manual tunes}: this approach is based on an optimization of the parameters made by eye. This is absolutely not the best way to tune some parameters, usually it requires a very large time for even semi-reasonable results since the process require a very large number of iterations .   
+	\item \textbf{Brute force tunes}: a better way would be to perform a very dense sampling in parameters space and run the generator with every configuration. This is very computational expensive and a scan in a $5$ parameters space with $10$ division each requires $10^5=100000$ Monte Carlo runs this with a rising number of parameters becomes really impractical, also using computers batch systems as an example CondorHT (\textsc{cern}).   
+	\item \textbf{Parametrization-based tunes}: an even more better approach is to find a surrogate function to parameterize the response of the MC generator at different values of the parameters to tune and try to study (minimize) this surrogate function instead of the real response of the generator. This is the right approach that is used in the high energy physics tune and that we are going to use in the follow for our tune.
 \end{enumerate}
-Let's discuss this last approach with more details.
+Let us discuss this last approach with more details in the next section.
 
 \section{Parametrization-based approach}
 
-The parametrization-based approach is the most used method. The current state-of-art in the tune procedure is to use a polynomial function to fit the response of the generator and minimize it, this approach is implemented in the software \textsc{Professor} \cite{Buckley:2009bj}. 
+The parametrization-based approach is the most used method. The current state-of-art in the tune procedure is to use a polynomial function to fit the response of the generator. Once the parametrization is performed the tuned parameters are given by the minimization of this parameterized response function. This approach based on the polynomial parametrization have been  implemented in the software \textsc{Professor} \cite{Buckley:2009bj}. 
 \\
-The first step in the procedure is to fit the response of the generator using a surrogate function simpler to study than the real one,
+So the first step in the procedure is to fit the response of the generator using a surrogate function simpler to study than the real one (e.g. Professor instead of the arbitrary complex real function use a polynomial).
 \begin{equation}
-	h(p)\ \xrightarrow{\quad \text{parametrization}\quad }\ \overline{h}(p)\quad ;
+	h(p)\ \xrightarrow{\quad \text{parametrization}\quad }\ \overline{h}(p)\quad ,
 \end{equation}
-after that: a \textit{loss function} $\mathcal{L}(h(p),h_{\text{data}})$ is defined, between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
+where the real function have been substituted by the surrogate one. 
+\\
+After that, a \textit{loss function} $\mathcal{L}(\overline{h}(p),h_{\text{data}})$ is defined, between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
 \begin{equation}
-	\mathcal{L}(h(p),h_{\text{data}})\equiv \chi^2=\frac{(h(p)-h_{\text{data}})^2}{\sigma}\quad.
+	\mathcal{L}(\overline{h}(p),h_{\text{data}})\equiv \chi^2=\frac{(\overline{h}(p)-h_{\text{data}})^2}{\sigma^2}\quad.
 \end{equation}
-Then to find the best parameters estimation, this loss function need to be minimized. The set of parameters $p_{\text{best}}$ that do this are the best evaluation that our generator can provide for the real values and we are going to call this set of best parameters: \textit{tune}.
+In the end to find the best parameters estimation, this loss function need to be minimized. The set of parameters $p_{\text{best}}$ that do this are the best evaluation that our generator can provide for the real values and we are going to call this set of best parameters: \textit{tune}.
 \begin{equation}
-	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(h(p),h_{\text{data}})\quad.
+	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
 \end{equation}
 In our study instead of the common software \textsc{professor} based on the polynomial parameterization we use the machine learning approach implemented in \textsc{mcnntunes} software \cite{MCNNTUNESonGitHub}
-using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carazza, S.Aioli and M.Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is write in pyhton and it uses neural networks (NN) that are trained to learn the generator behavior to the parameters variations.
+using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carazza, S. Aioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is writen in pyhton and it uses neural networks (NN) that are trained to learn the generator behavior to the parameters variations. This remove the polynomial constraint in the fit of the generator respond function in fact one of the main feature of the Neural Network is that they are universal function approximators.
 \\
 Let's make a brief introduction on machine learning and in particular on neural networks in order to understand why this choice.
 
 \section{Machine Learning and Neural Networks}
   
-Machine learning (ML) is a particular type of Artificial Intelligence it consist in systems that learn automatically by the data that are feed to it and not by the explicit programming of the algorithm. Is clear that the machine learning require the training of the algorithm in order to have a prediction on the problem under analysis.
+Machine learning (ML) is a particular type of Artificial Intelligence it consists in systems that learn automatically by the data that are feed to it and not by the explicit programming of the algorithm. It is clear that ML requires the training of the algorithm in order to have a prediction on the problem under analysis. The training is the most important step in the ML approach in fact is this step that gives to the ML the ability to return a predictive output.
 \\
-A particular type of ML is Deep Learning that uses neural networks with more than one layer organized in a hierarchical structure.
+A particular type of ML is Deep Learning that uses neural networks with more than one layer organized in a hierarchical structure to solve the problem. This is the type of ML we are interested in. But before we start with the explanation of the simple possible neural network that can be created. 
+
 
 \subsection{Neural Networks - Perceptron}
 
@@ -54,7 +57,7 @@ The concept of the Neural Network (NN) was developed in 1958 by Frank Rosenblatt
 	\label{fig:Perceptron}
 \end{figure}
 
-The revolutionary feature of the perceptron was the ability of learning by an adjustment of the weights. But a single perceptron is not enough. An example of limitation in shown in \figRef{fig:XORproblem} where the impossibility of implement a \textsc{xor} operation using a perceptron is shown with a graphical explanation. The perceptron is a linear classification algorithm and in the image is draw as a line that set a boundary for the acceptation of the hypothesis.
+\noindent The revolutionary feature of the perceptron was the ability of learning by an adjustment of the weights. But a single perceptron is not enough this kind of logical units have lots of limitations. An example of limitation for the perceptron is shown in \figRef{fig:XORproblem} where the impossibility of implement a \textsc{xor} operation using a perceptron is shown with a graphical explanation. The perceptron is a linear classification algorithm and in the image is represented as a blue line that set a boundary for the acceptation of the hypothesis.
 
 \begin{figure}[!htb]
 	\centering
@@ -63,28 +66,37 @@ The revolutionary feature of the perceptron was the ability of learning by an ad
 	\label{fig:XORproblem}
 \end{figure}
 
-The structure is very simple with a single unit but is not enough it have a lot of limitation so we have to introduce the concept of NN with more than one unit.
+The structure is very simple with a single unit but is not enough it have a lot of limitation so we have to introduce the concept of NN with more than one unit if we want eliminate these limitations and approximate every type of functions.
 
 \subsection{Feed-Forward Neural Networks}
 
-In a Neural Network different units called "neurons" are linked together. There are  different type of NNs we are interested in fully-connected Feed-Forward NNs, that are the ones used in \textsc{mcnntunes}. 
+In a Neural Network different units called "neurons" are linked together. Different type of NNs exist and they are classified according to the various ways the neurons are linked together. We are interested in \textit{fully-connected Feed-Forward NNs}, that are the ones used in \textsc{mcnntunes}. 
 \\
-\figRef{fig:NNesample} shows a schematic view of a NN the basic idea is that the neurons can get some value in input and return a value as output.
-In fully-connected NNs each neurons from a layer are connected to every neurons in the next layer. As we will discuss later one of the biggest feature of the NNs is that the they are universal function approximators \cite{HORNIK1991251, LESHNO1993861} the only request for this is that a sufficient number of hidden layers is available.
+In fully-connected NNs each neurons from a layer are connected to every neurons in the next layer. While, the Feed Forward attribute refers to the fact that the NN have not internal recursions (loops) between neurons but all the neurons from a layer are connected forward to the ones of the next layer.
 \\
-The Feed Forward attribute refers to the fact that the NN don't have internal recursions (loops) between neurons.
+\figRef{fig:NNesample} shows a schematic view of a fully-connected feed-forward multi-layer NN the basic idea is that the neurons can get some value in input and return a value as output. The output of neuron is then sent to all the neurons in the next layer and weighted differently for each one. 
+To be more specific: each unit $j$ in the hidden layer $(i)$ takes a vector of values $x^k$, that come from all the $k$ neurons of the previous layer, and an offset $\vartheta_j$ as input, compute the weighted sum $\sum_k w_{kj}x^k$ and apply the activation function $\phi$ to the result, common choices for this function are \textit{tanh} or \textit{sigmoid}. So, the total output of the $(i)$-th layer in the network is the function:
+\begin{equation}
+	f^{(i)}(x) = \displaystyle\sum_{j=1}^{N^{(i)}} \varphi \left( \displaystyle\sum_k w^{(i)}_{kj}x^k + \vartheta_j^{(i)} \right)\quad,
+\end{equation}
+where $N^{(i)}$ is the number of hidden units in the $(i)$-th layer. 
+\\ 
+One of the biggest feature of the NNs is that the they are universal function approximators \cite{HORNIK1991251, LESHNO1993861} the only request for this is that a sufficient number of hidden layers is available. This is the main reason why we want use a NN based approach instead of the polynomial one
+\\
+
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=14cm]{{img/NNesample.png}}
-	\caption{A fully-connected feed-forward neural network}
+	\includegraphics[width=0.95\textwidth]{{img/NN.pdf}}
+	\caption{A fully-connected feed-forward neural network with more than one hidden layer, the green one is the input layer and takes the value in input and usually scale them in the range $[0,1]$ and then the data sequentially go trough the neurons in the hidden layers (blue) where all the steps described above are performed for each layer. At the end the results of the computation are collected by the output layer (red). }
 	\label{fig:NNesample}
 \end{figure}
-As mentioned before the main feature of all the types of NNs is the ability to learn from data without being directly programmed.
-But to to this a learning algorithm have to be defined.
+
+\noindent As mentioned before the main feature of all the types of NNs is the ability to learn from data without being directly programmed.
+But to to this and so get some predictive results from the NN a learning algorithm have to be defined.
 \\
 A common training algorithm for the NN is the \textit{back-propagation}. Where a set of Monte Carlo simulations is used to train the NN. The back-propagation procedure is based on the idea of change the weights, $w_{jk}$, and the offsets, $\vartheta_{j}$, in order to minimize a loss function usually defined as the mean squared error ($E$):
 \begin{equation}
-	E=\frac{1}{2}\displaystyle\sum(h_{i}(x^j,w_{jk})-d_i)^2\quad,
+	E=\frac{1}{2}\displaystyle\sum_i(h_{i}(x^j,w_{jk})-d_i)^2\quad,
 \end{equation}  
 where the $h_{i}$ are the value in output from the NN and the $d_{i}$ the real value known from the Monte Carlo truth.
 \\
@@ -97,13 +109,15 @@ In the back-propagation algorithm the weight and the coefficients are update usi
 \end{equation}
 where $\lambda$ is the learning rate and is a user-tunable free parameter. 
 \\
-The batch is our training set that contains the Monte Carlo simulation that is used to calculate the gradient. The size of the batch used to train the NN is also a free parameters: smaller batch are faster to compute but the gradient direction is not the real one but an approximation; while bigger batch size give a good approximation of the direction of the steepest-descent but can be computational expensive. 
+The mini-batch are subset of our training set that contains the Monte Carlo simulations that are used to calculate the gradient. The size of the mini-batches used to train the NN is also a free parameters: smaller batches are faster to compute but the gradient direction is not the real one just an approximation; while bigger batch size give a good approximation of the direction of the steepest-descent but can be computational expensive. 
 \\
-The number of evaluation of the entire batch is called epochs and is tunable by the user.
+The number of evaluation of the entire training set is called epochs and is tunable by the user.
 \\
-Note that the batch size and the number of epochs are related. A batch of 50 run with a batch size of 10 and a number of epochs of 1000 require 5000 iterations while if we use a batch size of 25 it require only 2000 iterations to run over all the training set.
+Note that the batch size and the number of epochs are related. A training set of 50 run with a batch size of 10 and a number of epochs of 1000 require 5000 iterations while if we use a batch size of 25 it require only 2000 iterations to run over all the training set.
 \\
-A schematic representation of the training process is displayed in \figRef{fig:training2}
+A schematic representation of the training process is displayed in \figRef{fig:training2} where the training set is subdivided in the mini-batches that one by one are fed to the NN. Then, the Monte Carlo truth and the output of the network are used to compute the loss function $E$, using this information the back-propagation, based on the gradient descend algorithm, updates the weights in the descent direction of the gradient calculated using the mini-batch. All the procedure is repeated with every mini-batch and for a user tunable number of epochs.
+
+Note that the prediction capability of the Neural Network is dependent on the selection of all these user-tunable parameters that control the Neural Network architecture. All these parameters are usually referred as \textit{hyperparameters}. 
 
 \begin{figure}[!htb]
 	\centering
@@ -112,104 +126,41 @@ A schematic representation of the training process is displayed in \figRef{fig:t
 	\label{fig:training2}
 \end{figure}
 
-\section{Previous Tune for the Underlying Event}
 
-In the paper \cite{CPtunes} the CMS collaboration presents new \textsc{pythia8} tunes for the underlying event (UE). The tunes are called CP and a number from 1 to 5 where CP stands for \textsc{"cms pythia8"}. The tunes are performed changing the values of the coupling constant $\alpha_s$ for the ISR, FSR, hard scattering and MPI and the order of the evolution with the value of $Q^2$ for the interaction. Another difference among these tunes is the choice of the PDF set. The parameter that are tuned are shown in \tableRef{table:CP5variations} with the associated variation ranges and a recall on the definition of each one. 
+%%%%%%%\section{Previous Tune for the Underlying Event} OLD
 
-\begin{table}
-	\centering
-	\resizebox{0.97\textwidth}{!}{
-	\begin{tabular}{l c c}
-		Parameter description & Name in PYTHIA8 & Range considered\\\hline\hline
-		\\[-8pt]
-		MPI threshold $[\mathrm{GeV}]$, \texttt{pT0Ref}, at $\sqrt{s}=\sqrt{s_0}$ \ & \texttt{MultipartonInteractions:pT0Ref} &  $1.0-3.0$ \\[3pt]
-		Exponent of $\sqrt{s}$ dependence, $\epsilon$ & \texttt{MultipartonInteractions:ecmPow} & $0.0-0.3$ \\[3pt]
-		Matter fraction contained in the core & \texttt{MultipartonInteractions:coreFraction} & $0.1-0.95$ \\[3pt]
-		Radius of the core & \texttt{MultipartonInteractions:coreRadius} & $0.1-0.8$ \\[3pt]
-		Range of color reconnection probability & \texttt{ColorReconnection:range} & $1.0-9.0$ \\[3pt]
-	\end{tabular}
-	}
-	\caption{This table report the five parameters tuned for the underlying event in CP tunes, the variation ranges used for the sampling are shown in the last column. Table from \cite{CPtunes}}
-	\label{table:CP5variations}
-\end{table}
-
-\subsection{The distributions used}
-\label{sec:Thedistributionsused}
-
-The observables distributions used for the tune are the following one:
-
-%\begin{table}
-%	\centering
-%	%\resizebox{\textwidth}{!}{
-%	\begin{tabular}{l l}
-%	Rivet Analysis & Distribution\\\hline\hline
-%	\\[-8pt]
-%	CMS\_2015\_I1384119 & d01-x01-y01\\[2pt]
-%	CMS\_2015\_PAS\_FSQ\_15\_007 & d01-x01-y01\\[2pt]
-%	CMS\_2015\_PAS\_FSQ\_15\_007 & d02-x01-y01\\[2pt]
-%	CMS\_2015\_PAS\_FSQ\_15\_007 & d05-x01-y01\\[2pt]
-%	CMS\_2015\_PAS\_FSQ\_15\_007 & d06-x01-y01\\[2pt]
-%	CMS\_2012\_PAS\_FSQ\_12\_020 & d05-x01-y01\\[2pt]
-%	CMS\_2012\_PAS\_FSQ\_12\_020 & d06-x01-y01\\[2pt]
-%	CMS\_2012\_PAS\_FSQ\_12\_020 & d08-x01-y01\\[2pt]
-%	CMS\_2012\_PAS\_FSQ\_12\_020 & d09-x01-y01\\[2pt]
-%	CDF\_2015\_I1388868 & d01-x01-y01\\[2pt]
-%	CDF\_2015\_I1388868 & d02-x01-y01\\[2pt]
-%	CDF\_2015\_I1388868 & d05-x01-y01\\[2pt]
-%	CDF\_2015\_I1388868 & d06-x01-y01\\[2pt]
-%	CMS\_2018\_I1680318 & d01-x02-y01\\[2pt]
-%	CMS\_2018\_I1680318 & d01-x03-y01\\
-%	\end{tabular}
-%	%}	
-%\end{table}
-
-\begin{itemize}
-	\item The pseudorapidity distribution of charged hadrons ($p$, $K$ ,$\pi$) measured for an
-inclusive selection in inelastic proton-proton collisions \cite{CMS:2015zrm}; 
-\item Charged particle density and charged particle scalar $p_T^{sum}$ in TransMIN and TransMAX regions at different $\sqrt{s}$ ($1.96\ \mathrm{TeV}$ \cite{CDF:2015txs}, \, $7\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-12-020}, \, $13\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-15-007});
-\item The pseudorapidity distributions for single diffractive (\textsc{sd}) and non single diffractive (\textsc{nsd}) events selection \cite{CMS:2018nhd}.
-\end{itemize}
-In the next chapter we will describe our tune using \texttt{mcnntunes} and in it we used the same distribution listed here. All the graphs for these observables are then shown with the final tunes descriptions.
-
-\subsection{Pyhtia configuration and the tunes}
-
-On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are reported the values for the \texttt{pythia8} parameters used in the CP tunes and, on the bottom, the 5 parameters resulting from the tune.
-\begin{table}[!htb]
-	\centering
-	\includegraphics[width=0.95\textwidth]{{img/CPtunes1.png}}
-	\caption{CP1 and CP2 tunes settings are report here together with the values for the parameters tuned. CP1 and CP2 use a LO PDF set. CP1 $\alpha_s$ is different between matrix element calculation and MPI that use a value of 0.1365 ISR and FSR that instead use 0.130. While, CP2 use the same value for all processes, it is fixed at 0.130. In both cases $\alpha_s$ run with a LO evolution. Table from \cite{CPtunes}}
-	\label{fig:CPtunes1}
-\end{table}
-\begin{table}[!htb]
-	\centering
-	\includegraphics[width=0.95\textwidth]{{img/CPtunes2.png}}
-	\caption{here are reported CP3, CP4 and CP5 tunes settings, and the results for the tune. The three tunes use an equal $\alpha_s$ value for al the processes, $\alpha_s=0.118$ running with a NLO evolution. The difference between CP3 and the other two tune is that CP3 use a NLO PDF set while CP4 and CP5 a NNLO one. CP5 ISR emission is also ordered according to rapidity. Table from \cite{CPtunes}}
-	\label{fig:CPtunes2}
-\end{table}
-\\
-Below we are going to focus on CP5 tune. We are going to reproduce this tune using the same settings for \texttt{pythia8} but using a different tuning software: \texttt{mcnntunes}. 
-\\
 In the next section \texttt{mcnntunes} is introduced and all its working modes are explained in detail. 
 
 \section{MCNNTUNES}
 
-\texttt{mcnntunes} \cite{MCNNTUNESarticle} is a Shower Monte Carlo generators tuning tool,  that implement a tune procedure based on the use of Feed Forward Neural Networks (FFNNs). The advantage of using FFNNs have been described above and is that they are universal function approximators. This remove the polynomial bias present in \texttt{professor} tool.
+\texttt{mcnntunes} \cite{MCNNTUNESarticle} is a Shower Monte Carlo generators tuning tool that implements a tune procedure based on the use of Feed Forward Neural Networks (FFNNs). The advantage of using FFNNs have been described above and is that they are universal function approximators at the simple cost of have a sufficient number of hidden units in the hidden layers. This feature allows us to remove the polynomial bias present in \texttt{professor} tool.
 \\
-\texttt{mcnntunes} offers two different operation modes: \textit{PerBin Model} and \textit{Inverse Model}. The first one is based on approach similar to the one in \texttt{professor} but where the response of the generator is parameterized using these FFNNs; the later is a new approach where the NN is trained to learn the inverse function of the generator response and to try to infers the parameters value from the experimental values of the bins in the distributions used.
+\texttt{mcnntunes} offers two different main operation modes: \textit{PerBin Model} and \textit{Inverse Model}. The first one is based on approach similar to the one in \texttt{professor} but where the response of the generator is parameterized using these FFNNs, one for each bin; the later is a totally new approach where the NN (only one in this case) is trained to learn the inverse function of the generator response and then used to try to infers the parameters value starting the experimental values of the bins in the distributions used.
 \\
-In next two sections we are going to describe the two methods in details.
 
 \medskip
 
+\subsection{Sampling Phase and Training Set Generation}
+
 The two approach have the same starting point that is a sampling of the parameter space (e.g. for the UE analysis we use the parameters space shown in \tableRef{table:CP5variations}), than the generator is run with every sampled configuration. 
 All these MC runs are going to build our dataset that is called \textit{training set}.
+\\
+A schematic explanation of how the sampling phase and the training set generation were performed in CMSSW environment (lxplus \textsc{cern}) is shown in \figRef{fig:worksampling}. 
+In more detail the sampling start by mean of \textsc{mcnntunes} script called \textsc{mcnntemplate} with a sampling of the defined parameter space. The sampling generates  $N$ different configuration for the parameters to tune, this are then encapsulated in a runcard for \textsc{pythia} that contains all the necessary information to make \textsc{pythia} work properly (beams energies, type of event to simulate etc.). Then the \textsc{pythia} generator is run with every configuration generated and this is performed not locally but on a computers batch (e.g. the \textsc{cern} one CondorHT). The runcards we pass to Condor contain also the information on the analysis we want to performe and on how to fill the various histograms for the observables. Once the generators runs end the outputs are saved in the \textsc{yoda} format, that is a particular type of data file. The set of these \textsc{yoda} files, containing the information on the MC runs, composes our training set that then can be used for tuning procedure.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.95\textwidth]{{img/Worksampling.pdf}}
+	\caption{A schematic description of the main step from the sampling phase to the generation of the training set used for the tune procedure. These shows how the work was performed in CMSSW environment. The starting point and the final tune procedure are both controlled by \textsc{mcnntunes}. In the middle of these two phases the generation of the training set is required, this is performed running the generator many times.}
+	\label{fig:worksampling}
+\end{figure}
 
 \subsection{Per Bin Model}
 \label{sec:PerBinModel}
 
 PerBin Model is a parametrisation-based method. The main idea, as shown in \figRef{fig:PerBinModel_schematic} is to build a model (i.e. a neural network) for each bin in order to parameterize the generator output. Each NN takes the parameters values as input and returns the bin value as output.
 \\
-All these NNs are then trained feeding the MC runs from the training set and  using a gradient-based algorithm, as usual for feed forward neural networks, with mean squared errors as loss.
+All these NNs are then trained feeding the MC runs from the training set and  using a gradient-based algorithm, as usual for feed forward neural networks, with mean squared errors as loss function.
 \\
 Once, the NN is trained, the last step is the tune in which one actually get the best parameters estimation.  This step define a surrogate loss function for the tuning problem. In fact, the parameterization step return a model $h^{(i)}(\mathbf{p})$ for each bin, $i$, where $\mathbf{p}$ is the vector of the parameters. 
 \\
@@ -230,15 +181,17 @@ So the best estimation for the parameters is the configuration of parameters tha
 
 \subsubsection{Errors evaluation}
 
-\textsc{mcnntunes} PerBin model as introduced in \cite{MCNNTUNESarticle} do not have a proper error evaluation. In fact it was using as error the final width of the distribution of sampled point in the CMA-ES algorithm. But, this was not working. Thanks to M. Lazzarin and S. Carazza we can handle the code and add a proper errors estimation.
+\textsc{mcnntunes} PerBin model as introduced in \cite{MCNNTUNESarticle} did not have a proper error evaluation. In fact it was using as error the final width of the distribution of sampled point in the CMA-ES algorithm. But, this was not working. Thanks to S. Carazza and with the help of M. Lazzarin we had the opportunity of handle the code and add a proper errors estimation.
 
 Now, the errors evaluation for the PerBin Model is given by the definition of a confidence interval using the $\chi^2$ function.
-In fact, as shown in section 9.6 and 9.7 of \cite{cowan}, for an estimators vector $\hat{h}(\mathbf{p})=(\hat{h}^{(1)}(\mathbf{p}),\hat{h}^{(2)}(\mathbf{p}),\dots,\hat{h}^{(n)}(\mathbf{p}))$ for the parameters $\hat{h}(\mathbf{p})$ the probability distribution function and the likelihood (the $\chi^2$ in our case) in limit of a large sample are Gaussian distributed. The probability distribution function for the estimators is 
+In fact, as shown in section 9.6 and 9.7 of \cite{cowan}, for an estimators vector $\hat{h}(\mathbf{p})=(\hat{h}^{(1)}(\mathbf{p}),\hat{h}^{(2)}(\mathbf{p}),\dots,\hat{h}^{(n)}(\mathbf{p}))$ for the parameters $\mathbf{p}$ the probability distribution function and the likelihood (the $\chi^2$ in our case) in limit of a large sample\footnote{In other case this still a good approximation.} are Gaussian distributed. The probability distribution function for the estimators is than:
 \begin{equation}
-f(\hat{h}(\mathbf{p})|h(\mathbf{p})) = \frac{1}{(2\pi)^{n/2}|V|^{1/2}}\exp\left[ -\frac{1}{2}\left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right)^T V^{-1} \left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right) \right] 
+f(\hat{h}(\mathbf{p})|h(\mathbf{p})) = \frac{1}{(2\pi)^{n/2}|V|^{1/2}}\exp\left[ -\frac{1}{2}\left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right)^T V^{-1} \left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right) \right] \ ,
 \end{equation}
 where $T$ is the transpose vector and $V^{-1}$ is the inverse covariance matrix. 
-Can be shown that also the likelihood is Gaussian as the probability distribution function. So a changing in the parameter give a calculable variation in the $\chi^2$
+Can be shown that also the likelihood is Gaussian as the probability distribution function. 
+%So a changing in the parameter give a calculable variation in the $\chi^2$
+So, we can define our confidence interval using the $\chi^2$ statistic as: 
 \begin{equation}
 	\frac{\chi^2(\text{c.i.})}{N_{dof}}= \frac{\chi^2_{min}}{N_{dof}}+\frac{Q_\gamma}{N_{dof}}
 	\label{eq:chi2_variation}
@@ -259,7 +212,7 @@ The variation is dependent on the number of parameters and on the chosen confide
 	\label{table:percentile}
 \end{table}
 
-Then, the error is defined as the value of the parameters that give a deviation from the minimum value of the $\chi^2/N_{dof}$ equal to the $Q_\gamma/N_{dof}$ value for a confidence level of $0.683$, as defined in \eqRef{eq:chi2_variation}. An example for the evaluation in \texttt{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the quantities defined here in \eqRef{eq:chi2_variation} and the errors are given by the intersections between this line and the blue line, that is the $\chi^2/N_{dof}$ for the different values of the parameter.
+\noindent Then, the error is defined as the value of the parameters that give a deviation from the minimum value of the $\chi^2/N_{dof}$ equal to the $Q_\gamma/N_{dof}$ value for a confidence level of $0.683$, as defined in \eqRef{eq:chi2_variation}. An example for the evaluation in \texttt{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the quantities defined here in \eqRef{eq:chi2_variation} and the errors are given by the intersections between this line and the blue line, that is the $\chi^2/N_{dof}$ for the different values of the parameter.
 
 \begin{figure}[!htb]
 	\centering

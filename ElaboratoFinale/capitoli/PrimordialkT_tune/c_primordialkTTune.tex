@@ -10,11 +10,42 @@ The value of the primordial $k_T$ can be estimate as reported in \eqRef{eq:Primo
 
 %The introduction of the primordial $k_T$ is really important in the description of the $Z$ boson $p_T$ spectrum. At the LO calculation there is nothing that can recoil against the $Z$ boson so it can only be produced with zero $p_T$. With the introduction of the primordial $k_T$ one have that the already at the LO the $Z$ can have a non zero primordial $k_T$.
 
-So the introduction of the tune for the primordial $k_T$ is needed. In fact the CP5 tune it is known that does not describe well the $Z$ spectrum in the low-$p_T$ region \cite{CPtunes}.
+So the introduction of the tune for the primordial $k_T$ is needed. In fact the CP5 tune it is known that does not describe well the $Z$ spectrum in the low-$p_T$ region \cite{CPtunes}. This is shown in \figRef{fig:CP5_notdescribeZjet} for the production cross-section in $Z$ plus jets events and in the figure \figRef{fig:CP5_notdescribeZ} for $Z$ boson production in DY observations. As we can se the CP5 tune is very far from experimental data values in the low regions. 
 
+The distribution for $Z+$jets events as a function of the variable $p_T^{bal}=\big|p_T^Z-\sum_{\text{jets}}p_T^{j}\big|$ is not well described in the first bin. While the one as a function of the $p_T^Z$ miss the description in the region $p_T^Z \lesssim 40\ \mathrm{GeV}$. This two observable as described in \cite{CPtunes} are very sensitive to the parton shower process and UE.
 
+For the tune we focus on the distribution in \figRef{fig:CP5_notdescribeZ} distributions, also here we can see that CP5 tune don't describe very well the low regions for this two observables.  
+ 
 
+\begin{figure}[!htb]
+	\centering
+	\noindent
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.985\textwidth]{{img/CPpaper_zjet1.png}}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/CPpaper_zjet2.png}}
+	\end{subfigure}%
+	\caption{Figure from CP tunes presentation paper \cite{CPtunes}. These two images show the $Z$ boson production cross-section in $Z$ plus jets (with at least one jet) at $\sqrt{s}=13\ \mathrm{TeV}$ as a function of the imbalance of the transverse momentum between the jet and the $Z$ boson (left) and of the $Z$ boson transverse momentum (right) \cite{CMS:2018mdf}. The first bin in the left distribution and the regione $p_T^Z \lesssim 40\ \mathrm{GeV}$ in the right one are not well described by CP5 tune (yellow line).}
+	\label{fig:CP5_notdescribeZjet}
+\end{figure}
 
+\begin{figure}[!htb]
+	\centering
+	\noindent
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_only_CP5default/CMS_2019_I1753680/d27-x01-y03.pdf}}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_only_CP5default/CMS_2019_I1753680/d28-x01-y03.pdf}}
+	\end{subfigure}
+	\caption{The CP5 tune is not good in the description of the low region of the $Z$ boson production cross-section of the $Z$ boson transverse momentum (left) or of the $\phi_\eta^*$ angle. This distribution are from the CMS analysis \cite{ZpT_distributions} at the center-of-mass energy of $13\ \mathrm{TeV}$.}
+	\label{fig:CP5_notdescribeZ}
+\end{figure}
 
 \section{Primordial $k_T$ and ISR effect on $p_T^Z$}
 
@@ -30,8 +61,8 @@ Let's see how this parameter impact on the $Z$ boson production. If we consider 
 	\includegraphics[width=0.8\textwidth]{{img/feynman_ZpT_2_blue.pdf}}
 \end{figure}
 
-With the addition of the primordial $k_T$ we get a Gaussian distribution that width is set by \texttt{BeamRemnants:primordialKThard}.
-If we move to higher order diagrams the $Z$ boson can be produced with a non zero $p_T$, then the primordial $k_T$ is added. 
+With the addition of the primordial $k_T$ we get a Gaussian distribution which width is set by \texttt{BeamRemnants:primordialKThard}.
+If we move to higher order diagrams the $Z$ boson can be produced with a non zero $p_T$ that is balanced by the various jets, then the primordial $k_T$ is added to the already non-zero $Z$ boson transverse momentum. 
 
 A large contribution come also from the amount of ISR that is emitted from the incoming partons, in fact each split can give to the incoming parton a non-zero initial value of $p_T$ and so the $Z$ boson is created with a non-zero $p_T$ before the introduction of the primordial $k_T$. 
 
@@ -41,7 +72,9 @@ An higher amount of ISR, so a lower value for the threshold, can lead to a large
 
 The primordial $k_T$ was not investigated by CP5 so it is important to include that in the analysis in order to describe better the low $p_T$ region. 
 
-The parameters variation ranges we use are the one reported in the \tableRef{table:primordialkT_variations}. The other parameters are set to CP5 values.
+The parameters variation ranges we use are the one reported in the \tableRef{table:primordialkT_variations} while others parameters are set to CP5 values.
+
+
 
 \begin{table}[!htb]
 \centering
@@ -58,7 +91,7 @@ Parameter Name & Value \\
 
 The number of samples is lower than the one used for the Underlying Event in fact the training set we use for the PerBin Model contains more or less $160$ MC runs and a little more for the Inverse Model, $\sim 200$.
 
-To performed the tune the distribution used are from the \cite{ZpT_distributions} analysis at $\sqrt{s}=13\ \mathrm{TeV}$:
+\figRef{fig:CP5_notdescribeZ} shows the distributions used to performed the tune. The distributions  are from the \cite{ZpT_distributions} analysis at $\sqrt{s}=13\ \mathrm{TeV}$:
 \begin{itemize}
 	\item The $Z$ boson production cross-section in DY observation as a function of $p_T^Z$;
 	\item The $Z$ boson production cross-section in DY observation as a function of $\phi_\eta^*$.

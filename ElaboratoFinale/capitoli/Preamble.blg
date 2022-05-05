@@ -39,47 +39,47 @@ Warning--entry type for "MCNNTUNESonGitHub" isn't style-file defined
 --line 621 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--empty year in StirlingPrivate
 Warning--empty author in CMS-PAS-FSQ-15-007
-Warning--empty journal in Perceptron
 Warning--empty author in CMS-PAS-FSQ-12-020
-You've used 49 entries,
+Warning--empty journal in Perceptron
+You've used 51 entries,
             2481 wiz_defined-function locations,
-            955 strings with 15240 characters,
-and the built_in function-call counts, 18650 in all, are:
-= -- 1468
-> -- 1217
-< -- 32
-+ -- 468
-- -- 368
-* -- 1512
-:= -- 3136
-add.period$ -- 189
-call.type$ -- 49
-change.case$ -- 98
+            964 strings with 15612 characters,
+and the built_in function-call counts, 19357 in all, are:
+= -- 1532
+> -- 1247
+< -- 34
++ -- 482
+- -- 376
+* -- 1565
+:= -- 3249
+add.period$ -- 197
+call.type$ -- 51
+change.case$ -- 102
 chr.to.int$ -- 47
-cite$ -- 55
-duplicate$ -- 814
-empty$ -- 1580
-format.name$ -- 443
-if$ -- 3873
-int.to.chr$ -- 3
-int.to.str$ -- 50
-missing$ -- 27
-newline$ -- 295
-num.names$ -- 141
-pop$ -- 406
+cite$ -- 57
+duplicate$ -- 852
+empty$ -- 1647
+format.name$ -- 455
+if$ -- 4026
+int.to.chr$ -- 5
+int.to.str$ -- 52
+missing$ -- 29
+newline$ -- 307
+num.names$ -- 147
+pop$ -- 418
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 51
 quote$ -- 0
-skip$ -- 541
+skip$ -- 561
 stack$ -- 0
-substring$ -- 505
-swap$ -- 111
+substring$ -- 527
+swap$ -- 118
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 340
+type$ -- 354
 warning$ -- 4
-while$ -- 122
+while$ -- 128
 width$ -- 0
-write$ -- 706
+write$ -- 736
 (There were 21 warnings)

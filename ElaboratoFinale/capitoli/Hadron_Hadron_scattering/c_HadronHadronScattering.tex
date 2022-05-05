@@ -24,7 +24,8 @@
 \chapter{Hadron-Hadron Scattering}
 \label{chap:Hadron-HadronScattering}
 
-In a high energy proton-proton collision we can have either soft or hard processes. Most of the time the hard processes are accompanied by soft interactions, occurring along the hadron interaction.
+In a high energy proton-proton collision we can have either soft or hard processes.
+Most of the time the hard processes are accompanied by soft interactions, occurring along the hadron interaction.
 While the hard processes as the Higgs boson production, or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non perturbative approaches. 
 
 This chapter gives a theoretical introduction on some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations, and finally the all-orders approaches (e.g. the parton showers).
@@ -267,27 +268,29 @@ In \figRef{fig:NNPDF31} we can also see that with increasing virtuality ($Q^2$) 
 \begin{equation}
 	\text{Resolution}\sim\frac{\hbar}{Q}\quad .
 \end{equation}
-So, when probed at higher energy, the hadrons appear denser than when are probed at lower energy. This, as will be discussed in the next chapter, is related to the higher number of interaction between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called \textit{multiple parton interaction}: this concept will be discussed in the next chapter.
+So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation find an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when are probed at lower energy. This, as will be discussed in the next chapter, is related to the higher number of interaction between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called \textit{multiple parton interaction}: this concept will be discussed in the next chapter.
 
 
 \section{A real proton-proton collision}
 
 
-We have understood that the complexity in the description of a proton-proton collision arises from composite nature of the protons. In this chapter we discussed the importance of the QCD factorization theorem that help us in the calculation of the hadronic cross section with the convolution between the partonic cross section and the PDF. We have discussed the importance of the parton shower algorithm where a set of partons are evolved in a more complex final state by emissions in the initial and final states.
+We have understood that the complexity in the description of a proton-proton collision arises from composite nature of the protons. In this chapter we discussed the importance of the QCD factorization theorem that help us in the calculation of the hadronic cross section with the convolution between the partonic cross section and the parton distribution functions (PDF). We have discussed the importance of the parton shower algorithm where a set of partons are evolved in a more complex final state by emissions in the initial and final states.
 \\
-All these processes are important in the description of a real proton-proton collision but also the partons that are left unscattered are non-color singlet and can contribute to the complex final state observed in the experiments, and additionally, as mentioned before, nothing prevent additional partons scatterings from taking place and growing more and more the complexity of the partons final state. 
+All these processes are important in the description of a real proton-proton collision but also the partons that are left unscattered are non-color singlet and can contribute to the complex final state observed in the experiments, and additionally, as mentioned before, nothing prevent additional partons scatterings from taking place and increasing more and more the complexity of the partons final state. 
 
-Than, another problem is related to the not-well-understood hadronization process.
-Hadronization is not known from first principles and different models have been implemented in different programs: the \textit{cluster fragmentation model} implemented in \textsc{herwig} and the \textit{string fragmentation model} in \textsc{pythia} simulated this process of hadronization where the set of final-state partons is transformed into a set of hadrons. All these processes are schematically shown in \figRef{fig:Processes}.
+Another problem is related to the not-well-understood hadronization process of all the final-state partons involved in the hadron-hadron interaction.
+Hadronization is not known from first principles and different models have been implemented in different programs: the \textit{cluster fragmentation model} implemented in \textsc{herwig} and the \textit{string fragmentation model} in \textsc{pythia}
+%simulated this process of hadronization where the set of final-state partons is transformed into a set of hadrons. 
+All these processes are schematically shown in \figRef{fig:Processes}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.98\textwidth]{{img/Processes.png}}
-	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea on the evolution of the system. The two incoming hadrons enter the scattering from the left side, the read line indicate the main hard scattering and the fuchsia one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Than the new formed hadrons (lightblue) can undergo to different decays.}
+	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea on the evolution of the system. The two incoming hadrons enter the scattering from the left side, the red line indicate the main hard scattering and the magenta one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Than the new formed hadrons (lightblue) can undergo to different decays.}
 	\label{fig:Processes}
 \end{figure}
 
-Next chapter is going to describe the \textsc{pythia} Monte Carlo generator in more details. \textsc{pythia} introduces different free parameters that need to be tuned with experimental data from Tevatron and LHC. The tune methods are described in \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES} along with the description of some already existing tune for the underlying event in proton-proton collision.
+Next chapter will describe in more details  the \textsc{pythia} Monte Carlo generator, that is currently used to simulate many processes in proton-proton collision at the LHC. \textsc{pythia} introduces different free parameters that need to be tuned with experimental data (from Tevatron and LHC). The tune methods are described in \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES} along with the description of some already existing tune for the underlying event in proton-proton collision.
 
 
 
