@@ -1,15 +1,15 @@
-\chapter{Tune procedure, CP5 Tune and \textsc{mcnntunes}}
+\chapter{Tune procedure and \textsc{mcnntunes}}
 \label{chap:TuneprocedureCP5TuneandMCNNTUNES}
 
-The study of the underlying event, or more in general of softQCD processes require the use of Monte Carlo generator that often are based on phenomenological model with a lot of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure of estimate the best parameters values is called \textit{tune}. 
+The study of the underlying event, or more in general of soft QCD processes require the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure of estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
 \\
 The tune procedure can be really computational expensive, in fact it requires to run the generator a very large amount of times, and usually these MC generators are really expansive in term of computational time required for just a single job.  
 \\
-To tune a certain number of parameters the number of jobs you have to run increase with this number of parameters, in fact the parameter space dimension increase with the number and the granularity of the sampling we want to perform. Different approaches have been developed and used in the past to tune these MC generators. A brief description is reported for each approach in the following list:
+To tune a certain number of parameters the number of jobs you have to run increase with this number of parameters. In fact, the parameters space dimension increase with the number of the sampling we want to perform and the granularity we want to achieve. So, in the past, different approaches have been developed and used to tune these MC generators. A brief description is reported for each approach in the following list:
 \begin{enumerate}[label=\arabic*)]
 	\item \textbf{Manual tunes}: this approach is based on an optimization of the parameters made by eye. This is absolutely not the best way to tune some parameters, usually it requires a very large time for even semi-reasonable results since the process require a very large number of iterations .   
-	\item \textbf{Brute force tunes}: a better way would be to perform a very dense sampling in parameters space and run the generator with every configuration. This is very computational expensive and a scan in a $5$ parameters space with $10$ division each requires $10^5=100000$ Monte Carlo runs this with a rising number of parameters becomes really impractical, also using computers batch systems as an example CondorHT (\textsc{cern}).   
-	\item \textbf{Parametrization-based tunes}: an even more better approach is to find a surrogate function to parameterize the response of the MC generator at different values of the parameters to tune and try to study (minimize) this surrogate function instead of the real response of the generator. This is the right approach that is used in the high energy physics tune and that we are going to use in the follow for our tune.
+	\item \textbf{Brute force tunes}: a better way would be to perform a very dense sampling in parameters space, run the generator with every configuration and then chose the configuration corresponding to the output that better describes the experimental data. This is very computational expensive and a scan in a $5$ parameters space with $10$ division each requires $10^5=100000$ Monte Carlo runs this with a rising number of parameters becomes really impractical, also using computers batch systems as an example CondorHT (\textsc{cern}).   
+	\item \textbf{Parametrization-based tunes}: an even more better approach is to find a surrogate function to parameterize the response of the MC generator at different values of the parameters to tune, and try to study (minimize) this surrogate function instead of the real response of the generator. This is the right approach that is used in the high energy physics tune and that we are going to use in the follow for our tune.
 \end{enumerate}
 Let us discuss this last approach with more details in the next section.
 
@@ -17,13 +17,13 @@ Let us discuss this last approach with more details in the next section.
 
 The parametrization-based approach is the most used method. The current state-of-art in the tune procedure is to use a polynomial function to fit the response of the generator. Once the parametrization is performed the tuned parameters are given by the minimization of this parameterized response function. This approach based on the polynomial parametrization have been  implemented in the software \textsc{Professor} \cite{Buckley:2009bj}. 
 \\
-So the first step in the procedure is to fit the response of the generator using a surrogate function simpler to study than the real one (e.g. Professor instead of the arbitrary complex real function use a polynomial).
+So the first step in the procedure is to fit the response of the generator using a surrogate function simpler to study than the real one (e.g. Professor instead of the arbitrary complex real function use a polynomial fitted to well describe the real function).
 \begin{equation}
 	h(p)\ \xrightarrow{\quad \text{parametrization}\quad }\ \overline{h}(p)\quad ,
 \end{equation}
 where the real function have been substituted by the surrogate one. 
 \\
-After that, a \textit{loss function} $\mathcal{L}(\overline{h}(p),h_{\text{data}})$ is defined, between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
+After that, a \textit{loss function} $\mathcal{L}(\overline{h}(p),h_{\text{data}})$ is defined between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
 \begin{equation}
 	\mathcal{L}(\overline{h}(p),h_{\text{data}})\equiv \chi^2=\frac{(\overline{h}(p)-h_{\text{data}})^2}{\sigma^2}\quad.
 \end{equation}
@@ -32,22 +32,22 @@ In the end to find the best parameters estimation, this loss function need to be
 	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
 \end{equation}
 In our study instead of the common software \textsc{professor} based on the polynomial parameterization we use the machine learning approach implemented in \textsc{mcnntunes} software \cite{MCNNTUNESonGitHub}
-using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carazza, S. Aioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is writen in pyhton and it uses neural networks (NN) that are trained to learn the generator behavior to the parameters variations. This remove the polynomial constraint in the fit of the generator respond function in fact one of the main feature of the Neural Network is that they are universal function approximators.
+using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carazza, S. Aioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is writen in python and it uses neural networks (NNs) that are trained in order to learn the generator behavior to the parameters variations. This remove the polynomial constraint in the fit of the generator respond function in fact one of the main feature of the Neural Network is that they are universal function approximators.
 \\
 Let's make a brief introduction on machine learning and in particular on neural networks in order to understand why this choice.
 
 \section{Machine Learning and Neural Networks}
   
-Machine learning (ML) is a particular type of Artificial Intelligence it consists in systems that learn automatically by the data that are feed to it and not by the explicit programming of the algorithm. It is clear that ML requires the training of the algorithm in order to have a prediction on the problem under analysis. The training is the most important step in the ML approach in fact is this step that gives to the ML the ability to return a predictive output.
+Machine learning (ML) is a particular type of Artificial Intelligence it consists in systems that learn automatically by the data that are fed into it and not by the explicit programming of the algorithm. It is clear that ML requires the training of the algorithm in order to have a predictive output related to the problem under analysis. The training is the most important step in the ML approach in fact is this step that gives to the ML the ability to return a predictive output without it the output we get is not able to give us a meaningful result.
 \\
-A particular type of ML is Deep Learning that uses neural networks with more than one layer organized in a hierarchical structure to solve the problem. This is the type of ML we are interested in. But before we start with the explanation of the simple possible neural network that can be created. 
+A particular type of ML is Deep Learning that uses neural networks with more than one layer organized in a hierarchical structure to solve the problem. This is the type of ML we are interested in. But before we start with the explanation of the simple possible neural network that can be created in order to understand the basis in the logic of each unit that is going to compose the neural network. 
 
 
 \subsection{Neural Networks - Perceptron}
 
-The concept of the Neural Network (NN) was developed in 1958 by Frank Rosenblatt. He introduce the simpler example of NN: the perceptron \cite{Perceptron}. A representation of a percepton is shown in \figRef{fig:Perceptron} the input values are weighted and summed than the weighted-sum is passed to an activation function (step function) an additional offset $b$ can be introduced, the output of the perceptron is than:
+The concept of the Neural Network (NN) was developed in 1958 by Frank Rosenblatt. He introduce the simpler example of NN: the perceptron \cite{Perceptron}. A representation of a percepton is shown in \figRef{fig:Perceptron} the input values are weighted and summed, an additional offset $b$ can be introduced, then the weighted-sum is passed to an activation function (step function). So, the output that the perceptron returns is:
 \begin{equation}
-	h(x)= \text{step}(w^T\, x + b)
+	h(x)= \text{step}\bigg(\displaystyle\sum_j w^j\, x_j + b\bigg)
 \end{equation}
 
 \begin{figure}[!htb]
@@ -70,12 +70,12 @@ The structure is very simple with a single unit but is not enough it have a lot 
 
 \subsection{Feed-Forward Neural Networks}
 
-In a Neural Network different units called "neurons" are linked together. Different type of NNs exist and they are classified according to the various ways the neurons are linked together. We are interested in \textit{fully-connected Feed-Forward NNs}, that are the ones used in \textsc{mcnntunes}. 
+In a Neural Network different units called "neurons" are linked together. Different type of NNs exist and they are classified according to the various ways the neurons are linked each other. We are interested in \textit{fully-connected Feed-Forward NNs}, that are the ones used in \textsc{mcnntunes}. 
 \\
 In fully-connected NNs each neurons from a layer are connected to every neurons in the next layer. While, the Feed Forward attribute refers to the fact that the NN have not internal recursions (loops) between neurons but all the neurons from a layer are connected forward to the ones of the next layer.
 \\
 \figRef{fig:NNesample} shows a schematic view of a fully-connected feed-forward multi-layer NN the basic idea is that the neurons can get some value in input and return a value as output. The output of neuron is then sent to all the neurons in the next layer and weighted differently for each one. 
-To be more specific: each unit $j$ in the hidden layer $(i)$ takes a vector of values $x^k$, that come from all the $k$ neurons of the previous layer, and an offset $\vartheta_j$ as input, compute the weighted sum $\sum_k w_{kj}x^k$ and apply the activation function $\phi$ to the result, common choices for this function are \textit{tanh} or \textit{sigmoid}. So, the total output of the $(i)$-th layer in the network is the function:
+To be more specific: each unit $j$ in the hidden layer $(i)$ takes a vector of values $x^k$, that come from all the $k$ neurons of the previous layer, and an offset $\vartheta_j$ as input, compute the weighted sum $\sum_k w_{kj}x^k$ and apply the activation function $\phi$ to the result, common choices for this function are \textit{tanh} or \textit{sigmoid} functions. So, the total output of the $(i)$-th layer in the network is the function:
 \begin{equation}
 	f^{(i)}(x) = \displaystyle\sum_{j=1}^{N^{(i)}} \varphi \left( \displaystyle\sum_k w^{(i)}_{kj}x^k + \vartheta_j^{(i)} \right)\quad,
 \end{equation}
@@ -107,7 +107,8 @@ In the back-propagation algorithm the weight and the coefficients are update usi
 	\vartheta_{j}^{(i+1)}=\vartheta_{j}^{(i)}-\lambda\left( \frac{\partial E}{\partial \vartheta_{j}} \right)^{(i)}
 	\label{eq:learning_bp}
 \end{equation}
-where $\lambda$ is the learning rate and is a user-tunable free parameter. 
+where $\lambda$ is the learning rate and is a user-tunable free parameter and it controls how much change the weights each time the weights are update.
+It is one of the main parameter in the neural networks a to small value for it can lead to a failure in the training procedure while a to large one can lead to unstable results. 
 \\
 The mini-batch are subset of our training set that contains the Monte Carlo simulations that are used to calculate the gradient. The size of the mini-batches used to train the NN is also a free parameters: smaller batches are faster to compute but the gradient direction is not the real one just an approximation; while bigger batch size give a good approximation of the direction of the steepest-descent but can be computational expensive. 
 \\

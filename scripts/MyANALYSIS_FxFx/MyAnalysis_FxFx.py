@@ -124,7 +124,7 @@ def main(args):
     use_FxFx=MyYml.getYML('FxFx_lhe', 'use_FxFx')
     if use_FxFx != None:
         FxFx_lhe_files=MyYml.getYML('FxFx_lhe','files')
-        mcnntemplate_number=condor_queue=len(FxFx_lhe_files)  ### we are going to use 1 for each run!!!
+        #mcnntemplate_number=condor_queue=len(FxFx_lhe_files)  ### we are going to use 1 for each run!!!
 
     ### Print info
     info=f'''**********  Analisys: {name}  ***********\n
@@ -331,12 +331,24 @@ EOF
         dir_work=run_on_eos_path
 
 
+
+#    if use_FxFx:
+#        print('\n------- ADD the LHE file fot FxFx ----------')
+#        for i,item in enumerate(FxFx_lhe_files):
+#            i=str(i).zfill(4)
+#            filename_rivet=f'{output_path}/{i}/rivet{name}_cfg.py'
+#            cmd=f'''sed -i "/Beams:frameType/a \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 'Beams:LHEF = {item}'," {filename_rivet}'''
+#            print(cmd)
+#            os.system(cmd)
+#        print('')
+
     if use_FxFx:
         print('\n------- ADD the LHE file fot FxFx ----------')
-        for i,item in enumerate(FxFx_lhe_files):
+        for i in range(int(mcnntemplate_number)):
+            choice = random.choice(FxFx_lhe_files)
             i=str(i).zfill(4)
             filename_rivet=f'{output_path}/{i}/rivet{name}_cfg.py'
-            cmd=f'''sed -i "/Beams:frameType/a \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 'Beams:LHEF = {item}'," {filename_rivet}'''
+            cmd=f'''sed -i "/Beams:frameType/a \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 'Beams:LHEF = {choice}'," {filename_rivet}'''
             print(cmd)
             os.system(cmd)
         print('')
@@ -351,7 +363,7 @@ eval `scram runtime -sh`
 source Rivet/rivetSetup.sh
 
 i=$(printf "%04d" ${{1}})
-k=$((${{1}}+1))
+k=$(( $RANDOM % 5000 + 1 ))
 
 sed -i "s/initialSeed = 1/initialSeed = ${{k}}/" {output_path}/${{i}}/rivet{name}_cfg.py
 
@@ -404,7 +416,8 @@ queue {condor_queue}'''
     print('\n******** CONDOR SUBMIT SCRIPT ********\n'+condor_template+'\n*******************************\n')
     print(f'"condor{name}.sub" has been created')
 
-    os.system(f'condor_submit condor{name}.sub')
+    if noCondor==True:
+        os.system(f'condor_submit condor{name}.sub')
 
 
 
