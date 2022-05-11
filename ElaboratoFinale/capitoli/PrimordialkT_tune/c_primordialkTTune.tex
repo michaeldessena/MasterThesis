@@ -7,15 +7,17 @@ The main unresolved problem for the primordial $k_T$ tune is the unexpected high
 \\
 In fact, the primordial $k_T$ found is origin in the Fermi Motion of the partons inside the hadrons. So when the parton undergoes to the hard scattering it can already have an initial no zero transverse momentum.
 The value of the primordial $k_T$ can be estimate as reported in \eqRef{eq:PrimordialKT}, but in the case of the $Z$ boson $p_T$ spectrum this estimation is not sufficient the required value observed in order to reproduce the experimental data are in the order of $2\ \mathrm{GeV}$.
-
+\\
 %The introduction of the primordial $k_T$ is really important in the description of the $Z$ boson $p_T$ spectrum. At the LO calculation there is nothing that can recoil against the $Z$ boson so it can only be produced with zero $p_T$. With the introduction of the primordial $k_T$ one have that the already at the LO the $Z$ can have a non zero primordial $k_T$.
-
-So the introduction of the tune for the primordial $k_T$ is needed. In fact the CP5 tune it is known that does not describe well the $Z$ spectrum in the low-$p_T$ region \cite{CPtunes}. This is shown in \figRef{fig:CP5_notdescribeZjet} for the production cross-section in $Z$ plus jets events and in the figure \figRef{fig:CP5_notdescribeZ} for $Z$ boson production in DY observations. As we can se the CP5 tune is very far from experimental data values in the low regions. 
-
+%
+The primordial $k_T$ was tune in the Monash tune \cite{Monash} and the following tunes, as CP5, inherited the values of the parameters from there.
+\\
+So the introduction of a new tune for the primordial $k_T$ is needed. In fact the CP5 tune it is known that does not describe well the $Z$ spectrum in the low-$p_T$ region \cite{CPtunes}. This is shown in \figRef{fig:CP5_notdescribeZjet} for the production cross-section in $Z$ plus jets events and in the figure \figRef{fig:CP5_notdescribeZ} for $Z$ boson production in DY observations. As we can se the CP5 tune is very far from experimental data values in the low regions. 
+\\
 The distribution for $Z+$jets events as a function of the variable $p_T^{bal}=\big|p_T^Z-\sum_{\text{jets}}p_T^{j}\big|$ is not well described in the first bin. While the one as a function of the $p_T^Z$ miss the description in the region $p_T^Z \lesssim 40\ \mathrm{GeV}$. This two observable as described in \cite{CPtunes} are very sensitive to the parton shower process and UE.
-
+\\
 For the tune we focus on the distribution in \figRef{fig:CP5_notdescribeZ} distributions, also here we can see that CP5 tune don't describe very well the low regions for this two observables.  
- 
+
 
 \begin{figure}[!htb]
 	\centering
@@ -97,19 +99,67 @@ The number of samples is lower than the one used for the Underlying Event in fac
 	\item The $Z$ boson production cross-section in DY observation as a function of $\phi_\eta^*$.
 \end{itemize}
 
- 
+
+\noindent The PerBin Model minimization results are displayed in \figRef{fig:result_PerBin_PrimordialkT_1}
+
 \begin{figure}[!htb]
 	\centering
-	\noindent
+	\noindent 
 	\begin{subfigure}{0.48\textwidth}
 	\centering
-	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_weights/CMS_2019_I1753680/d27-x01-y03.pdf}}	
+		\includegraphics[width=\textwidth]{{img/chi2_0.png}}
 	\end{subfigure}%
 	\begin{subfigure}{0.48\textwidth}
 	\centering
-	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_weights/CMS_2019_I1753680/d28-x01-y03.pdf}}	
+		\includegraphics[width=\textwidth]{{img/chi2_1.png}}
 	\end{subfigure}
+	\caption{The output of the minimizer for the PerBin model in the primordial $k_T$ tune. The left panel shows the result of the minimization for the \texttt{SpaceShower:pT0Ref} parameter while the right one \texttt{BeamRemnants:primordialKThard}. The blue line is the $\chi^2/\mathrm{DoF}$ the best value is indicated by the solid red line while the errors are the ones indicated by the dashed red lines.}
+	\label{fig:result_PerBin_PrimordialkT_1}
 \end{figure}
+
+
+The Inverse model distribution of prediction is reported in \figRef{fig:}
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.95\textwidth]{{img/prediction_spread.png}}
+	\caption{The prediction spread for the Inverse model in the primordial $k_T$ tune. The left histograms refers to the \texttt{BeamRemnants:primordialKThard} parameter while the right one to the \texttt{SpaceShower:pT0Ref}. The predictions are indicated by the solid black vertical lines and the errors by the dashed black lines. }
+\end{figure}
+
+\noindent The PerBin Model gives to us very stable results the value and the errors we got from the tune are reported in \tableRef{table:Primordial_kT_results}.  
+This are also compared to the ones obtained from the Inverse model. The value obtained from the two model are compatible each other. The default values for CP5 are also reported and they are the one inherited by Monash13 tune. As we can see the value we get are quite different to the one in CP5.
+
+\begin{table}
+	\centering
+\begin{tabular}{l | c | c | c}
+Parameter Name & PerBin & Inverse & Default CP5\\ 
+\hline \hline
+\\[-0.85em]
+	\texttt{BeamRemnants:primordialKThard} & $ 2.5^{+0.2}_{-0.2} $ & $ 2.42\pm0.08 $ & $1.8$\\
+	\texttt{SpaceShower:pT0Ref} & $ 1.6^{+0.5}_{-0.5} $ & $ 1.21\pm0.02  $ & $2.0$
+\end{tabular}
+\caption{Results obtained from the PerBin and the Inverse model in the }
+\label{table:Primordial_kT_results}
+\end{table}	
+
+
+The overall results are displayed in \figRef{fig:result_primKT_FXFX}. Our tunes describe better the low region of the two spectrum. These low regions are the one we actually tune the higher $p_T$ region is only simulated using the value obtained from the tune of the first 5 bins in each distribution of  \figRef{fig:result_primKT_FXFX}. To simulate all the spectrum we have to use a mergin scheme as FxFx in order to avoid the double counting. 
+
+ 
+%\begin{figure}[!htb]
+%	\centering
+%	\noindent
+%	\begin{subfigure}{0.48\textwidth}
+%	\centering
+%	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_weights/CMS_2019_I1753680/d27-x01-y03.pdf}}	
+%	\end{subfigure}%
+%	\begin{subfigure}{0.48\textwidth}
+%	\centering
+%	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_weights/CMS_2019_I1753680/d28-x01-y03.pdf}}	
+%	\end{subfigure}
+%	\label{fig:result_primKT_FXFX}
+%\end{figure}
 
 \begin{figure}[!htb]
 	\centering
@@ -122,6 +172,30 @@ The number of samples is lower than the one used for the Underlying Event in fac
 	\centering
 	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_noWeights/CMS_2019_I1753680/d28-x01-y03.pdf}}	
 	\end{subfigure}
+	\caption{The results we get from the tune of the primordial $k_T$. The left figure shows the $Z$ boson production cross-section as a function of the $p_T^Z$.  
+The red line refers to the PerBin model tune, the blue line to the Inverse Model and the green line is the CP5 default tune. The black points are the experimental data. The colored vertical lines the statistical uncertainties.
+	It is clear that our two tunes better describe the low region respect to the original CP5. }
+	\label{fig:result_primKT_FXFX}
 \end{figure}
 
+\section{Primordial $k_T$ tune vs MPI}
 
+As discussed above primordial $k_T$ is not the only source of non zero transverse momentum in a LO $Z$ boson production.
+This is the reason why we are tuning also the Initial State Radiation. In fact the ISR can leads to a non zero initial $k_T$ a larger amount of ISR (low \texttt{SpaceShower:pT0Ref}) is related to more splitting occurring in the evolution of the incoming partons and before the hard scattering in which the $Z$ boson is produced. But this is not the only one process that can leads to a non-zero initial transverse momentum, there are also the MPI that can contribute to this initial transverse momentum. 
+
+\figRef{fig:result_primKT_MPI1} shows the effect of the MPI on the distributions we use for the tune. The blue line is obtained setting \texttt{PartonLevel:MPI=off} in \textsc{Phytia8} configuration.
+
+\begin{figure}[!htb]
+	\centering
+	\noindent
+	\begin{subfigure}{0.48\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_with_without_MPI_yellowBand/CMS_2019_I1753680/d27-x01-y03.pdf}}	
+	\end{subfigure}%
+	\begin{subfigure}{0.48\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{{img/rivet-plots-PrimordialkT_with_without_MPI_yellowBand/CMS_2019_I1753680/d28-x01-y03.pdf}}	
+	\end{subfigure}
+	\caption{The image shows that MPI have an effect on the two distribution. The blue line is the result without the MPI and the red line with MPI.}
+	\label{fig:result_primKT_MPI1}
+\end{figure}

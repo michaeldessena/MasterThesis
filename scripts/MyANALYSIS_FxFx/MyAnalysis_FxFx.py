@@ -357,7 +357,15 @@ EOF
     if use_FxFx == True or add_seed_for_LHE == True: 
         runRivet_template=f'''#!/usr/bin/bash
 
-cd {dir_work}
+#cd {dir_work}
+eval `scram project CMSSW CMSSW_11_2_4`
+cd CMSSW_11_2_4/src
+eval `scram runtime -sh`
+cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet .
+cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration .
+cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
+cp {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
+#cp -r {output_path} .
 
 eval `scram runtime -sh`
 source Rivet/rivetSetup.sh
@@ -408,6 +416,7 @@ output                = output_logs{name}/rivet.$(ClusterId).$(ProcId).out
 error                 = output_logs{name}/rivet.$(ClusterId).$(ProcId).err
 log                   = output_logs{name}/rivet.$(ClusterId).log
 +JobFlavour           = "{condor_jobflavour}"
+request_memory        = 2000M
 queue {condor_queue}'''
     
     print(f'Creating "condor{name}.sub" scriptfile')
@@ -416,7 +425,7 @@ queue {condor_queue}'''
     print('\n******** CONDOR SUBMIT SCRIPT ********\n'+condor_template+'\n*******************************\n')
     print(f'"condor{name}.sub" has been created')
 
-    if noCondor==True:
+    if noCondor==False:
         os.system(f'condor_submit condor{name}.sub')
 
 

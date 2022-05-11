@@ -1,7 +1,7 @@
 \chapter{Tune procedure and \textsc{mcnntunes}}
 \label{chap:TuneprocedureCP5TuneandMCNNTUNES}
 
-The study of the underlying event, or more in general of soft QCD processes require the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure of estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
+The study of the underlying event, or more in general of soft QCD processes requires the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure of estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
 \\
 The tune procedure can be really computational expensive, in fact it requires to run the generator a very large amount of times, and usually these MC generators are really expansive in term of computational time required for just a single job.  
 \\
@@ -112,9 +112,9 @@ It is one of the main parameter in the neural networks a to small value for it c
 \\
 The mini-batch are subset of our training set that contains the Monte Carlo simulations that are used to calculate the gradient. The size of the mini-batches used to train the NN is also a free parameters: smaller batches are faster to compute but the gradient direction is not the real one just an approximation; while bigger batch size give a good approximation of the direction of the steepest-descent but can be computational expensive. 
 \\
-The number of evaluation of the entire training set is called epochs and is tunable by the user.
+The number of evaluation of the entire training set is called epochs and it is tunable by the user.
 \\
-Note that the batch size and the number of epochs are related. A training set of 50 run with a batch size of 10 and a number of epochs of 1000 require 5000 iterations while if we use a batch size of 25 it require only 2000 iterations to run over all the training set.
+Note that the batch size and the number of epochs are strictly related. A training set of 50 MC runs with a batch size of 10 and a number of epochs of 1000 requires 5000 iterations while if we use a batch size of 25 it requires only 2000 iterations to run over all the training set.
 \\
 A schematic representation of the training process is displayed in \figRef{fig:training2} where the training set is subdivided in the mini-batches that one by one are fed to the NN. Then, the Monte Carlo truth and the output of the network are used to compute the loss function $E$, using this information the back-propagation, based on the gradient descend algorithm, updates the weights in the descent direction of the gradient calculated using the mini-batch. All the procedure is repeated with every mini-batch and for a user tunable number of epochs.
 
@@ -123,7 +123,7 @@ Note that the prediction capability of the Neural Network is dependent on the se
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=14cm]{{img/Training2.pdf}}
-	\caption{The training set used to train the NN is divided in mini-batch (the mini-batch size is a user tunable parameter) than one by one the baths are feed to the NN the output of the network together with the Monte Carlo truth are used to calculate the loss function. Then the weights and the offset are updated as described in \eqRef{eq:learning_bp} with the back-propagation algorithm. This is done with each mini-batch in the training set and for a number of epochs defined from the user. }
+	\caption{The training set used to train the NN is divided in mini-batch (the mini-batch size is a user tunable parameter) than one by one the batches are feed to the NN the output of the network together with the Monte Carlo truth are used to calculate the loss function. Then the weights and the offset are updated as described in \eqRef{eq:learning_bp} with the back-propagation algorithm. This is done with each mini-batch in the training set and for a number of epochs defined from the user. }
 	\label{fig:training2}
 \end{figure}
 
@@ -134,9 +134,9 @@ In the next section \texttt{mcnntunes} is introduced and all its working modes a
 
 \section{MCNNTUNES}
 
-\texttt{mcnntunes} \cite{MCNNTUNESarticle} is a Shower Monte Carlo generators tuning tool that implements a tune procedure based on the use of Feed Forward Neural Networks (FFNNs). The advantage of using FFNNs have been described above and is that they are universal function approximators at the simple cost of have a sufficient number of hidden units in the hidden layers. This feature allows us to remove the polynomial bias present in \texttt{professor} tool.
+\texttt{mcnntunes} \cite{MCNNTUNESarticle} is a Shower Monte Carlo generators tuning tool that implements a tune procedure based on the use of Feed Forward Neural Networks (FFNNs). The advantage of using FFNNs has been described above and it is that they are universal function approximators at the simple cost of have a sufficient number of hidden units in the hidden layers. This feature allows us to remove the polynomial bias present in \texttt{professor} tool.
 \\
-\texttt{mcnntunes} offers two different main operation modes: \textit{PerBin Model} and \textit{Inverse Model}. The first one is based on approach similar to the one in \texttt{professor} but where the response of the generator is parameterized using these FFNNs, one for each bin; the later is a totally new approach where the NN (only one in this case) is trained to learn the inverse function of the generator response and then used to try to infers the parameters value starting the experimental values of the bins in the distributions used.
+\texttt{mcnntunes} offers two different main operation modes: \textit{PerBin Model} and \textit{Inverse Model}. The first one is based on approach similar to the one in \texttt{professor} but where the response of the generator is parameterized using these FFNNs, one for each bin; the later is a totally new approach where the NN (only one in this case) is trained to learn the inverse function of the generator response and then used to try to infers the parameters value starting from the experimental values of the bins in the distributions used.
 \\
 
 \medskip
@@ -147,7 +147,7 @@ The two approach have the same starting point that is a sampling of the paramete
 All these MC runs are going to build our dataset that is called \textit{training set}.
 \\
 A schematic explanation of how the sampling phase and the training set generation were performed in CMSSW environment (lxplus \textsc{cern}) is shown in \figRef{fig:worksampling}. 
-In more detail the sampling start by mean of \textsc{mcnntunes} script called \textsc{mcnntemplate} with a sampling of the defined parameter space. The sampling generates  $N$ different configuration for the parameters to tune, this are then encapsulated in a runcard for \textsc{pythia} that contains all the necessary information to make \textsc{pythia} work properly (beams energies, type of event to simulate etc.). Then the \textsc{pythia} generator is run with every configuration generated and this is performed not locally but on a computers batch (e.g. the \textsc{cern} one CondorHT). The runcards we pass to Condor contain also the information on the analysis we want to performe and on how to fill the various histograms for the observables. Once the generators runs end the outputs are saved in the \textsc{yoda} format, that is a particular type of data file. The set of these \textsc{yoda} files, containing the information on the MC runs, composes our training set that then can be used for tuning procedure.
+In more detail the sampling start by mean of \textsc{mcnntunes} script called \textsc{mcnntemplate} with a sampling of the defined parameter space. The sampling generates  $N$ different configuration for the parameters to tune, this are then encapsulated in a runcard for \textsc{pythia} that contains all the necessary information to make \textsc{pythia} work properly (beams energies, type of event to simulate etc.). Once these runcard are saved the \textsc{pythia} generator is run with every configuration generated and this is performed not locally but on a computers batch (e.g. the \textsc{cern} one CondorHT) in order to gets all the results in few days. The runcards we pass to Condor contain also the information on the analysis we want to perform and on how to fill the various histograms for the observables. Once the generators runs end the outputs are saved in the \textsc{yoda} format, that is a standard type of data file for these analysis. The set of these \textsc{yoda} files, containing the information on the MC runs, composes our training set that then can be used for the tuning procedure.
 
 \begin{figure}[!htb]
 	\centering
@@ -158,7 +158,7 @@ In more detail the sampling start by mean of \textsc{mcnntunes} script called \t
 
 \medskip
 
-\textsc{mcnntunes} offer also the possibility of change the value of the hyperparameters. The value that can be modified for the Neural Network. It is possible to chose the NN architecture: the number of hidden layer, the number of neurons for each layer and the activation function used. It is also possible to set the number of epochs, the batch size and the learning rate in order to have the best train for the architecture selected and other choice are possible. This is really important in order to get the best possible results for the tune.
+\textsc{mcnntunes} offer also the possibility of change the value of the hyperparameters. The value that can be modified for the Neural Network. It is possible to chose the NN architecture: the number of hidden layer, the number of neurons for each layer and the activation function used. It is also possible to set the number of epochs, the batch size and the learning rate in order to have the best train for the architecture selected and other choice are possible. This is really important in order to get the best possible results for the tune. Below we are going to discuss the procedure used for the Inverse Model in order to search for the best hyperparameters configuration.
 
 \subsection{Per Bin Model}
 \label{sec:PerBinModel}
@@ -239,7 +239,7 @@ This can impose some limitation on the model performance that cannot get its max
 \subsection{Inverse Model}
 
 The Inverse Model is the most innovative tuning procedure introduced by \texttt{mcnntunes}. This model contrarily to the PerBin Model takes the histograms bins as input and returns parameters values as output. For the Inverse Model the NN used is only one as shown schematically in \figRef{fig:InverseModel_schematic}. What the Inverse Model try to do is to learn the inverted model of the generator. So starting from the observed values the model try to reproduce the parameters values necessary to get the histograms we use as input.
-
+\\
 The model is build and then trained with the training set introduced before. Once the model is trained feeding the experimental data to the NN this can try to infer the values of the parameters required to get the output. 
 
 \begin{figure}[!htb]
@@ -251,7 +251,7 @@ The model is build and then trained with the training set introduced before. Onc
 
 \subsubsection{Errors evaluation}
 
-The errors are evaluated in a different way respect to PerBin Model in fact in the Inverse Model there is not a minimization step, and the error is evaluated by a re-sampling of the experimental data using a \textit{multivariate Gaussian Distribution}, as in \eqRef{eq:gaussianDristribution} with a diagonal covariance matrix that have experimental uncertainties on the main diagonal.
+The errors are evaluated in a different way respect to PerBin Model in fact in the Inverse Model there is not a minimization step, and the error is evaluated by a re-sampling of the experimental data using a \textit{multivariate Gaussian Distribution}, as the one in \eqRef{eq:gaussianDristribution} with a diagonal covariance matrix that have experimental uncertainties on the main diagonal.
 \begin{equation}
 	f(x_i; h^{(i)}_{\text{exp}}, \sigma^{(i)}_{\text{exp}})\,=\,\mathcal{N}\cdot\exp\left[ 
 	-\frac{1}{2}
@@ -272,15 +272,22 @@ So, a set of histograms is generated, then this is fed to the NN and a distribut
 \end{figure}
 
 Note that this is a new method for the tune. As we are going to see this method requires more attentions than the PerBin Model to get it working correctly in the case of an high number of parameters to tune.
-
-Respect to the PerBin Model this method is faster. The NN trained is only one and is not needed a minimization so a scan in the hyperparameters can be performed in order to search for the best architecture. 
+\\
+Respect to the PerBin Model this method is faster in the training step. The NN trained is only one and is not needed a minimization  so a scan in the hyperparameters can be performed in order to search for the best architecture. 
 
  
 \subsubsection{Hyperparameters}
 
 A really important step in the Inverse model is the \textit{hyperparameter optimization} it is required to get the method working. 
 
-The procedure consist in build a \textit{validation set } containing some Monte Carlo simulations as the training set (e.g. $10\%$ of the simulations in the training set) and retrain the model with different choices for the NN architecture. Than a closure test is performed in order to estimate the performance of the NN and then the best model is retrained and the experimental data are fed to it in order to get the best estimation for the parameters to tune. This procedure is schematically summarized in \figRef{fig:HyperParams}.
+The procedure consist in build a \textit{validation set } containing some Monte Carlo simulations as the training set (e.g. $10\%$ of the simulations in the training set) and retrain the model with different choices for the NN architecture. Than a closure test is performed in order to estimate the performance of the NN. The test is performed using these validation set MC runs as input instead of the real experimental data, the closure test is done  computing a loss function between the predicted value and the Monte Carlo truth defined as:
+\begin{equation}
+	L=\displaystyle\sum_i \frac{\big|p_i^{\text{true}} - p_i^{\text{pred}} \big|}{p_i^{\text{true}}}
+\end{equation} 
+\\
+The configuration that minimize the distance between predicted and real values (MC truth), and so this loss function, is the best architecture in the selected hyperparaemters space.  
+\\
+Once the best model is found, it is retrained using the MC runs contained in both training and validation set. Then the experimental data are fed to it in order to get the best estimation for the parameters to tune. This procedure is schematically summarized in \figRef{fig:HyperParams}.
 \\
 The hyperparameters scan is performed using the python package \texttt{hyperopt}.
 
@@ -294,16 +301,18 @@ The hyperparameters scan is performed using the python package \texttt{hyperopt}
 
 \subsubsection{Problems}
 
-As we are going to see the main problem for the Inverse model is the stability in the results. The operation that this model is trying to do is very hard, learn the inverse response of the generator is not an easy task. This difficulties in some case leads to a bad prediction. 
+As we are going to see the main problem for the Inverse model is the stability in the results. The operation that this model is trying to do is very hard, learn the inverse response of the generator is not an easy task. These difficulties in some case lead to a bad prediction. 
 \\
-As we are going to see in the chapter on our tune the inverse model requires some more attention than the PerBin model to get it work properly and in some case when the number of parameters became large and maybe the correlation between the parameters are important this model fails. 
+As we are going to see in the chapter that describe our tune the Inverse model requires some more attention than the PerBin model to get it work properly and in some case when the number of parameters became larger and maybe the correlation between the parameters are important this model fails. 
 \\
 But if more care are given to this model this can become a very powerful method for future tunes.
 
 
 \subsection{Weightrules in MCNNTUNES}
 
-\textsc{mcnntunes} as \textsc{professor} implement the possibility of change the weight of the singles bins in the distributions. This is a really useful feature. As we will discuss later we use these weightrules to get a results more similar to CP5 in our tune. Increasing the weight of a bin this bin became more important in the overall $\chi^2$ evaluation and it is better described by the simulations. An example is shown in \figRef{fig:CMS_weightrules} where the application of the weightrules takes us to a better description of the experimental data.
+\textsc{mcnntunes} as \textsc{professor} implement the possibility of change the weight of the singles bins in the distributions. This is a really useful feature. As we will discuss later we use these weightrules to get a results more similar to CP5 in our tune. 
+This feature gives to us the possibility to decide which distribution is more important in our tune.
+Increasing the weight of a bin this bin became more important in the overall $\chi^2$ evaluation and it is better described by the simulations. An example is shown in \figRef{fig:CMS_weightrules} where the application of the weightrules takes us to a better description of the experimental data.
 
 \begin{figure}[!htb]
 \centering
