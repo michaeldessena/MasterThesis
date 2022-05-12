@@ -358,13 +358,17 @@ EOF
         runRivet_template=f'''#!/usr/bin/bash
 
 #cd {dir_work}
-eval `scram project CMSSW CMSSW_11_2_4`
+scram project CMSSW CMSSW_11_2_4
 cd CMSSW_11_2_4/src
 eval `scram runtime -sh`
-cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet .
-cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration .
-cp -r /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
-cp {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
+echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet !!!!!!!!"
+cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet .
+echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration !!!!!!!!"
+cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration .
+echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface !!!!!!!!"
+cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
+echo "copy {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py !!!!!!!!"
+cp -v {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
 #cp -r {output_path} .
 
 eval `scram runtime -sh`

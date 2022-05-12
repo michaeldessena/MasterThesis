@@ -374,9 +374,9 @@ the PerBin Model with different weights give a result more similar to CP5 in alm
 \clearpage
 \subsection{Inverse Model results}
 
-On the other hand if the PerBin model gives to us very good result, we cannot tell the same for the Inverse Model. In this case the Inverse Model gives very bad results. Also after the hyperparameters optimization the model fails.
+On the other hand if the PerBin model gives to us very good result, we cannot tell the same for the Inverse Model. In this case the Inverse Model gives very bad results. Also after the hyperparameters optimization, using ranges described in \tableRef{table:hyperpar_MinBias_2par}, the model fails.
 \\
-The predictions distribution is reported for each parameter in \figRef{fig:result_INV_5params} and the actual parameters in \tableRef{table:result_INV_5params} as we can see the predicted value are in most of the case out of the variation range set for the sampling and (also to the maximum possible value in \textsc{pythia}). 
+The predictions distribution is reported for each parameter in \figRef{fig:result_INV_5params} and the actual parameters in \tableRef{table:result_INV_5params} as we can see the predicted values are in most of the cases out of the variation ranges set for the sampling and (also to the maximum possible value in \textsc{pythia8}). 
 Some other parameter are determined with a very large distribution and so very large errors. 
 
 
@@ -402,6 +402,8 @@ Some other parameter are determined with a very large distribution and so very l
 \end{table}
 
 \noindent As we can see from \figRef{fig:Inverse_not_working} the tune we get from the Inverse Model (blue line), as was expected, cannot describe the observables distributions.   The tune misses all the experimental data point approximately by a $50\%$ of the value. Se we have to exclude this model for this tune. Maybe the failure is related to the higher number of parameters respect to the first test, that leads to a more complex generator response and so a more difficult model to learn and invert.
+
+In \textsc{mcnntunes} presentation paper \cite{MCNNTUNESarticle} is reported that the Inverse model can fail when in the training set is not given a sufficient number of MC simulation with parameter near to the actual real ones. So, to try make this model work, we decide to introduce a Gaussian bias in the sampling phase instead of a uniformed distributed sampling. Our Gaussian sampling was peaked on the parameters predicted by the PerBin Model, but also this procedure does not leads to some consistent results.   
 
 \begin{figure}[H]
 	\centering
@@ -531,7 +533,7 @@ The left distribution of \figRef{fig:result_5params_4} and the distribution in \
 	\label{fig:result_5params_5}
 \end{figure}
 
-The overall difference between MC points and experimental points can be evaluated for all three using the $chi^2/\mathrm{DoF}$ definition:
+The overall difference between MC points and experimental points can be evaluated for all three using the $\chi^2/\mathrm{DoF}$ definition:
 \begin{equation}
 	\chi^2=\displaystyle\sum_i\frac{(\text{MC}_i-\text{exp}_i)^2}{\sigma_i^2}\quad.
 \end{equation}
