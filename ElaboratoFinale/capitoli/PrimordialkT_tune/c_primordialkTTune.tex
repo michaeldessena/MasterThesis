@@ -99,8 +99,12 @@ The number of samples is lower than the one used for the Underlying Event in fac
 	\item The $Z$ boson production cross-section in DY observation as a function of $\phi_\eta^*$.
 \end{itemize}
 
+\noindent For the tune we use only the 
 
-\noindent The PerBin Model minimization results are displayed in \figRef{fig:result_PerBin_PrimordialkT_1}
+
+\medskip
+
+\noindent The PerBin Model minimization results are displayed in \figRef{fig:result_PerBin_PrimordialkT_1}. The blue line indicates the value of the $\chi^2/DoF$ as a function of the parameter value. The best estimation is marked by a solid red line while the dashed red lines indicate the errors. Both the parameters are in a well defined minimum. 
 
 \begin{figure}[!htb]
 	\centering
@@ -118,14 +122,31 @@ The number of samples is lower than the one used for the Underlying Event in fac
 \end{figure}
 
 
-The Inverse model distribution of prediction is reported in \figRef{fig:}
+The Inverse model distribution of prediction for the best configuration is reported in \figRef{fig:PrimordialkT_InverseModel_results} the best estimation for the parameter is indicated by the solid black line while the dashed black lines are the errors computed using the standard deviation. The hyperparameters space scanned to search for the best configuration is the same used above and reported in \tableRef{table:hyperpar_MinBias_2par}. The best hyperparameters we found are the one reported in the \tableRef{table:hyperpar_PrimkT}
 
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.95\textwidth]{{img/prediction_spread.png}}
 	\caption{The prediction spread for the Inverse model in the primordial $k_T$ tune. The left histograms refers to the \texttt{BeamRemnants:primordialKThard} parameter while the right one to the \texttt{SpaceShower:pT0Ref}. The predictions are indicated by the solid black vertical lines and the errors by the dashed black lines. }
+	\label{fig:PrimordialkT_InverseModel_results}
 \end{figure}
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{ l | c }
+	Hyperparameter & Value\\[2pt]\hline\hline
+	Number of hidden layer & 2 \\[2pt]
+	Units layers & [15,\,17] \\[2pt]
+	Activation function & sigmoid \\[2pt]
+	Optimizer & rmsprop\\[2pt]
+	Epochs & 2000\\[2pt]
+	Batch size & 64\\[2pt]
+	\end{tabular}
+	\caption{Best hyperparameters model found for the primordial $k_T$ tune with Inverse model.}
+	\label{table:hyperpar_PrimkT}
+\end{table}
+
 
 \noindent The PerBin Model gives to us very stable results the value and the errors we got from the tune are reported in \tableRef{table:Primordial_kT_results}.  
 This are also compared to the ones obtained from the Inverse model. The value obtained from the two model are compatible each other. The default values for CP5 are also reported and they are the one inherited by Monash13 tune. As we can see the value we get are quite different to the one in CP5.
@@ -139,7 +160,7 @@ Parameter Name & PerBin & Inverse & Default CP5\\
 	\texttt{BeamRemnants:primordialKThard} & $ 2.5^{+0.2}_{-0.2} $ & $ 2.42\pm0.08 $ & $1.8$\\
 	\texttt{SpaceShower:pT0Ref} & $ 1.6^{+0.5}_{-0.5} $ & $ 1.21\pm0.02  $ & $2.0$
 \end{tabular}
-\caption{Results obtained from the PerBin and the Inverse model in the }
+\caption{Results obtained from the PerBin and the Inverse model in the tuning of the low region of $Z$ boson production spectra. they are compared to the default for CP5 (inherited from Monash tune.)}
 \label{table:Primordial_kT_results}
 \end{table}	
 
@@ -199,3 +220,23 @@ This is the reason why we are tuning also the Initial State Radiation. In fact t
 	\caption{The image shows that MPI have an effect on the two distribution. The blue line is the result without the MPI and the red line with MPI.}
 	\label{fig:result_primKT_MPI1}
 \end{figure}
+
+The main parameters that controls the number of parton interactions in a single hadron-hadron collision is the \texttt{MultipartonInteractions:}\-\texttt{pT0Ref} parameter. It is clear that the first $2$ or $3$ bins of the left distribution of \figRef{fig:result_primKT_MPI1_pt0} are sensitive to the variation of this parameter. A future thing to do is to investigate the effects of these MPI in more detail and perform a more general tune including them in this description.
+
+
+\begin{figure}[!htb]
+	\centering
+	\noindent
+	\begin{subfigure}{0.48\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{{img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680/d27-x01-y03.pdf}}	
+	\end{subfigure}%
+	\begin{subfigure}{0.48\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{{img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680/d28-x01-y03.pdf}}	
+	\end{subfigure}
+	\caption{The image shows that MPI have an effect on the two distribution. The blue line is the result without the MPI and the red line with MPI.}
+	\label{fig:result_primKT_MPI1_pt0}
+\end{figure}
+
+

@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}QCD factorization theorem}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Partonic cross-section}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Higher order calculations}{8}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Parton Showers}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Parton Showers}{11}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Merging parton showers and matrix element calculations}{13}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Parton distribution functions}{14}{section.2.4}%
 \contentsline {section}{\numberline {2.5}A real proton-proton collision}{15}{section.2.5}%
@@ -14,18 +14,19 @@
 \contentsline {subsection}{\numberline {3.2.1}Parton Shower}{21}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Multiple Parton Interactions in \texttt {Pythia}}{21}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Momentum and flavour conservation}{22}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Impact Parameter Dependence}{23}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Parton rescattering}{24}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Interleaving of Multiple Interaction and Parton Shower}{25}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Beam Beam Remnants and primordial $k_T$}{26}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.4}Impact Parameter Dependence}{22}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Parton rescattering}{23}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Interleaving of Multiple Interaction and Parton Shower}{24}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Beam Beam Remnants and primordial $k_T$}{25}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}Color Reconnection and Hadronization }{26}{subsection.3.2.8}%
 \contentsline {section}{\numberline {3.3}\textsc {pythia} summary}{28}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Observable to Study the Underlying Event and Existing Tune}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Minimum Bias Measurements and Underlying Event topology}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Observables in Z production processes}{32}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Previous Tune for the Underlying Event}{35}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}The distributions used for the Tune}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Pyhtia configuration and the tunes}{36}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {4}CMS Detector, Observable to Study the Underlying Event and Existing Tunes}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Compact Muon Solenoid Detector}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Minimum Bias Measurements and Underlying Event topology}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Observables in Z production processes}{34}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Previous Tune for the Underlying Event}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The distributions used for the Tune}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Pyhtia configuration and the tunes}{38}{subsection.4.3.2}%
 \contentsline {chapter}{\numberline {5}Tune procedure and \textsc {mcnntunes}}{39}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Parametrization-based approach}{40}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Machine Learning and Neural Networks}{40}{section.5.2}%
@@ -33,14 +34,14 @@
 \contentsline {subsection}{\numberline {5.2.2}Feed-Forward Neural Networks}{41}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}MCNNTUNES}{44}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Sampling Phase and Training Set Generation}{45}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Per Bin Model}{46}{subsection.5.3.2}%
-\contentsline {subsubsection}{Errors evaluation}{46}{subsubsection*.35}%
+\contentsline {subsection}{\numberline {5.3.2}Per Bin Model}{45}{subsection.5.3.2}%
+\contentsline {subsubsection}{Errors evaluation}{46}{subsubsection*.36}%
 \contentsline {subsection}{\numberline {5.3.3}Negative aspects}{48}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}Inverse Model}{48}{subsection.5.3.4}%
-\contentsline {subsubsection}{Errors evaluation}{48}{subsubsection*.39}%
-\contentsline {subsubsection}{Hyperparameters}{49}{subsubsection*.41}%
-\contentsline {subsubsection}{Problems}{51}{subsubsection*.43}%
-\contentsline {subsection}{\numberline {5.3.5}Weightrules in MCNNTUNES}{51}{subsection.5.3.5}%
+\contentsline {subsubsection}{Errors evaluation}{49}{subsubsection*.40}%
+\contentsline {subsubsection}{Hyperparameters}{50}{subsubsection*.42}%
+\contentsline {subsubsection}{Problems}{50}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {5.3.5}Weightrules in MCNNTUNES}{50}{subsection.5.3.5}%
 \contentsline {chapter}{\numberline {6}Our Tune for the Underlying Event}{53}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Introduction}{53}{section.6.1}%
 \contentsline {section}{\numberline {6.2}First test: only two parameters variation}{53}{section.6.2}%
@@ -54,7 +55,7 @@
 \contentsline {chapter}{\numberline {7}Tune for the Primordial $k_T$}{71}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Primordial $k_T$ and ISR effect on $p_T^Z$}{71}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Primordial $k_T$ tune}{73}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Primordial $k_T$ tune vs MPI}{74}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusions}{77}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Events}{79}{appendix.A}%
-\contentsline {chapter}{Bibliography}{83}{appendix*.82}%
+\contentsline {section}{\numberline {7.3}Primordial $k_T$ tune vs MPI}{76}{section.7.3}%
+\contentsline {chapter}{Conclusions}{79}{chapter*.80}%
+\contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Events}{81}{appendix.A}%
+\contentsline {chapter}{Bibliography}{85}{appendix*.86}%

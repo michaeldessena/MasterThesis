@@ -43,45 +43,45 @@ Warning--empty year in StirlingPrivate
 Warning--empty author in CMS-PAS-FSQ-15-007
 Warning--empty author in CMS-PAS-FSQ-12-020
 Warning--empty journal in Perceptron
-You've used 56 entries,
+You've used 57 entries,
             2481 wiz_defined-function locations,
-            1002 strings with 16476 characters,
-and the built_in function-call counts, 21099 in all, are:
-= -- 1691
-> -- 1312
-< -- 38
-+ -- 510
-- -- 394
-* -- 1688
-:= -- 3526
-add.period$ -- 217
-call.type$ -- 56
-change.case$ -- 112
-chr.to.int$ -- 52
-cite$ -- 62
-duplicate$ -- 942
-empty$ -- 1820
-format.name$ -- 480
-if$ -- 4402
+            1011 strings with 16688 characters,
+and the built_in function-call counts, 21478 in all, are:
+= -- 1726
+> -- 1327
+< -- 39
++ -- 516
+- -- 398
+* -- 1716
+:= -- 3586
+add.period$ -- 221
+call.type$ -- 57
+change.case$ -- 114
+chr.to.int$ -- 53
+cite$ -- 63
+duplicate$ -- 961
+empty$ -- 1856
+format.name$ -- 487
+if$ -- 4484
 int.to.chr$ -- 5
-int.to.str$ -- 57
-missing$ -- 33
-newline$ -- 337
-num.names$ -- 162
-pop$ -- 454
+int.to.str$ -- 58
+missing$ -- 34
+newline$ -- 343
+num.names$ -- 165
+pop$ -- 460
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 57
 quote$ -- 0
-skip$ -- 616
+skip$ -- 628
 stack$ -- 0
-substring$ -- 601
-swap$ -- 129
+substring$ -- 621
+swap$ -- 131
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 389
+type$ -- 396
 warning$ -- 4
-while$ -- 143
+while$ -- 146
 width$ -- 0
-write$ -- 810
+write$ -- 825
 (There were 22 warnings)

@@ -19,37 +19,38 @@
 \BOOKMARK [2][-]{subsection.3.2.7}{Beam Beam Remnants and primordial kT}{section.3.2}% 19
 \BOOKMARK [2][-]{subsection.3.2.8}{Color Reconnection and Hadronization }{section.3.2}% 20
 \BOOKMARK [1][-]{section.3.3}{pythia summary}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{Observable to Study the Underlying Event and Existing Tune}{}% 22
-\BOOKMARK [1][-]{section.4.1}{Minimum Bias Measurements and Underlying Event topology}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.1.1}{Observables in Z production processes}{section.4.1}% 24
-\BOOKMARK [1][-]{section.4.2}{Previous Tune for the Underlying Event}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.2.1}{The distributions used for the Tune}{section.4.2}% 26
-\BOOKMARK [2][-]{subsection.4.2.2}{Pyhtia configuration and the tunes}{section.4.2}% 27
-\BOOKMARK [0][-]{chapter.5}{Tune procedure and mcnntunes}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Parametrization-based approach}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{Machine Learning and Neural Networks}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.2.1}{Neural Networks - Perceptron}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.2}{Feed-Forward Neural Networks}{section.5.2}% 32
-\BOOKMARK [1][-]{section.5.3}{MCNNTUNES}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.3.1}{Sampling Phase and Training Set Generation}{section.5.3}% 34
-\BOOKMARK [2][-]{subsection.5.3.2}{Per Bin Model}{section.5.3}% 35
-\BOOKMARK [2][-]{subsection.5.3.3}{Negative aspects}{section.5.3}% 36
-\BOOKMARK [2][-]{subsection.5.3.4}{Inverse Model}{section.5.3}% 37
-\BOOKMARK [2][-]{subsection.5.3.5}{Weightrules in MCNNTUNES}{section.5.3}% 38
-\BOOKMARK [0][-]{chapter.6}{Our Tune for the Underlying Event}{}% 39
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 40
-\BOOKMARK [1][-]{section.6.2}{First test: only two parameters variation}{chapter.6}% 41
-\BOOKMARK [2][-]{subsection.6.2.1}{Per Bin Model results}{section.6.2}% 42
-\BOOKMARK [2][-]{subsection.6.2.2}{Inverse Model results}{section.6.2}% 43
-\BOOKMARK [2][-]{subsection.6.2.3}{Overall results}{section.6.2}% 44
-\BOOKMARK [1][-]{section.6.3}{Our tune for the UE in Minimum Bias observations}{chapter.6}% 45
-\BOOKMARK [2][-]{subsection.6.3.1}{Per Bin Model results}{section.6.3}% 46
-\BOOKMARK [2][-]{subsection.6.3.2}{Inverse Model results}{section.6.3}% 47
-\BOOKMARK [2][-]{subsection.6.3.3}{Overall results}{section.6.3}% 48
-\BOOKMARK [0][-]{chapter.7}{Tune for the Primordial kT}{}% 49
-\BOOKMARK [1][-]{section.7.1}{Primordial kT and ISR effect on pTZ}{chapter.7}% 50
-\BOOKMARK [1][-]{section.7.2}{Primordial kT tune}{chapter.7}% 51
-\BOOKMARK [1][-]{section.7.3}{Primordial kT tune vs MPI}{chapter.7}% 52
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 53
-\BOOKMARK [0][-]{appendix.A}{Test with two free parameters for the Underlying Events}{}% 54
-\BOOKMARK [0][-]{appendix*.82}{Bibliography}{}% 55
+\BOOKMARK [0][-]{chapter.4}{CMS Detector, Observable to Study the Underlying Event and Existing Tunes}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Compact Muon Solenoid Detector}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Minimum Bias Measurements and Underlying Event topology}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Observables in Z production processes}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Previous Tune for the Underlying Event}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{The distributions used for the Tune}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Pyhtia configuration and the tunes}{section.4.3}% 28
+\BOOKMARK [0][-]{chapter.5}{Tune procedure and mcnntunes}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Parametrization-based approach}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Machine Learning and Neural Networks}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.2.1}{Neural Networks - Perceptron}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.2}{Feed-Forward Neural Networks}{section.5.2}% 33
+\BOOKMARK [1][-]{section.5.3}{MCNNTUNES}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.3.1}{Sampling Phase and Training Set Generation}{section.5.3}% 35
+\BOOKMARK [2][-]{subsection.5.3.2}{Per Bin Model}{section.5.3}% 36
+\BOOKMARK [2][-]{subsection.5.3.3}{Negative aspects}{section.5.3}% 37
+\BOOKMARK [2][-]{subsection.5.3.4}{Inverse Model}{section.5.3}% 38
+\BOOKMARK [2][-]{subsection.5.3.5}{Weightrules in MCNNTUNES}{section.5.3}% 39
+\BOOKMARK [0][-]{chapter.6}{Our Tune for the Underlying Event}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{First test: only two parameters variation}{chapter.6}% 42
+\BOOKMARK [2][-]{subsection.6.2.1}{Per Bin Model results}{section.6.2}% 43
+\BOOKMARK [2][-]{subsection.6.2.2}{Inverse Model results}{section.6.2}% 44
+\BOOKMARK [2][-]{subsection.6.2.3}{Overall results}{section.6.2}% 45
+\BOOKMARK [1][-]{section.6.3}{Our tune for the UE in Minimum Bias observations}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.3.1}{Per Bin Model results}{section.6.3}% 47
+\BOOKMARK [2][-]{subsection.6.3.2}{Inverse Model results}{section.6.3}% 48
+\BOOKMARK [2][-]{subsection.6.3.3}{Overall results}{section.6.3}% 49
+\BOOKMARK [0][-]{chapter.7}{Tune for the Primordial kT}{}% 50
+\BOOKMARK [1][-]{section.7.1}{Primordial kT and ISR effect on pTZ}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.2}{Primordial kT tune}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.3}{Primordial kT tune vs MPI}{chapter.7}% 53
+\BOOKMARK [0][-]{chapter*.80}{Conclusions}{}% 54
+\BOOKMARK [0][-]{appendix.A}{Test with two free parameters for the Underlying Events}{}% 55
+\BOOKMARK [0][-]{appendix*.86}{Bibliography}{}% 56

@@ -358,6 +358,8 @@ EOF
         runRivet_template=f'''#!/usr/bin/bash
 
 #cd {dir_work}
+
+###
 scram project CMSSW CMSSW_11_2_4
 cd CMSSW_11_2_4/src
 eval `scram runtime -sh`
@@ -369,6 +371,7 @@ echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterf
 cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
 echo "copy {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py !!!!!!!!"
 cp -v {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
+####
 #cp -r {output_path} .
 
 eval `scram runtime -sh`
@@ -379,7 +382,14 @@ k=$(( $RANDOM % 5000 + 1 ))
 
 sed -i "s/initialSeed = 1/initialSeed = ${{k}}/" {output_path}/${{i}}/rivet{name}_cfg.py
 
-cmsRun {output_path}/${{i}}/rivet{name}_cfg.py
+mkdir output   #
+cp -rv {output_path}/* output/  #
+
+eval `scram runtime -sh`  #
+
+cmsRun output/${{i}}/rivet{name}_cfg.py
+
+#cmsRun {output_path}/${{i}}/rivet{name}_cfg.py
 '''
     else:
         runRivet_template=f'''#!/usr/bin/bash
