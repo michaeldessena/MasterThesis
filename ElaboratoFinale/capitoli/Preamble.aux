@@ -198,10 +198,10 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces here are reported CP3, CP4 and CP5 tunes settings, and the results for the tune. The three tunes use an equal $\alpha _s$ value for al the processes, $\alpha _s=0.118$ running with a NLO evolution. The difference between CP3 and the other two tune is that CP3 use a NLO PDF set while CP4 and CP5 a NNLO one. CP5 ISR emission is also ordered according to rapidity. Table from \cite  {CPtunes}\relax }}{38}{table.caption.29}\protected@file@percent }
 \newlabel{fig:CPtunes2}{{4.3}{38}{here are reported CP3, CP4 and CP5 tunes settings, and the results for the tune. The three tunes use an equal $\alpha _s$ value for al the processes, $\alpha _s=0.118$ running with a NLO evolution. The difference between CP3 and the other two tune is that CP3 use a NLO PDF set while CP4 and CP5 a NNLO one. CP5 ISR emission is also ordered according to rapidity. Table from \cite {CPtunes}\relax }{table.caption.29}{}}
 \citation{Buckley:2009bj}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Tune procedure and \textsc  {mcnntunes}}{39}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Tuning procedure and \textsc  {mcnntunes}}{39}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:TuneprocedureCP5TuneandMCNNTUNES}{{5}{39}{Tune procedure and \textsc {mcnntunes}}{chapter.5}{}}
+\newlabel{chap:TuneprocedureCP5TuneandMCNNTUNES}{{5}{39}{Tuning procedure and \textsc {mcnntunes}}{chapter.5}{}}
 \citation{MCNNTUNESonGitHub}
 \citation{MCNNTUNESarticle}
 \citation{tensorflow2015-whitepaper}
@@ -213,52 +213,52 @@
 \newlabel{fig:Perceptron}{{5.1}{41}{A schematic representation of a perceptron.\relax }{figure.caption.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Feed-Forward Neural Networks}{41}{subsection.5.2.2}\protected@file@percent }
 \citation{HORNIK1991251,LESHNO1993861}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The figure shows one of the limitations of the perceptron. The \textsc  {xor} operation is not possible with a linear cut.\relax }}{42}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:XORproblem}{{5.2}{42}{The figure shows one of the limitations of the perceptron. The \textsc {xor} operation is not possible with a linear cut.\relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces The figure shows one of the limitations of the perceptron. The \textsc  {xor} operation is not possible with a linear cut. In the figure the two axis are related to the two boolean variables $x$ and $y$; the possible values for these variables are only $0$ and $1$, the four combination are indicated by the red circles: $(0,0)$, $(1,0)$, $(0,1)$ and $(1,1)$. The first image shows the \textsc  {and} operation the full red circle indicates the accepted point $(1,1)$, the discrimination can be performed correctly with just one straight line (perceptron discrimination). Also the second and the third ones can be implemented correctly using perceptron. But this cannot be done for the \textsc  {xor} operation.\relax }}{42}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:XORproblem}{{5.2}{42}{The figure shows one of the limitations of the perceptron. The \textsc {xor} operation is not possible with a linear cut. In the figure the two axis are related to the two boolean variables $x$ and $y$; the possible values for these variables are only $0$ and $1$, the four combination are indicated by the red circles: $(0,0)$, $(1,0)$, $(0,1)$ and $(1,1)$. The first image shows the \textsc {and} operation the full red circle indicates the accepted point $(1,1)$, the discrimination can be performed correctly with just one straight line (perceptron discrimination). Also the second and the third ones can be implemented correctly using perceptron. But this cannot be done for the \textsc {xor} operation.\relax }{figure.caption.31}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces A fully-connected feed-forward neural network with more than one hidden layer, the green one is the input layer and takes the value in input and usually scale them in the range $[0,1]$ and then the data sequentially go trough the neurons in the hidden layers (blue) where all the steps described above are performed for each layer. At the end the results of the computation are collected by the output layer (red). \relax }}{43}{figure.caption.32}\protected@file@percent }
 \newlabel{fig:NNesample}{{5.3}{43}{A fully-connected feed-forward neural network with more than one hidden layer, the green one is the input layer and takes the value in input and usually scale them in the range $[0,1]$ and then the data sequentially go trough the neurons in the hidden layers (blue) where all the steps described above are performed for each layer. At the end the results of the computation are collected by the output layer (red). \relax }{figure.caption.32}{}}
 \newlabel{eq:learning_bp}{{5.7}{43}{Feed-Forward Neural Networks}{equation.5.2.7}{}}
 \citation{MCNNTUNESarticle}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces The training set used to train the NN is divided in mini-batch (the mini-batch size is a user tunable parameter) than one by one the batches are feed to the NN the output of the network together with the Monte Carlo truth are used to calculate the loss function. Then the weights and the offset are updated as described in \mbox  {Eq. \ref  {eq:learning_bp}} with the back-propagation algorithm. This is done with each mini-batch in the training set and for a number of epochs defined from the user. \relax }}{44}{figure.caption.33}\protected@file@percent }
 \newlabel{fig:training2}{{5.4}{44}{The training set used to train the NN is divided in mini-batch (the mini-batch size is a user tunable parameter) than one by one the batches are feed to the NN the output of the network together with the Monte Carlo truth are used to calculate the loss function. Then the weights and the offset are updated as described in \eqRef {eq:learning_bp} with the back-propagation algorithm. This is done with each mini-batch in the training set and for a number of epochs defined from the user. \relax }{figure.caption.33}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}MCNNTUNES}{44}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}MCNNTUNES}{45}{section.5.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Sampling Phase and Training Set Generation}{45}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Per Bin Model}{45}{subsection.5.3.2}\protected@file@percent }
-\newlabel{sec:PerBinModel}{{5.3.2}{45}{Per Bin Model}{subsection.5.3.2}{}}
 \citation{CMAES}
 \citation{MCNNTUNESarticle}
 \citation{MCNNTUNESarticle}
 \citation{MCNNTUNESarticle}
-\citation{cowan}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces A schematic description of the main step from the sampling phase to the generation of the training set used for the tune procedure. These shows how the work was performed in CMSSW environment. The starting point and the final tune procedure are both controlled by \textsc  {mcnntunes}. In the middle of these two phases the generation of the training set is required, this is performed running the generator many times.\relax }}{46}{figure.caption.34}\protected@file@percent }
 \newlabel{fig:worksampling}{{5.5}{46}{A schematic description of the main step from the sampling phase to the generation of the training set used for the tune procedure. These shows how the work was performed in CMSSW environment. The starting point and the final tune procedure are both controlled by \textsc {mcnntunes}. In the middle of these two phases the generation of the training set is required, this is performed running the generator many times.\relax }{figure.caption.34}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Errors evaluation}{46}{subsubsection*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}PerBin Model}{46}{subsection.5.3.2}\protected@file@percent }
+\newlabel{sec:PerBinModel}{{5.3.2}{46}{PerBin Model}{subsection.5.3.2}{}}
+\citation{cowan}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Figure from \cite  {MCNNTUNESarticle}\relax }}{47}{figure.caption.35}\protected@file@percent }
 \newlabel{fig:PerBinModel_schematic}{{5.6}{47}{Figure from \cite {MCNNTUNESarticle}\relax }{figure.caption.35}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces The table report the values of the quantile $Q_\gamma $ for different confidence level $0.683$ is the row corresponding to the $1\sigma $ definition and is the one of our interest.\relax }}{47}{table.caption.37}\protected@file@percent }
-\newlabel{table:percentile}{{5.1}{47}{The table report the values of the quantile $Q_\gamma $ for different confidence level $0.683$ is the row corresponding to the $1\sigma $ definition and is the one of our interest.\relax }{table.caption.37}{}}
-\newlabel{eq:chi2_variation}{{5.10}{47}{Errors evaluation}{equation.5.3.10}{}}
-\citation{MCNNTUNESarticle}
-\citation{MCNNTUNESarticle}
+\@writefile{toc}{\contentsline {subsubsection}{Error evaluation}{47}{subsubsection*.36}\protected@file@percent }
+\newlabel{eq:chi2_variation}{{5.10}{47}{Error evaluation}{equation.5.3.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces The table report the values of the quantile $Q_\gamma $ for different confidence level $0.683$ is the row corresponding to the $1\sigma $ definition and is the one of our interest.\relax }}{48}{table.caption.37}\protected@file@percent }
+\newlabel{table:percentile}{{5.1}{48}{The table report the values of the quantile $Q_\gamma $ for different confidence level $0.683$ is the row corresponding to the $1\sigma $ definition and is the one of our interest.\relax }{table.caption.37}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces This figure shows the error evaluation in \texttt  {mcnntunes} for the \texttt  {MultipartonInteractions:ecmPow} \texttt  {Pythia8} parameter. The blue line is the value of the $\chi 2/N_{dof}$ evaluated for different parameter values. The best estimation is indicated by the vertical red line, while the green line is the quantity in \mbox  {Eq. \ref  {eq:chi2_variation}}. The error is evaluated from the intersection of blue and green lines. \relax }}{48}{figure.caption.38}\protected@file@percent }
 \newlabel{fig:exampleChi2Variation}{{5.7}{48}{This figure shows the error evaluation in \texttt {mcnntunes} for the \texttt {MultipartonInteractions:ecmPow} \texttt {Pythia8} parameter. The blue line is the value of the $\chi 2/N_{dof}$ evaluated for different parameter values. The best estimation is indicated by the vertical red line, while the green line is the quantity in \eqRef {eq:chi2_variation}. The error is evaluated from the intersection of blue and green lines. \relax }{figure.caption.38}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Negative aspects}{48}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Inverse Model}{48}{subsection.5.3.4}\protected@file@percent }
+\citation{MCNNTUNESarticle}
+\citation{MCNNTUNESarticle}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Inverse Model}{49}{subsection.5.3.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Figure from \cite  {MCNNTUNESarticle}\relax }}{49}{figure.caption.39}\protected@file@percent }
 \newlabel{fig:InverseModel_schematic}{{5.8}{49}{Figure from \cite {MCNNTUNESarticle}\relax }{figure.caption.39}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Errors evaluation}{49}{subsubsection*.40}\protected@file@percent }
 \newlabel{eq:gaussianDristribution}{{5.11}{49}{Errors evaluation}{equation.5.3.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Predictions spread for the inverse model after that a Gaussian resample is performed\relax }}{49}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:InverseModel_predictionsSpread}{{5.9}{49}{Predictions spread for the inverse model after that a Gaussian resample is performed\relax }{figure.caption.41}{}}
 \citation{MCNNTUNESarticle}
 \citation{MCNNTUNESarticle}
-\citation{CMS:2015zrm}
-\citation{CMS:2015zrm}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Predictions spread for the inverse model after that a Gaussian resample is performed\relax }}{50}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:InverseModel_predictionsSpread}{{5.9}{50}{Predictions spread for the inverse model after that a Gaussian resample is performed\relax }{figure.caption.41}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Hyperparameters}{50}{subsubsection*.42}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Problems}{50}{subsubsection*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Weightrules in MCNNTUNES}{50}{subsection.5.3.5}\protected@file@percent }
+\citation{CMS:2015zrm}
+\citation{CMS:2015zrm}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces The hyperparameter optimization procedure is schematically shown here. The model is trained using a training set than performing a closure test a scan on the hyperparameter is done. Once the best configuration is found the best model is retrained using both the runs in the training set and the runs in the validation set. Then the experimental data are fed the network and the best parameters are estimated. Figure from \cite  {MCNNTUNESarticle}\relax }}{51}{figure.caption.43}\protected@file@percent }
 \newlabel{fig:HyperParams}{{5.10}{51}{The hyperparameter optimization procedure is schematically shown here. The model is trained using a training set than performing a closure test a scan on the hyperparameter is done. Once the best configuration is found the best model is retrained using both the runs in the training set and the runs in the validation set. Then the experimental data are fed the network and the best parameters are estimated. Figure from \cite {MCNNTUNESarticle}\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Weightrules in MCNNTUNES}{51}{subsection.5.3.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces An example of weightrules application. Here the black point are the experimental data from the CMS analysis at $\sqrt  {s}=13\ \mathrm  {TeV}$ \cite  {CMS:2015zrm} while the colored lines are the simulations, the vertical lines on MC points indicate the statistical uncertainties. It is easy to see that the distribution in the right panel is not well described from the tune, but thanks to the weightrules we can give to this distribution a greater importance in the tune and describes it better as shown in the left panel. This is better explained in the next chapter.\relax }}{52}{figure.caption.45}\protected@file@percent }
 \newlabel{fig:CMS_weightrules}{{5.11}{52}{An example of weightrules application. Here the black point are the experimental data from the CMS analysis at $\sqrt {s}=13\ \mathrm {TeV}$ \cite {CMS:2015zrm} while the colored lines are the simulations, the vertical lines on MC points indicate the statistical uncertainties. It is easy to see that the distribution in the right panel is not well described from the tune, but thanks to the weightrules we can give to this distribution a greater importance in the tune and describes it better as shown in the left panel. This is better explained in the next chapter.\relax }{figure.caption.45}{}}
 \citation{CPtunes}

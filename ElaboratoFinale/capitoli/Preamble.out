@@ -26,14 +26,14 @@
 \BOOKMARK [1][-]{section.4.3}{Previous Tune for the Underlying Event}{chapter.4}% 26
 \BOOKMARK [2][-]{subsection.4.3.1}{The distributions used for the Tune}{section.4.3}% 27
 \BOOKMARK [2][-]{subsection.4.3.2}{Pyhtia configuration and the tunes}{section.4.3}% 28
-\BOOKMARK [0][-]{chapter.5}{Tune procedure and mcnntunes}{}% 29
+\BOOKMARK [0][-]{chapter.5}{Tuning procedure and mcnntunes}{}% 29
 \BOOKMARK [1][-]{section.5.1}{Parametrization-based approach}{chapter.5}% 30
 \BOOKMARK [1][-]{section.5.2}{Machine Learning and Neural Networks}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.2.1}{Neural Networks - Perceptron}{section.5.2}% 32
 \BOOKMARK [2][-]{subsection.5.2.2}{Feed-Forward Neural Networks}{section.5.2}% 33
 \BOOKMARK [1][-]{section.5.3}{MCNNTUNES}{chapter.5}% 34
 \BOOKMARK [2][-]{subsection.5.3.1}{Sampling Phase and Training Set Generation}{section.5.3}% 35
-\BOOKMARK [2][-]{subsection.5.3.2}{Per Bin Model}{section.5.3}% 36
+\BOOKMARK [2][-]{subsection.5.3.2}{PerBin Model}{section.5.3}% 36
 \BOOKMARK [2][-]{subsection.5.3.3}{Negative aspects}{section.5.3}% 37
 \BOOKMARK [2][-]{subsection.5.3.4}{Inverse Model}{section.5.3}% 38
 \BOOKMARK [2][-]{subsection.5.3.5}{Weightrules in MCNNTUNES}{section.5.3}% 39
