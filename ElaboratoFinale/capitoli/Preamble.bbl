@@ -242,6 +242,13 @@ Albert~M. Sirunyan et~al.
 \newblock Technical report, CERN, Geneva, 2012.
 \newblock URL \url{http://cds.cern.ch/record/1478982}.
 
+\bibitem[Aaltonen et~al.(2015)]{CDF:2015txs}
+Timo~Antero Aaltonen et~al.
+\newblock {Study of the energy dependence of the underlying event in
+  proton-antiproton collisions}.
+\newblock \emph{Phys. Rev. D}, 92\penalty0 (9):\penalty0 092009, 2015.
+\newblock \doi{10.1103/PhysRevD.92.092009}.
+
 \bibitem[Khachatryan et~al.(2010)]{HighPurity}
 Vardan Khachatryan et~al.
 \newblock {CMS Tracking Performance Results from Early LHC Operation}.
@@ -301,13 +308,6 @@ Albert~M Sirunyan et~al.
   proton-proton collisions at $ \sqrt{s} $ = 13 TeV}.
 \newblock \emph{JHEP}, 12:\penalty0 061, 2019{\natexlab{b}}.
 \newblock \doi{10.1007/JHEP12(2019)061}.
-
-\bibitem[Aaltonen et~al.(2015)]{CDF:2015txs}
-Timo~Antero Aaltonen et~al.
-\newblock {Study of the energy dependence of the underlying event in
-  proton-antiproton collisions}.
-\newblock \emph{Phys. Rev. D}, 92\penalty0 (9):\penalty0 092009, 2015.
-\newblock \doi{10.1103/PhysRevD.92.092009}.
 
 \bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
   Seggern]{Buckley:2009bj}

@@ -7,7 +7,7 @@
 %\\
 %So, it is clear that at some level these MPI have to exist, and they can become important in the description of the event; they can change the color topology of the colliding system as a whole.  
 %\\
-%In this scenario it is important to have a good understanding of the phenomenon. The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in \texttt{Pythia} Monte Carlo event generator; then some focus is given to the free parameters we are going to tune in the following sections.
+%In this scenario it is important to have a good understanding of the phenomenon. The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in \textsc{Pythia} Monte Carlo event generator; then some focus is given to the free parameters we are going to tune in the following sections.
 %
 %\section{Basic Concepts}
 %\label{sec:BasicConcepts}
@@ -139,14 +139,11 @@
 %\begin{equation}
 %	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
 %\end{equation}
-%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
+%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \textsc{pythia8}.	
 	
-\section{\texttt{Pythia8} Monte Carlo events generator}	
+%\section{\textsc{Pythia8} Monte Carlo events generator}	
 
-\texttt{Pythia}8 is a standard tool for the simulation of events in high energy collisions. \texttt{Pythia} contains the evolution from a few-body system to a complex multiparticles final state.
-
-
-\section{Parton Showers}
+\section{All-order approaches and PYTHIA Monte Carlo generator}
 
 A different approach to describe the phenomena observed at high-energy colliders, instead of calculating cross sections order by order in the perturbative expansion, is the use of an \textit{all-order} approach. 
 \\
@@ -164,13 +161,21 @@ An example is the $Z$ production $p_T$ spectrum shown in \figRef{figure:pT_Z_CDF
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=12cm]{{img/pT_Z_CDF.png}}
+			\includegraphics[width=12cm]{{img/pT_Z_CDF.png}}
 	\caption{CDF data on $Z$ production cross section at Tevatron collider, CDF experiment, the predictions from fixed order calculation (dotted) with resummation (dashed), and with the inclusion of power corrections (solid) are compared. Figure take from \cite{kulesza2002electroweak}}
 	\label{figure:pT_Z_CDF}
 \end{figure}
 
-An other \textit{all-order} approach is based on the simulation of the so-called "parton showers". It is  implemented in different Monte Carlo programs, as  \textsc{pythia} \cite{PYTHIA2015}, \textsc{herwig} \cite{Herwig2008} and \textsc{sherpa} \cite{SHERPA2004}. 
-The algorithm starts from few partons arising from a hard interaction. Then, as the energy scale at which we examines the scattering decrease these harder partons can split, and so more partons are produced in the shower. The higher scale parton are related to the lower energy scale (close to $\Lambda_{QCD}$) using the DGLAP evolution equation formalism. The solution to this equation can be written using a Sudakov form factor arising from the probability of no gluon emission in the evolution from higher to lower scale.
+An other \textit{all-order} approach is based on the simulation of the so-called \textit{parton shower}. It is  implemented in different Monte Carlo programs, as  \textsc{pythia} \cite{PYTHIA2015}, \textsc{herwig} \cite{Herwig2008} and \textsc{sherpa} \cite{SHERPA2004}.
+
+The following sections will focus on parton shower in particular on its implementation in
+\textsc{Pythia}8. \textsc{Pythia} is a standard tool for the simulation of events in high energy collisions. \textsc{Pythia} contains the evolution from a few-body system to a complex multiparticles final state. It simulate a lot of different processes, some of them are described below. Let starts with a discussion on how the parton shower work and how it is implemented in \textsc{pythia}.
+
+
+
+\subsection{Parton Showers}
+ 
+The parton shower algorithm starts from few partons arising from a hard interaction. Then, as the energy scale at which we examines the scattering decrease these harder partons can split, and so more partons are produced in the shower. The higher scale parton are related to the lower energy scale (close to $\Lambda_{QCD}$) using the DGLAP evolution equation formalism. The solution to this equation can be written using a \textit{Sudakov form factor} arising from the probability of no gluon emission in the evolution from higher to lower scale.
 \\
 In the parton showering process, in addition to the kinematic variables (momentum fraction $z$ and azimuthal angle $\phi$) and flavours of the partons, an evolution variable $t$ is generated. \textsc{Pythia8} uses as  evolution variable the squared of the relative transverse momentum of the two partons in the splitting ($p_T^2$). Different choices are made in \textsc{herwig} and \textsc{sherpa}.
 \\
@@ -191,14 +196,32 @@ The respective probabilities of emitting radiation as one moves in the decreasin
 \end{align}
 We can write-out our Sudakov form factor by using the two probability in \eqRef{eq:FSR1} and \eqRef{eq:ISR1}, as
 \begin{equation}
-	\Delta(p_T^2)=\exp\left( -\displaystyle\int_{p_T0}^{p_T'} \frac{d\mathcal{P}_{PS}}{dp_T^2} \,dp_T\right) \qquad\text{ with } \quad PS=ISR,\ FSR \quad.
+	\Delta(p_T^2)=\exp\left( -\displaystyle\int_{p_{T0}^{PS}}^{p_T'} \frac{d\mathcal{P}_{PS}}{dp_T^2} \,dp_T\right) \qquad\text{ with } \quad PS=ISR,\ FSR \quad.
 	\label{eq:sudakovFormFactor}
 \end{equation}
 The Sudakov form factor give the probability of a parton to evolve from an harder scale to a softer scale without emitting a parton harder than some resolution scale. 
 \\
 The introduction of the Sudakov form factor resums all the effects from the soft and collinear gluon emission. For more details and some plots of different Sudakov form factor values see section 3.5 of \cite{Campbell2006}.
 
+
+ In \textsc{pythia}8 all the contributions from Initial State Radiation, Final State Radiation and Multi Parton Interactions are interleaved into a single common sequence of decreasing $p_T$. 
+\\
+The parton shower has been described in the previously section. The solution to the DGLAP equation is given putting \eqRef{eq:FSR1} and \eqRef{eq:ISR1} in \eqRef{eq:sudakovFormFactor} for the ISR and the FSR by a Sudakov form factor that is related to the no emission probability in the $p_T$-evolution. 
+\\
+The evolution variables for ISR and FSR are defined starting from the virtuality ($Q^2$) of the emission:
+\begin{equation}
+	p_T^2=\left\{\begin{aligned}
+		&(1-z)Q^2 && ISR\\
+		&z(1-z)Q^2 && FSR
+	\end{aligned}\right.\quad,
+	\label{eq:partonShowerEvolutionVariables}
+\end{equation}
+so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ in fact a time-like virtuality ($p^2>0$) is implicated, while for the ISR we have $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$). In both case $Q^2$ values are positive defined. Than the actual strong of the radiation is set by the choices of $\alpha_{s\,ISR}$ and $\alpha_{s\,FSR}$ values.
+
+The threshold on the transverse momentum scale for ISR, $p_{T0}^{ISR}$, and FSR, $p_{T0}^{FSR}$,  are free parameters in \textsc{pyhtia} and are called \texttt{Space}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{Ref}   and \texttt{Time}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{min}.
+
 \subsection{Merging parton showers and matrix element calculations}
+\label{sec:merging}
 
 Regions dominated by soft and collinear gluon emissions are described very well by parton showers approach; on the other hand, regions where partons are  energetic and widely separated are well described by matrix element calculations.  
 So, the best approach would be to combine the two different descriptions, this would require an universal formalism for parton showers and matrix element calculations. This universal formalism was created in 2001 and it is called "Les Houches Accord" \cite{LesHouchesAccord}.
@@ -219,34 +242,17 @@ A better way is to combine NLO matrix element calculation with parton showers: t
 \end{figure}
 %%%
 
-%\subsection{Parton Shower}
 
-\medskip
-
- In \texttt{Pythia}8 all the contributions from Initial State Radiation (ISR), Final State Radiation (FSR) and Multi Parton Interactions (MPI) are interleaved into a single common sequence of decreasing $p_T$. 
-\\
-The parton shower has been described in the previously section. The solution to the DGLAP equation is given putting \eqRef{eq:FSR1} and \eqRef{eq:ISR1} in \eqRef{eq:sudakovFormFactor} for the ISR and the FSR by a Sudakov form factor that is related to the no emission probability in the $p_T$-evolution. 
-\\
-The evolution variables for ISR and FSR are defined starting from the virtuality ($Q^2$) of the emission:
-\begin{equation}
-	p_T^2=\left\{\begin{aligned}
-		&(1-z)Q^2 && ISR\\
-		&z(1-z)Q^2 && FSR
-	\end{aligned}\right.\quad,
-	\label{eq:partonShowerEvolutionVariables}
-\end{equation}
-so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ in fact a time-like virtuality ($p^2>0$) is implicated, while for the ISR we have $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$). In both case $Q^2$ values are positive defined. Than the actual strong of the radiation is set by the choices of $\alpha_{s\,ISR}$ and $\alpha_{s\,FSR}$ values.
-
-\subsection{Multiple Parton Interactions in \texttt{Pythia}}
+\section{Multiple Parton Interactions in PYTHIA}
 
 
-By the fact that the hadrons are viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision different couples of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} (MPI) and it is related to the composite nature of the incoming hadrons. 
+By the fact that the hadrons are viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision different couples of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} and it is related to the composite nature of the incoming hadrons. 
 \\
 So, it is clear that at some level these MPI have to exist, and they can become important in the description of the event; they can change the color topology of the colliding system as a whole.  
 \\
-In this scenario it is important to have a good understanding of the phenomenon. The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in \texttt{Pythia} Monte Carlo event generator; then some focus is given to the free parameters we are going to tune in the following sections.
+In this scenario it is important to have a good understanding of the phenomenon. The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in \textsc{Pythia} Monte Carlo event generator; then some focus is given to the free parameters we are going to tune in the following sections.
 
-\section{Basic Concepts}
+\subsection{Basic Concepts}
 \label{sec:BasicConcepts}
 
 The main hypothesis of the multiple interactions models is that: the QCD factorization theorem is true not only for the hard process but also for the other partons scatters.
@@ -376,19 +382,41 @@ The number of partons is related to $x$ with a power low so, it is likely to hav
 \begin{equation}
 	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
 \end{equation}
-%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
-These two parameters are named \texttt{MultiplepartonInteractions:pT0Ref} and \texttt{MultiplepartonInteractions:ecmPow} and control respectively the threshold for the MPI to occur at a fixed center-of-mass energy and the power evolution with $\sqrt{s}$. 
+%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \textsc{pythia8}.	
+These two parameters are named \texttt{MultiplepartonInteractions:}\-\texttt{pT0Ref} and \texttt{Mul}\-\texttt{tiple}\-\texttt{partonInteractions:}\-\texttt{ecmPow} and control respectively the threshold for the MPI to occur at a fixed center-of-mass energy and the power evolution with $\sqrt{s}$. 
 
 
-In \texttt{pythia}8 MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Than we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
+In \textsc{pythia}8 MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Than we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
 \begin{equation}
 	\frac{d\mathcal{P}_{MPI}}{dp_T}=\frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T}\ \exp\left( -\displaystyle\int_{p_T}^{p_T\,i-1} \frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T'}\,dp_T' \right)\quad .
 \end{equation}
 
+\subsubsection{Interleaving of Multiple Interaction and Parton Shower}
+
+As discussed above the ISR, FSR and MPI are simulated in \textsc{Pythia} following a common decreasing $p_T$ evolution.
+So we have that the total probability is given from the composition of the various contributions from each process:
+\begin{align}
+	\frac{d\mathcal{P}}{dp_T}=&\left( \frac{d\mathcal{P}_{MPI}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T} \right) \nonumber \times\\ 
+	&\times\exp\left\{ -\displaystyle\int_{p_T}^{p_T\,i-1} \left( \frac{d\mathcal{P}_{MPI}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T'} \right)\,dp_T' \right\}
+	\label{eq:common_pT_sequence}
+\end{align}
+%
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=12cm]{{img/PartonShower.png}}
+	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
+	\label{fig:PartonShower}
+\end{figure}
+%
+\\
+In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occurs at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
+The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
+\\
+This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 \subsection{Momentum and flavour conservation}
 
-One problem is to achieve momentum conservation, so we need to take into account the modification in the PDF by the $i-1$ interaction. To do that in \texttt{Pythia} the PDF are rescaled to the remaining available $x$ range, adjusting their normalization.
+One problem in MPI simulation is to achieve momentum conservation, so we need to take into account the modification in the PDF by the $i-1$ interaction. To do that in \textsc{Pythia} the PDF are rescaled to the remaining available $x$ range, adjusting their normalization.
 \\
 We need to take into account the momentum fraction $x_i$ removed from the hadron remnant by the $i-th$ interaction. This is done evaluating PDF not at $x_i$ but at a rescaled value
 \begin{equation}
@@ -426,7 +454,7 @@ To include the impact parameter dependence on the collision, it is necessary to 
 	\rho(r) \propto \frac{1-\beta}{a_1^3}\exp\left\{-\frac{r^2}{a_1^2}\right\}+\frac{\beta}{a_2^3}\exp\left\{ -\frac{r^2}{a_2^2} \right\}\quad,
 	\label{eq:matterDistribution}
 \end{equation}
-where a fraction $\beta$ of matter is contained in a radius $a_2$, and the rest in a larger radius $a_1$.
+where a fraction $\beta$ of matter is contained in a radius $a_2$, and the rest in a larger radius $a_1$. in \textsc{pythia8} these two parameters are named respectively as \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Fraction} and \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Radius}.
 
 \medskip
 
@@ -490,28 +518,7 @@ so, this have modified the probability distribution of interactions number from 
 %\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
 %\end{equation}
 
-\subsection{Interleaving of Multiple Interaction and Parton Shower}
 
-As discussed above the MPI are simulated in \texttt{Pythia} following a decreasing $p_T$ evolution.
-So we have that the total probability is given from the composition of the various contributions:
-\begin{align}
-	\frac{d\mathcal{P}}{dp_T}=&\left( \frac{d\mathcal{P}_{MPI}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T} \right) \nonumber \times\\ 
-	&\times\exp\left\{ -\displaystyle\int_{p_T}^{p_T\,i-1} \left( \frac{d\mathcal{P}_{MPI}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T'} \right)\,dp_T' \right\}
-	\label{eq:common_pT_sequence}
-\end{align}
-%
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=12cm]{{img/PartonShower.png}}
-	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
-	\label{fig:PartonShower}
-\end{figure}
-%
-\\
-In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occurs at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
-The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
-\\
-This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 \subsection{Beam Beam Remnants and primordial $k_T$}
 \label{sec:Beam Beam Remnants and primordial kT}
@@ -539,11 +546,13 @@ but, as an example, to reproduce the data for the $p_T$ distributions of $Z$ bos
 
 \medskip
 
-In \texttt{Pythia} the primordial kT is assigned to initiators sampling a Gaussian distributions for $p_x$ and $p_y$ independently with variable width $\sigma$
+In \textsc{pythia} the primordial kT is assigned to initiators sampling a Gaussian distributions for $p_x$ and $p_y$ independently with variable width $\sigma$
 \begin{equation}
 	\sigma(Q,\widehat{m})=\frac{Q_{1/2}\,\sigma_{\text{soft}}+Q\,\sigma_{\text{soft}}}{Q_{1/2}+Q}\,\frac{\widehat{m}}{\widehat{m}_{1/2}+\widehat{m}}
 \end{equation}
 Where $Q$ is the hard-process renormalization scale for the main hard process and the $p_T$ scale for subsequent MPI. $\sigma_{\text{soft}}$, $\sigma_{\text{hard}}$ are the minimum and maximum width, $\widehat{m}$ is the invariant mass, while $Q_{1/2}$ and $\widehat{m}_{1/2}$ the halfway values between the two extremes.
+
+In \textsc{pythia} the maximum width parameters is called \texttt{Beam}\-\texttt{Remnants:}\-\texttt{primordialKT}\-\texttt{hard}.
 
 \subsection{Color Reconnection}
 
@@ -586,8 +595,18 @@ With this definition for the probability, it is clear that system with low $p_T$
 
 To summarize \textsc{pythia8} is able to simulate high energy hadron-hadron collisions. The evolution of the system is simulated in a common decreasing-$p_T$ sequence the master formula for the evolution is written in \eqRef{eq:common_pT_sequence}. 
 \\
-This evolution start from an hard scale that is the scale of the main parton hard scattering that is described by a fixed ME calculation, \textsc{pythia} can be interfaced with external frameworks for the ME step as \textsc{powheg} and \textsc{mad-graph5 amc@nlo}. Then the parton shower is started with the simulation of ISR, FSR and MPI also the parton rescattering is allowed. Once the evolution is ended the hadronization transform the partons in a set of final hadrons these hadron than decay and rescatters against each others before the detection.
+This evolution start from an hard scale that is the scale of the main parton hard scattering that is described by a fixed ME calculation, \textsc{pythia} can be interfaced with external frameworks for the ME step as \textsc{powheg} and \textsc{mad-graph5 amc@nlo} (some care have to be taken as described in \secRef{sec:merging}). Then the parton shower is started with the simulation of ISR, FSR and MPI also the parton rescattering is allowed. Once the evolution is ended the color reconnection and the hadronization transform the partons in a set of final hadrons these hadron than decay and rescatters against each others before the detection.
+\\
+A schematic view of these processes is shown in \figRef{fig:Processes}.
 
-All these processes are describe mainly by phenomenological model, due to the not-known-by-first-principles soft QCD description. The use of these phenomenological models introduces lots of free parameters (some are been pointed out in the previously sections) that have to be tuned with data to give to \textsc{pythia} the ability of simulate real events.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.98\textwidth]{{img/Processes.png}}
+	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea on the evolution of the system. The two incoming hadrons enter the scattering from the left side, the red line indicate the main hard scattering and the magenta one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Than the new formed hadrons (lightblue) can undergo to different decays.}
+	\label{fig:Processes}
+\end{figure}
 
-In the next chapter we are going to focus on the study of the underlying event and so on all the soft events related to an hard scattering in an hadron-hadron collision. 
+
+\noindent All these processes are describe mainly by phenomenological model, due to the not-known-by-first-principles soft QCD description. The use of these phenomenological models introduces lots of free parameters (some are been pointed out in this sections) that have to be tuned with data to give to \textsc{pythia} the ability of simulates real events.
+
+Next chapter will focus on the study of the underlying event and so on all the soft events related to an hard scattering in an hadron-hadron collision with the description of the analyses used in our tune and the effects of some of these \textsc{pythia}8 parameters on these observables distributions. 

@@ -31,12 +31,14 @@ While the hard processes as the Higgs boson production, or the high $p_T$ jet pr
 This chapter gives a theoretical introduction on some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
 %and finally the all-orders approaches (e.g. the parton showers).
 
+\noindent Then, it is described the parton shower with the  Initial and Final State Radiations. The effects of Multi Parton Interactions and other important processes in the simulation of High Energy Physics events in particular on the basic aspect of \textsc{pythia}8 generator.
+
 
 \section{QCD factorization theorem}
 
 The fundamental idea for the description of a hadron-hadron collision is that hadrons are made-up from partons that, at some high energy scale, can be seen as free. So the hadron-hadron interaction can be seen as an interaction between two free partons, given a sufficiently high energy scale for the interaction.
 \\
-This idea was developed in the framework of the deep inelastic scattering, and the Bjorken scaling observation confirms it \cite{Bjorken:1968dy}. The generalization of this concept leads to the QCD factorization theorem. 
+This idea was developed in the framework of the deep inelastic scattering, and the Bjorken scaling observation confirms it \cite{Bjorken:1968dy}. The generalization of this concept leads to the \textit{QCD factorization theorem}. 
 \\   
 The factorization theorem was introduced first by Drell and Yan \cite{DRELL1971578}. 
 The hadron-hadron scattering cross-section is described in terms of partons extending the formalism used for deep inelastic scattering, through the following factorized formula:
@@ -63,22 +65,23 @@ The hadron-hadron scattering cross-section is described in terms of partons exte
 \label{eq:factorization2}
 \end{equation}
 Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function in the hadron $A\,(B)$ that is dependent on $x_a\,(x_b)$ that is the momentum fraction of the total momentum of the hadron $A\,(B)$ carried by the parton, and on the scale of the interaction. 
-
+\\
 Let describe all the contribution to this formula in more detail.
 
 \subsection{Parton distribution functions}
 
 The first ingredient in our recipe is the knowledge of the quark and gluon distributions inside the two hadrons that undergo the scattering. 
-
-The parton distribution functions used to describe a hard scattering are solution to the DGLAP (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) equations \cite{Lipatov:400357, Gribov:427157, ALTARELLI1977298, Dokshitzer:1977sg}
+\\
+The PDFs used to describe a hard scattering are solution to the DGLAP (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) equations \cite{Lipatov:400357, Gribov:427157, ALTARELLI1977298, Dokshitzer:1977sg}
 \\
 \begin{equation}
-	\mu_F^2\frac{\partial f_{i/H}(x,\mu_F^2)}{\partial\mu_F^2}=\displaystyle\sum_j\frac{\alpha_s(\mu_F^2)}{2\pi}\displaystyle\int_x^1 \frac{dz}{z}\, P_{i\,\rightarrow\,j}(z)\ f_{j/p}\left(\frac{x}{z},\mu_F^2\right)\quad ,
+	\mu_F^2\frac{\partial f_{i/H}(x,\mu_F^2)}{\partial\mu_F^2}=\displaystyle\sum_j\frac{\alpha_s(\mu_F^2)}{2\pi}\displaystyle\int_x^1 \frac{dz}{z}\, P_{i\,\rightarrow\,j}(z)\ f_{j/H}\left(\frac{x}{z},\mu_F^2\right)\quad ,
 \end{equation}
 \\
-where $P_{i\,\rightarrow\,j}$ are the so-called splitting functions: they are the probability that a parton of type $i$ emits a parton $j$ (a quark or a gluon) carrying a fraction $z$ of the $i$-parton momentum.
+where $\mu_F$ is the energy scale known as  \textit{factorization scale}.ì, and $f_i/H(x,\mu_F)$ the PDF for the parton of type $i$ inside the hadron $H$ and it is a function of the momentum fraction $x$ and of the energy scale.
+$P_{i\,\rightarrow\,j}$ are the so-called \textit{splitting functions}: they are the probability that a parton of type $i$ emits a parton $j$ (a quark or a gluon) carrying a fraction $z$ of the $i$-parton momentum.
 \\
-The splitting functions have the following perturbative expansions in $alpha_s$: 
+The splitting functions have the following perturbative expansions in $\alpha_s$: 
 \begin{equation}
 	P_{i\,\rightarrow\,j}(x,\alpha_s)=P_{i\,\rightarrow\,j}^{(0)}(x)+\frac{\alpha_s}{2\pi}P_{i\,\rightarrow\,j}^{(1)}(x)+\dots\quad .
 \end{equation}
@@ -106,7 +109,7 @@ In \figRef{fig:NNPDF31} we can also see that with increasing virtuality ($Q^2$) 
 \begin{equation}
 	\text{Resolution}\sim\frac{\hbar}{Q}\quad .
 \end{equation}
-So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation find an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when are probed at lower energy. This, as will be discussed in the next chapter, is related to the higher number of interaction between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called \textit{multiple parton interaction}: this concept will be discussed in the next chapter.
+So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation find an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when are probed at lower energy. This, as will be discussed in the below sections, is related to the energy dependence in the number of interaction between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called \textit{multiple parton interaction}: this concept will be discussed in the next chapter.
 
 %%%%%%
 
@@ -168,7 +171,7 @@ So, when probed at higher energy, the hadrons appear denser\footnote{This densit
 
 \subsection{Partonic cross-section}
 
-Partonic cross section is another fundamental ingredients in our recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So the our hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
+Partonic cross section is another fundamental ingredients in our recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So our hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
 \begin{equation}
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,\mu_F^2)\,f_{b/B}(x_b,\mu_F^2)\,\left[\hat{\sigma}_0+\alpha_s(\mu_R^2)\hat{\sigma}_1+\dots\right]\quad .
 \label{eq:factorization3}
@@ -178,7 +181,6 @@ Where we have introduced the dependencies on the two unphysical scales:
 	\item[--] The \textit{factorization scale} $\mu_F$: this scale is related to the resolution with which the hadron is being probed, separates long- and short- distance physics processes.
 	\item[--] The \textit{renormalization scale} $\mu_R$: the scale at which is evaluated the strong coupling constant $\alpha_s$. The dependence of $\alpha_s$ on the renormalization scale is related to different effects such as  the vacuum polarization, the quark self-energy, the vertex corrections, and the gluon loop corrections to the elementary three-gluon and four-gluon couplings.
 \end{itemize}
-
 The calculation of such expansion at the leading order (LO) is performed by evaluating all the possible tree-level Feynman diagrams for every process. Then the calculation proceeds by computing the squared matrix element and by integrating it over the available phase space (analytically or numerically).
 \\
 At this point, we can already encounter some divergence that can be avoided imposing some  restrictions on the phase space.
