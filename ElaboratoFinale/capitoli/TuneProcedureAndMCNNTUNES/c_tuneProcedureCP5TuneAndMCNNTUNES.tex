@@ -21,14 +21,14 @@ So the first step in the procedure is to fit the response of the generator using
 \begin{equation}
 	h(p)\ \xrightarrow{\quad \text{parametrization}\quad }\ \overline{h}(p)\quad ,
 \end{equation}
-where $h(p)$ is a vector of functions. Each function gives the value of the $i^{th}$ bin based on the  parameters values. In this phase this functions vector has been substituted by the surrogate one $\overline{h}(p)$.  
+where $h(p)$ is the vector of the observables distrutions bins from MC simulations that are function of the parameters. In this phase this functions that give the bins value at the variation of the parameters value have been substituted by the surrogate ones $\overline{h}(p)$.  
 %where the real function has been substituted by the surrogate one. 
 \\
 After that, a \textit{loss function} $\mathcal{L}(\overline{h}(p),h_{\text{data}})$ is defined between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
 \begin{equation}
 	\mathcal{L}(\overline{h}(p),h_{\text{data}})\equiv \chi^2=\frac{(\overline{h}(p)-h_{\text{data}})^2}{\sigma^2}\quad.
 \end{equation}
-where $sigma^2$ is the vector of the squared error on each bin.  
+where $\sigma^2$ is the vector of the experimental squared error on each bin.  
 In the end to find the best parameters estimation, this loss function need to be minimized. The set of parameters $p_{\text{best}}$ are the best evaluation that our generator can provide for the real values and we are going to call this set of best parameters: \textit{tune}.
 \begin{equation}
 	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
@@ -316,14 +316,15 @@ But if more care are given to this model this can become a very powerful method 
 
 \textsc{mcnntunes} as \textsc{professor} implements the possibility of change the weight of the singles bins in the distributions. This is a really useful feature in order to give some more importance to distributions and points that require a better description by the tune. As we will discuss later we use these weightrules to get a results more similar to CP5 in our tune. 
 This feature gives to us the possibility to decide which distribution is more important in our tune.
-Increasing the weight of a bin this bin became more important in the overall $\chi^2$ evaluation and it is better described by the simulations. An example is shown in \figRef{fig:CMS_weightrules} where the application of the weightrules takes us to a better description of the experimental data.
-
-\begin{figure}[!htb]
-\centering
-\noindent
-	\includegraphics[width=0.85\textwidth]{{img/CMS2015_weightrules.jpg}}
-	\caption{An example of weightrules application. Here the black point are the experimental data from the CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$ \cite{CMS:2015zrm} while the colored lines are the simulations, the vertical lines on MC points indicate the statistical uncertainties. It is easy to see that the distribution in the right panel is not well described from the tune, but thanks to the weightrules we can give to this distribution a greater importance in the tune and describes it better as shown in the left panel. This is better explained in the next chapter.}
-	\label{fig:CMS_weightrules}
-\end{figure}   
+Increasing the weight of a bin this bin became more important in the overall $\chi^2$ evaluation and it is better described by the simulations. 
+%An example is shown in \figRef{fig:CMS_weightrules} where the application of the weightrules takes us to a better description of the experimental data.
+%
+%\begin{figure}[!htb]
+%\centering
+%\noindent
+%	\includegraphics[width=0.85\textwidth]{{img/CMS2015_weightrules.jpg}}
+%	\caption{An example of weightrules application. Here the black point are the experimental data from the CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$ \cite{CMS:2015zrm} while the colored lines are the simulations, the vertical lines on MC points indicate the statistical uncertainties. It is easy to see that the distribution in the right panel is not well described from the tune, but thanks to the weightrules we can give to this distribution a greater importance in the tune and describes it better as shown in the left panel. This is better explained in the next chapter.}
+%	\label{fig:CMS_weightrules}
+%\end{figure}   
 
 

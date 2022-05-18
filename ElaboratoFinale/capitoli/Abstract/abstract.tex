@@ -1,17 +1,17 @@
 Soft QCD studies require the use of Monte Carlo generators based on phenomenological models: these models introduce a lot of free parameters that have to be tuned with the real data.
-Due to the high computational cost of running a generator, the tuning requires a parametrization-based approach: the state-of-art is the use of a polynomial parametrization. 
-In this work, an alternative approach based on machine learning techniques, implemented in the Python package MCNNTUNES by means of Feed Forward Neural Networks, is used to tune parameters. 
+Due to the high computational cost of running a generator it is important to reduce the number of Monte Carlo job required, this is done employing a parametrization-based approach were the real response of the generator is replaced by a surrogate one. The state-of-art for this approach is the use of a polynomial parametrization. 
+In this work, an alternative approach based on machine learning techniques, implemented in the Python package \textsc{mcnntunes} by means of Feed Forward Neural Networks, is used to tune parameters. 
 
 \medskip
 
 Firstly, the basic theoretical concepts used in the Monte Carlo simulations are introduced.
 The aim of our work was to validate \textsc{mcnntunes} as a tool for the tuning of Monte Carlo generators in High Energy Physics simulations and than use it for a further tune.
-To perform this validation we try to reproduce an already existing tune for the description of the Underlying Event in hadron-hadron scatters using data collected in Minimum Bias observation.
-So, in the first part the parameters related to the Multi Parton Interactions and Color Reconnection, in \textsc{pythia} event generator, have been tuned. The tune was performed employing data from the CDF and CMS experiments at different center-of-mass energy. The validation of the \textsc{mcnntunes} tool is performed in two steps: a first test with a restrict number of free parameters and the actual tune. 
+To perform this validation we try to reproduce an already existing tune for the description of the Underlying Event in hadron-hadron collisions using data collected in Minimum Bias observations.
+So, in the first part the parameters related to the Multi Parton Interactions and Color Reconnection, in \textsc{pythia} event generator, have been tuned. The tune was performed employing data from the CDF and CMS experiments at different center-of-mass energy. The validation of the \textsc{mcnntunes} tool is performed in two steps: a first test with a restrict number of free parameters in order to test all the functionality and check the different operation mode in a simpler case than the actual tune. Once the tool as been tested   the actual tune is performed. 
 
 \medskip
 
-Once the tool has been validated, we employed it for the tune of the Primordial $k_T$ and Initial State Radiation parameters using data collected in $Z$ boson-production events by the CMS experiment at the center-of-mass energy of $13\ \mathrm{TeV}$. 
+Then after that the validation of \textsc{mcnntunes} as a valid  tool has been performed, we employed it for the tune of the Primordial $k_T$ and Initial State Radiation parameters using data collected in $Z$ boson-production events by the CMS experiment at the center-of-mass energy of $13\ \mathrm{TeV}$. 
 
 
 %the parameters that describe Multi Parton Interactions and Color Reconnection, in Pythia event generator framework, are tuned: this is done employing observables sensible to  underlying events in minimum bias observation, as the charged particle density and the charged particle scalar momentum sum in the two transverse regions defined respectively to the direction of the leading object arising from the hard scattering of two partons. 

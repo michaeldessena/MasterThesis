@@ -224,7 +224,7 @@ The tuned parameters are shown in \tableRef{table:CP5variations} with the associ
 	\label{table:CP5variations}
 \end{table}
 
-\noindent These parameters are the ones that govern the number of MPI and the amount of Color Reconnections\footnote{Note that the parameters related to the simulation of the hadronization and beam remnant are set to the values of the Monash tune}. These CP* tunes want to be a general (multi-purpose) tunes for UE and minimum bias observables described above.
+\noindent These parameters are the ones that govern the number of MPI and the amount of Color Reconnections\footnote{Note that all the other parameters are set to the default values of the Monash tune \cite{Monash}}. These CP* tunes want to be a general (multi-purpose) tunes for UE and minimum bias observables described above.
 
 These tunes are performed with the standard tool for the  high energy physics tune: \textsc{professor}. 
 
@@ -266,13 +266,13 @@ inclusive selection in inelastic proton-proton collisions \cite{CMS:2015zrm};
 \item Charged particle density and charged particle scalar $p_T^{sum}$ in TransMIN and TransMAX regions at different $\sqrt{s}$ ($1.96\ \mathrm{TeV}$ \cite{CDF:2015txs}, \, $7\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-12-020}, \, $13\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-15-007});
 \item The pseudorapidity distributions for single diffractive (\textsc{sd}) and non single diffractive (\textsc{nsd}) events selection \cite{CMS:2018nhd}.
 \end{itemize}
-In the next chapter we will describe our tune using \texttt{mcnntunes} and in it we used the same distribution listed here. All the graphs for these observables are then shown with the final tunes descriptions.
+In the next chapter we will describe our tune using \textsc{mcnntunes} and in it we used the same distribution listed here. All the graphs for these observables are then shown with the final tunes descriptions.
 
 
 
 \subsection{Pyhtia configuration and the tunes}
 
-On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are reported the values for the \texttt{pythia8} parameters used in the CP tunes and, on the bottom, the five parameters resulting from the tune.
+On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are reported the values for the \textsc{pythia8} parameters used in the CP tunes and, on the bottom, the five parameters resulting from the tune.
 \begin{table}[!htb]
 	\centering
 	\includegraphics[width=0.95\textwidth]{{img/CPtunes1.png}}
@@ -286,7 +286,7 @@ On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are re
 	\label{fig:CPtunes2}
 \end{table}
 \\
-Below we are going to focus on CP5 tune. We are going to reproduce this tune using the same settings for \texttt{pythia8} but using a different tuning software: \texttt{mcnntunes}. 
+Below we are going to focus on CP5 tune. We are going to reproduce this tune using the same settings for \textsc{pythia8} but using a different tuning software: \textsc{mcnntunes}. 
 \\
 
 %%%% INTRODUCTION to the next chapter

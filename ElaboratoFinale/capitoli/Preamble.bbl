@@ -309,6 +309,12 @@ Albert~M Sirunyan et~al.
 \newblock \emph{JHEP}, 12:\penalty0 061, 2019{\natexlab{b}}.
 \newblock \doi{10.1007/JHEP12(2019)061}.
 
+\bibitem[Skands et~al.(2014)Skands, Carrazza, and Rojo]{Monash}
+Peter Skands, Stefano Carrazza, and Juan Rojo.
+\newblock {Tuning PYTHIA 8.1: the Monash 2013 Tune}.
+\newblock \emph{Eur. Phys. J. C}, 74\penalty0 (8):\penalty0 3024, 2014.
+\newblock \doi{10.1140/epjc/s10052-014-3024-y}.
+
 \bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
   Seggern]{Buckley:2009bj}
 Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
@@ -392,12 +398,6 @@ Richard~D. Ball et~al.
 \newblock \emph{Eur. Phys. J. C}, 77\penalty0 (10):\penalty0 663,
   2017{\natexlab{b}}.
 \newblock \doi{10.1140/epjc/s10052-017-5199-5}.
-
-\bibitem[Skands et~al.(2014)Skands, Carrazza, and Rojo]{Monash}
-Peter Skands, Stefano Carrazza, and Juan Rojo.
-\newblock {Tuning PYTHIA 8.1: the Monash 2013 Tune}.
-\newblock \emph{Eur. Phys. J. C}, 74\penalty0 (8):\penalty0 3024, 2014.
-\newblock \doi{10.1140/epjc/s10052-014-3024-y}.
 
 \bibitem[Sirunyan et~al.(2018{\natexlab{c}})]{CMS:2018mdf}
 Albert~M Sirunyan et~al.
