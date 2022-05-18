@@ -1,6 +1,243 @@
 
-\chapter{Multiple Parton Interactions}
-\label{chap:MultiplePartonInteractions}
+%\chapter{Multiple Parton Interactions}
+%\label{chap:MultiplePartonInteractions}
+
+
+%By the fact that the hadrons are viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision different couples of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} (MPI) and it is related to the composite nature of the incoming hadrons. 
+%\\
+%So, it is clear that at some level these MPI have to exist, and they can become important in the description of the event; they can change the color topology of the colliding system as a whole.  
+%\\
+%In this scenario it is important to have a good understanding of the phenomenon. The aim of this section is to describe the basic concepts that are use to simulate MPI, for example in \texttt{Pythia} Monte Carlo event generator; then some focus is given to the free parameters we are going to tune in the following sections.
+%
+%\section{Basic Concepts}
+%\label{sec:BasicConcepts}
+%
+%The main hypothesis of the multiple interactions models is that: the QCD factorization theorem is true not only for the hard process but also for the other partons scatters.
+%\\
+%So, we can write:
+%\begin{equation}
+%	\frac{d\sigma_{\text{int}}}{dp_\perp}=\displaystyle\sum_{i,j,k,l}\displaystyle\int dx_1 \displaystyle\int dx_2 \displaystyle\int d\hat{t}\, f_i(x_1,Q^2)f_j(x_2,Q^2)\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}\delta\left( p_\perp^2-\frac{\hat{t}\hat{u}}{\hat{s}} \right) \quad .
+%	\label{eq:sigma_int1}
+%\end{equation}
+%This represent the interaction differential cross section for the hadron-hadron collisions, where $\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}$ is the differential cross section for QCD hard $2\ \rightarrow 2$ processes, this processes are the one reported in \tableRef{table:partonic_cross_sections}. 
+%\\
+%In \eqRef{eq:sigma_int1} we used the Mandelstam variables associated to the partonic system:
+%\begin{align}
+%	&\hat{s}=(p_1+p_2)^2=(p_3+p_4)^2=x_1x_2s\\
+%	&\hat{t}=(p_1-p_3)^2=(p_2-p_4)^2\\
+%	&\hat{u}=(p_1-p_4)^2=(p_2-p_3)^2
+%\end{align} 
+%where $p_1$, $p_2$ are the four-momenta of the incoming partons and $p_3$, $p_4$ the four-momenta of the outgoing partons. 
+%
+%%Note that in \eqRef{eq:sigma_int1} the jet cross section is twice as large $\sigma_{\text{jet}}=2\sigma_{\text{int}}$, because at first approximation each interaction gives rise to two jets.
+%
+%\noindent We assume also that the "hardness" of processes is defined by the $p_T$ scale of the interaction ($Q^2=p_T^2$).
+%
+%%\begin{table}[!ht]
+%%	\centering
+%%	\begin{tabular}{l | c}\rule{0pt}{3ex} 
+%%	Process & Partonic cross section \rule{0pt}{3.5ex}\\   \hline\hline 
+%%	$q\,q'\ \rightarrow\ q\,q'$ & $\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+%%	$q\,q\ \rightarrow\ q\,q$ & $\frac{4}{9}\left(\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}+\frac{\hat{s}^2+\hat{t}^2}{\hat{u}^2}\right) -\frac{8}{27}\frac{\hat{s}^2}{\hat{u}\hat{t}}$\rule{0pt}{3.5ex}\\
+%%	$q\,\overline{q}\ \rightarrow\ q'\,\overline{q}'$ & $\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+%%	$q\,\overline{q}\ \rightarrow\ q\,\overline{q}$ & $\frac{4}{9}\left(\frac{\hat{s}^2+\hat{u}^2}{\hat{t}^2}+\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}\right) -\frac{8}{27}\frac{\hat{u}^2}{\hat{s}\hat{t}}$\rule{0pt}{3.5ex}\\
+%%	$q\,\overline{q}\ \rightarrow\ g\,g$ & $\frac{32}{27}\frac{\hat{t}^2+\hat{u}^2}{\hat{t}\hat{u}}-\frac{8}{3}\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}$\rule{0pt}{3.5ex}\\
+%%	$g\,g\ \rightarrow\ q\,\overline{q}$ & $\frac{1}{6}\frac{\hat{t}^2+\hat{u}^2}{\hat{t}\hat{u}}-\frac{8}{3}\frac{\hat{t}^2+\hat{u}^2}{\hat{s}^2}$\rule{0pt}{3.5ex}\\
+%%	$g\,q\ \rightarrow\ g\,q$ & $-\frac{4}{9}\frac{\hat{s}^2+\hat{u}^2}{\hat{s}\hat{u}}-\frac{\hat{u}^2+\hat{s}^2}{\hat{t}^2}$\rule{0pt}{3.5ex}\\
+%%	$g\,g\ \rightarrow\ g\,g$ & $\frac{9}{2}\left( 3-\frac{\hat{t}\hat{u}}{\hat{s}^2} -\frac{\hat{s}\hat{u}}{\hat{t}^2} - \frac{\hat{s}\hat{t}}{\hat{u}^2} \right)$\rule{0pt}{3.5ex}
+%%	\end{tabular}
+%%	\caption{Parton-Parton differential cross sections ($2\ \rightarrow\ 2$ QCD process), can beh calculated in pQCD evaluating the matrix element for each process involving quark, antiquark and gluon.}
+%%	\label{table:partonic_cross_sections}
+%%\end{table}
+%
+%\begin{table}[!ht]
+%	\centering	
+%	\begin{tabular}{| c | P{6cm} | c |}
+%	\hline
+%	Process & Amplitude & $\displaystyle\sum|\mathcal{M}|^2/(4\pi\alpha_s)^2$\\\hline\hline
+%	$qq'\,\rightarrow\,qq' $ & \scalebox{0.95}{\raisebox{-.5\height}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_1.pdf}}}} & $\displaystyle{ \frac{4}{9}\frac{s^2+u^2}{t^2} }$\\\hline
+%	$qq\,\rightarrow\,qq $ & \scalebox{0.95}{\raisebox{-.5\height}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_2.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_3.pdf}}}} & $\displaystyle{\frac{4}{9}\frac{s^2+u^2}{t^2} + \frac{4}{9}\frac{s^2+t^2}{u^2} - \frac{8}{27}\frac{s^2}{tu}}$\\\hline
+%	$q\overline{q}\,\rightarrow\,q'\overline{q'} $ & \scalebox{0.95}{\raisebox{-.5\height}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_4.pdf}}}} & $\displaystyle{\frac{4}{9}\frac{t^2+u^2}{s^2}} $\\\hline
+%	$q\overline{q}\,\rightarrow\,q\overline{q} $ & \scalebox{0.95}{\raisebox{-.5\height}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_5.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_6.pdf}}}} & $\displaystyle{\frac{4}{9}\frac{s^2+u^2}{t^2} + \frac{4}{9}\frac{t^2+u^2}{s^2} - \frac{8}{27}\frac{u^2}{st}}$\\\hline
+%	$q\overline{q}\,\rightarrow\,gg $ & \scalebox{0.95}{\raisebox{0.0\height}{\vtop{\hbox{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_7.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_8.pdf}}}\begin{minipage}{4cm}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_9.pdf}}}\end{minipage}}}} & $\displaystyle{\frac{32}{27}\frac{t^2+u^2}{tu}-\frac{8}{3}\frac{t^2+u^2}{s^2}} $\\\hline
+%	$gg\,\rightarrow\,q\overline{q} $ & \scalebox{0.95}{\raisebox{0.0\height}{\vtop{\hbox{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_10.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_11.pdf}}}\begin{minipage}{4cm}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_12.pdf}}}\end{minipage}}}} & $ \displaystyle{\frac{1}{6}\frac{t^2+u^2}{tu}-\frac{3}{8}\frac{t^2+u^2}{s^2}} $\\\hline
+%	$qg\,\rightarrow\,qg $ & \scalebox{0.95}{\raisebox{0.0\height}{\vtop{\hbox{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_13.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_14.pdf}}}\begin{minipage}{4cm}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_15.pdf}}}\end{minipage}}}} & $ \displaystyle{-\frac{4}{9}\frac{s^2+u^2}{su}+\frac{s^2+u^2}{t^2} }$\\\hline
+%	$gg\,\rightarrow\,gg $ & \scalebox{0.95}{\raisebox{0.1\height}{\vtop{\hbox{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_16.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_17.pdf}}}\hbox{\raisebox{0.1\height}{\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_18.pdf}}\qquad\includegraphics[width=2.5cm]{{img/DiagrammiPartonic/feynman_partonic_19.pdf}}}}}}} & $ \displaystyle{\frac{9}{2}\left( 3-\frac{tu}{s^2}-\frac{su}{t^2}-\frac{st}{u^2}\right)} $\\\hline
+%	\end{tabular}
+%	\caption{Parton-Parton differential cross sections ($2\ \rightarrow\ 2$ QCD process), can beh calculated in pQCD evaluating the matrix element for each process involving quark, antiquark and gluon. Table from \cite{SIEGERTthesis}}
+%	\label{table:partonic_cross_sections}
+%\end{table}
+%
+%%\begin{table}[!ht]
+%%	\centering
+%%	\includegraphics[width=0.8\textwidth]{{img/Table_cross_sections.png}}
+%%	\caption{Parton-Parton differential cross sections ($2\ \rightarrow\ 2$ QCD process), can beh calculated in pQCD evaluating the matrix element for each process involving quark, antiquark and gluon. Table from \cite{SIEGERTthesis}}
+%%	\label{table:partonic_cross_sections}
+%%\end{table}
+%
+%\noindent As you can see from the formulae in \tableRef{table:partonic_cross_sections}
+%at small scattering angles, for $t\,\rightarrow\,0$,  the t-channel gluon exchange processes $qq'\,\rightarrow\,qq'$, $qg\,\rightarrow\,qg$ and $gg\,\rightarrow\,gg$ dominate the full matrix element. For scatterings that are soft relative to $\hat{s}$, $|\hat{t}|\ll \hat{s}$, we can approximate $|\hat{t}|$ as:
+%\begin{equation}
+%	p_T^2=\frac{\hat{t}\hat{u}}{\hat{s}} = \frac{\hat{t}(-\hat{s}-\hat{t})}{\hat{s}} \approx |\hat{t}|\quad ,
+%\end{equation}
+%in this limit, the only differences between quark and gluon cross sections are the color factors
+%\begin{equation}
+%	\hat{\sigma}_{gg}:\hat{\sigma}_{qg}:\hat{\sigma}_{qq}=\frac{9}{4}:1:\frac{4}{9}\quad .
+%\end{equation}
+%So, the \eqRef{eq:sigma_int1} can be rewritten like
+%\begin{equation}
+%	\frac{d\sigma_{int}}{dp_T^2}\approx\int\int\frac{dx_1}{x_1}\,\frac{dx_2}{x_2}\,F(x_1,p_T^2)\,F(x_2,p_T^2)\frac{d\hat{\sigma}_{2\,\rightarrow\,2}}{dp_T^2}\quad ,
+%	\label{eq:sigma_int2}
+%\end{equation}
+%whit:
+%	\begin{gather}
+%		\frac{d\hat{\sigma}_{2\,\rightarrow\,2}}{dp_T^2} = \frac{8\pi\alpha_s^2(p_T^2)}{9p_T^4}\quad ;\\
+%		F(x,Q^2)=\displaystyle\sum_q\left( x\,q(x,Q^2) + x\,\overline{q}(x,Q^2) \right) + \frac{9}{4}\,x\,g(x,Q^2)\quad .
+%	\end{gather}
+%Now, we can integrate the \eqRef{eq:sigma_int2}:
+%\begin{equation}
+%	\sigma_{int}(p_{T\,min})= \displaystyle\int_{ p_{T\,min}^2}^{(\sqrt{s}/2)^2}\frac{d\hat{\sigma}_{2\,\rightarrow\,2}}{dp_T^2}\,dp_T^2\propto \frac{1}{p_{T\,min}^2}\  \xrightarrow{\ \ p_{T\,min}\,\rightarrow\, 0 \ }\ \ \infty
+%	\label{eq:interaction_crossSection}
+%\end{equation}
+%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=12cm]{{img/CrossSection_Tot.png}}
+%	\caption{This figure shows the interaction cross section ($\sigma_{\text{int}}$) at Tevatron ($p\overline{p}$, $\sqrt{s}=1.8\ \mathrm{TeV}$) and at LHC ($pp$, $\sqrt{s}=14\ \mathrm{TeV}$). The flat lines are the corresponding values for the total cross section. The interaction cross section that arise from \eqRef{eq:interaction_crossSection} is divergent for $p_{T\,min}\,\rightarrow\,0$ in reality a dumping of this divergence is expected due to the color screening effect.}
+%	\label{fig:CrossSection_Tot}
+%\end{figure}
+%
+%\noindent The total cross section is divergent in the limit $p_T\,\rightarrow\,0$, this divergence is shown in \figRef{fig:CrossSection_Tot}. Due to this divergence the total interaction cross section at some $p_{T}$ scale can exceed the total proton-proton cross section.
+%\\
+%To understand this paradox should be noted that the interaction cross section described in \eqRef{eq:interaction_crossSection} is related to the interaction probability between two partons and counts the number of interactions, while the total proton-proton cross section $\sigma_{pp}$ counts the number of events. For example, an event (a proton-proton collision) in which two partons interact counts once in the total cross section and twice in the interaction cross section.
+%\\
+%So, the ratio between this two quantities is perfectly allowed to be larger than unity, we can write it down as:
+%\begin{equation}
+%	\frac{\sigma_{int}(p_{T\,min})}{\sigma_{tot}}=\langle n \rangle (p_{T\,min})\quad .
+%\end{equation}
+%Furthermore, we have to consider the \textit{screening effect}: in fact the incoming hadrons are color singlet objects. Therefore, when the $p_T$ of an exchanged gluon is small, and so the associated wavelength large, this gluon cannot longer resolve the color charges and the effective coupling is decreased, this screening set a cutoff in the divergence. The screening effect is schematically shown in \figRef{fig:ScreeningEffect}.
+%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{{img/ScreeningEffect.png}}
+%	\caption{A picture of the screening effect. The left figure show two color charge that are not resolved by the gluon in fact the wave length is greater than the spatial separation, $d$, of the two charges. So resolution of the probe is not enough to discriminate the color charges. While on the right figure the two charges are very well distinct.}
+%	\label{fig:ScreeningEffect}
+%\end{figure}
+%
+%\noindent So, this cutoff is associated with color screening distance i.e. the average size of the region within the  compensation of color charge occurs.
+%This cutoff is then introduced in the factor as:
+%\begin{equation}
+%	\frac{\alpha_s^2\,(p_{T0}^2+p_{T}^2)}{\alpha_s^2\,(p_T^2)}\,\frac{p_T^4}{(p_{T0}^2+p_T^2)^2}\quad .
+%\end{equation}
+%This factor contains the phenomenological regularization of the divergence, with the factor $p_{T0}$ that have to be tuned to data. 
+%\\
+%Now the interaction cross section is smoothly regularized and therefore finite.
+%\\
+%To be notice that: parameter $p_{T0}$ do not have to be energy-independent, but since the energy is related with the sensibility of our probe, higher energy is related with the capacity of probing PDFs to lower x values (as discussed previously, see \figRef{fig:NNPDF31}) and in this low x region the number of partons rapidly increases. So, the partons are closer packed in this regions and as a consequence the color screening distance decrease.
+%\\
+%The number of partons is related to $x$ with a power low so, it is likely to have a dependence of the same form for $p_{T0}$ respect to the center-of-mass energy
+%\begin{equation}
+%	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
+%\end{equation}
+%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
+	
+\section{\texttt{Pythia8} Monte Carlo events generator}	
+
+\texttt{Pythia}8 is a standard tool for the simulation of events in high energy collisions. \texttt{Pythia} contains the evolution from a few-body system to a complex multiparticles final state.
+
+
+\section{Parton Showers}
+
+A different approach to describe the phenomena observed at high-energy colliders, instead of calculating cross sections order by order in the perturbative expansion, is the use of an \textit{all-order} approach. 
+\\
+Different all-order approaches exist such as resummation techniques and parton showers. Resummation is based on the observation that in many quantities the smallness of the expansion coefficients $\alpha_s$ is violated by large logarithmic enhancements. This takes the dominant contribution from each order and "resums" them by means of an evolution equation. 
+\\
+The main problem in QCD is related to the fact that lots of quantities have logarithmic corrections that can lead to divergences. Resummation avoids these divergences.
+%The main problem in QCD is related to the fact that lot of quantities have corrections of the form $\alpha_s^n\log^k(Q_i/Q_j)$ where $Q_i$ and $Q_j$ are two different energies scales, for example:
+%\begin{itemize}
+%	\item[--] Renormalization $\mu_R=Q^2$ and factorization scales logs: $\alpha_s^n\log^n(Q^2/\mu_f)$
+%\end{itemize}
+Various methods to perform this resummation exist depending on the process and the type of divergence that has to be eliminated.
+\\
+%%%% GRAPH on pT Z with effect of resummation 
+An example is the $Z$ production $p_T$ spectrum shown in \figRef{figure:pT_Z_CDF}: here the comparison between experimental CDF data and theoretical predictions is shown: in the low $p_T$ region the \textit{all-order} approach regularizes the divergence of the fixed order calculation and describes the data better. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=12cm]{{img/pT_Z_CDF.png}}
+	\caption{CDF data on $Z$ production cross section at Tevatron collider, CDF experiment, the predictions from fixed order calculation (dotted) with resummation (dashed), and with the inclusion of power corrections (solid) are compared. Figure take from \cite{kulesza2002electroweak}}
+	\label{figure:pT_Z_CDF}
+\end{figure}
+
+An other \textit{all-order} approach is based on the simulation of the so-called "parton showers". It is  implemented in different Monte Carlo programs, as  \textsc{pythia} \cite{PYTHIA2015}, \textsc{herwig} \cite{Herwig2008} and \textsc{sherpa} \cite{SHERPA2004}. 
+The algorithm starts from few partons arising from a hard interaction. Then, as the energy scale at which we examines the scattering decrease these harder partons can split, and so more partons are produced in the shower. The higher scale parton are related to the lower energy scale (close to $\Lambda_{QCD}$) using the DGLAP evolution equation formalism. The solution to this equation can be written using a Sudakov form factor arising from the probability of no gluon emission in the evolution from higher to lower scale.
+\\
+In the parton showering process, in addition to the kinematic variables (momentum fraction $z$ and azimuthal angle $\phi$) and flavours of the partons, an evolution variable $t$ is generated. \textsc{Pythia8} uses as  evolution variable the squared of the relative transverse momentum of the two partons in the splitting ($p_T^2$). Different choices are made in \textsc{herwig} and \textsc{sherpa}.
+\\
+As mentioned before, the shower evolution is based on the standard (LO) DGLAP splitting kernels P(z) described here:
+\begin{align}
+P_{q\,\rightarrow\,qg}(z) & = C_F\frac{1+z^2}{1-z}\quad ; \\
+P_{g\,\rightarrow\,gg}(z) & = C_A\frac{(1-z(1-z))^2}{z(1-z)}\quad ; \\
+P_{q\,\rightarrow\,q\overline{q}}(z) & = T_R(z^2+(1-z)^2)\quad ;
+\end{align} 
+where $C_F=\frac{4}{3}$ is the Casimir operator for $SU(3)$, $C_A=N_C=3$, that are named "color factors", and $T_R=\frac{1}{2}$ that is given by the trace calculation of the group generators, each contribution is multiplied by $N_f$ if summing over all contributing quark flavours.
+\\
+The parton shower consist of two components: the initial-state radiation (ISR) describing the emission from the incoming partons and the final-state radiation (FSR) describing emission of outgoing partons.
+Both ISR and FSR algorithms are based on these splitting kernels.
+The respective probabilities of emitting radiation as one moves in the decreasing evolution variable sequence are:
+\begin{align}
+	FSR: \qquad\quad & \frac{d\mathcal{P}_{FSR}}{dp_T^2} = \frac{1}{p_T^2}\displaystyle\int \frac{dz}{z}\,\frac{\alpha_s}{2\pi}P(z)\quad ;\label{eq:FSR1}\\
+	ISR: \qquad\quad & \frac{d\mathcal{P}_{ISR}}{dp_T^2} = \frac{1}{p_T^2}\displaystyle\int \frac{dz}{z}\,\frac{\alpha_s}{2\pi}P(z)\,\frac{f'(x/z,p_T^2)}{f(x,p_T^2)}\quad .\label{eq:ISR1}
+\end{align}
+We can write-out our Sudakov form factor by using the two probability in \eqRef{eq:FSR1} and \eqRef{eq:ISR1}, as
+\begin{equation}
+	\Delta(p_T^2)=\exp\left( -\displaystyle\int_{p_T0}^{p_T'} \frac{d\mathcal{P}_{PS}}{dp_T^2} \,dp_T\right) \qquad\text{ with } \quad PS=ISR,\ FSR \quad.
+	\label{eq:sudakovFormFactor}
+\end{equation}
+The Sudakov form factor give the probability of a parton to evolve from an harder scale to a softer scale without emitting a parton harder than some resolution scale. 
+\\
+The introduction of the Sudakov form factor resums all the effects from the soft and collinear gluon emission. For more details and some plots of different Sudakov form factor values see section 3.5 of \cite{Campbell2006}.
+
+\subsection{Merging parton showers and matrix element calculations}
+
+Regions dominated by soft and collinear gluon emissions are described very well by parton showers approach; on the other hand, regions where partons are  energetic and widely separated are well described by matrix element calculations.  
+So, the best approach would be to combine the two different descriptions, this would require an universal formalism for parton showers and matrix element calculations. This universal formalism was created in 2001 and it is called "Les Houches Accord" \cite{LesHouchesAccord}.
+In order to combine the two approaches some care must be taken: there is the risk of double counting. Different techniques prevent this risk: for example CKKW \cite{CKKW2001} is used to combine LO matrix element calculations and parton shower.
+
+
+A better way is to combine NLO matrix element calculation with parton showers: this is done by the FxFx mergin scheme, developed by Frixione, Nason, Webber in the \textsc{mc@nlo} framework \cite{FxFx1,FxFx2,FxFx3,FxFx4}. In this scenario the risk of  double counting is given by the fact that at NLO one emission can be made explicit as indicated in \figRef{fig:DoubleCounting} by the red gluon line, then the progress of the parton shower can leads to a double counting between real emission matrix element and the parton shower as shown in \figRef{fig:DoubleCounting}, the double counting sources are indicated by the blue arrows.
+% TODO: mi piacerebbe aggiungere una descrizione più completa del merging con FxFx visto che viene usato dopo. 
+
+%%%
+%%% Immagine di Frixi.. presentation
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{{img/feynman_doubleCounting_FxFx_curved-cropped.pdf}}
+	%\includegraphics[width=14cm]{{img/feynman_doubleCounting_FxFx-cropped.pdf}}
+	\caption{The FxFx margin scheme have to avoid this double counting. Feynman diagrams that can lead to a double counting are grouped with the violet arrow, the blue emission are related to the parton shower while the red ones to the NLO process.}
+	\label{fig:DoubleCounting}
+\end{figure}
+%%%
+
+%\subsection{Parton Shower}
+
+\medskip
+
+ In \texttt{Pythia}8 all the contributions from Initial State Radiation (ISR), Final State Radiation (FSR) and Multi Parton Interactions (MPI) are interleaved into a single common sequence of decreasing $p_T$. 
+\\
+The parton shower has been described in the previously section. The solution to the DGLAP equation is given putting \eqRef{eq:FSR1} and \eqRef{eq:ISR1} in \eqRef{eq:sudakovFormFactor} for the ISR and the FSR by a Sudakov form factor that is related to the no emission probability in the $p_T$-evolution. 
+\\
+The evolution variables for ISR and FSR are defined starting from the virtuality ($Q^2$) of the emission:
+\begin{equation}
+	p_T^2=\left\{\begin{aligned}
+		&(1-z)Q^2 && ISR\\
+		&z(1-z)Q^2 && FSR
+	\end{aligned}\right.\quad,
+	\label{eq:partonShowerEvolutionVariables}
+\end{equation}
+so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ in fact a time-like virtuality ($p^2>0$) is implicated, while for the ISR we have $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$). In both case $Q^2$ values are positive defined. Than the actual strong of the radiation is set by the choices of $\alpha_{s\,ISR}$ and $\alpha_{s\,FSR}$ values.
+
+\subsection{Multiple Parton Interactions in \texttt{Pythia}}
 
 
 By the fact that the hadrons are viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision different couples of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} (MPI) and it is related to the composite nature of the incoming hadrons. 
@@ -139,31 +376,11 @@ The number of partons is related to $x$ with a power low so, it is likely to hav
 \begin{equation}
 	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
 \end{equation}
-In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
-	
-\section{\texttt{Pythia8} Monte Carlo events generator}	
+%In the next section we are going to discuss how this and other effects fit into the Monte Carlo generator \texttt{pythia8}.	
+These two parameters are named \texttt{MultiplepartonInteractions:pT0Ref} and \texttt{MultiplepartonInteractions:ecmPow} and control respectively the threshold for the MPI to occur at a fixed center-of-mass energy and the power evolution with $\sqrt{s}$. 
 
-\texttt{Pythia}8 is a standard tool for the simulation of events in high energy collisions. \texttt{Pythia} contains the evolution from a few-body system to a complex multiparticles final state.
 
-\subsection{Parton Shower}
-
- In \texttt{Pythia}8 all the contributions from Initial State Radiation (ISR), Final State Radiation (FSR) and Multi Parton Interactions (MPI) are interleaved into a single common sequence of decreasing $p_T$. 
-\\
-The parton shower has been described in the previously section. The solution to the DGLAP equation is given putting \eqRef{eq:FSR1} and \eqRef{eq:ISR1} in \eqRef{eq:sudakovFormFactor} for the ISR and the FSR by a Sudakov form factor that is related to the no emission probability in the $p_T$-evolution. 
-\\
-The evolution variables for ISR and FSR are defined starting from the virtuality ($Q^2$) of the emission:
-\begin{equation}
-	p_T^2=\left\{\begin{aligned}
-		&(1-z)Q^2 && ISR\\
-		&z(1-z)Q^2 && FSR
-	\end{aligned}\right.\quad,
-	\label{eq:partonShowerEvolutionVariables}
-\end{equation}
-so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ in fact a time-like virtuality ($p^2>0$) is implicated, while for the ISR we have $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$). In both case $Q^2$ values are positive defined. Than the actual strong of the radiation is set by the choices of $\alpha_{s\,ISR}$ and $\alpha_{s\,FSR}$ values.
-
-\subsection{Multiple Parton Interactions in \texttt{Pythia}}
-
-The MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Than we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
+In \texttt{pythia}8 MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Than we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
 \begin{equation}
 	\frac{d\mathcal{P}_{MPI}}{dp_T}=\frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T}\ \exp\left( -\displaystyle\int_{p_T}^{p_T\,i-1} \frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T'}\,dp_T' \right)\quad .
 \end{equation}
@@ -245,33 +462,33 @@ So we have now that the number of interaction per event is give by (for impact p
 \end{equation}
 so, this have modified the probability distribution of interactions number from a Poissonian to a narrower one at each $b$ fixed.
 
-\subsection{Parton rescattering}
-
-It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}.
+%\subsection{Parton rescattering}
 %
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.95\textwidth]{{img/Rescattering_3casi.png}}
-	\caption{This figure shows parton rescattering. On the right image a double $2\,\rightarrow\,2$ scattering (no rescattering) is shown; on the middle a parton rescattering process where only one of the rescattered partons have already scattered; on the right image a parton rescattering with both the partons that undergo to rescattering have already been scattered. }
-	\label{fig:Rescattering}
-\end{figure}
+%It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}.
+%%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.95\textwidth]{{img/Rescattering_3casi.png}}
+%	\caption{This figure shows parton rescattering. On the right image a double $2\,\rightarrow\,2$ scattering (no rescattering) is shown; on the middle a parton rescattering process where only one of the rescattered partons have already scattered; on the right image a parton rescattering with both the partons that undergo to rescattering have already been scattered. }
+%	\label{fig:Rescattering}
+%\end{figure}
+%%
+%\\
+%We can have 3 type of MPI:
+%\begin{enumerate}
+%	\item No ones of the partons that enter in the second scattering undergoes to another scatter before (\figRef{fig:Rescattering} left);
+%	\item Only one of the two partons has alredy been scattered (\figRef{fig:Rescattering} middle);
+%	\item Both the partons have alredy been scattered before (\figRef{fig:Rescattering} right). 
+%\end{enumerate}
+%The second and the third are the rescatters the overall influence of rescatters in proton-proton interactions was estimated to be small respect to the first case with distinct $2\,\rightarrow\,2$  scatters. 
 %
-\\
-We can have 3 type of MPI:
-\begin{enumerate}
-	\item No ones of the partons that enter in the second scattering undergoes to another scatter before (\figRef{fig:Rescattering} left);
-	\item Only one of the two partons has alredy been scattered (\figRef{fig:Rescattering} middle);
-	\item Both the partons have alredy been scattered before (\figRef{fig:Rescattering} right). 
-\end{enumerate}
-The second and the third are the rescatters the overall influence of rescatters in proton-proton interactions was estimated to be small respect to the first case with distinct $2\,\rightarrow\,2$  scatters. 
-
-The simulation of parton rescatters start from the evaluation of the parton density as:
-\begin{equation}
-	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_n \,\delta(x-x_n)}_{\text{scattered parton(s)}}\quad,
-\end{equation} 
-where the $\delta(x-x_i)$ takes into account the already scattered partons that have a fixed momentum fraction $x_n$. While the hadron remnant is still described by a continuous momentum density, scaled to achieve momentum conservation:
-\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
-\end{equation}
+%The simulation of parton rescatters start from the evaluation of the parton density as:
+%\begin{equation}
+%	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_n \,\delta(x-x_n)}_{\text{scattered parton(s)}}\quad,
+%\end{equation} 
+%where the $\delta(x-x_i)$ takes into account the already scattered partons that have a fixed momentum fraction $x_n$. While the hadron remnant is still described by a continuous momentum density, scaled to achieve momentum conservation:
+%\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
+%\end{equation}
 
 \subsection{Interleaving of Multiple Interaction and Parton Shower}
 
@@ -328,7 +545,7 @@ In \texttt{Pythia} the primordial kT is assigned to initiators sampling a Gaussi
 \end{equation}
 Where $Q$ is the hard-process renormalization scale for the main hard process and the $p_T$ scale for subsequent MPI. $\sigma_{\text{soft}}$, $\sigma_{\text{hard}}$ are the minimum and maximum width, $\widehat{m}$ is the invariant mass, while $Q_{1/2}$ and $\widehat{m}_{1/2}$ the halfway values between the two extremes.
 
-\subsection{Color Reconnection and Hadronization }
+\subsection{Color Reconnection}
 
 The last important step at parton level is the \textit{color reconnection}. Color reconnection is motivated by the fact that MPI leads to different color strings. In the previous steps the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$ all this strings that can be overlapped in physical space can be reconnected. The basic idea is to reconnect strings in order to reduce the total string length; and thus the potential energy (Lund Model).
 \\
@@ -340,30 +557,30 @@ the \texttt{ColorReconnection:range} $R$ is a user-tunable parameter while $p_{T
 \\
 With this definition for the probability, it is clear that system with low $p_T$ are more likely reconnected to other. This idea find is justification in the fact that lower $p_T$ values correspond to larger spatial extension and so these strings have more chance to overlap with other and so to reconnect.
 
-\subsubsection*{Hadronization}
-
-The hadronization takes all these partons (color strings) and transforms them in a set of color-neutral hadrons. Hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
-\\
-Lund model basic idea is to break the color line and to reduce the total string length, the string is representative of the potential
-\begin{equation}
-	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}\quad,
-\end{equation}
-where $\kappa$ is the string tension.  This potential is a combination of an attractive (Coulomb) potential ad a linear potential that phenomenologically include quarks confinement. The linear potential is the dominating part at increasing distance values, so the energy increase with distance. 
-\\
-The simplest case is the one in \figRef{fig:StringBreakings}: The $q\overline{q}$ system evolves in space increasing the string length at some point the distance is to large and is convenient to break the string into two strings.
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=12cm]{{img/StringBreakings.png}}
-	\caption{The lund Model is schematically shown here. The string evolution in time is shown vertically while the spatial position horizontally. As the partons move apart at some point become convenient to break the string, in order to reduce the total potential energy, and a partons pair is produced.}
-	\label{fig:StringBreakings}
-\end{figure}
+%\subsubsection*{Hadronization}
+%
+%The hadronization takes all these partons (color strings) and transforms them in a set of color-neutral hadrons. Hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
+%\\
+%Lund model basic idea is to break the color line and to reduce the total string length, the string is representative of the potential
+%\begin{equation}
+%	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}\quad,
+%\end{equation}
+%where $\kappa$ is the string tension.  This potential is a combination of an attractive (Coulomb) potential ad a linear potential that phenomenologically include quarks confinement. The linear potential is the dominating part at increasing distance values, so the energy increase with distance. 
+%\\
+%The simplest case is the one in \figRef{fig:StringBreakings}: The $q\overline{q}$ system evolves in space increasing the string length at some point the distance is to large and is convenient to break the string into two strings.
+%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=12cm]{{img/StringBreakings.png}}
+%	\caption{The lund Model is schematically shown here. The string evolution in time is shown vertically while the spatial position horizontally. As the partons move apart at some point become convenient to break the string, in order to reduce the total potential energy, and a partons pair is produced.}
+%	\label{fig:StringBreakings}
+%\end{figure}
 
 %So the hadronization try to reduce the string length.
 %\begin{equation}
 %	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}
 %\end{equation}
-The hadronization step confines the quark into hadrons, then these hadrons can undergoes to hadron rescattering and decay. These are the hadrons that are revealed by the detectors.
+%The hadronization step confines the quark into hadrons, then these hadrons can undergoes to hadron rescattering and decay. These are the hadrons that are revealed by the detectors.
 
 \section{\textsc{pythia} summary}
 

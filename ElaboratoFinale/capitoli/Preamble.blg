@@ -19,8 +19,6 @@ Warning--entry type for "ALTARELLI1977298" isn't style-file defined
 --line 99 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "Dokshitzer:1977sg" isn't style-file defined
 --line 113 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
-Warning--entry type for "StirlingPrivate" isn't style-file defined
---line 122 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "PhysRevBloch" isn't style-file defined
 --line 128 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "KinoshitaToichiro" isn't style-file defined
@@ -39,49 +37,48 @@ Warning--entry type for "MCNNTUNESonGitHub" isn't style-file defined
 --line 621 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
 Warning--entry type for "CottinBuracchio:2276806" isn't style-file defined
 --line 781 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
-Warning--empty year in StirlingPrivate
 Warning--empty author in CMS-PAS-FSQ-15-007
 Warning--empty author in CMS-PAS-FSQ-12-020
 Warning--empty journal in Perceptron
-You've used 57 entries,
+You've used 56 entries,
             2481 wiz_defined-function locations,
-            1011 strings with 16688 characters,
-and the built_in function-call counts, 21478 in all, are:
-= -- 1726
-> -- 1327
-< -- 39
-+ -- 516
-- -- 398
-* -- 1716
-:= -- 3586
-add.period$ -- 221
-call.type$ -- 57
-change.case$ -- 114
-chr.to.int$ -- 53
-cite$ -- 63
-duplicate$ -- 961
-empty$ -- 1856
-format.name$ -- 487
-if$ -- 4484
+            999 strings with 16598 characters,
+and the built_in function-call counts, 21158 in all, are:
+= -- 1696
+> -- 1322
+< -- 38
++ -- 512
+- -- 396
+* -- 1697
+:= -- 3542
+add.period$ -- 219
+call.type$ -- 56
+change.case$ -- 112
+chr.to.int$ -- 52
+cite$ -- 61
+duplicate$ -- 947
+empty$ -- 1819
+format.name$ -- 485
+if$ -- 4418
 int.to.chr$ -- 5
-int.to.str$ -- 58
+int.to.str$ -- 57
 missing$ -- 34
-newline$ -- 343
-num.names$ -- 165
-pop$ -- 460
+newline$ -- 339
+num.names$ -- 162
+pop$ -- 447
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 56
 quote$ -- 0
-skip$ -- 628
+skip$ -- 616
 stack$ -- 0
-substring$ -- 621
-swap$ -- 131
+substring$ -- 590
+swap$ -- 129
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 396
-warning$ -- 4
-while$ -- 146
+type$ -- 389
+warning$ -- 3
+while$ -- 142
 width$ -- 0
-write$ -- 825
-(There were 22 warnings)
+write$ -- 816
+(There were 20 warnings)

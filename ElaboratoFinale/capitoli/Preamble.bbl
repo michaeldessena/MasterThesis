@@ -1,4 +1,4 @@
-\begin{thebibliography}{57}
+\begin{thebibliography}{56}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,6 +17,16 @@ Giovanna~Francesca Cottin~Buracchio.
   colliders}, Aug 2017.
 \newblock URL \url{https://cds.cern.ch/record/2276806}.
 \newblock Presented 09 Jun 2017.
+
+\bibitem[collaboration(2012)]{HiggsBoson_discovery}
+CMS collaboration.
+\newblock Observation of a new boson at a mass of 125 gev with the cms
+  experiment at the lhc.
+\newblock \emph{Physics Letters B}, 716\penalty0 (1):\penalty0 30--61, 2012.
+\newblock ISSN 0370-2693.
+\newblock \doi{https://doi.org/10.1016/j.physletb.2012.08.021}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0370269312008581}.
 
 \bibitem[Abramowicz et~al.(2015)]{DIS}
 H.~Abramowicz et~al.
@@ -50,13 +60,6 @@ Sidney~D Drell and Tung-Mow Yan.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/0003491671900716}.
 
-\bibitem[Campbell et~al.(2006)Campbell, Huston, and Stirling]{Campbell2006}
-J~M Campbell, J~W Huston, and W~J Stirling.
-\newblock Hard interactions of quarks and gluons: a primer for lhc physics, Dec
-  2006.
-\newblock ISSN 1361-6633.
-\newblock URL \url{http://dx.doi.org/10.1088/0034-4885/70/1/R02}.
-
 \bibitem[Lipatov(1975)]{Lipatov:400357}
 L~N Lipatov.
 \newblock {The parton model and perturbation theory}, 1975.
@@ -80,10 +83,19 @@ Yuri~L. Dokshitzer.
   and e+ e- Annihilation by Perturbation Theory in Quantum Chromodynamics.},
   1977.
 
-\bibitem[Stirling()]{StirlingPrivate}
-W.J. Stirling.
-\newblock {private communication}.
-\newblock URL \url{http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html}.
+\bibitem[Ball et~al.(2017{\natexlab{a}})Ball, Bertone, Carrazza, Debbio, Forte,
+  Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
+  Slade, and Ubiali]{NNPDF3.1}
+Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
+  Forte, Patrick Groth-Merrild, Alberto Guffanti, Nathan~P. Hartland, Zahari
+  Kassabov, José~I. Latorre, Emanuele~R. Nocera, Juan Rojo, Luca Rottoli, Emma
+  Slade, and Maria Ubiali.
+\newblock Parton distributions from high-precision collider data.
+\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct
+  2017{\natexlab{a}}.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
+\newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-017-5199-5}.
 
 \bibitem[Bloch and Nordsieck(1937)]{PhysRevBloch}
 F.~Bloch and A.~Nordsieck.
@@ -99,6 +111,13 @@ Toichiro Kinoshita.
 T.~D. Lee and M.~Nauenberg.
 \newblock Degenerate systems and mass singularities, Mar 1964.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.133.B1549}.
+
+\bibitem[Campbell et~al.(2006)Campbell, Huston, and Stirling]{Campbell2006}
+J~M Campbell, J~W Huston, and W~J Stirling.
+\newblock Hard interactions of quarks and gluons: a primer for lhc physics, Dec
+  2006.
+\newblock ISSN 1361-6633.
+\newblock URL \url{http://dx.doi.org/10.1088/0034-4885/70/1/R02}.
 
 \bibitem[Kulesza et~al.(2002)Kulesza, Sterman, and
   Vogelsang]{kulesza2002electroweak}
@@ -177,51 +196,10 @@ Rikkert Frederix and Stefano Frixione.
 \newblock \emph{JHEP}, 12:\penalty0 061, 2012.
 \newblock \doi{10.1007/JHEP12(2012)061}.
 
-\bibitem[Fadin(2000)]{BFKL1}
-Victor~S. Fadin.
-\newblock {BFKL resummation}.
-\newblock \emph{Nucl. Phys. A}, 666:\penalty0 155--164, 2000.
-\newblock \doi{10.1016/S0375-9474(00)00022-1}.
-
-\bibitem[Balitsky and Lipatov(1978)]{BFKL2}
-I.~I. Balitsky and L.~N. Lipatov.
-\newblock {The Pomeranchuk Singularity in Quantum Chromodynamics}.
-\newblock \emph{Sov. J. Nucl. Phys.}, 28:\penalty0 822--829, 1978.
-
-\bibitem[Ball et~al.(2017{\natexlab{a}})Ball, Bertone, Carrazza, Debbio, Forte,
-  Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
-  Slade, and Ubiali]{NNPDF3.1}
-Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
-  Forte, Patrick Groth-Merrild, Alberto Guffanti, Nathan~P. Hartland, Zahari
-  Kassabov, José~I. Latorre, Emanuele~R. Nocera, Juan Rojo, Luca Rottoli, Emma
-  Slade, and Maria Ubiali.
-\newblock Parton distributions from high-precision collider data.
-\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct
-  2017{\natexlab{a}}.
-\newblock ISSN 1434-6052.
-\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
-\newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-017-5199-5}.
-
 \bibitem[SIEGERT(2010)]{SIEGERTthesis}
 FRANK SIEGERT.
 \newblock Monte-carlo event generation for the lhc, 2010.
 \newblock URL \url{http://etheses.dur.ac.uk/484/}.
-
-\bibitem[Andersson et~al.(1983)Andersson, Gustafson, Ingelman, and
-  Sjöstrand]{ANDERSSON198331}
-B.~Andersson, G.~Gustafson, G.~Ingelman, and T.~Sjöstrand.
-\newblock Parton fragmentation and string dynamics.
-\newblock \emph{Physics Reports}, 97\penalty0 (2):\penalty0 31--145, 1983.
-\newblock ISSN 0370-1573.
-\newblock \doi{https://doi.org/10.1016/0370-1573(83)90080-7}.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/0370157383900807}.
-
-\bibitem[Sjostrand(1984)]{Sjostrand:1984ic}
-Torbjorn Sjostrand.
-\newblock {Jet Fragmentation of Nearby Partons}.
-\newblock \emph{Nucl. Phys. B}, 248:\penalty0 469--502, 1984.
-\newblock \doi{10.1016/0550-3213(84)90607-2}.
 
 \bibitem[Sakuma and McCauley(2014)]{CMSdetector}
 Tai Sakuma and Thomas McCauley.
@@ -258,6 +236,45 @@ Albert~M. Sirunyan et~al.
   2019{\natexlab{a}}.
 \newblock \doi{10.1140/epjc/s10052-019-6620-z}.
 
+\bibitem[CMS(2012)]{CMS-PAS-FSQ-12-020}
+{Measurement of the Underlying Event Activity at the LHC at 7 TeV and
+  Comparison with 0.9 TeV}.
+\newblock Technical report, CERN, Geneva, 2012.
+\newblock URL \url{http://cds.cern.ch/record/1478982}.
+
+\bibitem[Khachatryan et~al.(2010)]{HighPurity}
+Vardan Khachatryan et~al.
+\newblock {CMS Tracking Performance Results from Early LHC Operation}.
+\newblock \emph{Eur. Phys. J. C}, 70:\penalty0 1165--1192, 2010.
+\newblock \doi{10.1140/epjc/s10052-010-1491-3}.
+
+\bibitem[Salam and Soyez(2007)]{JetAlgorithm1}
+Gavin~P. Salam and Gregory Soyez.
+\newblock {A Practical Seedless Infrared-Safe Cone jet algorithm}.
+\newblock \emph{JHEP}, 05:\penalty0 086, 2007.
+\newblock \doi{10.1088/1126-6708/2007/05/086}.
+
+\bibitem[Cacciari et~al.(2008)Cacciari, Salam, and Soyez]{JetAlgorithm2}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The anti-$k_t$ jet clustering algorithm}.
+\newblock \emph{JHEP}, 04:\penalty0 063, 2008.
+\newblock \doi{10.1088/1126-6708/2008/04/063}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2018nhd}
+Albert~M. Sirunyan et~al.
+\newblock {Measurement of charged particle spectra in minimum-bias events from
+  proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}.
+\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (9):\penalty0 697,
+  2018{\natexlab{b}}.
+\newblock \doi{10.1140/epjc/s10052-018-6144-y}.
+
+\bibitem[Khachatryan et~al.(2015)]{CMS:2015zrm}
+Vardan Khachatryan et~al.
+\newblock {Pseudorapidity distribution of charged hadrons in proton-proton
+  collisions at $\sqrt{s}$ = 13 TeV}.
+\newblock \emph{Phys. Lett. B}, 751:\penalty0 143--163, 2015.
+\newblock \doi{10.1016/j.physletb.2015.10.004}.
+
 \bibitem[Bechtel(2009)]{Bechtel:2009zza}
 Florian Bechtel.
 \newblock \emph{{The underlying event in proton-proton collisions}}.
@@ -285,33 +302,12 @@ Albert~M Sirunyan et~al.
 \newblock \emph{JHEP}, 12:\penalty0 061, 2019{\natexlab{b}}.
 \newblock \doi{10.1007/JHEP12(2019)061}.
 
-\bibitem[Khachatryan et~al.(2015)]{CMS:2015zrm}
-Vardan Khachatryan et~al.
-\newblock {Pseudorapidity distribution of charged hadrons in proton-proton
-  collisions at $\sqrt{s}$ = 13 TeV}.
-\newblock \emph{Phys. Lett. B}, 751:\penalty0 143--163, 2015.
-\newblock \doi{10.1016/j.physletb.2015.10.004}.
-
 \bibitem[Aaltonen et~al.(2015)]{CDF:2015txs}
 Timo~Antero Aaltonen et~al.
 \newblock {Study of the energy dependence of the underlying event in
   proton-antiproton collisions}.
 \newblock \emph{Phys. Rev. D}, 92\penalty0 (9):\penalty0 092009, 2015.
 \newblock \doi{10.1103/PhysRevD.92.092009}.
-
-\bibitem[CMS(2012)]{CMS-PAS-FSQ-12-020}
-{Measurement of the Underlying Event Activity at the LHC at 7 TeV and
-  Comparison with 0.9 TeV}.
-\newblock Technical report, CERN, Geneva, 2012.
-\newblock URL \url{http://cds.cern.ch/record/1478982}.
-
-\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2018nhd}
-Albert~M. Sirunyan et~al.
-\newblock {Measurement of charged particle spectra in minimum-bias events from
-  proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}.
-\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (9):\penalty0 697,
-  2018{\natexlab{b}}.
-\newblock \doi{10.1140/epjc/s10052-018-6144-y}.
 
 \bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
   Seggern]{Buckley:2009bj}

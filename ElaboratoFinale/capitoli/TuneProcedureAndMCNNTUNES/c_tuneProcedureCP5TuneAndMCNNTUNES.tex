@@ -1,9 +1,9 @@
 \chapter{Tuning procedure and \textsc{mcnntunes}}
 \label{chap:TuneprocedureCP5TuneandMCNNTUNES}
 
-The study of the underlying event, or more in general of soft QCD processes requires the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure to estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
-\\
-The tuning procedure can be really computational expensive, in fact it requires to run the generator a very large amount of times, and usually these MC generators are really expansive in term of computational time required for just a single job.  
+%The study of the underlying event, or more in general of soft QCD processes requires the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure to estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
+
+As was introduced in the first chapter the tuning procedure can be really computational expensive, in fact it requires to run the generator a very large amount of times, and usually these MC generators are really expansive in term of computational time required for just a single job.  
 \\
 To tune a certain number of parameters the number of MonteCarlo runs needed for the tuning procedure increases with the number of free parameters. In fact, the dimension of the parameter space increases with the number of the sampling we want to perform and the granularity we want to achieve. So, in the past, different approaches have been developed and used to tune these MC generators. A brief description is reported for each approach in the following list:
 \begin{enumerate}[label=\arabic*)]
@@ -21,18 +21,20 @@ So the first step in the procedure is to fit the response of the generator using
 \begin{equation}
 	h(p)\ \xrightarrow{\quad \text{parametrization}\quad }\ \overline{h}(p)\quad ,
 \end{equation}
-where the real function has been substituted by the surrogate one. 
+where $h(p)$ is a vector of functions. Each function gives the value of the $i^{th}$ bin based on the  parameters values. In this phase this functions vector has been substituted by the surrogate one $\overline{h}(p)$.  
+%where the real function has been substituted by the surrogate one. 
 \\
 After that, a \textit{loss function} $\mathcal{L}(\overline{h}(p),h_{\text{data}})$ is defined between the surrogate function and the experimental data. A common choice for it is the $\chi^2$ function defined as:
 \begin{equation}
 	\mathcal{L}(\overline{h}(p),h_{\text{data}})\equiv \chi^2=\frac{(\overline{h}(p)-h_{\text{data}})^2}{\sigma^2}\quad.
 \end{equation}
+where $sigma^2$ is the vector of the squared error on each bin.  
 In the end to find the best parameters estimation, this loss function need to be minimized. The set of parameters $p_{\text{best}}$ are the best evaluation that our generator can provide for the real values and we are going to call this set of best parameters: \textit{tune}.
 \begin{equation}
 	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
 \end{equation}
 In our study instead of the common software \textsc{professor} based on the polynomial parameterization we use the machine learning approach implemented in \textsc{mcnntunes} software \cite{MCNNTUNESonGitHub}
-using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks (FFNNs) that are trained in order to learn the generator behavior with respect to the parameters variations. This remove the polynomial constraint in the fit of the generator response function in fact one of the main feature of the Neural Networks (NNs) is that they are universal function approximators.
+using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks that are trained in order to learn the generator behavior with respect to the parameters variations. This remove the polynomial constraint in the fit of the generator response function in fact one of the main feature of the Neural Networks (NNs) is that they are universal function approximators.
 \\
 A brief introduction follows on machine learning and in particular on neural networks in order to understand was made.
 

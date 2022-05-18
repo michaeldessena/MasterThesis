@@ -32,9 +32,10 @@ The main feature of the CMS detector is a superconducting solenoid with a $6\ \m
 The silicon tracker is responsable of the measurement of charged particles tracks within the pseudorapidity
 range $|\eta| < 2.5$. The typically track resolutions, for non-isolated particles of $1 < pT < 10 GeV$ and $|\eta| < 1.4$, are $1.5\%$ in $p_T$. This inner tracking system is the central detector for the charge particles tracks reconstruction and, thanks to the high magnetic field, for the momentum measurements in CMS.  
 \\
-The ECAL barrel cover the pseudorapidity range $|\eta|<1.479$ it consist of about $61200$ $\mathrm{PbWO}_4$ crystal while the endcaps cover the pseudorapidity range $1.479<|\eta|<3.0$. This was build in order to have a resolution able to discriminate the two gamma in the Higgs boson decay $H^0\,\rightarrow\,\gamma\gamma$ 
+The ECAL barrel cover the pseudorapidity range $|\eta|<1.479$ it consist of about $61200$ $\mathrm{PbWO}_4$ crystal while the endcaps cover the pseudorapidity range $1.479<|\eta|<3.0$. 
+%This was build in order to have a resolution able to discriminate the two gamma in the Higgs boson decay $H^0\,\rightarrow\,\gamma\gamma$ 
 \\
-The HCAL, instead, the barrel cover the pseudorapidity range $|\eta|<1.3$ while the endcaps $1.3<|\eta|<3.0$ this detectors are really important in the hadronic jet reconstruction. 
+Instead, the HCAL barrel cover the pseudorapidity range $|\eta|<1.3$ while the endcaps $1.3<|\eta|<3.0$ this detectors are really important in the hadronic jet reconstruction. 
 \\
 Another main feature of the CMS detector is obviously the muon system it has three main functions: muon detection, momentum measurement and triggering, totally the muon system cover the pseudorapidity up to $|\eta|<2.4$
 \\
@@ -82,6 +83,26 @@ The charged-particle with largest $p_T$ \cite{CMS-PAS-FSQ-15-007}, the dilepton 
 \\
 So we are interest in studying the transMAX and transMIN regions in particular the observable sensitive to UE in these regions. The main observables studied in these regions are: the charged-particle density and the charged-particle scalar-$p_T$ sum density in the $\eta-\phi$ space.
 
+\subsection{Selection Criteria}
+
+The selection criteria for CMS data from analyses \cite{CMS-PAS-FSQ-15-007} and \cite{CMS-PAS-FSQ-12-020} are the selection of charged particle tracks within the pseudorapidity range $|\eta| < 2$ and $p_T \geq 0.5\ \mathrm{GeV}$ in order to ensure a good track reconstruction efficiency. Fake tracks after mis-reconstruction are removed imposing to pass the \textit{highPurity} \cite{HighPurity}. Secondary decays are removed by requiring the impact parameter significance $d_0/\sigma_{d\,0} < 3$ and the significance in the z-direction $d_z/\sigma_{d\,z} < 3$. Then to keep only tracks with good resolution the tracks with relative uncertainties $\sigma_{p_T}/p_T > 0.05$ are discarded.
+\\
+To reconstruct the charged particle jets the clustering algorithm use is the Seedless Infrared-Safe Cone (SISCone) \cite{JetAlgorithm1} jet algorithm\footnote{The the Anti$-k_T$ algorithm \cite{JetAlgorithm2} is currently the more preferred jet clustering algorithm in CMS but to ensure continuity with respect to the previous analyses on the UE the one above is chosen.}. Charged particle within the pseudorapidty range $|\eta|<2.5$ are used for jet reconstruction then the reconstructed jet have to pass the above selection criteria.
+\\
+Minimum bias events are triggered by requiring activity in both Beam Scintillator Counters (BSC) located at a distance of $\pm10.86\ \mathrm{m}$ from the detector center and are sensitive within $3.23 < |\eta| < 4.65$ in coincidence with signals from both beams in the Beam Pick-up Timing for eXperiments (BPTX) devices, they are located along the beam pipe at $175\ \mathrm{m}$ from the interaction point. These coincidences indicate that both the beams are crossing at the same time and that they interact.
+
+The selection criteria we are going to use for the pseudorapidity distributions from the analyses \cite{CMS:2018nhd} and \cite{CMS:2015zrm} are: 
+\begin{enumerate}
+	\item Online: coincident signals in both beams in the Beam Pick-up Timing for eXperiments (BPTX);
+	\item Offline: at least one vertex reconstruction.
+\end{enumerate}
+
+The tracker measure all the charged particles within $|\eta|<2.4$ and all the interaction points are used for the tracks reconstruction in the offline analysis. 
+\\
+Further details can be found in the respective paper for each analysis.
+
+\subsection{Hard scale dependence}
+
 In an hadron-hadron collision with two jets productions it is observed that not only the toward and away regions activity increases with the hardness of the collision ($p_T^{max}$) but also the transverse regions activity increases with it. This is shown in \figRef{fig:UEpredictions_in_regions.png}, where the different color lines refer to different scales for the collision. It is observed that the away region ($60\leq |\Delta\phi|\leq 120$) at increasing energy for the collision become broader this is related to the increasing quantity of FSR.
 \\
 This increment in the transverse regions activity cannot be explained only by the increase of the FSR. To explain this rise one need to attribute activity in the transverse regions to MPI: the number of extra scatters increases with energy. This rise is related to the density functions for the partons inside the hadrons that increse when probed at higher energies and so the partons become denser packed in hadrons. In this way the extra scatters probability is larger to higher energies. 
@@ -101,6 +122,8 @@ This increment in the transverse regions activity cannot be explained only by th
 	\caption{The evolution of the charged-particles density (left) and of the scalar-$p_T$ sum density of charged particles (right) as a function of the energy scale for the scattering (leading object $p_T$), the two distribution increase quite rapidly in the first bins than they saturate ($\approx 6-7\ \mathrm{GeV}$) the scalar-$p_T$ sum density increase a little bit more, for $p_T>$ but very slowly. The black dots are the experimental point and are compared to prediction with CMS \textsc{pythia} tunes: CP3, CP4 and CP5; they are described with more details in the next chapter. Figure from \cite{CPtunes}.}
 	\label{fig:CPtransmax_evolution_with_energy}
 \end{figure}
+
+\subsection{Sensitivity to MPI parameters}
 
 Now we want to look for the sensitivity of these observables to some \textsc{Pythia8} parameters. In figure \figRef{fig:CP5onlyPT0} is shown the effect of the MPI on booth the distributions shown before separately for TransMAX and TransMIN regions. 
 %The amount of the MPI is related to the value of $p_{T0}$: an high value of $p_{T0}$ is related to less MPI (blue line) and an higher value to a major contribution from the the MPI (red line).
@@ -123,7 +146,14 @@ Another important observation that was also pointed out in the \chapRef{sec:Basi
 	\label{fig:CPECMdep}
 \end{figure}
 
-So these observables are the main ones we are going to use in our tune and used in previous tunes for the UE. The data from the activity in the TransMAX and TransMIN  regions have been collected by  a large number of experiment at different center-of-mass energies.
+So these observables are the main ones we are going to use in our tune and used in previous tunes for the UE. The data from the activity in the TransMAX and TransMIN  regions have been collected by  a large number of experiment at different center-of-mass energies. 
+
+The selection criteria for CMS data from analyses \cite{CMS-PAS-FSQ-15-007} and \cite{CMS-PAS-FSQ-12-020} are the selection of charged particle tracks within the pseudorapidity range $|\eta| < 2$ and $p_T \geq 0.5\ \mathrm{GeV}$ in order to ensure a good track reconstruction efficiency. Fake tracks after mis-reconstruction are removed imposing to pass the \textit{highPurity} \cite{HighPurity}. Secondary decays are removed by requiring the impact parameter significance $d_0/\sigma_{d\,0} < 3$ and the significance in the z-direction $d_z/\sigma_{d\,z} < 3$. Then to keep only tracks with good resolution the tracks with relative uncertainties $\sigma_{p_T}/p_T > 0.05$ are discarded.
+\\
+To reconstruct the charged particle jets the clustering algorithm use is the Seedless Infrared-Safe Cone (SISCone) \cite{JetAlgorithm1} jet algorithm\footnote{The the Anti$-k_T$ algorithm \cite{JetAlgorithm2} is currently the more preferred jet clustering algorithm in CMS but to ensure continuity with respect to the previous analyses on the UE the one above is chosen.}. Charged particle within the pseudorapidty range $|\eta|<2.5$ are used for jet reconstruction then the reconstructed jet have to pass the above selection criteria.
+\\
+Minimum bias events are triggered by requiring activity in both Beam Scintillator Counters (BSC) located at a distance of $\pm10.86\ \mathrm{m}$ from the detector center and are sensitive within $3.23 < |\eta| < 4.65$ in coincidence with signals from both beams in the Beam Pick-up Timing for eXperiments (BPTX) devices these coincidence indicate that both the beams are crossing at the same time and that they interact.
+ 
 
 \subsection{Observables in Z production processes}
 
