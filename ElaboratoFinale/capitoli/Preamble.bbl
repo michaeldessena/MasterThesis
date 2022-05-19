@@ -214,28 +214,6 @@ Tai Sakuma and Thomas McCauley.
 \newblock Technical report, CERN, Geneva, 2015.
 \newblock URL \url{https://cds.cern.ch/record/2104473}.
 
-\bibitem[Chatrchyan et~al.(2012)]{CMS:2012oqb}
-Serguei Chatrchyan et~al.
-\newblock {Measurement of the underlying event in the Drell-Yan process in
-  proton-proton collisions at $\sqrt{s}=7$ TeV}.
-\newblock \emph{Eur. Phys. J. C}, 72:\penalty0 2080, 2012.
-\newblock \doi{10.1140/epjc/s10052-012-2080-4}.
-
-\bibitem[Sirunyan et~al.(2018{\natexlab{a}})]{CMS:2017ngy}
-A.~M. Sirunyan et~al.
-\newblock {Measurement of the underlying event activity in inclusive Z boson
-  production in proton-proton collisions at $ \sqrt{s}=13 $ TeV}.
-\newblock \emph{JHEP}, 07:\penalty0 032, 2018{\natexlab{a}}.
-\newblock \doi{10.1007/JHEP07(2018)032}.
-
-\bibitem[Sirunyan et~al.(2019{\natexlab{a}})]{CMS:2018mdd}
-Albert~M. Sirunyan et~al.
-\newblock {Study of the underlying event in top quark pair production in
-  $\mathrm {p}\mathrm {p}$ collisions at 13 $~\text {Te}\text {V}$}.
-\newblock \emph{Eur. Phys. J. C}, 79\penalty0 (2):\penalty0 123,
-  2019{\natexlab{a}}.
-\newblock \doi{10.1140/epjc/s10052-019-6620-z}.
-
 \bibitem[CMS(2012)]{CMS-PAS-FSQ-12-020}
 {Measurement of the Underlying Event Activity at the LHC at 7 TeV and
   Comparison with 0.9 TeV}.
@@ -267,12 +245,12 @@ Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
 \newblock \emph{JHEP}, 04:\penalty0 063, 2008.
 \newblock \doi{10.1088/1126-6708/2008/04/063}.
 
-\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2018nhd}
+\bibitem[Sirunyan et~al.(2018{\natexlab{a}})]{CMS:2018nhd}
 Albert~M. Sirunyan et~al.
 \newblock {Measurement of charged particle spectra in minimum-bias events from
   proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}.
 \newblock \emph{Eur. Phys. J. C}, 78\penalty0 (9):\penalty0 697,
-  2018{\natexlab{b}}.
+  2018{\natexlab{a}}.
 \newblock \doi{10.1140/epjc/s10052-018-6144-y}.
 
 \bibitem[Khachatryan et~al.(2015)]{CMS:2015zrm}
@@ -281,6 +259,28 @@ Vardan Khachatryan et~al.
   collisions at $\sqrt{s}$ = 13 TeV}.
 \newblock \emph{Phys. Lett. B}, 751:\penalty0 143--163, 2015.
 \newblock \doi{10.1016/j.physletb.2015.10.004}.
+
+\bibitem[Chatrchyan et~al.(2012)]{CMS:2012oqb}
+Serguei Chatrchyan et~al.
+\newblock {Measurement of the underlying event in the Drell-Yan process in
+  proton-proton collisions at $\sqrt{s}=7$ TeV}.
+\newblock \emph{Eur. Phys. J. C}, 72:\penalty0 2080, 2012.
+\newblock \doi{10.1140/epjc/s10052-012-2080-4}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2017ngy}
+A.~M. Sirunyan et~al.
+\newblock {Measurement of the underlying event activity in inclusive Z boson
+  production in proton-proton collisions at $ \sqrt{s}=13 $ TeV}.
+\newblock \emph{JHEP}, 07:\penalty0 032, 2018{\natexlab{b}}.
+\newblock \doi{10.1007/JHEP07(2018)032}.
+
+\bibitem[Sirunyan et~al.(2019{\natexlab{a}})]{CMS:2018mdd}
+Albert~M. Sirunyan et~al.
+\newblock {Study of the underlying event in top quark pair production in
+  $\mathrm {p}\mathrm {p}$ collisions at 13 $~\text {Te}\text {V}$}.
+\newblock \emph{Eur. Phys. J. C}, 79\penalty0 (2):\penalty0 123,
+  2019{\natexlab{a}}.
+\newblock \doi{10.1140/epjc/s10052-019-6620-z}.
 
 \bibitem[Bechtel(2009)]{Bechtel:2009zza}
 Florian Bechtel.

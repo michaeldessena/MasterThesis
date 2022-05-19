@@ -12,7 +12,7 @@ As an example, in a proton-proton collision with a $Z$ boson production, that th
 
 It is important to underline the fact that most of the observables to study the UE are sensible only to the sum of these contributions and not to the single ones. So, a good description of all these processes and their interplay is really important in order to study the complexes finals states originating from this scatters that contribute to the observables.
 \\
-In this chapter these observables sensible to the UE are introduced and described with more detail.
+In this chapter these observables sensible to the UE are introduced and described with more detail but first a description of the detector used to take the measurement is necessary.
 
 %%%%%%% CMS DETECTOR
 
@@ -29,23 +29,44 @@ The main feature of the CMS detector is a superconducting solenoid with a $6\ \m
 	\label{fig:CMSdetector}
 \end{figure}
 
-The silicon tracker is responsable of the measurement of charged particles tracks within the pseudorapidity
-range $|\eta| < 2.5$. The typically track resolutions, for non-isolated particles of $1 < pT < 10 GeV$ and $|\eta| < 1.4$, are $1.5\%$ in $p_T$. This inner tracking system is the central detector for the charge particles tracks reconstruction and, thanks to the high magnetic field, for the momentum measurements in CMS.  
-\\
+\noindent The silicon tracker is responsable of the measurement of charged particles tracks within the pseudorapidity
+range $|\eta| < 2.5$. It is the most important detector for the studies of this thesis, in fact all the distribution examinated are collected by the analysis of charged particle tracks. it is obviously that a good resolution for the track reconstruction is required. The typically track resolutions, for non-isolated particles of $1 < pT < 10 GeV$ and $|\eta| < 1.4$, are $1.5\%$ in $p_T$. So, this inner tracking system is the central detector for the charge particles tracks reconstruction and, thanks to the high magnetic field, for the momentum measurements in CMS. The energy instead is measured by the two types of calorimeters: ECAL and HCAL.
+\\   
 The ECAL barrel cover the pseudorapidity range $|\eta|<1.479$ it consist of about $61200$ $\mathrm{PbWO}_4$ crystal while the endcaps cover the pseudorapidity range $1.479<|\eta|<3.0$. 
 %This was build in order to have a resolution able to discriminate the two gamma in the Higgs boson decay $H^0\,\rightarrow\,\gamma\gamma$ 
 \\
-Instead, the HCAL barrel cover the pseudorapidity range $|\eta|<1.3$ while the endcaps $1.3<|\eta|<3.0$ this detectors are really important in the hadronic jet reconstruction. 
+Instead, the HCAL barrel cover the pseudorapidity range $|\eta|<1.3$ while the endcaps $1.3<|\eta|<3.0$ this detectors are really important in the hadronic jet detection and reconstruction. 
 \\
 Another main feature of the CMS detector is obviously the muon system it has three main functions: muon detection, momentum measurement and triggering, totally the muon system cover the pseudorapidity up to $|\eta|<2.4$
 \\
 The LHC provide proton-proton collision at very high interaction rates, the beam crossing interval is $25\ \mathrm{ns}$). So, it is impossible to store all the data, the rate is reduced in two steps: Level-1 (L1) Trigger and High-Level Trigger (HLT). This two step perform a first events selection keeping only the interest interactions.
 \\
-In the next section we are going to discuss some of the distribution observed using CMS detector.
-
+%In the next section we are going to discuss some of the distribution observed using CMS detector.
+In the following the selection criteria and the space topology for the analysis used for the tunes are introduced in order to better understand what kind of observables are studied in this thesis.
 
 %%%%%%%
 
+\subsection{Selection Criteria}
+
+The selection criteria for CMS data from analysis at $13\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-15-007} are the selection of charged particle tracks within $|\eta| < 2$ while  $|\eta|<0.8$ for the analyses at $7$ \cite{CMS-PAS-FSQ-12-020} and CDF one at $1.96\ \mathrm{TeV}$ \cite{CDF:2015txs}. The trigger sensibility impose $p_T \geq 0.5\ \mathrm{GeV}$ in order to ensure a good track reconstruction efficiency. Fake tracks after mis-reconstruction are removed imposing to pass the \textit{highPurity} \cite{HighPurity}. Secondary decays are removed by requiring the impact parameter significance $d_0/\sigma_{d\,0} < 3$ and the significance in the z-direction $d_z/\sigma_{d\,z} < 3$. Then to keep only tracks with good resolution the tracks with relative uncertainties $\sigma_{p_T}/p_T > 0.05$ are discarded.
+\\
+To reconstruct the charged particle jets the clustering algorithm use is the Seedless Infrared-Safe Cone (SISCone) \cite{JetAlgorithm1} jet algorithm\footnote{The the Anti$-k_T$ algorithm \cite{JetAlgorithm2} is currently the more preferred jet clustering algorithm in CMS but to ensure continuity with respect to the previous analyses on the UE the one above is chosen.}. Charged particle within the pseudorapidty range $|\eta|<2.5$ are used for jet reconstruction then the reconstructed jet have to pass the above selection criteria.
+\\
+Minimum bias events are triggered by requiring activity in both Beam Scintillator Counters (BSC) located at a distance of $\pm10.86\ \mathrm{m}$ from the detector center and are sensitive within $3.23 < |\eta| < 4.65$ in coincidence with signals from both beams in the Beam Pick-up Timing for eXperiments (BPTX) devices, they are located along the beam pipe at $175\ \mathrm{m}$ from the interaction point. These coincidences indicate that both the beams are crossing at the same time and that they interact.
+
+The selection criteria we are going to use for the pseudorapidity distributions from the analyses \cite{CMS:2018nhd} and \cite{CMS:2015zrm} are: 
+\begin{enumerate}
+	\item Online: coincident signals in both beams in the Beam Pick-up Timing for eXperiments (BPTX);
+	\item Offline: at least one vertex reconstruction.
+\end{enumerate}
+
+The tracker measure all the charged particles within $|\eta|<2.4$ and all the interaction points are used for the tracks reconstruction in the offline analysis. 
+\\
+Further details can be found in the respective paper for each analysis.
+
+
+
+%%%%%%%
 
 \section{Minimum Bias Measurements and Underlying Event topology}
 \label{sec:Minimum Bias Measurements and Underlying Event topology}
@@ -83,23 +104,7 @@ The charged-particle with largest $p_T$ \cite{CMS-PAS-FSQ-15-007}, the dilepton 
 \\
 So we are interest in studying the transMAX and transMIN regions in particular the observable sensitive to UE in these regions. The main observables studied in these regions are: the charged-particle density and the charged-particle scalar-$p_T$ sum density in the $\eta-\phi$ space.
 
-\subsection{Selection Criteria}
 
-The selection criteria for CMS data from analysis at $13\ \mathrm{TeV}$ \cite{CMS-PAS-FSQ-15-007} are the selection of charged particle tracks within $|\eta| < 2$ while  $|\eta|<0.8$ for the analyses at $7$ \cite{CMS-PAS-FSQ-12-020} and CDF one at $1.96\ \mathrm{TeV}$ \cite{CDF:2015txs}. The trigger sensibility impose $p_T \geq 0.5\ \mathrm{GeV}$ in order to ensure a good track reconstruction efficiency. Fake tracks after mis-reconstruction are removed imposing to pass the \textit{highPurity} \cite{HighPurity}. Secondary decays are removed by requiring the impact parameter significance $d_0/\sigma_{d\,0} < 3$ and the significance in the z-direction $d_z/\sigma_{d\,z} < 3$. Then to keep only tracks with good resolution the tracks with relative uncertainties $\sigma_{p_T}/p_T > 0.05$ are discarded.
-\\
-To reconstruct the charged particle jets the clustering algorithm use is the Seedless Infrared-Safe Cone (SISCone) \cite{JetAlgorithm1} jet algorithm\footnote{The the Anti$-k_T$ algorithm \cite{JetAlgorithm2} is currently the more preferred jet clustering algorithm in CMS but to ensure continuity with respect to the previous analyses on the UE the one above is chosen.}. Charged particle within the pseudorapidty range $|\eta|<2.5$ are used for jet reconstruction then the reconstructed jet have to pass the above selection criteria.
-\\
-Minimum bias events are triggered by requiring activity in both Beam Scintillator Counters (BSC) located at a distance of $\pm10.86\ \mathrm{m}$ from the detector center and are sensitive within $3.23 < |\eta| < 4.65$ in coincidence with signals from both beams in the Beam Pick-up Timing for eXperiments (BPTX) devices, they are located along the beam pipe at $175\ \mathrm{m}$ from the interaction point. These coincidences indicate that both the beams are crossing at the same time and that they interact.
-
-The selection criteria we are going to use for the pseudorapidity distributions from the analyses \cite{CMS:2018nhd} and \cite{CMS:2015zrm} are: 
-\begin{enumerate}
-	\item Online: coincident signals in both beams in the Beam Pick-up Timing for eXperiments (BPTX);
-	\item Offline: at least one vertex reconstruction.
-\end{enumerate}
-
-The tracker measure all the charged particles within $|\eta|<2.4$ and all the interaction points are used for the tracks reconstruction in the offline analysis. 
-\\
-Further details can be found in the respective paper for each analysis.
 
 \subsection{Hard scale dependence}
 
@@ -185,10 +190,14 @@ with $\eta^+$ and $\eta^-$ the pseudorapidities of the two leptons \cite{phistar
 	\label{fig:angles}
 \end{figure}
 
-To full simulate the Z production spectrum we have to merge matrix element calculation and space shower to do this we used the FxFx merging scheme that have been introduced in \chapRef{chap:Hadron-HadronScattering}. 
-As shown in \figRef{fig:PrimordialkT_distributionUsed_noFxFx} the description with out FxFx is good only in the first bins. The strategy we follow for the tuning of the primordial kT is tu tune the Primordial $k_T$ in this low region. From these two distribution we take only the first 5 bins each.
+The $Z$ boson is a very massive boson,$m=91.1876 \pm 0.002\ \mathrm{GeV}$ \cite{PDG}, can be produced only in the hard  scattering of two partons of the hadron undergoing to the collision, then after a very short lifetime the $Z$ boson decay in a couple of leptons: $e^+\,e^-$ or $\mu^+\,\mu^-$. The measurement of this final state takes information on the $Z$ boson that is not directly observed by experiments. 
+It is a matter of facts that the production of the $Z$ boson can be affected by all the other soft processes taking place along to this production that can change the topology of the initial state. In the last chapter it is investigated the effect of ISR and Primordial $k_T$ on the $Z$ boson production in the low region of the spectrum.  
 \\
-Than we are going to run the FxFx only for the comparison once the parameters are tuned. This is going to be discussed in \chapRef{chap:primordialkTtune} where we perform the primordial $k_T$ tune.
+Since the $Z$ boson production is an hard processes to full simulate the Z production spectrum we have to merge matrix element calculation and space shower to do this we have to use a mergin scheme. To have a good description of the high region of the spectrum ($p_T^Z > 2\ \mathrm{GeV}$) we have to include higher order calculation to consider NLO and NNLO processes and so we have to adopt a more complex merging scheme as the FxFx merging scheme that have been introduced in \chapRef{chap:Hadron-HadronScattering}. 
+\\
+As shown in \figRef{fig:PrimordialkT_distributionUsed_noFxFx} the description at LO (and without the need of FxFx) is good only in the first bins that are the ones of interest for the study of underlying event effects and it is less computationally expensive than run all the FxFx merging scheme. So, the strategy followed for the tuning of the primordial kT in the \chapRef{chap:primordialkTtune} is to tune the Primordial $k_T$ in this low region, the one of interest, taking only the first 5 bins from each distribution.
+\\
+Then the full simulation with FxFx is run only for the comparison once the parameters have been tuned. This is going to be discussed in more detail in \chapRef{chap:primordialkTtune} where the primordial $k_T$ tune is perform.
 
 \begin{figure}[!htb]
 	\centering
@@ -198,8 +207,8 @@ Than we are going to run the FxFx only for the comparison once the parameters ar
 \end{figure}
 
 
-In the following section we will introduce the existing CMS tunes for the minimum bias and UE. These tunes are able to reproduce very well the observables described in \secRef{sec:Minimum Bias Measurements and Underlying Event topology} at $1.96$, $7$ and $13\ \mathrm{TeV}$. 
-But as we are going to see in \chapRef{chap:Hadron-HadronScattering} the tunes do not describe well the low region of the $Z$ boson production cross section so a further tune on these observable is performed.
+In the following section we will introduce the existing CMS tunes for the  UE in minimum bias observations. These tunes are able to reproduce very well the observables described in \secRef{sec:Minimum Bias Measurements and Underlying Event topology} at $1.96$, $7$ and $13\ \mathrm{TeV}$. 
+%But as we are going to see in \chapRef{chap:Hadron-HadronScattering} the tunes do not describe well the low region of the $Z$ boson production cross section so a further tune on these observable is performed.
 
 
 \section{Previous Tune for the Underlying Event}
