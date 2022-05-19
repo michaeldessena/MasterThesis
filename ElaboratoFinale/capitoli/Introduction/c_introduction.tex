@@ -67,16 +67,20 @@ Every physics study at the LHC cannot ignore all these contribution in order to 
 
 \medskip
 
-To study the underlying event, or more in general soft QCD processes, it is required the use of Monte Carlo generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure to estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
+To study the underlying event, or more in general soft QCD processes, it is required the use of Monte Carlo (MC) generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure to estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
 
 The tuning procedure can be really computational expensive, due to the high time required to run a Monte Carlo generator, and to perform a tune it is required to run a generator a very large amount of times. So, to reduce the number of runs required the procedure usually taken for the tuning is a \textit{parameterization-based approach}. The approach consist in: fitting the histograms that are generated from these Monte Carlo simulations with different values for the input parameters under analysis, and study the variation defining a function that describe the bins behavior to the variation of the parameters. We are going to refers to this procedure as \textit{fitting the generator response}.
+
+\medskip
+
+This thesis will focus on this \textit{tuning problem} for the underlying event using an approach based on machine learning implement by means of Feed Forward Neural Networks (FFNNs). 
 
 %%%%%% Riassunto Tesi
 %%%%%% Da Controllare una volta finita!!
 
 ------------------------ Da Ricontrollare una volta finita ------------------------
 
-This thesis focus on the tune problem for the underlying event using an approach based on machine learning implement by means of Feed Forward Neural Networks (FFNNs). 
+
 %In this thesis we are going to focus on this aspect the Monte Carlo simulation have to describe the real data very well if we want to use it in experiments. The procedure to adapt the generator parameters values in order to reproduce the data correctly goes under the name of \textit{tune}. 
 The next chapter is going to introduce the theoretical aspect in the description of an hadron-hadron collision. We start from the description of hard event using perturbation theory and than we move on the description of the all-order approaches (e.g. parton showers implemented in Monte Carlo generator). Then, we focus on the main processes described by the Monte Carlo generators and in particular in \textsc{pythia8}. Some particular attention is give to the Multi Parton Interaction, the Color Reconnection, the Primordial $k_T$, the Initial and Final State Radiations description. These are the main contribution we are focusing on in the tuning of the underlying event and minimum bias observables and of the $Z$ boson production cross section at low transverse momentum of the $Z$ boson. All the observables we are going to use in the tunes are described in \chapRef{chap:ObservabletoStudytheUnderlyingEvent} with an introduction on the existing CMS tunes called CP and a number from 1 to 5 that are the starting point for our work. The \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES} describe the basic concepts in the tune procedure in particular on the parametrization-based approach used for the tuning, in this chapter we also discuss the main tool we are going to use that is called \textsc{mcnntunes} it implement a tuning method based on machine learning. Our tunes for the underlying event and for the $Z$ boson spectrum are described respectively in \chapRef{chap:OurTunefortheUnderlyingEvent} and \chapRef{chap:primordialkTtune}.
  

@@ -28,10 +28,10 @@ In a high energy proton-proton collision we can have either soft or hard process
 Most of the time the hard processes are accompanied by soft interactions, occurring along the hadron interaction.
 While the hard processes as the Higgs boson production, or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non perturbative approaches. 
 
-This chapter gives a theoretical introduction on some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
+This chapter in the first part focus on a theoretical introduction on some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
 %and finally the all-orders approaches (e.g. the parton showers).
 
-\noindent Then, it is described the parton shower with the  Initial and Final State Radiations. The effects of Multi Parton Interactions and other important processes in the simulation of High Energy Physics events in particular on the basic aspect of \textsc{pythia}8 generator.
+\noindent In the second part, it is described the parton shower where the parton emission is describe in term of splitting probability for the Initial State Radiation (ISR) and Final State Radiations (FSR). Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of High Energy Physics events. Some particular focus is on \textsc{pythia}8 MC generator and the main parameters that will be tuned in this work.
 
 
 \section{QCD factorization theorem}
@@ -64,9 +64,9 @@ The hadron-hadron scattering cross-section is described in terms of partons exte
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,Q^2)\,f_{b/B}(x_b,Q^2)\,\hat{\sigma}_{ab \rightarrow X}\quad .
 \label{eq:factorization2}
 \end{equation}
-Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function in the hadron $A\,(B)$ that is dependent on $x_a\,(x_b)$ that is the momentum fraction of the total momentum of the hadron $A\,(B)$ carried by the parton, and on the scale of the interaction. 
+Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$, e.g. the proton. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function in the hadron $A\,(B)$ that is dependent on $x_a\,(x_b)$ that is the momentum fraction of the total momentum of the hadron $A\,(B)$ carried by the parton, and on the scale of the interaction. 
 \\
-Let describe all the contribution to this formula in more detail.
+Let describe all the contribution to this formula in more detail one by one.
 
 \subsection{Parton distribution functions}
 
@@ -78,8 +78,8 @@ The PDFs used to describe a hard scattering are solution to the DGLAP (Dokshitze
 	\mu_F^2\frac{\partial f_{i/H}(x,\mu_F^2)}{\partial\mu_F^2}=\displaystyle\sum_j\frac{\alpha_s(\mu_F^2)}{2\pi}\displaystyle\int_x^1 \frac{dz}{z}\, P_{i\,\rightarrow\,j}(z)\ f_{j/H}\left(\frac{x}{z},\mu_F^2\right)\quad ,
 \end{equation}
 \\
-where $\mu_F$ is the energy scale known as  \textit{factorization scale}.ì, and $f_i/H(x,\mu_F)$ the PDF for the parton of type $i$ inside the hadron $H$ and it is a function of the momentum fraction $x$ and of the energy scale.
-$P_{i\,\rightarrow\,j}$ are the so-called \textit{splitting functions}: they are the probability that a parton of type $i$ emits a parton $j$ (a quark or a gluon) carrying a fraction $z$ of the $i$-parton momentum.
+where $\mu_F$ is the energy scale known as  \textit{factorization scale}, and $f_{i/H}(x,\mu_F)$ the PDF for the parton of type $i$ inside the hadron $H$. The PDF is a function of the momentum fraction $x$ and of the energy scale.
+While, $P_{i\,\rightarrow\,j}$ are the so-called \textit{splitting functions}: they are the probability that a parton of type $i$ emits a parton $j$ (a quark or a gluon) carrying a fraction $z$ of the $i$-parton momentum.
 \\
 The splitting functions have the following perturbative expansions in $\alpha_s$: 
 \begin{equation}

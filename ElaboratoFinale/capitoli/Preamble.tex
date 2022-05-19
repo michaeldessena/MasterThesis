@@ -82,6 +82,15 @@
 
 
 
+%%%% PER LA STAMPA METTE TUTTI I LINK """BLACK"""
+%\usepackage{hyperref}
+%\hypersetup{
+%   colorlinks=true,
+%   urlcolor=black,    % color of external links
+%   linkcolor=black,  % color of toc, list of figs etc.
+%   citecolor=black,   % color of links to bibliography
+%}
+
 
 
 \usepackage[nottoc]{tocbibind} %Includes "References" in the table of contents
@@ -102,6 +111,30 @@
 \pagenumbering{gobble}
 \input{{Cover/cover}}
 
+\cleardoublepage
+\newpage
+
+%%%% Dedica 
+\clearpage
+\begin{center}
+    \thispagestyle{empty}
+    \vspace*{0.25\textheight}\null
+    \hspace*{\fill} \emph{A Federico} \qquad
+\end{center}
+\cleardoublepage
+
+\newpage
+
+
+%%% Frase
+\clearpage
+\begin{flushright}
+\thispagestyle{empty}
+	\vspace*{0.25\textheight}\null
+     \emph{"Iniziare non vuol dire che dovrai finire."} \qquad
+    \\[4pt]
+    \textsc{rancore, \ s.u.n.s.h.i.n.e.}\qquad
+\end{flushright}
 \cleardoublepage
 \newpage
 

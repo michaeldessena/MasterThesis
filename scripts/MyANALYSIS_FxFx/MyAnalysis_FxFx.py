@@ -357,20 +357,20 @@ EOF
     if use_FxFx == True or add_seed_for_LHE == True: 
         runRivet_template=f'''#!/usr/bin/bash
 
-#cd {dir_work}
+cd {dir_work}
 
 ###
-scram project CMSSW CMSSW_11_2_4
-cd CMSSW_11_2_4/src
-eval `scram runtime -sh`
-echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet !!!!!!!!"
-cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet .
-echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration !!!!!!!!"
-cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration .
-echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface !!!!!!!!"
-cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
-echo "copy {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py !!!!!!!!"
-cp -v {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
+#scram project CMSSW CMSSW_11_2_4
+#cd CMSSW_11_2_4/src
+#eval `scram runtime -sh`
+#echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet !!!!!!!!"
+#cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Rivet .
+#echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration !!!!!!!!"
+#cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/Configuration .
+#echo "copy /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface !!!!!!!!"
+#cp -vr /eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/GeneratorInterface .
+#echo "copy {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py !!!!!!!!"
+#cp -v {run_on_eos_path}/Configuration/GenProduction/python/rivet_customize{name}.py Configuration/GenProduction/python/
 ####
 #cp -r {output_path} .
 
@@ -382,10 +382,10 @@ k=$(( $RANDOM % 5000 + 1 ))
 
 sed -i "s/initialSeed = 1/initialSeed = ${{k}}/" {output_path}/${{i}}/rivet{name}_cfg.py
 
-mkdir output   #
-cp -rv {output_path}/* output/  #
-
-eval `scram runtime -sh`  #
+#mkdir output   #
+#cp -rv {output_path}/* output/  #
+#
+#eval `scram runtime -sh`  #
 
 cmsRun output/${{i}}/rivet{name}_cfg.py
 
