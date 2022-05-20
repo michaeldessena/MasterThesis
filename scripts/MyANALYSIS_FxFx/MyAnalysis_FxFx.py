@@ -387,9 +387,9 @@ sed -i "s/initialSeed = 1/initialSeed = ${{k}}/" {output_path}/${{i}}/rivet{name
 #
 #eval `scram runtime -sh`  #
 
-cmsRun output/${{i}}/rivet{name}_cfg.py
+#cmsRun output/${{i}}/rivet{name}_cfg.py
 
-#cmsRun {output_path}/${{i}}/rivet{name}_cfg.py
+cmsRun {output_path}/${{i}}/rivet{name}_cfg.py
 '''
     else:
         runRivet_template=f'''#!/usr/bin/bash
