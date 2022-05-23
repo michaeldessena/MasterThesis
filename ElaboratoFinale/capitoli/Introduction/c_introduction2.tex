@@ -1,0 +1,150 @@
+%INTRODUCTION
+%%%%-------PROVA-------------
+%\documentclass[10pt]{report}
+%\usepackage[british]{babel}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{geometry}
+%\geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+%\usepackage{biblatex} %Imports biblatex package
+%\addbibresource{{../biblio/biblio.bib}} %Import the bibliography file
+%%%%%-------------------------
+%
+%\begin{document}
+
+\chapter{Introduction}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+High-energy collisions, such as those studied at the Large Hadron Collider (LHC) in Geneva, lead to very complex final states. Usually, hundreds of particles are produced and detected by the experiments with momenta scales ranging over different orders of magnitude. All these observed final states are very complicated to understand and explain. The theory underlying the description of high energy particle interactions is the \emph{standard model of particle} (SM). 
+\\
+%%%% MIO
+The SM is the theory that describes all the elementary particles and the fundamental interactions: electromagnetic, weak and strong\footnote{Actually, the fundamental interactions are four: there is also the gravitational interaction. The inclusion of a description also for this last interaction is a central problem for modern physics. There are different theories that try to merge the quantum effects with the general relativity that describe the gravitational force but none of these has been able to give a final description yet. This is not important in the framework of the particle physics studies at the collider in fact this force is negligible with respect to the others.  }. The standard model relies on the Quantum Field Theory framework and on the concept of gauge symmetry. The symmetry group for the theory is $SU(3)\times SU(2)\times U(1)$. 
+%%%%%%%%%%%%%
+\\
+%%%% MIO
+The aim of the SM is to describe with a unique formalism all the three interactions. The abelian group $U(1)$ is related to the electromagnetic interaction, the theory based on the gauge group $U(1)$, first introduced by Richard Feynman, is called \textit{quantum electrodynamics} (QED). During the last century, this force was unified to the weak interaction described by the gauge symmetry $SU(2)$ in a single interaction: the Electroweak interaction \cite{PhysRevLett.19.1264}. Last, the $SU(3)$ group is the one related to the strong interactions of quarks the theory describe the interaction in term of three possible states of charge called \textit{colors}: red, green and blue. This is the origin of the theory name: \textit{quantum chromodynamics} (QCD). 
+%%%%%%%%%
+
+\medskip
+
+All the processes in the standard model are evaluated by means of matrix element calculations to give the probability of having an evolution from a initial-state to a defined final-state.
+\\
+In practice, the matrix elements are to laborious to be evaluated already over the first few orders of perturbation theory, and in particular the QCD processes have to deal with the intrinsically non-perturbative problem of \textit{color confinement}. Matrix element calculations have to deal with many divergences and often they are performed in an approximated scenario. Then, even if it has been possible to compute these matrix elements correctly, they must be integrated over a large final-state phase space in order to obtain predictions for the description of experimental observables. 
+The crucial tool for the description of the processes is the \textit{factorization}, which allows the treatment of processes separating them into different regimes according to the transferred-momentum scale of the interaction. The processes at the highest scale are referred to as \textit{hard processes} and are described in terms of free partons (asymptotic freedom) interacting and generating a small number of energetic outgoing elementary particles. Due to the large momentum transferred in the hard interaction the value of the QCD coupling constant, $\alpha_s$, is small (as shown in \figRef{fig:alphas}), so the perturbative theory is applicable.
+While, at the very lower scales, of the order of $1\ \mathrm{GeV}$, the $\alpha_s$ value is large, the QCD become intrinsically non-perturbative and highly interacting, in this scenario the incoming partons are not describable in terms of free partons because they are confined into the beams hadrons\footnote{The coupling constant of the QCD is large so they are strongly bounded to each other and so cannot be seen as free when they interact.} and interact in a non-perturbative way to form the observed final-state. These soft processes are the ones that cannot yet be described starting from first principles but have to be modeled by employing phenomenological models based on the introduction of free parameters. These two regimes are connected by an evolutionary process calculable using perturbative QCD.  The main consequence of this scale evolution is the so-called \textit{parton showers}: the production of many additional partons in the initial- and final-state. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.55\textwidth]{{alphaS2.png}}
+	\caption{Evolution of the coupling constant with the energy scale of the interaction \cite{PDG}}
+	\label{fig:alphas}
+\end{figure}
+
+\noindent The description of all these processes is based on computer simulation based on Monte Carlo (MC) techniques. The evolution of scale that leads to the parton showering is a Markov process that can be easily simulated with Monte Carlo techniques, also the hadronization that leads from the parton-composed final-state to the hadron-composed final-state  is described in terms of Monte Carlo processes.
+\\
+All these elements together give a \textit{Monte Carlo event generator} capable of simulating a large number of interesting processes. These event generators are needed in high energy physics studies. For  example, they are used to extract a new physics signal from the background of all the other SM processes, provide an input for new selection or reconstruction procedures, or the construction of new experiments.
+
+\medskip
+
+Historically, the strong interaction was associated with the hadrons and not with quarks (they were unknown yet). However, with the deep inelastic scattering experiments \cite{DIS} it was proven that the hadrons are composite objects and then they cannot be fundamental particles for the SM. There must be something more fundamental: \textit{partons} (quarks and gluons). The \textit{partons model} \cite{Feynman:1969wa} was developed to describe the interaction of hadrons in very high energy scatterings. What was observed in DIS of electrons on nucleons was the so-called \textit{Bjorken scaling} the observed structure constant was (at high energy) independent from the probe energy which reflects the fact that the nucleons, or more in general hadrons, are constituted by a collection of point-like objects: the above-mentioned partons.
+\\
+The development of event generators began shortly after this discovery. The description of lots of processes' features at the hard scale as  DIS, hadron jets and lepton pairs production can be performed simply with the description in terms of parton collisions. The description of the complex final-states observed in the MC event generators is obtained by the observation that the primary partons in the evolution can radiate gluons and these gluons could themselves radiate other gluons leading to a cascade. The natural endpoint of this cascade is the hadronization that due to the low energy scale and the consequent high value of the coupling constant is not derivable by the QCD fundamental principles.
+\\
+Most of the interactions observed a the LHC are soft, these soft processes as the above mentioned hadronization can be simulated but due to the non-perturbative nature of the processes they must include free parameters that require a \textit{tune} in order to describe the data. A really important phenomenon related to this topic is the study of the so-called \textit{underlying event} (UE) i.e. the soft component of a collision, where at least one hard interaction occurs, that increases the complexity of the final state observed by adding more particles to it.  
+\\
+The hard tail of the UE is described by the QCD perturbative approach using matrix element calculations. But along with it the description of the showering process need to be simulated: the \textit{Initial-State Radiation} (ISR) and \textit{Final-State Radiation} (FSR) add more particles to the simulated process. It is known that the main contribution to the UE arises from the extra partons scatterings occurring along with the primary hard scattering, these extra scatterings are called \textit{Multi Parton Interactions} (MPI). MPI are soft or semi-hard parton-parton scatterings that add more particles to the final-state. 
+\\
+Usually, the observables sensible to the underlying event receive contribution also from the main hard scattering. So, a good  description of UE observables requires a good modeling of MPI and Beam-Beam Remntants (BBR), which are all the partons left unscattered, and also of the hadronization process, ISR and FSR. The existing MC generators, as pyhtia \cite{PYTHIA2015}, describe all these processes and have adjustable parameters to control the behavior of event modeling. The set of parameters that best describe the fitted distributions is referred to as \textit{tune}. 
+In 2020 the CMS Collaboration has published a new set of tunes for the UE simulations \cite{CPtunes} in \textsc{pythia8} event generator. The tunes are obtained from data measurements sensitive to soft and semi-hard MPI at different collision energies. 
+\\
+One of the main problems in the tuning of these event generators is that the tuning procedure can be really computational expensive, due to the high time required to run a MC generator, and to perform a tune it is required to run a generator a very large amount of times. So, to reduce the number of runs required the procedure usually taken for the tuning is a \textit{parameterization-based approach}. The approach consists of fitting the histograms that are generated from these Monte Carlo simulations with different values for the input parameters under analysis and studying the variation by  defining a function that describes the bins' behavior to the variation of the parameters. These procedure is referred as as \textit{fitting the generator response}.
+
+\medskip
+
+This master thesis, it is investigating this tune aspect focusing on the tuning of parameters for the MC generator \textsc{pythia8}. The work is developed within the CMS experiment framework on data collected in minimum bias observation and $Z$ boson production events. In particular, the description of the above mentioned UE. The tuning is performed using \textsc{mcnntunes} \cite{MCNNTUNESarticle} which implements a machine learning approach by means of Feed Forward Neural Networks (FFNNs).
+\\
+In the thesis, it is validated \textsc{mcnntunes} against the already existing CMS tune for the underlying event: CP5 \cite{CPtunes}. The validation is performed employing data from CDF and CMS analyses at different center-of-mass energies: $1.96$, $7$, $13\ \mathrm{TeV}$ and distributions of charged particle density and charged particle transverse momentum  sum in the transverse regions and pseudorapidity distributions of charged hadrons production, single and non-single diffractive events. For the description of these distributions a correct  tuning for the parameters related to MPI and Color Reconnection (CR) in important. 
+\\
+Once the tool has been validated. It is used to tune the primordial $k_T$ and the ISR. In this step, it is investigated the effects of the two \textsc{pythia8} parameters \texttt{BeamRemnants:primordialKThard} and \texttt{SpaceShower:pt0Ref} in the description of the low region in the spectra of Drell Yan observation in $Z$ boson production events.
+
+
+
+ 
+ 
+%\cleardoublepage 
+% 
+%	The SM is the theory that describe all the elementary particles and the fundamental interactions: electromagnetic, weak and strong\footnote{Actually the fundamental interactions are four: there is also the gravitational interaction. The inclusion of a description also for this last interaction is a central problem for the modern physics. There are different theory that try to merge the quantum effects with the general relativity that describe the gravitational force but none of these have been able to give a final description yet. This is not important in the framework of the particle physics studies at the collider in fact this force is negligible respect to the others.  }. The standard model relies on the Quantum Field Theory framework and on the concept of gauge symmetry. The symmetry group for the theory is $SU(3)\times SU(2)\times U(1)$. 
+%\\
+%The aim of the SM is to describe with a unique formalism all the three interactions. The abelian group $U(1)$ is related the electromagnetic interaction, the theory based on the gauge group $U(1)$, first introduced by Richard Feynman, is called \textit{quantum electrodynamics} (QED). During the last century this force was unified to the weak interaction described by the gauge symmetry $SU(2)$ in a single interaction: the Electroweak interaction \cite{PhysRevLett.19.1264}. Last, the $SU(3)$ group is the one related to the strong interactions of quarks the theory describe the interaction in term of three possible state of charge called \textit{colors}: red, green, blue. This is the origin of the theory name: \textit{quantum chromodynamics} (QCD). 
+%%This quantum field theory describe the forces acting between particles by means of the exchange of other particles representing the quanta of the interaction and called \textit{gauge bosons}. 
+%\\
+%In practice, the matrix elements are to laborious to be evaluated over the first few orders of perturbation theory  
+%\\
+%The particle contained in the SM are grouped in \textit{fermions}, particles with semi-integer spin, and \textit{bosons}, particles with integer spin. The fermions contained in the standard model are sub-divided into leptons and quarks. The first one: $e,\,\nu_e,\,\mu,\,\nu_\mu,\,\tau,\,\nu_\tau$, can interact only by means of weak and electromagnetic interactions (not the neutrinos they have not electrical charge), in fact they have not a color charge so cannot interact strongly. While the quarks: $u,\,d,\,s,\,c,\,b,\,t$, can interact by means of all the above described interactions.  
+%While the boson are the gauge particles (spin 1), i.e. the particles that mediate the interaction: photons is the well known gauge boson for the electromagnetic force, gluons are the ones for the strong interaction, $W$ and $Z$ bosons are mediators of the weak one. Lastly, the famous Higgs boson that is the scalar field of the theory (particle with spin 0). The masses of all the particles in the SM are derived by the interaction with this last particle by mean of the Higgs mechanism. \tableRef{fig:particlesSM} shows a summary of all the fundamental particles of the SM with discovery dates, masses and some other properties.
+%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics[width=0.95\textwidth]{{Particles.png}}
+%	\caption{All the fundamental particles of the standard model. Figure from \cite{CottinBuracchio:2276806}}
+%	\label{fig:particlesSM}
+%\end{figure}
+%
+%\noindent The discover of the Higgs boson in 2012 \cite{HiggsBoson_discovery} at the Large Hadron Collider (\textsc{cern}) was the last ingredient that was missing in the SM. The Higgs boson was predicted by the theory but not yet discovered. This discovery confirm the theory and complete it. 
+%\\
+%In a high energy hadron-hadron collision all the interactions named above take place and participate in the creation of the complex final state observed in the experiments that investigate the fundamental particle physics. Obviously to explain what is observed in colliders experiments a good understanding of the theory that describes the strong interaction is required  
+%
+%\medskip
+%
+%Historically, the strong interaction was associated to the hadrons and not to quarks (they were unknown yet). However, with the deep inelastic scattering experiments \cite{DIS} it was proven that the hadrons are composite objects and then they cannot be fundamental particles for the SM. There must be something more fundamental: \textit{partons} (quarks and gluons). The \textit{partons model} \cite{Feynman:1969wa} was developed to describe the interaction of hadrons in very high energy scatterings. What was observed in DIS of electrons on nucleons was the so called \textit{Bjorken scaling} the observed structure constant was (at high energy) independent from the probe energy this reflect the fact that the nucleons, or more in general hadrons, are constituted by a collection of point-like objects: the above mentioned partons.
+%\\
+%So the partons model leads to the introduction of the \textit{Parton Distribution Function} (PDF) in order to describe the probability of finding a parton inside an hadron carrying a fraction of the total momentum of the hadron. 
+%
+%\medskip
+%
+%But why the quarks have not been directly observed by these high energy experiments? the reason why they have not been measured is that they are confined by the strong force into the hadrons. In fact, the intensity of the strong force increase when one try to take apart the quarks bounded together. 
+%\\
+%This peculiarity of the QCD theory, respect to the QED, arises from the fact that QCD group $SU(3)$ is not an abelian group this reflects in the color charge of the vector boson related to the strong interaction. In fact, the gluons are colored, so can interact each other. While in the QED this was not possible in fact the photons are not charged particles, and cannot interacts themselves. This peculiarity leads to an opposite behavior of the QCD coupling constant, $\alpha_s$, respect to the QED one, $\alpha$.   
+%\\
+%The evolution of the strong interaction coupling constant with respect to the momentum scale $Q^2$ of the interaction is shown in \figRef{fig:alphas}. When $Q^2\gg 1 \ \mathrm{GeV}$ (short distance) the $\alpha_s$ value is small and so the quark and the gluon are weakly coupled, this is called \textit{asymptotic freedom}. In this limit the processes can be evaluate using perturbation theory. This type of processes are refered as \textit{hard QCD} processes, where the hard attribute is related to the high energy scale of the interaction.   
+%
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[width=0.55\textwidth]{{alphaS2.png}}
+%	\caption{evolution of the coupling constant with the energy scale of the interaction \cite{PDG}}
+%	\label{fig:alphas}
+%\end{figure}
+%
+%\noindent On the other hand, when $Q^2$ is small (large distance), the value of the coupling constant is large, this leads to \textit{quarks confinement}. Color confinement is the  reason why we cannot observe free quarks in the experiments, as described above, but as the energy scale of the interaction decrease the quarks are confined into hadrons. These type of processes where the energy scale is low are referred as \textit{soft QCD} processes. Soft QCD processes cannot be described by perturbation theory\footnote{Due to the high value of the constant $\alpha_s$ the series expansion in terms of $\alpha_s$ is not possible.} and are not well understood starting from fundamental principles. 
+%\\
+%The soft QCD processes are clearly an important fraction of the processes we have to describe in order to understand what is going on in real proton-proton collision at LHC. 
+%%A clear example of the importance of the soft processes is the hadronization: once the partons inside the protons have interact the products of the interaction go toward the detector after a tiny distance all the quarks are bounded in hadrons. The hadronization is present in every collision, it is clear that we have to take it into account.  
+%%So, the use of Monte Carlo simulations to describe these processes is required to explain the experimental data we get. 
+%Every physics study at the LHC cannot ignore all these contribution in order to understand all features of main QCD processes i.e. minimum-bias events and jet production. This understanding requires not only a good description of the hard scatters but also a good description of the \textit{underlying event} (UE) i.e. the soft component of a collision that increase the complexity of the final state observed adding more particles to it.  
+%
+%\medskip
+%
+%To study the underlying event, or more in general soft QCD processes, it is required the use of Monte Carlo (MC) generators that often are based on phenomenological models with lots of free parameters. These free parameters must be tuned on experimental data in order to obtain meaningful results from the simulations. The procedure to estimate the best parameters values in order to best reproduce the observables under analysis is called \textit{tune}. 
+%
+%The tuning procedure can be really computational expensive, due to the high time required to run a Monte Carlo generator, and to perform a tune it is required to run a generator a very large amount of times. So, to reduce the number of runs required the procedure usually taken for the tuning is a \textit{parameterization-based approach}. The approach consist in: fitting the histograms that are generated from these Monte Carlo simulations with different values for the input parameters under analysis, and study the variation defining a function that describe the bins behavior to the variation of the parameters. We are going to refers to this procedure as \textit{fitting the generator response}.
+%
+%\medskip
+%
+%This thesis will focus on this \textit{tuning problem} for the underlying event using an approach based on machine learning implement by means of Feed Forward Neural Networks (FFNNs). 
+
+%%%%%% Riassunto Tesi
+%%%%%% Da Controllare una volta finita!!
+
+
+
+
+%In this thesis we are going to focus on this aspect the Monte Carlo simulation have to describe the real data very well if we want to use it in experiments. The procedure to adapt the generator parameters values in order to reproduce the data correctly goes under the name of \textit{tune}. 
+
+\medskip
+
+\chapRef{chap:Hadron-HadronScattering} is going to introduce the theoretical aspects of the description of a hadron-hadron collision. It has to be seen as a general view on all the processes that one have to take into account to have a proper MC simulation of an hadron-hadron collision. The chapter starts with the description of hard events using perturbation theory: factorization theorem. Then the description moves on to the introduction of the parton shower algorithm that links the hard scale of the hard interaction to the softer scale of the hadronization. It has been introduced that the UE description cannot avoid the simulation of the Multi Parton Interaction, a detailed introduction on this is given. Some other important processes are described at the parton level, e.g. the introduction of the primordial $k_T$. In the end of the chapter an introduction to the hadronization process is given. 
+Along with the chapter a particular focus is given to the main parameters that are going to be used in the tuning of the underlying event in minimum bias observation and in $Z$ boson production spectra observed in Drell Yan events. All the observables used in the tunes presented in this thesis are described in \chapRef{chap:ObservabletoStudytheUnderlyingEvent} with an introduction on the CMS detector and on the existing CMS tunes called CP and a number from 1 to 5 \cite{CPtunes} that are the starting point for our work. \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES} describe the basic concepts in the tuning procedure, in particular, it focuses on the parametrization-based approach used for the tuning, in this chapter, it is also discussed the main tool that will be used called \textsc{mcnntunes} \cite{MCNNTUNESarticle} which implements a tuning method based on machine learning. The \textsc{mcnntunes} tunes performed for the underlying event and for the $Z$ boson spectrum are described respectively in \chapRef{chap:OurTunefortheUnderlyingEvent} and \chapRef{chap:primordialkTtune}.
+ 

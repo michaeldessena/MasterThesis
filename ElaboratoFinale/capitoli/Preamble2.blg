@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Preamble2.aux
+The style file: unsrtnat.bst
+Database file #1: /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevLett.19.1264" isn't style-file defined
+--line 1 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "DRELL1971578" isn't style-file defined
+--line 16 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Campbell2006" isn't style-file defined
+--line 62 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Lipatov:400357" isn't style-file defined
+--line 77 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Gribov:427157" isn't style-file defined
+--line 88 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "ALTARELLI1977298" isn't style-file defined
+--line 99 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "Dokshitzer:1977sg" isn't style-file defined
+--line 113 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevBloch" isn't style-file defined
+--line 128 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "KinoshitaToichiro" isn't style-file defined
+--line 143 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PhysRevLee" isn't style-file defined
+--line 156 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "PYTHIA2015" isn't style-file defined
+--line 171 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "SIEGERTthesis" isn't style-file defined
+--line 215 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "MCNNTUNESonGitHub" isn't style-file defined
+--line 621 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--entry type for "YODA" isn't style-file defined
+--line 866 of file /home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib
+Warning--empty author in CMS-PAS-FSQ-15-007
+Warning--empty author in CMS-PAS-FSQ-12-020
+Warning--empty journal in Perceptron
+Warning--empty year in YODA
+You've used 50 entries,
+            2481 wiz_defined-function locations,
+            951 strings with 14724 characters,
+and the built_in function-call counts, 18332 in all, are:
+= -- 1513
+> -- 1048
+< -- 37
++ -- 414
+- -- 310
+* -- 1419
+:= -- 3036
+add.period$ -- 193
+call.type$ -- 50
+change.case$ -- 100
+chr.to.int$ -- 46
+cite$ -- 56
+duplicate$ -- 853
+empty$ -- 1623
+format.name$ -- 393
+if$ -- 3855
+int.to.chr$ -- 5
+int.to.str$ -- 51
+missing$ -- 32
+newline$ -- 301
+num.names$ -- 144
+pop$ -- 392
+preamble$ -- 1
+purify$ -- 50
+quote$ -- 0
+skip$ -- 557
+stack$ -- 0
+substring$ -- 536
+swap$ -- 113
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 347
+warning$ -- 4
+while$ -- 128
+width$ -- 0
+write$ -- 725
+(There were 18 warnings)

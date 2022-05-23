@@ -1,0 +1,357 @@
+\begin{thebibliography}{50}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Weinberg(1967)]{PhysRevLett.19.1264}
+Steven Weinberg.
+\newblock A model of leptons, Nov 1967.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.19.1264}.
+
+\bibitem[Zyla et~al.(2020)]{PDG}
+P.A. Zyla et~al.
+\newblock {Review of Particle Physics}.
+\newblock \emph{PTEP}, 2020\penalty0 (8):\penalty0 083C01, 2020.
+\newblock \doi{10.1093/ptep/ptaa104}.
+\newblock and 2021 update.
+
+\bibitem[Abramowicz et~al.(2015)]{DIS}
+H.~Abramowicz et~al.
+\newblock {Combination of measurements of inclusive deep inelastic ${e^{\pm
+  }p}$ scattering cross sections and QCD analysis of HERA data}.
+\newblock \emph{Eur. Phys. J. C}, 75\penalty0 (12):\penalty0 580, 2015.
+\newblock \doi{10.1140/epjc/s10052-015-3710-4}.
+
+\bibitem[Feynman(1969)]{Feynman:1969wa}
+R.~P. Feynman.
+\newblock {The behavior of hadron collisions at extreme energies}.
+\newblock \emph{Conf. Proc. C}, 690905:\penalty0 237--258, 1969.
+
+\bibitem[Sjöstrand et~al.(2015)Sjöstrand, Ask, Christiansen, Corke, Desai,
+  Ilten, Mrenna, Prestel, Rasmussen, and Skands]{PYTHIA2015}
+Torbjörn Sjöstrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
+  Nishita Desai, Philip Ilten, Stephen Mrenna, Stefan Prestel, Christine~O.
+  Rasmussen, and Peter~Z. Skands.
+\newblock An introduction to pythia 8.2, Jun 2015.
+\newblock ISSN 0010-4655.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cpc.2015.01.024}.
+
+\bibitem[Sirunyan et~al.(2020)]{CPtunes}
+Albert~M Sirunyan et~al.
+\newblock {Extraction and validation of a new set of CMS PYTHIA8 tunes from
+  underlying-event measurements}.
+\newblock \emph{Eur. Phys. J. C}, 80\penalty0 (1):\penalty0 4, 2020.
+\newblock \doi{10.1140/epjc/s10052-019-7499-4}.
+
+\bibitem[Lazzarin et~al.(2021)Lazzarin, Alioli, and Carrazza]{MCNNTUNESarticle}
+Marco Lazzarin, Simone Alioli, and Stefano Carrazza.
+\newblock {MCNNTUNES: Tuning Shower Monte Carlo generators with machine
+  learning}.
+\newblock \emph{Comput. Phys. Commun.}, 263:\penalty0 107908, 2021.
+\newblock \doi{10.1016/j.cpc.2021.107908}.
+
+\bibitem[Bjorken(1969)]{Bjorken:1968dy}
+J.~D. Bjorken.
+\newblock {Asymptotic Sum Rules at Infinite Momentum}.
+\newblock \emph{Phys. Rev.}, 179:\penalty0 1547--1553, 1969.
+\newblock \doi{10.1103/PhysRev.179.1547}.
+
+\bibitem[Drell and Yan(1971)]{DRELL1971578}
+Sidney~D Drell and Tung-Mow Yan.
+\newblock Partons and their applications at high energies, 1971.
+\newblock ISSN 0003-4916.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0003491671900716}.
+
+\bibitem[Lipatov(1975)]{Lipatov:400357}
+L~N Lipatov.
+\newblock {The parton model and perturbation theory}, 1975.
+\newblock URL \url{http://cds.cern.ch/record/400357}.
+
+\bibitem[Gribov and Lipatov(1972)]{Gribov:427157}
+Vladimir~Naumovich Gribov and L~N Lipatov.
+\newblock {Deep inelastic ep scattering in perturbation theory}, 1972.
+\newblock URL \url{https://cds.cern.ch/record/427157}.
+
+\bibitem[Altarelli and Parisi(1977)]{ALTARELLI1977298}
+G.~Altarelli and G.~Parisi.
+\newblock Asymptotic freedom in parton language, 1977.
+\newblock ISSN 0550-3213.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/0550321377903844}.
+
+\bibitem[Dokshitzer(1977)]{Dokshitzer:1977sg}
+Yuri~L. Dokshitzer.
+\newblock {Calculation of the Structure Functions for Deep Inelastic Scattering
+  and e+ e- Annihilation by Perturbation Theory in Quantum Chromodynamics.},
+  1977.
+
+\bibitem[Ball et~al.(2017{\natexlab{a}})Ball, Bertone, Carrazza, Debbio, Forte,
+  Groth-Merrild, Guffanti, Hartland, Kassabov, Latorre, Nocera, Rojo, Rottoli,
+  Slade, and Ubiali]{NNPDF3.1}
+Richard~D. Ball, Valerio Bertone, Stefano Carrazza, Luigi~Del Debbio, Stefano
+  Forte, Patrick Groth-Merrild, Alberto Guffanti, Nathan~P. Hartland, Zahari
+  Kassabov, José~I. Latorre, Emanuele~R. Nocera, Juan Rojo, Luca Rottoli, Emma
+  Slade, and Maria Ubiali.
+\newblock Parton distributions from high-precision collider data.
+\newblock \emph{The European Physical Journal C}, 77\penalty0 (10), Oct
+  2017{\natexlab{a}}.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
+\newblock URL \url{http://dx.doi.org/10.1140/epjc/s10052-017-5199-5}.
+
+\bibitem[Bloch and Nordsieck(1937)]{PhysRevBloch}
+F.~Bloch and A.~Nordsieck.
+\newblock Note on the radiation field of the electron, Jul 1937.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.52.54}.
+
+\bibitem[Kinoshita(1962)]{KinoshitaToichiro}
+Toichiro Kinoshita.
+\newblock Mass singularities of feynman amplitudes, 1962.
+\newblock URL \url{https://doi.org/10.1063/1.1724268}.
+
+\bibitem[Lee and Nauenberg(1964)]{PhysRevLee}
+T.~D. Lee and M.~Nauenberg.
+\newblock Degenerate systems and mass singularities, Mar 1964.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.133.B1549}.
+
+\bibitem[Campbell et~al.(2006)Campbell, Huston, and Stirling]{Campbell2006}
+J~M Campbell, J~W Huston, and W~J Stirling.
+\newblock Hard interactions of quarks and gluons: a primer for lhc physics, Dec
+  2006.
+\newblock ISSN 1361-6633.
+\newblock URL \url{http://dx.doi.org/10.1088/0034-4885/70/1/R02}.
+
+\bibitem[Frixione and Webber(2002)]{FxFx1}
+Stefano Frixione and Bryan~R Webber.
+\newblock Matching nlo qcd computations and parton shower simulations.
+\newblock \emph{Journal of High Energy Physics}, 2002\penalty0 (06):\penalty0
+  029–029, Jun 2002.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1088/1126-6708/2002/06/029}.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2002/06/029}.
+
+\bibitem[Frixione et~al.(2003)Frixione, Nason, and Webber]{FxFx2}
+Stefano Frixione, Paolo Nason, and Bryan~R Webber.
+\newblock Matching nlo qcd and parton showers in heavy flavour production.
+\newblock \emph{Journal of High Energy Physics}, 2003\penalty0 (08):\penalty0
+  007–007, Aug 2003.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1088/1126-6708/2003/08/007}.
+\newblock URL \url{http://dx.doi.org/10.1088/1126-6708/2003/08/007}.
+
+\bibitem[Frixione and Webber(2005)]{FxFx3}
+Stefano Frixione and Bryan~R. Webber.
+\newblock The mc@nlo 3.1 event generator, 2005.
+
+\bibitem[Frederix and Frixione(2012)]{FxFx4}
+Rikkert Frederix and Stefano Frixione.
+\newblock {Merging meets matching in MC@NLO}.
+\newblock \emph{JHEP}, 12:\penalty0 061, 2012.
+\newblock \doi{10.1007/JHEP12(2012)061}.
+
+\bibitem[SIEGERT(2010)]{SIEGERTthesis}
+FRANK SIEGERT.
+\newblock Monte-carlo event generation for the lhc, 2010.
+\newblock URL \url{http://etheses.dur.ac.uk/484/}.
+
+\bibitem[Sakuma and McCauley(2014)]{CMSdetector}
+Tai Sakuma and Thomas McCauley.
+\newblock {Detector and Event Visualization with SketchUp at the CMS
+  Experiment}.
+\newblock \emph{J. Phys. Conf. Ser.}, 513:\penalty0 022032, 2014.
+\newblock \doi{10.1088/1742-6596/513/2/022032}.
+
+\bibitem[CMS(2015)]{CMS-PAS-FSQ-15-007}
+{Underlying Event Measurements with Leading Particles and Jets in pp collisions
+  at $\sqrt{s} = 13$ TeV}.
+\newblock Technical report, CERN, Geneva, 2015.
+\newblock URL \url{https://cds.cern.ch/record/2104473}.
+
+\bibitem[CMS(2012)]{CMS-PAS-FSQ-12-020}
+{Measurement of the Underlying Event Activity at the LHC at 7 TeV and
+  Comparison with 0.9 TeV}.
+\newblock Technical report, CERN, Geneva, 2012.
+\newblock URL \url{http://cds.cern.ch/record/1478982}.
+
+\bibitem[Aaltonen et~al.(2015)]{CDF:2015txs}
+Timo~Antero Aaltonen et~al.
+\newblock {Study of the energy dependence of the underlying event in
+  proton-antiproton collisions}.
+\newblock \emph{Phys. Rev. D}, 92\penalty0 (9):\penalty0 092009, 2015.
+\newblock \doi{10.1103/PhysRevD.92.092009}.
+
+\bibitem[Khachatryan et~al.(2010)]{HighPurity}
+Vardan Khachatryan et~al.
+\newblock {CMS Tracking Performance Results from Early LHC Operation}.
+\newblock \emph{Eur. Phys. J. C}, 70:\penalty0 1165--1192, 2010.
+\newblock \doi{10.1140/epjc/s10052-010-1491-3}.
+
+\bibitem[Salam and Soyez(2007)]{JetAlgorithm1}
+Gavin~P. Salam and Gregory Soyez.
+\newblock {A Practical Seedless Infrared-Safe Cone jet algorithm}.
+\newblock \emph{JHEP}, 05:\penalty0 086, 2007.
+\newblock \doi{10.1088/1126-6708/2007/05/086}.
+
+\bibitem[Cacciari et~al.(2008)Cacciari, Salam, and Soyez]{JetAlgorithm2}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {The anti-$k_t$ jet clustering algorithm}.
+\newblock \emph{JHEP}, 04:\penalty0 063, 2008.
+\newblock \doi{10.1088/1126-6708/2008/04/063}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{a}})]{CMS:2018nhd}
+Albert~M. Sirunyan et~al.
+\newblock {Measurement of charged particle spectra in minimum-bias events from
+  proton\textendash{}proton collisions at $\sqrt{s}=13\,\text {TeV} $}.
+\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (9):\penalty0 697,
+  2018{\natexlab{a}}.
+\newblock \doi{10.1140/epjc/s10052-018-6144-y}.
+
+\bibitem[Khachatryan et~al.(2015)]{CMS:2015zrm}
+Vardan Khachatryan et~al.
+\newblock {Pseudorapidity distribution of charged hadrons in proton-proton
+  collisions at $\sqrt{s}$ = 13 TeV}.
+\newblock \emph{Phys. Lett. B}, 751:\penalty0 143--163, 2015.
+\newblock \doi{10.1016/j.physletb.2015.10.004}.
+
+\bibitem[Chatrchyan et~al.(2012)]{CMS:2012oqb}
+Serguei Chatrchyan et~al.
+\newblock {Measurement of the underlying event in the Drell-Yan process in
+  proton-proton collisions at $\sqrt{s}=7$ TeV}.
+\newblock \emph{Eur. Phys. J. C}, 72:\penalty0 2080, 2012.
+\newblock \doi{10.1140/epjc/s10052-012-2080-4}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{b}})]{CMS:2017ngy}
+A.~M. Sirunyan et~al.
+\newblock {Measurement of the underlying event activity in inclusive Z boson
+  production in proton-proton collisions at $ \sqrt{s}=13 $ TeV}.
+\newblock \emph{JHEP}, 07:\penalty0 032, 2018{\natexlab{b}}.
+\newblock \doi{10.1007/JHEP07(2018)032}.
+
+\bibitem[Sirunyan et~al.(2019{\natexlab{a}})]{CMS:2018mdd}
+Albert~M. Sirunyan et~al.
+\newblock {Study of the underlying event in top quark pair production in
+  $\mathrm {p}\mathrm {p}$ collisions at 13 $~\text {Te}\text {V}$}.
+\newblock \emph{Eur. Phys. J. C}, 79\penalty0 (2):\penalty0 123,
+  2019{\natexlab{a}}.
+\newblock \doi{10.1140/epjc/s10052-019-6620-z}.
+
+\bibitem[Bechtel(2009)]{Bechtel:2009zza}
+Florian Bechtel.
+\newblock \emph{{The underlying event in proton-proton collisions}}.
+\newblock PhD thesis, Hamburg U., 2009.
+
+\bibitem[Banfi et~al.(2011)Banfi, Redford, Vesterinen, Waller, and
+  Wyatt]{phistareta}
+A.~Banfi, S.~Redford, M.~Vesterinen, P.~Waller, and T.~R. Wyatt.
+\newblock {Optimisation of variables for studying dilepton transverse momentum
+  distributions at hadron colliders}.
+\newblock \emph{Eur. Phys. J. C}, 71:\penalty0 1600, 2011.
+\newblock \doi{10.1140/epjc/s10052-011-1600-y}.
+
+\bibitem[Sirunyan et~al.(2019{\natexlab{b}})]{ZpT_distributions}
+Albert~M Sirunyan et~al.
+\newblock {Measurements of differential Z boson production cross sections in
+  proton-proton collisions at $ \sqrt{s} $ = 13 TeV}.
+\newblock \emph{JHEP}, 12:\penalty0 061, 2019{\natexlab{b}}.
+\newblock \doi{10.1007/JHEP12(2019)061}.
+
+\bibitem[Skands et~al.(2014)Skands, Carrazza, and Rojo]{Monash}
+Peter Skands, Stefano Carrazza, and Juan Rojo.
+\newblock {Tuning PYTHIA 8.1: the Monash 2013 Tune}.
+\newblock \emph{Eur. Phys. J. C}, 74\penalty0 (8):\penalty0 3024, 2014.
+\newblock \doi{10.1140/epjc/s10052-014-3024-y}.
+
+\bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
+  Seggern]{Buckley:2009bj}
+Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
+  Seggern.
+\newblock {Systematic event generator tuning for the LHC}.
+\newblock \emph{Eur. Phys. J. C}, 65:\penalty0 331--357, 2010.
+\newblock \doi{10.1140/epjc/s10052-009-1196-7}.
+
+\bibitem[Carrazza and Lazzarin(2020)]{MCNNTUNESonGitHub}
+Stefano Carrazza and Marco Lazzarin.
+\newblock N3pdf/mcnntunes: mcnntunes 0.1.0, October 2020.
+\newblock URL \url{https://doi.org/10.5281/zenodo.4071125}.
+
+\bibitem[Abadi et~al.(2015)Abadi, Agarwal, Barham, Brevdo, Chen, Citro,
+  Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia,
+  Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah,
+  Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan,
+  Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu, and
+  Zheng]{tensorflow2015-whitepaper}
+Mart\'{i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
+  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
+  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
+  Levenberg, Dandelion Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris
+  Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal
+  Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas,
+  Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and
+  Xiaoqiang Zheng.
+\newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
+  2015.
+\newblock URL \url{https://www.tensorflow.org/}.
+\newblock Software available from tensorflow.org.
+
+\bibitem[Rosenblatt(1958)]{Perceptron}
+F.~Rosenblatt.
+\newblock The perceptron: A probabilistic model for information storage and
+  organization in the brain.
+\newblock 1958.
+\newblock URL \url{https://doi.org/10.1037/h0042519}.
+
+\bibitem[Hornik(1991)]{HORNIK1991251}
+Kurt Hornik.
+\newblock Approximation capabilities of multilayer feedforward networks.
+\newblock \emph{Neural Networks}, 4\penalty0 (2):\penalty0 251--257, 1991.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/0893-6080(91)90009-T}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/089360809190009T}.
+
+\bibitem[Leshno et~al.(1993)Leshno, Lin, Pinkus, and Schocken]{LESHNO1993861}
+Moshe Leshno, Vladimir~Ya. Lin, Allan Pinkus, and Shimon Schocken.
+\newblock Multilayer feedforward networks with a nonpolynomial activation
+  function can approximate any function.
+\newblock \emph{Neural Networks}, 6\penalty0 (6):\penalty0 861--867, 1993.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/S0893-6080(05)80131-5}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0893608005801315}.
+
+\bibitem[YODA()]{YODA}
+YODA.
+\newblock Yoda.
+\newblock URL \url{https://yoda.hepforge.org/}.
+
+\bibitem[Hansen(2016)]{CMAES}
+Nikolaus Hansen.
+\newblock The {CMA} evolution strategy: {A} tutorial.
+\newblock \emph{CoRR}, abs/1604.00772, 2016.
+\newblock URL \url{http://arxiv.org/abs/1604.00772}.
+
+\bibitem[Cowan(1998)]{cowan}
+G.~Cowan.
+\newblock \emph{Statistical data analysis}.
+\newblock Oxford University Press, USA, 1998.
+
+\bibitem[Ball et~al.(2017{\natexlab{b}})]{NNPDF:2017mvq}
+Richard~D. Ball et~al.
+\newblock {Parton distributions from high-precision collider data}.
+\newblock \emph{Eur. Phys. J. C}, 77\penalty0 (10):\penalty0 663,
+  2017{\natexlab{b}}.
+\newblock \doi{10.1140/epjc/s10052-017-5199-5}.
+
+\bibitem[Sirunyan et~al.(2018{\natexlab{c}})]{CMS:2018mdf}
+Albert~M Sirunyan et~al.
+\newblock {Measurement of differential cross sections for Z boson production in
+  association with jets in proton-proton collisions at $\sqrt{s} =$ 13 TeV}.
+\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (11):\penalty0 965,
+  2018{\natexlab{c}}.
+\newblock \doi{10.1140/epjc/s10052-018-6373-0}.
+
+\end{thebibliography}

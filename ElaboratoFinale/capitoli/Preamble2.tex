@@ -1,0 +1,186 @@
+%% Preamble Master Thesis
+\documentclass[12pt, a4paper, twoside, openright]{report} %REPORT %chapter, section, subsection
+
+%\linespread{1.2} % INTERLINEA
+
+% --------- Remove Chapter from Chapter report -----
+
+\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%  {\normalfont\bfseries}{}{0pt}{\Huge}
+%\usepackage{varwidth}
+
+%\titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\huge}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % encoding used for .tex file
+\usepackage[british]{babel}	% can be omitted "utf8" encoding is the default
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools} % add tool like xrightarrow
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  % Add the centering in the tabular with fixed colum width
+
+\usepackage{geometry} % margin and other page settings 
+%\geometry{hmargin={2cm,2cm},vmargin={2cm,2cm}}
+\geometry{
+	left=35mm,
+ 	top=30mm,
+ 	bottom=25mm,
+ 	right=25mm}
+
+\usepackage[autostyle=true]{csquotes} % to quote something!
+
+\usepackage[labelfont=bf,textfont=md]{caption} % caption options % Figure, Table in boldface and the text normal
+%\captionsetup{format=hang, font = small}
+%\captionsetup{font = footnotesize}
+\captionsetup{font = small}
+%\captionsetup{widht=0.8\textwidth}
+
+\usepackage{graphicx} % figure object 
+\usepackage{subcaption}
+\graphicspath{{img}} 
+%FOR DIFFERNT PATHs
+% 
+%\graphicspath{{path1}}
+%\input{file1.tex}
+%\graphicspath{{path2}}
+%\input{file2.tex}
+%
+\usepackage{enumitem} % change the enumerate item [label=\arabic*)]
+
+\usepackage{float} % add options for floating object: \begin{figure}[H]
+
+
+%%% ----- To set header/ footer
+\usepackage{fancyhdr}
+%\fancyhead[LO]{\rightmark}
+%\fancyhead[RE]{\leftmark }
+\pagestyle{fancy}
+%\fancyhf{}
+\fancyhead{}
+\fancyhead[RO]{\rightmark}
+\fancyhead[LE]{\leftmark }
+%\rhead[RO]{\rightmark}
+%\lhead[LE]{\leftmark}
+
+\usepackage{emptypage} % include NOT TRIED
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref} %to use autoref
+
+\newcommand{\figRef}[1]{\mbox{Fig. \ref{#1}}}
+\newcommand{\tableRef}[1]{\mbox{Table \ref{#1}}}
+\newcommand{\eqRef}[1]{\mbox{Eq. \ref{#1}}}
+\newcommand{\chapRef}[1]{\mbox{Chapter \ref{#1}}}
+\newcommand{\secRef}[1]{\mbox{Section \ref{#1}}}
+\newcommand{\refApp}[1]{\mbox{Appendix \ref{#1}}}
+
+
+
+%%%% PER LA STAMPA METTE TUTTI I LINK """BLACK"""
+%\usepackage{hyperref}
+%\hypersetup{
+%   colorlinks=true,
+%   urlcolor=black,    % color of external links
+%   linkcolor=black,  % color of toc, list of figs etc.
+%   citecolor=black,   % color of links to bibliography
+%}
+
+
+
+\usepackage[nottoc]{tocbibind} %Includes "References" in the table of contents
+
+%\usepackage[backend=biber, style=numeric]{biblatex} %Imports biblatex package
+\usepackage[square,numbers]{natbib}
+%\usepackage[backend=bibtex,bibencoding=ascii, sorting=none]{biblatex}
+%\addbibresource{{Bibliography/biblio.bib}} %Import the bibliography file
+%\addbibresource{{/home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Introduction/biblio.bib}}
+
+\title{Soft QCD parameter tuning using feed-forward neural networks}
+\author{Michael Dessena}
+\date{\today}
+
+\begin{document}
+
+\captionsetup{width=0.9\textwidth}  % set the width of all the captions
+
+\pagenumbering{gobble}
+\input{{Cover/cover}}
+
+\cleardoublepage
+\newpage
+
+%%%% Dedica 
+\clearpage
+\begin{center}
+    \thispagestyle{empty}
+    \vspace*{0.25\textheight}\null
+    \hspace*{\fill} \emph{A Federico} \qquad
+\end{center}
+\cleardoublepage
+
+\newpage
+
+
+%%% Frase
+\clearpage
+\begin{flushright}
+\thispagestyle{empty}
+	\vspace*{0.25\textheight}\null
+     \emph{\textquotedblleft \,Iniziare non vuol dire che dovrai finire.\,\textquotedblright} \qquad
+    \\[4pt]
+    \textsc{\small{rancore, \ s.u.n.s.h.i.n.e.}}\qquad\quad
+\end{flushright}
+\cleardoublepage
+\newpage
+
+{\Large\abstract}
+\setcounter{page}{1}
+\pagenumbering{roman}
+\input{{Abstract/abstract.tex}}
+
+\tableofcontents
+
+
+
+\graphicspath{{Introduction/}}
+\input{{Introduction/c_introduction2.tex}}
+	
+\graphicspath{{Hadron_Hadron_scattering/}}
+\input{{Hadron_Hadron_scattering/c_HadronHadronScattering2.tex}}
+	
+\graphicspath{{Multi_Parton_Interactions/}}
+\input{{Multi_Parton_Interactions/c_Multi_Parton_Interactions2.tex}}
+	
+	\graphicspath{{ObservableToStudyTheUnderlyingEvent/}}
+\input{{ObservableToStudyTheUnderlyingEvent/c_ObservableToStudyTheUnderlyingEvent.tex}}
+	
+\graphicspath{{TuneProcedureAndMCNNTUNES/}}
+\input{{TuneProcedureAndMCNNTUNES/c_tuneProcedureCP5TuneAndMCNNTUNES.tex}}	
+	
+\graphicspath{{OurTune/}}
+\input{{OurTune/c_ourTune}}
+
+\graphicspath{{PrimordialkT_tune/}}
+\input{{PrimordialkT_tune/c_primordialkTTune.tex}}
+
+\graphicspath{{Conclusions/}}
+\input{{Conclusions/c_conclusions.tex}}
+
+\appendix 
+\graphicspath{{Apendix/}}
+\input{{Apendix/a_test2param.tex}}
+
+%\bibliographystyle{plainnat}
+\bibliographystyle{unsrtnat} % citations ordered by appearance
+\bibliography{{/home/michael/Scrivania/MasterThesis/ElaboratoFinale/capitoli/Bibliography/biblio.bib}}
+
+%\printbibliography
+
+
+\end{document}
