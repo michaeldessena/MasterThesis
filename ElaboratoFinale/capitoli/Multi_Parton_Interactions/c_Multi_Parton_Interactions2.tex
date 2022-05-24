@@ -264,10 +264,85 @@ An example of merging approach is the FxFx merging scheme, developed by Frixione
 So, it is clear that the matrix element calculations cannot be blindly combined with parton showers. The combination of these two approaches is a very active research topic, and is important for giving
 a good description for jet production from QCD.
 
+
+%%%% AGGIUNTA
+\section{Soft QCD processes}
+
+Lots of physics processes and modeling issues are related to "soft QCD". In the following, firstly, is performed a brief introduction of different QCD processes that form the dominant part of the total hadron-hadron cross-section. Then, the model of the Multi Parton Interaction and its implementation in pyhtia8 are described. Lastly, the primordial $k_T$ concept, the color reconnection and the hadronization processes are introduced. All these contribution have to be understood if one want to have a good description of the soft QCD contribution to what is observed, in particular for the description of the UE.
+
+\medskip
+
+Hadron-hadron scatterings are classified by the characteristics of the final states. The main division is between \textit{elastic} and \textit{inelastic} scatterings. In elastic ones:
+\begin{equation}
+	A(p_A)+B(p_B)\ \longrightarrow \ A(p_A')+B(p_B') \quad,
+\end{equation} 
+both the hadrons $A$ and $B$ emerge intact and no other particles are produced. The only exchanged quantity is momentum. \figRef{fig:CS-elastic} shows how the topology of an observed elastic events would be.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=10cm]{{img/CS-elastic.png}}
+	\caption{Elastic scattering diagram and $\phi$-$\eta$ plot showing the angular  distribution of products after the interaction. Figure from \cite{DiffractionInPythia}}
+	\label{fig:CS-elastic}
+\end{figure}
+
+\noindent All the other cases are classified as inelastic. In inelastic scatterings the final-state is different from the initial one.
+\begin{equation}
+	A(p_A)+B(p_B)\ \longrightarrow \ X\quad.
+\end{equation} 
+Where $X$ indicates that a new final state have been generated in the interaction. In this case the system gets complex and new particles are produced. 
+\\
+So, the total cross-section can be written-out as a sum of two contributions:
+\begin{equation}
+	\sigma_{\text{tot}}(s) = \sigma_{\text{el}}(s) + \sigma_{\text{inel}}(s)
+	\label{eq:cross_section_elastic_inelastic}
+\end{equation}
+Where the various contribution depend on the center-of-mass energy squared $s=(p_A+p_B)^2$.
+\\
+The inelastic contribution can be further subdivide into \textit{diffractive} and \textit{non-diffractive} events. The division is based on the presence, or not, of a large rapidity gap somewhere in the final-state that can be seen as a decay of an excitation of the beam particles.
+
+\subsection{Diffractive cross-section} 
+
+Once a events has been classified as diffractive it is possible to distinguish between three possible classes of diffractive events: double-diffractive (DD), single-diffractive (SD) and central-diffractive (CD). 
+In DD events both the beams particles are excited and both are fragmented in the collision, on the other hand in SD dissociation just one of the two hadrons get excited while the other survive the collision intact. In the last case, CD, both the beam particles survive intact, but they leave an excited state in the central region that then decays.
+\\
+So, the inelastic cross-section in \eqRef{eq:cross_section_elastic_inelastic} can be re-written as:
+\begin{equation}
+	\sigma_{\text{inel}}(s) = \sigma_{\text{SD}}(s)+\sigma_{\text{DD}}(s)+\sigma_{\text{CD}}(s)+\sigma_{\text{ND}}(s)  \quad,
+\end{equation}
+where ND are all the non-diffractive inelastic events\footnote{It has to be mentioned that other topologies are possible defined as multi-diffractive events whit multi rapidity gap observed. These type of events have a very low cross-section ($\ll 1 \ \mathrm{mb}$) with respect to the other considered.}, this type of events are the dominants in proton-proton collisions at LHC.
+
+\begin{figure}[!htb]
+	\centering
+	\noindent
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/CS-SD.png}}
+		\caption*{a)}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/CS-DD.png}}
+		\caption*{b)}
+	\end{subfigure}\\[20pt]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/CS-CD.png}}
+		\caption*{c)}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{{img/CS-ND.png}}
+		\caption*{d)}
+	\end{subfigure}
+	\caption{The figure shows: a) a SD events with a rapidity gap in the region $-10<\eta<3.5$; b) a DD events where all the two hadrons fragment and is formed a rapidity gap $|\eta|<3.5$; c) the two hadron survive but a central excitation is produced (CD event); d) a ND events all the $\phi-\eta$ region is covered by the products of the collision. Figure from \cite{DiffractionInPythia}}
+\end{figure}
+
+Next section will focus on the description of the non-diffractive part of the total cross section using the MPI model. In very rough terms, this means that the non-diffractive cross-section is saturated by more than a single partonic scattering, and that the number of partonic interactions is determined by a Poisson distribution. This model has been very successful in the description of many experimental measurements at hadron colliders.
+
 \section{Multiple Parton Interactions in PYTHIA}
 
 
-By the fact that the hadrons are viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision different couples of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} and it is related to the composite nature of the incoming hadrons. 
+Since hadrons can be viewed as "bunches" of partons, it is likely that in the same hadron-hadron collision more then one pair of partons can undergo to a scattering. This phenomenon is known as \textit{Multiple Parton Interactions} and it is related to the composite nature of the incoming hadrons. 
 \\
 So, it is clear that at some level these MPI have to exist, and they can become important in the description of the event; they can change the color topology of the colliding system as a whole.  
 \\
@@ -276,11 +351,11 @@ In this scenario it is important to have a good understanding of the phenomenon.
 \subsection{Basic Concepts}
 \label{sec:BasicConcepts}
 
-The main hypothesis of the multiple interactions models is that: the QCD factorization theorem is true not only for the hard process but also for the other partons scatters.
+The main hypothesis of the MPI model is the validity of the QCD factorization theorem not only for the hard process but also for the other partons scatters.
 \\
 So, we can write:
 \begin{equation}
-	\frac{d\sigma_{\text{int}}}{dp_\perp}=\displaystyle\sum_{i,j,k,l}\displaystyle\int dx_1 \displaystyle\int dx_2 \displaystyle\int d\hat{t}\, f_i(x_1,Q^2)f_j(x_2,Q^2)\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}\delta\left( p_\perp^2-\frac{\hat{t}\hat{u}}{\hat{s}} \right) \quad .
+	\frac{d\sigma_{\text{int}}}{dp_T}=\displaystyle\sum_{i,j,k,l}\displaystyle\int dx_1 \displaystyle\int dx_2 \displaystyle\int d\hat{t}\, f_i(x_1,Q^2)f_j(x_2,Q^2)\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}\delta\left( p_\perp^2-\frac{\hat{t}\hat{u}}{\hat{s}} \right) \quad .
 	\label{eq:sigma_int1}
 \end{equation}
 This represent the interaction differential cross section for the hadron-hadron collisions, where $\frac{d\hat{\sigma}_{ij\,\rightarrow\,kl}}{d\hat{t}}$ is the differential cross section for QCD hard $2\ \rightarrow 2$ processes, this processes are the one reported in \tableRef{table:partonic_cross_sections}. 
@@ -295,7 +370,7 @@ where $p_1$, $p_2$ are the four-momenta of the incoming partons and $p_3$, $p_4$
 
 %Note that in \eqRef{eq:sigma_int1} the jet cross section is twice as large $\sigma_{\text{jet}}=2\sigma_{\text{int}}$, because at first approximation each interaction gives rise to two jets.
 
-\noindent We assume also that the "hardness" of processes is defined by the $p_T$ scale of the interaction ($Q^2=p_T^2$).
+\noindent We assume also that the "hardness" of a  process is defined by the $p_T$ scale of the interaction ($Q^2=p_T^2$).
 
 %\begin{table}[!ht]
 %	\centering
@@ -371,7 +446,7 @@ Now, we can integrate the \eqRef{eq:sigma_int2}:
 	\label{fig:CrossSection_Tot}
 \end{figure}
 
-\noindent The total cross section is divergent in the limit $p_T\,\rightarrow\,0$, this divergence is shown in \figRef{fig:CrossSection_Tot}. Due to this divergence the total interaction cross section at some $p_{T}$ scale can exceed the total proton-proton cross section.
+\noindent The total cross section is divergent in the limit $p_T\,\rightarrow\,0$. \figRef{fig:CrossSection_Tot} shows the rise of the interaction cross-section as the energy scale decreases. Due to this divergence the total interaction cross section at some $p_{T}$ scale can exceed the total proton-proton cross section (described in the section above).
 \\
 To understand this paradox should be noted that the interaction cross section described in \eqRef{eq:interaction_crossSection} is related to the interaction probability between two partons and counts the number of interactions, while the total proton-proton cross section $\sigma_{pp}$ counts the number of events. For example, an event (a proton-proton collision) in which two partons interact counts once in the total cross section and twice in the interaction cross section.
 \\
@@ -381,25 +456,35 @@ So, the ratio between this two quantities is perfectly allowed to be larger than
 \end{equation}
 Furthermore, we have to consider the \textit{screening effect}: in fact the incoming hadrons are color singlet objects. Therefore, when the $p_T$ of an exchanged gluon is small, and so the associated wavelength large, this gluon cannot longer resolve the color charges and the effective coupling is decreased, this screening set a cutoff in the divergence. The screening effect is schematically shown in \figRef{fig:ScreeningEffect}.
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.7\textwidth]{{img/ScreeningEffect.png}}
-	\caption{A picture of the screening effect. The left figure show two color charge that are not resolved by the gluon in fact the wave length is greater than the spatial separation, $d$, of the two charges. So resolution of the probe is not enough to discriminate the color charges. While on the right figure the two charges are very well distinct.}
+	\noindent
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{{img/screening1.png}}
+		\caption*{a) Screened color charges}
+	\end{subfigure}%
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{{img/screening2.png}}
+		\caption*{b) Resolved color charges}
+	\end{subfigure}
+	\caption{A picture of the screening effect. The left figure show two color charge that are not resolved by the gluon in fact the wave length is greater than the spatial separation, $d$, of the two charges. So resolution of the probe is not enough to discriminate among the various color charges. While on the right figure the two charges are very well distinct.}
 	\label{fig:ScreeningEffect}
 \end{figure}
 
-\noindent So, this cutoff is associated with color screening distance i.e. the average size of the region within the  compensation of color charge occurs.
+\noindent So, this cutoff is associated with color screening distance i.e. the average size of the region within which the  compensation of color charge occurs.
 This cutoff is then introduced in the factor as:
 \begin{equation}
 	\frac{\alpha_s^2\,(p_{T0}^2+p_{T}^2)}{\alpha_s^2\,(p_T^2)}\,\frac{p_T^4}{(p_{T0}^2+p_T^2)^2}\quad .
 \end{equation}
-This factor contains the phenomenological regularization of the divergence, with the factor $p_{T0}$ that have to be tuned to data. 
+This factor contains the phenomenological regularization of the divergence, with the factor $p_{T0}$ that has to be tuned to data. 
 \\
 Now the interaction cross section is smoothly regularized and therefore finite.
 \\
-To be notice that: parameter $p_{T0}$ do not have to be energy-independent, but since the energy is related with the sensibility of our probe, higher energy is related with the capacity of probing PDFs to lower x values (as discussed previously, see \figRef{fig:NNPDF31}) and in this low x region the number of partons rapidly increases. So, the partons are closer packed in this regions and as a consequence the color screening distance decrease.
+To be notice that: parameter $p_{T0}$ does not have to be energy-independent, but since the energy is related with the sensibility of our probe, higher energy is related with the capacity of probing PDFs to lower x values (as discussed previously, see \figRef{fig:NNPDF31}) and in this low-x region the number of partons rapidly increases. So, the partons are more closely packed in this region and as a consequence the color-screening distance decrease.
 \\
-The number of partons is related to $x$ with a power low so, it is likely to have a dependence of the same form for $p_{T0}$ respect to the center-of-mass energy
+The number of partons is related to $x$ with a power law so, it is likely to have a dependence of the same form for $p_{T0}$ respect to the center-of-mass energy
 \begin{equation}
 	p_{T0}(\sqrt{s})=p_{T0}^{ref} \,\left( \frac{\sqrt{s}}{E_{CM}^{ref}} \right)^{E_{CM}^{pow}}\quad .
 \end{equation}
@@ -407,49 +492,27 @@ The number of partons is related to $x$ with a power low so, it is likely to hav
 These two parameters are named \texttt{MultiplepartonInteractions:}\-\texttt{pT0Ref} and \texttt{Mul}\-\texttt{tiple}\-\texttt{partonInteractions:}\-\texttt{ecmPow} and control respectively the threshold for the MPI to occur at a fixed center-of-mass energy and the power evolution with $\sqrt{s}$. 
 
 
-In \textsc{pythia}8 MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Than we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
+In \textsc{pythia}8 MPI, as said before, are also generated in a decreasing $p_T$ sequence. So the hardest MPI is generated first. Then we can write the probability for an interaction, $i$, to occur at a scale $p_T$ using a Sudakov-type expression (as we have done for the ISR and the FSR):
 \begin{equation}
 	\frac{d\mathcal{P}_{MPI}}{dp_T}=\frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T}\ \exp\left( -\displaystyle\int_{p_T}^{p_T\,i-1} \frac{1}{\sigma_{ND}}\frac{d\sigma_{2\,\rightarrow\,2}}{dp_T'}\,dp_T' \right)\quad .
 \end{equation}
 
-\subsubsection{Interleaving of Multiple Interaction and Parton Shower}
-
-As discussed above the ISR, FSR and MPI are simulated in \textsc{Pythia} following a common decreasing $p_T$ evolution.
-So we have that the total probability is given from the composition of the various contributions from each process:
-\begin{align}
-	\frac{d\mathcal{P}}{dp_T}=&\left( \frac{d\mathcal{P}_{MPI}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T} \right) \nonumber \times\\ 
-	&\times\exp\left\{ -\displaystyle\int_{p_T}^{p_T\,i-1} \left( \frac{d\mathcal{P}_{MPI}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T'} \right)\,dp_T' \right\}
-	\label{eq:common_pT_sequence}
-\end{align}
-%
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=12cm]{{img/PartonShower.png}}
-	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
-	\label{fig:PartonShower}
-\end{figure}
-%
-\\
-In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occurs at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
-The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
-\\
-This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 \subsection{Momentum and flavour conservation}
 
-One problem in MPI simulation is to achieve momentum conservation, so we need to take into account the modification in the PDF by the $i-1$ interaction. To do that in \textsc{Pythia} the PDF are rescaled to the remaining available $x$ range, adjusting their normalization.
+One problem in MPI simulation is to achieve momentum conservation, so for each consecutive interaction it has to be taken into account the modification in the PDF by the $i-1$ interaction. To do that in \textsc{Pythia} the PDF are rescaled to the remaining available $x$ range, adjusting their normalization.
 \\
-We need to take into account the momentum fraction $x_i$ removed from the hadron remnant by the $i-th$ interaction. This is done evaluating PDF not at $x_i$ but at a rescaled value
+One need to take into account the momentum fraction $x_i$ removed from the hadron remnant by the $i-th$ interaction. This is done by evaluating PDF not at $x_i$ but at a rescaled value
 \begin{equation}
 	x_i'=\frac{x_i}{X} \qquad \ \text{with }\ \ X=1-\sum_{j=1}^{i-1}x_j\quad .
 \end{equation}
-So, using these quantities, we can rewrite our PDFs as:
+So, by using these quantities, we can rewrite our PDFs as:
 \begin{equation}
 	f_i(x,Q^2)\ \longrightarrow\ \frac{1}{X}f_0\left(\frac{x}{X}\right)\quad ,
 \end{equation}
 where $f_0$ is the original one-parton inclusive PDFs.
 \\
-Now, requiring also the flavour conservation and taking into account the number of valence and/or sea quarks involved in the preceding MPI. We have now the full forms of the PDFs used for the $i-th$ MPI:
+Now, requiring also the flavour conservation and taking into account the number of valence and/or sea quarks involved in the preceding MPI. The full forms of the PDFs used for the $i-th$ MPI are:
 \begin{align}
 f_i(x,Q^2) =&  \frac{N_{fv}}{N_{fv0}}\frac{1}{X} f_{v0}\left( \frac{x}{X},Q^2 \right) + \frac{a}{X}f_{s0}\left( \frac{x}{X},Q^2 \right)+\displaystyle\sum_j \frac{1}{X} f_{c_j0}\left( \frac{x}{X},Q^2 \right) \quad,\\
 g_i(x,Q^2) =& \frac{a}{X}g_0\left( \frac{x}{X},Q^2 \right)\quad, 
@@ -466,19 +529,17 @@ The factor $a$ is defined to satisfy the total momentum sum rule.
 
 \subsection{Impact Parameter Dependence}
 
-The simplest hypothesis for the multiple interaction simulation, it is to assume the same initial state for all hadron collisions without dependencies on the impact parameter. 
+The simplest hypothesis for the multiple interaction simulation, is to assume the same initial state for all hadron collisions without dependencies on the impact parameter. 
 \\
-The more realistic scenario it is to include the possibility that each collision could be characterized by a different impact parameter $b$, where a small $b$ value correspond to a large overlap between the two hadrons this is related to the probability of parton-parton interaction to take place.
+The more realistic scenario is to include the possibility that each collision could be characterized by a different impact parameter $b$, where a small $b$ value correspond to a large overlap between the two hadrons this is related to the probability of parton-parton interaction to take place.
 \\
-To include the impact parameter dependence on the collision, it is necessary to make some assumption on the matter distribution inside the proton. A possibility is to assume a spherically symmetric distribution inside an hadron at rest $\rho(\mathbf{x})\,d^3x=\rho(r)\,d^3x$. A Gaussian ansatz is the most simple choice but it appears to lead to a narrow multiplicity distribution and a too little pedestal effect. So the coiche is a double Gaussian:
+To include the impact parameter dependence on the collision, it is necessary to make some assumption on the matter distribution inside the proton. A possibility is to assume a spherically symmetric distribution inside an hadron at rest $\rho(\mathbf{x})\,d^3x=\rho(r)\,d^3x$. A Gaussian ansatz is the most simple choice but it appears to lead to a narrow multiplicity distribution and a too little pedestal effect. So the choice is a double Gaussian:
 \begin{equation}
 	\rho(r) \propto \frac{1-\beta}{a_1^3}\exp\left\{-\frac{r^2}{a_1^2}\right\}+\frac{\beta}{a_2^3}\exp\left\{ -\frac{r^2}{a_2^2} \right\}\quad,
 	\label{eq:matterDistribution}
 \end{equation}
-where a fraction $\beta$ of matter is contained in a radius $a_2$, and the rest in a larger radius $a_1$. in \textsc{pythia8} these two parameters are named respectively as \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Fraction} and \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Radius}.
-
-\medskip
-
+where a fraction $\beta$ of matter is contained in a smaller central region, called \textit{core}, of radius $a_2$, while the rest of the matter fraction in a larger one of radius $a_1$. In \textsc{pythia8} the two parameters related to the fraction of matter and the spatial extension of the core region are named respectively as \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Fraction} and \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Radius}.
+\\
 Now, for a given matter distribution $\rho(r)$,  the time-integrated overlap function of the incoming hadrons during the collision is given by:
 \begin{equation}
 	\mathcal{O}(b)=\displaystyle\int dt \displaystyle\int d^3x\,\rho(x,y,z)\,\rho(x+b,y,z+t)\quad.
@@ -491,68 +552,107 @@ Assuming the matter distribution function in \eqRef{eq:matterDistribution} and i
 	}
 \end{equation}
 this is useful to quantify the effect of overlapping protons.
-The larger is $\mathcal{O}(b)$ the more probable are parton-parton scatters between the incoming protons $\langle \widetilde{n} \rangle\propto \mathcal{O}(b)$.
-
-\medskip
-
-So, these assumption change the so-far Poissonian nature of the framework\footnote{the Poissonian distribution, in \eqRef{eq:poisson} describe the probability of having $n$ interactions at each impact parameter. If the matter distribution have an infinite tail (like our in \eqRef{eq:matterDistribution}) events may be obtained with arbitrarily large b values. This can be a problem for the definition of the total hadron-hadron cross section}
+The larger is $\mathcal{O}(b)$ the more probable are parton-parton scatters between the incoming protons. So, it is natural to assume a linear relationship between the overlapping function and the mean number of interaction in the event as in the following equation: 
+\begin{equation}
+\langle \widetilde{n} \rangle = k \mathcal{O}(b)\quad.
+\end{equation}
+In this scenario, the number of interactions at fixed impact parameter value is given by a Poissonian distribution:
 \begin{equation}
 \mathcal{P}(\widetilde{n})=
 	\left\langle \widetilde{n}\right\rangle ^{\widetilde{n}}\ \frac{e^{-\langle\widetilde{n}\rangle}}{\widetilde{n}!}
 	\label{eq:poisson}
-\end{equation}
-Now the request that at least one parton interactions in the hadron-hadron collision, ensures that we get a finite total cross section. So the probability that an event is produced by two hadrons scattering with impact parameter $b$:
+\end{equation} 
+
+%So, these assumption change the so-far Poissonian nature of the framework\footnote{the Poissonian distribution, in \eqRef{eq:poisson} describe the probability of having $n$ interactions at each impact parameter. If the matter distribution have an infinite tail (like our in \eqRef{eq:matterDistribution}) events may be obtained with arbitrarily large b values. This can be a problem for the definition of the total hadron-hadron cross section}
+%\begin{equation}
+%\mathcal{P}(\widetilde{n})=
+%	\left\langle \widetilde{n}\right\rangle ^{\widetilde{n}}\ \frac{e^{-\langle\widetilde{n}\rangle}}{\widetilde{n}!}
+%	\label{eq:poisson}
+%\end{equation}
+If the matter distribution have an infinite tail (like the one in \eqRef{eq:matterDistribution}) events may be obtained with arbitrarily large $b$ values. This can be a problem for the definition of the total hadron-hadron cross section.
+\\
+So, imposing that at least one parton interaction occurs in the hadron-hadron collision, it is ensured that finite total cross section is obtained. The probability that an interaction occurs  by a hadron scattering with impact parameter $b$, is:
 \begin{equation}
 	\mathcal{P}_{\text{int}}= \displaystyle\sum_{\widetilde{n}=1}^\infty\mathcal{P}_{\widetilde{n}(b)}=1-\mathcal{P}_0=1-e^{-\langle \widetilde{n}(b) \rangle}=1-e^{-k\mathcal{O}(b)}
 \end{equation}
-So we have now that the number of interaction per event is give by (for impact parameter $b$):
+Now, the number of interaction, for impact parameter $b$, per event is give by:
 \begin{equation}
-	\langle n(b) \rangle=\frac{\langle \widetilde{n}(b) \rangle}{\mathcal{P}_{\text{int}}}
+	\langle \widetilde{n}(b) \rangle =\frac{\langle k\mathcal{O}(b) \rangle}{ 1-e^{-k\mathcal{O}(b)} } =\frac{\langle k\mathcal{O}(b) \rangle}{\mathcal{P}_{\text{int}}(b)}
 \end{equation}
-so, this have modified the probability distribution of interactions number from a Poissonian to a narrower one at each $b$ fixed.
+where we have divided for the total interaction probability to take into account for the request of at least one parton interaction.
+So, this have modified the probability distribution of interactions number from a Poissonian to a narrower one at each $b$ fixed.
 
-%\subsection{Parton rescattering}
+\subsection{Parton rescattering}
+
+It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}.
 %
-%It is not necessary that the partons undergoing to a MPI are a different partons couple from the one scattered before. As shown in \figRef{fig:Rescattering} MPI can also arise when a parton scatters more than once against partons from the other beam, this is call \textit{parton rescattering}.
-%%
-%\begin{figure}[!ht]
-%	\centering
-%	\includegraphics[width=0.95\textwidth]{{img/Rescattering_3casi.png}}
-%	\caption{This figure shows parton rescattering. On the right image a double $2\,\rightarrow\,2$ scattering (no rescattering) is shown; on the middle a parton rescattering process where only one of the rescattered partons have already scattered; on the right image a parton rescattering with both the partons that undergo to rescattering have already been scattered. }
-%	\label{fig:Rescattering}
-%\end{figure}
-%%
-%\\
-%We can have 3 type of MPI:
-%\begin{enumerate}
-%	\item No ones of the partons that enter in the second scattering undergoes to another scatter before (\figRef{fig:Rescattering} left);
-%	\item Only one of the two partons has alredy been scattered (\figRef{fig:Rescattering} middle);
-%	\item Both the partons have alredy been scattered before (\figRef{fig:Rescattering} right). 
-%\end{enumerate}
-%The second and the third are the rescatters the overall influence of rescatters in proton-proton interactions was estimated to be small respect to the first case with distinct $2\,\rightarrow\,2$  scatters. 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.95\textwidth]{{img/Rescattering_3casi.png}}
+	\caption{This figure shows parton rescattering. On the left image a double $2\,\rightarrow\,2$ scattering (no rescattering) is shown; on the middle a parton rescattering process where only one of the rescattered partons have already scattered; on the right image a parton rescattering with both the partons that undergo to rescattering have already been scattered. }
+	\label{fig:Rescattering}
+\end{figure}
 %
-%The simulation of parton rescatters start from the evaluation of the parton density as:
-%\begin{equation}
-%	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_n \,\delta(x-x_n)}_{\text{scattered parton(s)}}\quad,
-%\end{equation} 
-%where the $\delta(x-x_i)$ takes into account the already scattered partons that have a fixed momentum fraction $x_n$. While the hadron remnant is still described by a continuous momentum density, scaled to achieve momentum conservation:
-%\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
-%\end{equation}
+
+\noindent We can have 3 type of MPI:
+\begin{enumerate}
+	\item No one of the partons that enter in the second scattering undergoes to another scatter before (\figRef{fig:Rescattering} left);
+	\item Only one of the two partons has alredy been scattered (\figRef{fig:Rescattering} middle);In very rough terms, this means that the non-diffractive
+cross section is saturated by more than a single partonic scattering, and that the number of partonic
+interactions is determined by a Poisson distribution. This model, which was originally proposed in [98]
+has been very successful in the description of many experimental measurements at hadron colliders.
+	\item Both the partons have alredy been scattered before (\figRef{fig:Rescattering} right). 
+\end{enumerate}
+The second and the third are the rescatters. The overall influence of rescatters in proton-proton interactions was estimated to be small respect to the first case with distinct $2\,\rightarrow\,2$  scatters. 
+\\
+The simulation of partons re-scatter start from the evaluation of the parton density as:
+\begin{equation}
+	f(x,Q^2)\ \  \longrightarrow\! \underbrace{\phantom{\Bigg(} f_{\text{rescaled}}(x,Q^2)}_{\text{hadron remnant}}+\underbrace{\displaystyle\sum_{i=1}^N \,\delta(x-x_i)}_{\text{scattered parton(s)}}\quad,
+\end{equation} 
+where the $\delta(x-x_i)$ takes into account the $N$  already-scattered partons that have a fixed momentum fraction $x_i$. While the hadron remnants that do not enter a scattering before are still described by a continuous momentum density, but re-scaled to achieve momentum conservation once that the already-scattered partons have been extracted:
+\begin{equation}	\displaystyle\int_0^1 \bigg( f_{\text{rescaled}}(x,Q^2) +\displaystyle\sum_n \,\delta(x-x_n) \bigg)dx=1\quad.
+\end{equation}
 
 
+\subsection{Interleaving of Multiple Interaction and Parton Shower}
 
-\subsection{Beam Beam Remnants and primordial $k_T$}
+%As discussed above the ISR, FSR and MPI are simulated in \textsc{Pythia} following a common decreasing $p_T$ evolution.
+Obviously, the parton shower can be applied not only to the partons that undergo to the primary hard scattering, but also the the other partons especially the ones interested by the MPI. 
+\\
+In other words, the event structure of a hadron collisions can be very complex, e.g. a single initial-state parton can split into two before both of them enter a hard collision. At the same time an independently resolved parton may undergo another collision, while all of them collectively radiate further gluons. This is a very complex situation that cannot be described exactly. But a good description can be obtained by considering an \textit{interleaved} parton shower and MPI evolution. An example of possible resulting event structure is reported in \figRef{fig:PartonShower}.
+\\
+So we have that the total interaction probability is given from the composition of the various contributions from each process:
+\begin{align}
+	\frac{d\mathcal{P}}{dp_T}=&\left( \frac{d\mathcal{P}_{MPI}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T} \right) \nonumber \times\\ 
+	&\times\exp\left\{ -\displaystyle\int_{p_T}^{p_T\,i-1} \left( \frac{d\mathcal{P}_{MPI}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{ISR}}{dp_T'}+\displaystyle\sum\frac{d\mathcal{P}_{FSR}}{dp_T'} \right)\,dp_T' \right\}
+	\label{eq:common_pT_sequence}
+\end{align}
+%
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=12cm]{{img/PartonShower.png}}
+	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
+	\label{fig:PartonShower}
+\end{figure}
+%
+\\
+In \figRef{fig:PartonShower} are shown 4 parton-parton interactions with their associated showers (ISR and FSR). The downward evolution correspond to read the graph from top to bottom. The first hard interaction occurs at a scale $p_T=p_{T1}$ while the following ones at lower scales $p_{T2}$, $p_{T3}$, $p_{T4}$. Each interaction is associated with is radiation the first one occurs at $p_T=p_{T1}'$.
+The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother parton. 
+\\
+This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
+
+
+\section{Primordial $k_T$ and Color reconnection}
 \label{sec:Beam Beam Remnants and primordial kT}
 
-What is left after that the evolution is end?
-\\
+What is left after that the $p_T$ evolution is ended?
 The evolution in $p_T$ can create an arbitrary complicate final state. 
 This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last are the so called \textit{Beam Beam Remnants} (BBR). 
-BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation.
+BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation and, to ensure momentum conservation, the BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators.
 \\
-To ensure momentum conservation the BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators.
+The showering process plus the MPI introduction lead to a large number of partons in the final states. Then, in the simulation, all the partons take the contribution from the primordial $k_T$ (originating from the Fermi motion) this is described in the next section.    
 
-\subsubsection*{Primordial $k_T$}
+\subsection*{Primordial $k_T$}
 
 We have considered only the longitudinal momentum. In a real scenario partons, inside the hadrons, are fermions. So, are expected to have a non zero initial transverse momentum arising from the Fermi motion inside the incoming hadrons. This is denoted as \textit{primordial $k_T$}. This is different from the transverse momentum derived from DGLAP shower evolution or from the hard interaction.
 
@@ -599,7 +699,7 @@ With this definition for the probability, it is clear that system with low $p_T$
 %\\
 %The simplest case is the one in \figRef{fig:StringBreakings}: The $q\overline{q}$ system evolves in space increasing the string length at some point the distance is to large and is convenient to break the string into two strings.
 %
-%\begin{figure}[!ht]
+%\begin{figure}[!htb]
 %	\centering
 %	\includegraphics[width=12cm]{{img/StringBreakings.png}}
 %	\caption{The lund Model is schematically shown here. The string evolution in time is shown vertically while the spatial position horizontally. As the partons move apart at some point become convenient to break the string, in order to reduce the total potential energy, and a partons pair is produced.}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{51}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -151,6 +151,11 @@ Rikkert Frederix and Stefano Frixione.
 \newblock {Merging meets matching in MC@NLO}.
 \newblock \emph{JHEP}, 12:\penalty0 061, 2012.
 \newblock \doi{10.1007/JHEP12(2012)061}.
+
+\bibitem[Navin(2010)]{DiffractionInPythia}
+Sparsh Navin.
+\newblock {Diffraction in Pythia}.
+\newblock 5 2010.
 
 \bibitem[SIEGERT(2010)]{SIEGERTthesis}
 FRANK SIEGERT.
