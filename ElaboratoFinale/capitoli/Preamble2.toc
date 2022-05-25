@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {2.3.1}Parton Showers}{14}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Merging parton showers and NLO matrix element calculations}{15}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Soft QCD processes}{17}{section.2.4}%
-\contentsline {subsubsection}{Various contributions to hadron-hadron cross-section}{17}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {2.4.1}Diffractive cross-section}{18}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}Various contributions to hadron-hadron cross-section}{17}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Diffractive cross-section}{18}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Multiple Parton Interactions in PYTHIA}{19}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Basic Concepts}{19}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Momentum and flavour conservation}{23}{subsection.2.5.2}%
@@ -41,12 +41,12 @@
 \contentsline {section}{\numberline {4.3}MCNNTUNES}{51}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Sampling Phase and Training Set Generation}{51}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}PerBin Model}{52}{subsection.4.3.2}%
-\contentsline {subsubsection}{Error evaluation}{53}{subsubsection*.37}%
+\contentsline {subsubsection}{Error evaluation}{53}{subsubsection*.36}%
 \contentsline {subsection}{\numberline {4.3.3}Negative aspects}{54}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Inverse Model}{55}{subsection.4.3.4}%
-\contentsline {subsubsection}{Errors evaluation}{55}{subsubsection*.41}%
-\contentsline {subsubsection}{Hyperparameters}{56}{subsubsection*.43}%
-\contentsline {subsubsection}{Problems}{56}{subsubsection*.45}%
+\contentsline {subsubsection}{Errors evaluation}{55}{subsubsection*.40}%
+\contentsline {subsubsection}{Hyperparameters}{56}{subsubsection*.42}%
+\contentsline {subsubsection}{Problems}{56}{subsubsection*.44}%
 \contentsline {subsection}{\numberline {4.3.5}Weightrules in MCNNTUNES}{57}{subsection.4.3.5}%
 \contentsline {chapter}{\numberline {5}Tune for the Underlying Event}{59}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{59}{section.5.1}%
@@ -62,6 +62,6 @@
 \contentsline {section}{\numberline {6.1}Primordial $k_T$ and ISR effect on $p_T^Z$}{77}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Primordial $k_T$ tune}{79}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Primordial $k_T$ tune vs MPI}{82}{section.6.3}%
-\contentsline {chapter}{Conclusions}{85}{chapter*.80}%
+\contentsline {chapter}{Conclusions}{85}{chapter*.79}%
 \contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Events}{87}{appendix.A}%
-\contentsline {chapter}{Bibliography}{91}{appendix*.86}%
+\contentsline {chapter}{Bibliography}{91}{appendix*.85}%

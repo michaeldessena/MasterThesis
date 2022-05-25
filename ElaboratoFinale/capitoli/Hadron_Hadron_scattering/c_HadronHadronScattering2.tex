@@ -30,18 +30,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%% old
 In a high energy proton-proton collision, it is possible to have either soft or hard processes.
-Most of the time the hard processes are accompanied by soft interactions, occurring along with the hadron interaction.
-While the hard processes such as the Higgs boson production or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, and the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non-perturbative approaches. The introduction of the MC simulation is required in order to have a complete description of these two classes of processes and also of their interconnection through the parton showering process. 
+Most of the time the hard processes are accompanied by soft interactions, occurring along with the same hadron interaction.
+While the hard processes such as the Higgs boson production or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, and the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non-perturbative models. The introduction of the MC simulation is required in order to have a complete description of these two classes of processes and also of their interconnection through the parton showering process. 
 
-This chapter, in the first part, focuses on a theoretical introduction to some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
+This chapter, in the first part, focuses on a theoretical introduction to some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the Parton Distribution Functions (PDFs).  
 %and finally the all-orders approaches (e.g. the parton showers).
 
-\noindent In the second part, it is described the parton shower where the parton emission is described in terms of splitting probability for the Initial State Radiation (ISR) and Final State Radiations (FSR). Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of High Energy Physics events. Lastly, a look at the hadronization process and at the model implemented in \textsc{pythia} is given.
+\noindent In the second part, it is described the parton shower where the parton emission is described in terms of splitting probability for the Initial State Radiation and Final State Radiations. Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of high energy physics events. Lastly, a look at the hadronization process and at the model implemented in \textsc{pythia} is given.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Structure of Monte Carlo event generators}
 
-Monte Carlo event generators build up the structure of a hadron-hadron collision in the different steps. Firstly, a primary hard subprocess is generated with the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect the to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly, all the processes at the hadron level take part in the simulation, e.g. the decays of unstable particles. A schematic representation of all these processes is shown in \figRef{fig:Processes}.
+Monte Carlo event generators build up the structure of a hadron-hadron collision in many  different steps. Firstly, a primary hard subprocess is generated to it is attached the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect the to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly, all the processes at the hadron level take part in the simulation, e.g. the decays of unstable particles. A schematic representation of all these processes is shown in \figRef{fig:Processes}.
 
 \begin{figure}[!htb]
 	\centering
@@ -50,12 +50,12 @@ Monte Carlo event generators build up the structure of a hadron-hadron collision
 	\label{fig:Processes}
 \end{figure}
 
-Usually, one is interested in the simulation of events of a particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all types of events and selecting only the one of interest, in fact, this would lead to a very low statistics in case of rare events. Due to the fact that partons entering in the hard scattering are coloured, they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as an evolution in some momentum-transfer-like variable downward evolution starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
+Usually, one is interested in the simulation of events of a particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all types of events and selecting only the one of interest, in fact, this would lead to a very low statistics in case of rare events. Due to the fact that partons entering in the hard scattering are coloured, they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as a downward evolution in some momentum-transfer-like variable starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
 partons and a backwards evolution of the incoming partons progressively towards the incoming hadrons.
 \\
-Be noticed that, incoming hadrons are composite particles, i.e. bounded state of partons. So, it is likely to have more than one interaction between partons in the same hadron-hadron collision. Also, these interactions are simulated according to the momentum-transfer-like variable downward evolution. 
+To be notice that, incoming hadrons are composite particles, i.e. bounded state of partons. So, it is likely to have more than one interaction between partons in the same hadron-hadron collision. Also, these interactions are simulated according to the momentum-transfer-like variable downward evolution. 
 \\
-As the evolution goes on is reached the region of order $1\ \mathrm{GeV}$, in which QCD became strongly interacting and perturbation theory breaks down. At this scale, the perturbative description in terms of partons must be terminated and replaced by a non-perturbative hadronization model in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation, they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
+As the evolution goes on is reached the region of order $1\ \mathrm{GeV}$ ($\approx \Lambda_{\text{QCD}}$), in which QCD became strongly interacting and perturbation theory breaks down. At this scale, the perturbative description in terms of partons must be terminated and replaced by a non-perturbative hadronization model in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation, they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
 
 %%%%%%%%%% END STRUCTURE OF MONTE CARLO EVENT GENERATORS
 
@@ -98,7 +98,7 @@ The hadron-hadron scattering cross-section is described in terms of partons exte
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,Q^2)\,f_{b/B}(x_b,Q^2)\,\hat{\sigma}_{ab \rightarrow X}\quad .
 \label{eq:factorization2}
 \end{equation}
-Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$, e.g. the proton. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross-section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function (PDF) in the hadron $A\,(B)$. PDF is dependent on $x_a\,(x_b)$ that is the light-cone momentum fraction carried by the parton with respect to the total momentum of the parent hadron $A\,(B)$; and on the scale of the interaction $Q^2$. 
+Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark, an antiquark or a gluon in the hadron $A\,(B)$, e.g. the proton. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross-section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function  in the hadron $A\,(B)$ for the parton of type $a$. PDF is dependent on $x_a\,(x_b)$ that is the light-cone momentum fraction carried by the parton with respect to the total momentum of the parent hadron $A\,(B)$; and on the scale of the interaction $Q^2$. 
 \\
 All the contributions to this formula are described in more detail one by one in the following sections.
 
@@ -143,7 +143,8 @@ In \figRef{fig:NNPDF31} we can also see that with increasing virtuality ($Q^2$) 
 \begin{equation}
 	\text{Resolution}\sim\frac{\hbar}{Q}\quad .
 \end{equation}
-So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation finds an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when probed at lower energy. This, as will be discussed in the below sections, is related to the energy dependence in the number of interactions between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called multiple parton interactions.
+So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation finds an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when probed at lower energy. This, as will be discussed in the below sections, is related to the energy dependence in the number of interactions between partons into a single hadron-hadron collision. 
+%The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called multiple parton interactions.
 
 %%%%%%
 
@@ -262,7 +263,7 @@ It is proven that higher-order calculations of observables calculated to order $
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{{img/ZRapidityDistributionLO_NLO_NNLO.png}}
-	\caption{The rapidity distribution predictions at LO (blue) NLO (green) and NNLO (red) for the Z production at the center of mass energy$\sqrt{s}=14\ \mathrm{TeV}$. The band width is related to the uncertainties. Going from LO to NLO there is an increase in the cross-section prediction and a reduction in the scales uncertainties, the NNLO prediction is in the NLO error band width but there is a further increase in the precision of the prediction. Figure from \cite{Campbell2006}, section 6.}
+	\caption{The rapidity distribution predictions at LO (blue) NLO (green) and NNLO (red) for the Z production at the center of mass energy$\sqrt{s}=14\ \mathrm{TeV}$. The band width is related to the uncertainties. Going from LO to NLO there is an increase in the cross-section prediction and a reduction in the scales uncertainties, the NNLO prediction is in the NLO error band width but there is a further increase in the precision of the prediction. Figure from \cite{Campbell2006} Section 6.}
 	\label{fig:ZRapidityDistributionLO_NLO_NNLO}
 \end{figure}
 

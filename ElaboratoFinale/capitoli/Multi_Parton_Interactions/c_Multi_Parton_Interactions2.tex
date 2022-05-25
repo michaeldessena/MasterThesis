@@ -50,7 +50,7 @@ P_{q\,\rightarrow\,q\overline{q}}(z) & = T_R(z^2+(1-z)^2)\quad ; \label{eq:DGLAP
 \end{align} 
 where $C_F=\frac{4}{3}$ is the Casimir operator for $SU(3)$, $C_A=N_C=3$, that are named "color factors", and $T_R=\frac{1}{2}$ that is given by the trace calculation of the group generators, each contribution is multiplied by $N_f$ if summing over all contributing quark flavours.
 \\
-The parton shower consists of two components: the initial-state radiation (ISR) describing the emission from the incoming partons and the final-state radiation (FSR) describing the emission of outgoing partons they are also respectively referred to as spacelike and timelike showers.
+The parton shower consists of two components: the initial-state radiation describing the emission from the incoming partons and the final-state radiation describing the emission of outgoing partons they are also respectively referred to as spacelike and timelike showers.
 Both ISR and FSR algorithms are based on these splitting kernels introduced in \eqRef{eq:DGLAP_splitting1}, \ref{eq:DGLAP_splitting2} and \ref{eq:DGLAP_splitting3}.
 The respective probabilities of emitting radiation as one move in the decreasing evolution variable sequence are:
 \begin{align}
@@ -58,9 +58,9 @@ The respective probabilities of emitting radiation as one move in the decreasing
 	ISR: \qquad\quad & \frac{d\mathcal{P}_{ISR}}{dp_T^2} = \frac{1}{p_T^2}\displaystyle\int \frac{dz}{z}\,\frac{\alpha_s}{2\pi}P(z)\,\frac{f'(x/z,p_T^2)}{f(x,p_T^2)}\quad .\label{eq:ISR1}
 \end{align}
 Where the FSR one represents the infinitesimal probability that a parton branches, or in this case decays, in a $dp_T^2$ step.
-Instead, \eqRef{eq:ISR1} refers to the same probability but it includes the description of the PDF evolution in fact the ISR is described in terms of production of a parton (instead of decays probability as in FSR). The slitting kernels are the same described above except that the production of a gluon $P_g(z)$ is equal to $2P_{gg}(z)$ since two gluons are generated from the decay of one gluon.
+Instead, \eqRef{eq:ISR1} refers to the same probability but it includes the description of the PDF evolution in fact the ISR is described in terms of production of a parton (instead of decays probability as in FSR). The slitting kernels are the same described above except that the splitting probability for the  production of a gluon is equal to $2P_{g\,\rightarrow\,gg}(z)$ since two gluons are generated from the decay of one gluon.
 
-Staring from these infinitesimal probabilities by multiplication of no-emission probability $1-dP_{ISR}$, or equally $1-dP_{ISR}$. 
+Staring from these infinitesimal probabilities by multiplication of no-emission probability $1-dP_{ISR}$, or equally $1-dP_{FSR}$. 
 The Sudakov form factor can be written as: % by means of the two probability in \eqRef{eq:FSR1} and \eqRef{eq:ISR1}, as
 \begin{equation}
 	\Delta(p_T^2)=\exp\left( -\displaystyle\int_{p_{T0}^{PS}}^{p_T'} \frac{d\mathcal{P}_{PS}}{dp_T^2} \,dp_T\right) \qquad\text{ with } \quad PS=ISR,\ FSR \quad.
@@ -69,9 +69,10 @@ The Sudakov form factor can be written as: % by means of the two probability in 
 The Sudakov form factor gives the probability of a parton to evolve from an harder scale to a softer scale without emitting a parton harder than some resolution scale.
 \\
 The introduction of the Sudakov form factor resumes all the effects from the soft and collinear gluon emission. For more details and some plots of different Sudakov form factors values see section 3.5 of \cite{Campbell2006}.
-
-
- In \textsc{pythia}8 the contributions from ISR and FSR are interleaved into a single common sequence of decreasing $p_T$. 
+\\
+The Sudakov factor allows to write the parton shower algorithm using a Markov Chain Monte Carlo method. In fact the system status at a certain value of $p_T$ depends only on the previous status of the system at a $p_T'>p_T$\footnote{It is important to remember that the simulation is described in a downward evolution in the evolution variable, $p_T$. So the previous state of the system is located at a higher value of this variable.}. 
+\\
+In \textsc{pythia}8 the contributions from ISR and FSR are interleaved into a single common sequence of decreasing $p_T$. 
 \\
 It has been seen that the solution to the DGLAP equation is given by putting \eqRef{eq:FSR1} and \eqRef{eq:ISR1} in \eqRef{eq:sudakovFormFactor} respectively for the ISR and the FSR by a Sudakov form factor that is related to the no-emission probability in the $p_T$-evolution. 
 \\
@@ -83,12 +84,13 @@ The evolution variables for ISR and FSR are defined starting from the virtuality
 	\end{aligned}\right.\quad,
 	\label{eq:partonShowerEvolutionVariables}
 \end{equation}
-so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ a time-like virtuality ($p^2>0$) is implicated, while for the ISR one has $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$). In both cases $Q^2$ values are positively defined. 
+so, in the two cases: for the FSR $Q^2_{FSR}=(p^2-m_0^2)$ a time-like virtuality ($p^2>0$) is implicated corresponding to a forwards evolution, while for the ISR one has $Q^2_{ISR}=(-p^2+m_0^2)$ with a space-like virtuality ($p^2<0$) describing the backwards evolution. In both cases $Q^2$ values are positively defined. 
 
 %Then the actual strong of the radiation is set by the choices of $\alpha_{s\,ISR}$ and $\alpha_{s\,FSR}$ values.
 
-The threshold on the transverse momentum scale for ISR, $p_{T0}^{ISR}$, and FSR, $p_{T0}^{FSR}$,  are free parameters in \textsc{pyhtia} and are called \texttt{Space}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{Ref}   and \texttt{Time}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{min}.
+\noindent The two cutoffs on the transverse momentum scale for ISR, $p_{T0}^{ISR}$, and FSR, $p_{T0}^{FSR}$,  are free parameters in \textsc{pyhtia} and are called \texttt{Space}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{Ref}   and \texttt{Time}\-\texttt{Shower:}\-\texttt{pT0}\-\texttt{min}.
 
+\medskip
 
 The parton showers alone are certainly not the whole story in describing the exclusive structure of an event. They are based on collinear and soft approximation. A good description of the hard wide-angle emission and multi-jet final-states cannot be ignored in order to describe many of the observables of interest. So, it is important to perform an higher-order matrix element calculations to describe better all these observables.  
 
@@ -102,10 +104,9 @@ So, the best approach would be to combine the two different descriptions, and th
 One problem arises from the fact that tree-level matrix elements are \textit{inclusive}, i.e. they give the probability of having at least $n$ partons in a state calculated exactly to the lowest order in $\alpha_s$, while the corresponding state generated by a parton shower is \textit{exclusive}, i.e. gives the probability that there are exactly $n$ partons calculated approximately to all orders in $\alpha_s$
 \\
 The second problem is to avoid the \textit{double-counting} of some regions of phase space or, conversely, the undercount other regions.
-
+\\
 To solve these problems there are different strategies. The various strategies are divided into two groups. The ones referred to as \textit{"match"} are those approaches in which high-order corrections to an inclusive process are integrated with the parton shower. The other strategy involves a \textit{"merge"} this is done by defining a merging scale, where any parton produced above that scale is generated with a corresponding higher-order matrix element and any parton produced below is generated by the shower.
-
-
+\\
 An example of merging approach is the FxFx merging scheme, developed by Frixione, Nason, Webber in the \textsc{mc@nlo} framework \cite{FxFx1,FxFx2,FxFx3,FxFx4}. In this scenario the risk of  double counting is given by the fact that at NLO one emission can be made explicit as indicated in \figRef{fig:DoubleCounting} by the red gluon line, and  then the progress of the parton shower can leads to a double counting between real emission matrix element and the parton shower as shown in \figRef{fig:DoubleCounting}, the double-counting sources are indicated by the blue arrows.
 % TODO: mi piacerebbe aggiungere una descrizione più completa del merging con FxFx visto che viene usato dopo. 
 
@@ -113,7 +114,7 @@ An example of merging approach is the FxFx merging scheme, developed by Frixione
 %%% Immagine di Frixi.. presentation
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{{img/feynman_doubleCounting_FxFx_curved-cropped.pdf}}
+	\includegraphics[width=12cm]{{img/feynman_doubleCounting_FxFx_curved-cropped.pdf}}
 	%\includegraphics[width=14cm]{{img/feynman_doubleCounting_FxFx-cropped.pdf}}
 	\caption{The FxFx margin scheme have to avoid this double counting. Feynman diagrams that can lead to a double counting are grouped with the violet arrow, the blue emission are related to the parton shower while the red ones to the NLO process.}
 	\label{fig:DoubleCounting}
@@ -129,7 +130,7 @@ a good description for jet production from QCD.
 
 Lots of physics processes and modeling issues are related to "soft QCD". In the following, firstly, is performed a brief introduction of different QCD processes that form the dominant part of the total hadron-hadron cross-section. Then, the model of the Multi Parton Interaction and its implementation in pyhtia8 are described. Lastly, the primordial $k_T$ concept, the color reconnection and the hadronization processes are introduced. All these contributions have to be understood if one wants to have a good description of the soft QCD contribution to what is observed, in particular for the description of the UE.
 
-\subsubsection{Various contributions to hadron-hadron cross-section}
+\subsection{Various contributions to hadron-hadron cross-section}
 
 Hadron-hadron scatterings are classified by the characteristics of the final states. The main division is between \textit{elastic} and \textit{inelastic} scatterings. In elastic ones:
 \begin{equation}

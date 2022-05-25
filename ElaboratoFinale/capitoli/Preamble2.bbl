@@ -52,6 +52,14 @@ Marco Lazzarin, Simone Alioli, and Stefano Carrazza.
 \newblock \emph{Comput. Phys. Commun.}, 263:\penalty0 107908, 2021.
 \newblock \doi{10.1016/j.cpc.2021.107908}.
 
+\bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
+  Seggern]{Buckley:2009bj}
+Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
+  Seggern.
+\newblock {Systematic event generator tuning for the LHC}.
+\newblock \emph{Eur. Phys. J. C}, 65:\penalty0 331--357, 2010.
+\newblock \doi{10.1140/epjc/s10052-009-1196-7}.
+
 \bibitem[Bjorken(1969)]{Bjorken:1968dy}
 J.~D. Bjorken.
 \newblock {Asymptotic Sum Rules at Infinite Momentum}.
@@ -290,14 +298,6 @@ Peter Skands, Stefano Carrazza, and Juan Rojo.
 \newblock {Tuning PYTHIA 8.1: the Monash 2013 Tune}.
 \newblock \emph{Eur. Phys. J. C}, 74\penalty0 (8):\penalty0 3024, 2014.
 \newblock \doi{10.1140/epjc/s10052-014-3024-y}.
-
-\bibitem[Buckley et~al.(2010)Buckley, Hoeth, Lacker, Schulz, and von
-  Seggern]{Buckley:2009bj}
-Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
-  Seggern.
-\newblock {Systematic event generator tuning for the LHC}.
-\newblock \emph{Eur. Phys. J. C}, 65:\penalty0 331--357, 2010.
-\newblock \doi{10.1140/epjc/s10052-009-1196-7}.
 
 \bibitem[Carrazza and Lazzarin(2020)]{MCNNTUNESonGitHub}
 Stefano Carrazza and Marco Lazzarin.
