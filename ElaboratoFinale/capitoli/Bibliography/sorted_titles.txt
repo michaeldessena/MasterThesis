@@ -1,0 +1,64 @@
+a model of leptons
+a practical seedless infrared-safe cone jet algorithm
+an introduction to pythia 82
+approximation capabilities of multilayer feedforward networks
+aspects of qcd from the tevatron to the lhc 
+asymptotic freedom in parton language
+asymptotic sum rules at infinite momentum
+bfkl resummation
+calculation of the structure functions for deep inelastic scattering and e e- annihilation by perturbation theory in quantum chromodynamics
+cms tracking performance results from early lhc operation
+combination of measurements of inclusive deep inelastic epm p scattering cross sections and qcd analysis of hera data
+deep inelastic ep scattering in perturbation theory
+degenerate systems and mass singularities
+detector and event visualization with sketchup at the cms experiment
+diffraction in pythia
+electroweak vector boson production in joint resummation 
+extraction and validation of a new set of cms pythia8 tunes from underlying-event measurements
+generic user process interface for event generators 
+hard interactions of quarks and gluons a primer for lhc physics
+herwig physics and manual
+jet fragmentation of nearby partons
+mass singularities of feynman amplitudes
+matching nlo qcd and parton showers in heavy flavour production
+matching nlo qcd computations and parton shower simulations
+mcnntunes tuning shower monte carlo generators with machine learning
+measurement of charged particle spectra in minimum-bias events from protontextendashproton collisions at sqrts13text tev 
+measurement of differential cross sections for z boson production in association with jets in proton-proton collisions at sqrts  13 tev
+measurement of the underlying event activity
+measurement of the underlying event activity in inclusive z boson production in proton-proton collisions at  sqrts13  tev
+measurement of the underlying event in the drell-yan process in proton-proton collisions at sqrts7 tev
+measurements of differential z boson production cross sections in proton-proton collisions at  sqrts   13 tev
+merging meets matching in mcnlo
+monte-carlo event generation for the lhc
+multilayer feedforward networks with a nonpolynomial activation function can approximate any function
+n3pdfmcnntunes mcnntunes 010
+note on the radiation field of the electron
+observation of a new boson at a mass of 125 gev with the cms experiment at the lhc
+optimisation of variables for studying dilepton transverse momentum distributions at hadron colliders
+parton distributions from high-precision collider data
+parton fragmentation and string dynamics
+partons and their applications at high energies
+phenomenology of new physics beyond the standard model
+private communication
+pseudorapidity distribution of charged hadrons in proton-proton collisions at sqrts  13 tev
+qcd matrix elements  parton showers
+review of particle physics
+sherpa 1 a proof-of-concept version
+statistical data analysis
+study of the energy dependence of the underlying event in proton-antiproton collisions
+study of the underlying event in top quark pair production in mathrm pmathrm p collisions at 13 text tetext v
+systematic event generator tuning for the lhc
+tensorflow
+tensorflow large-scale machine learning on heterogeneous systems
+the anti-k_t jet clustering algorithm
+the behavior of hadron collisions at extreme energies
+the cma evolution strategy a tutorial
+the mcnlo 31 event generator 
+the parton model and perturbation theory
+the perceptron a probabilistic model for information storage and organization in the brain
+the pomeranchuk singularity in quantum chromodynamics
+the underlying event in proton-proton collisions
+tuning pythia 81 the monash 2013 tune
+underlying event measurements with leading particles and jets in pp collisions at sqrts  13 tev
+yoda

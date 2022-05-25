@@ -29,33 +29,33 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% old
-In a high energy proton-proton collision we can have either soft or hard processes.
-Most of the time the hard processes are accompanied by soft interactions, occurring along the hadron interaction.
-While the hard processes as the Higgs boson production, or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non perturbative approaches. The introduction of the MC simulation is required in order to have a complete description of this two class of processes and also of they interconnection by means of the parton showering process. 
+In a high energy proton-proton collision, it is possible to have either soft or hard processes.
+Most of the time the hard processes are accompanied by soft interactions, occurring along with the hadron interaction.
+While the hard processes such as the Higgs boson production or the high $p_T$ jet production are well understood using perturbative QCD, the soft processes as the underlying event, and the hadronization are not so well understood. In fact, these processes involving a low energy scale at which perturbative series expansion of QCD breaks down, are studied with non-perturbative approaches. The introduction of the MC simulation is required in order to have a complete description of these two classes of processes and also of their interconnection through the parton showering process. 
 
-This chapter in the first part focus on a theoretical introduction on some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
+This chapter, in the first part, focuses on a theoretical introduction to some basic elements of perturbative QCD theory: the QCD factorization theorem, the fixed-order approach in perturbative QCD calculations for the partonic cross-section and the PDF.  
 %and finally the all-orders approaches (e.g. the parton showers).
 
-\noindent In the second part, it is described the parton shower where the parton emission is describe in term of splitting probability for the Initial State Radiation (ISR) and Final State Radiations (FSR). Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of High Energy Physics events. lastly a look on the hadronization process is given.
+\noindent In the second part, it is described the parton shower where the parton emission is described in terms of splitting probability for the Initial State Radiation (ISR) and Final State Radiations (FSR). Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of High Energy Physics events. Lastly, a look at the hadronization process and at the model implemented in \textsc{pythia} is given.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Structure of Monte Carlo event generators}
 
-Monte Carlo event generators build up the structure of a hadron-hadron collision in the different steps. Firstly, a primary hard subprocess is generated with the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect the to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly all the processes at hadron level take part in the simulation, e.g. the decays of unstable particles. A schematically representation of all these processes is shown in \figRef{fig:Processes}.
+Monte Carlo event generators build up the structure of a hadron-hadron collision in the different steps. Firstly, a primary hard subprocess is generated with the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect the to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly, all the processes at the hadron level take part in the simulation, e.g. the decays of unstable particles. A schematic representation of all these processes is shown in \figRef{fig:Processes}.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.98\textwidth]{{img/Processes.png}}
-	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea on the evolution of the system. The two incoming hadrons enter the scattering from the left side, the red line indicate the main hard scattering and the magenta one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Then the new formed hadrons (lightblue) can undergo to different decays.}
+	\caption{A schematic representation for a $pp$ collision. Reading the image from left to right one can have an idea of the evolution of the system. The two incoming hadrons enter the scattering from the left side, the red line indicates the main hard scattering and the magenta one the second parton scattering (MPI) each interaction is associated with initial (blue) and final (green) state radiation, the unscattered partons (black lines) re-enter the color reconnection and hadronization processes. Then the new-formed hadrons (light blue) can undergo to different decays.}
 	\label{fig:Processes}
 \end{figure}
 
-Usually, one is interested in simulation of events of particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all type of events and select only the one of interest, in fact this would leads to a very low statistics in case of rare events. Due to the fact that partons entering in the hard scattering are coloured they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as an evolution in some momentum-transfer-like variable downward evolution starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
+Usually, one is interested in the simulation of events of a particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all types of events and selecting only the one of interest, in fact, this would lead to a very low statistics in case of rare events. Due to the fact that partons entering in the hard scattering are coloured, they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as an evolution in some momentum-transfer-like variable downward evolution starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
 partons and a backwards evolution of the incoming partons progressively towards the incoming hadrons.
 \\
-To be notice that, incoming hadrons are composite particle, i.e. bounded state of partons. So, it is likely to have more than one interaction between partons in the same hadron-hadron collision. Also these interactions are simulated according to the momentum-transfer-like variable downward evolution. 
+Be noticed that, incoming hadrons are composite particles, i.e. bounded state of partons. So, it is likely to have more than one interaction between partons in the same hadron-hadron collision. Also, these interactions are simulated according to the momentum-transfer-like variable downward evolution. 
 \\
-As the evolution go on is reached the region of order $1\ \mathrm{GeV}$, in which QCD became strongly interacting and perturbation theory breaks down. At this scale the perturabtive description in terms of partons must be terminated and replaced by a non-perturbative hadronization models in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
+As the evolution goes on is reached the region of order $1\ \mathrm{GeV}$, in which QCD became strongly interacting and perturbation theory breaks down. At this scale, the perturbative description in terms of partons must be terminated and replaced by a non-perturbative hadronization model in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation, they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
 
 %%%%%%%%%% END STRUCTURE OF MONTE CARLO EVENT GENERATORS
 
@@ -68,9 +68,9 @@ As the evolution go on is reached the region of order $1\ \mathrm{GeV}$, in whic
 
 \section{QCD factorization theorem}
 
-A large amount of interesting processes at LHC involve an high transferred-momentum scale, e.g. the production of heavy particles or jets with high transverse momentum. 
+A large number of interesting processes at LHC involve a high transferred-momentum scale, e.g. the production of heavy particles or jets with high transverse momentum. 
 \\
-The fundamental idea for the description of hard processes in a hadron-hadron collision is that hadrons are made-up from partons that, at some high energy scale, can be seen as free. So the hadron-hadron interaction can be seen as an interaction between two free partons, if is given a sufficiently high energy scale for the interaction.
+The fundamental idea for the description of hard processes in a hadron-hadron collision is that hadrons are made-up of partons that, at some high energy scale, can be seen as free. So the hadron-hadron interaction can be seen as an interaction between two free partons if given a sufficiently high energy scale for the interaction.
 \\
 This idea was developed in the framework of the deep inelastic scattering, and the Bjorken scaling observation confirms it \cite{Bjorken:1968dy}. The generalization of this concept leads to the \textit{QCD factorization theorem}. 
 \\   
@@ -98,15 +98,15 @@ The hadron-hadron scattering cross-section is described in terms of partons exte
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,Q^2)\,f_{b/B}(x_b,Q^2)\,\hat{\sigma}_{ab \rightarrow X}\quad .
 \label{eq:factorization2}
 \end{equation}
-Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$, e.g. the proton. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function in the hadron $A\,(B)$. PDF is dependent on $x_a\,(x_b)$ that is the light-cone momentum fraction carried by the parton with respect to the total momentum of the parent hadron $A\,(B)$; and on the scale of the interaction $Q^2$. 
+Where $X$ is a partonic/leptonic state and $a\,(b)$ a quark or an antiquark in the hadron $A\,(B)$, e.g. the proton. The $\sigma_{AB}$ is the hadronic cross-section while $\sigma_{ab\rightarrow X}$ is the partonic cross-section that can be calculated using perturbative QCD. Finally, the $f_{a/A}\,(f_{b/B})$ is the parton distribution function (PDF) in the hadron $A\,(B)$. PDF is dependent on $x_a\,(x_b)$ that is the light-cone momentum fraction carried by the parton with respect to the total momentum of the parent hadron $A\,(B)$; and on the scale of the interaction $Q^2$. 
 \\
-Let describe all the contribution to this formula in more detail one by one.
+All the contributions to this formula are described in more detail one by one in the following sections.
 
 \subsection{Parton distribution functions}
 
 The first ingredient in our recipe is the knowledge of the quark and gluon distributions inside the two hadrons that undergo the scattering. 
 \\
-The PDFs used to describe a hard scattering are solution to the DGLAP (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) equations \cite{Lipatov:400357, Gribov:427157, ALTARELLI1977298, Dokshitzer:1977sg}
+The PDFs used to describe a hard scattering are solutions to the DGLAP (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) equations \cite{Lipatov:400357, Gribov:427157, ALTARELLI1977298, Dokshitzer:1977sg}
 \\
 \begin{equation}
 	\mu_F^2\frac{\partial f_{i/H}(x,\mu_F^2)}{\partial\mu_F^2}=\displaystyle\sum_j\frac{\alpha_s(\mu_F^2)}{2\pi}\displaystyle\int_x^1 \frac{dz}{z}\, P_{i\,\rightarrow\,j}(z)\ f_{j/H}\left(\frac{x}{z},\mu_F^2\right)\quad ,
@@ -121,7 +121,7 @@ The splitting functions have the following perturbative expansions in $\alpha_s$
 \end{equation}
 
 
-The information on the quark distribution inside a hadron $f_{q/p}(x,Q^2)$ arises from lepton-hadron DIS experiments, from lepton-pair production in hadron-hadron collisions (Drell-Yan processes) and jet measurements to study gluon distribution $f_{g/p}(x,Q^2)$. All these quantities are the experimental input in order to evaluate the PDF inside the hadron while the $Q$-evolution is described by DGLAP equation as discussed above.
+The information on the quark distribution inside a hadron $f_{q/p}(x,Q^2)$ arises from lepton-hadron DIS experiments, lepton-pair production in hadron-hadron collisions (Drell-Yan processes) and jet measurements to study gluon distribution $f_{g/p}(x,Q^2)$. All these quantities are the experimental input in order to evaluate the PDF inside the hadron while the $Q$-evolution is described by the DGLAP equation as discussed above.
 
 
 %The kinematic region covered by experiments is shown in \figRef{figure:xQ2planeCoverage}. At very low x and $Q^2$ the DGLAP evolution is believed to be no longer applicable and a BFKL (Balitsky-Fadin-Kuraev-Lipatov) \cite{BFKL1,BFKL2} description must be used.
@@ -129,7 +129,7 @@ The information on the quark distribution inside a hadron $f_{q/p}(x,Q^2)$ arise
 %anyway, this has not any experimental evidence so the DGLAP approach is used as default in all the PDF analysis.
 % but there are no experimental evidence of this so the DGLAP approach is used as default in all the PDF analysis.
 
-A lot of processes are available for the PDFs evaluation and a lot of PDF set have been generated, as an example \figRef{fig:NNPDF31} shows the NNPDF3.1 set \cite{NNPDF3.1} at NNLO for a virtuality $Q^2=10\ \mathrm{GeV^2}$ (left) and $Q^2=10^4\ \mathrm{GeV^2}$ (right). 
+A lot of processes are available for the PDFs evaluation and a lot of PDFs set have been generated, as an example \figRef{fig:NNPDF31} shows the NNPDF3.1 set \cite{NNPDF3.1} at NNLO for a virtuality $Q^2=10\ \mathrm{GeV^2}$ (left) and $Q^2=10^4\ \mathrm{GeV^2}$ (right). 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{{img/NNPDF3.1.png}}
@@ -137,13 +137,13 @@ A lot of processes are available for the PDFs evaluation and a lot of PDF set ha
 (left) and $Q^2=10^4\ \mathrm{GeV}^2$ (right). At low $x$ the contribution from the gluons is the dominating one while at higher x the dominant contribution is from the valence quarks. The PDF $Q$ evolution shows that when our proton is probed to higher $Q^2$ the resolution increase (higher $Q$ correspond to smaller distance resolution) and so we have a bigger contribution from the sea quarks at low $x$ values.}
 	\label{fig:NNPDF31}
 \end{figure}
-Note that the gluon contribution have been scaled of a factor 10: in fact, in the low $x$ region, $x<0.01$, the gluon contribution is the dominating one, while at high $x$ value the valence quarks dominate the PDF. 
+Note that the gluon contribution has been scaled by a factor of 10: in fact, in the low $x$ region, $x<0.01$, the gluon contribution is the dominating one, while at high $x$ value the valence quarks dominate the PDF. 
 \\
 In \figRef{fig:NNPDF31} we can also see that with increasing virtuality ($Q^2$) at low $x$ the density of the sea quarks increases: this is related to the fact that our hadrons are probed at higher energy and the probe resolution is proportional to the energy. 
 \begin{equation}
 	\text{Resolution}\sim\frac{\hbar}{Q}\quad .
 \end{equation}
-So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation find an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when are probed at lower energy. This, as will be discussed in the below sections, is related to the energy dependence in the number of interaction between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called \textit{multiple parton interaction}: this concept will be discussed in the next chapter.
+So, when probed at higher energy, the hadrons appear denser\footnote{This density growth is not endless but at some point a saturation is reached it is called \textit{parton saturation}. The parton saturation finds an explanation in the observation that at some high energy scale the parton mergers have to eventually compensate for splittings.} than when probed at lower energy. This, as will be discussed in the below sections, is related to the energy dependence in the number of interactions between partons in a single hadron-hadron collision. The phenomenon of having more than one interaction between partons in a single hadron-hadron collision is called multiple parton interactions.
 
 %%%%%%
 
@@ -205,46 +205,46 @@ So, when probed at higher energy, the hadrons appear denser\footnote{This densit
 
 \subsection{Partonic cross-section}
 
-Partonic cross section is another fundamental ingredients in our recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So our hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
+Partonic cross-section is another fundamental ingredient in our recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So our hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
 \begin{equation}
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,\mu_F^2)\,f_{b/B}(x_b,\mu_F^2)\,\left[\hat{\sigma}_0+\alpha_s(\mu_R^2)\hat{\sigma}_1+\dots\right]\quad .
 \label{eq:factorization3}
 \end{equation}
 Where we have introduced the dependencies on the two unphysical scales:
 \begin{itemize}
-	\item[--] The \textit{factorization scale} $\mu_F$: this scale is related to the resolution with which the hadron is being probed, separates long- and short- distance physics processes.
-	\item[--] The \textit{renormalization scale} $\mu_R$: the scale at which is evaluated the strong coupling constant $\alpha_s$. The dependence of $\alpha_s$ on the renormalization scale is related to different effects such as  the vacuum polarization, the quark self-energy, the vertex corrections, and the gluon loop corrections to the elementary three-gluon and four-gluon couplings.
+	\item[--] The \textit{factorization scale} $\mu_F$: this scale is related to the resolution with which the hadron is being probed, and separates long- and short-distance physics processes.
+	\item[--] The \textit{renormalization scale} $\mu_R$: the scale at which is evaluated the strong coupling constant $\alpha_s$. The dependence of $\alpha_s$ on the renormalization scale is related to different effects such as the vacuum polarization, the quark self-energy, the vertex corrections, and the gluon loop corrections to the elementary three-gluon and four-gluon couplings.
 \end{itemize}
 The calculation of such expansion at the leading order (LO) is performed by evaluating all the possible tree-level Feynman diagrams for every process. Then the calculation proceeds by computing the squared matrix element and by integrating it over the available phase space (analytically or numerically).
 \\
-At this point, we can already encounter some divergence that can be avoided imposing some  restrictions on the phase space.
+At this point, we can already encounter some divergence that can be avoided by imposing some  restrictions on the phase space.
 % restriction or constraints
 
 \subsubsection{Higher order calculations}
 
-The LO calculation can describe broad feature of a particular process and provide a first estimation of its cross section; anyway, in many cases this is insufficient.
+The LO calculation can describe broad features of a particular process and provide a first estimation of its cross-section; anyway, in many cases this is insufficient.
 \\
-The main source of uncertainty derives from the LO dependence  on the unphysical renormalization and factorization scales. Some process may contribute only when going beyond the first approximation, and some divergence can be resummed. 
+The main source of uncertainty derives from the LO dependence  on the unphysical renormalization and factorization scales. Some processes may contribute only when going beyond the first approximation, and some divergence can be resummed. 
 \\
 The next-to-leading order (NLO) calculation requires all the Feynman diagrams that take an extra $\alpha_s$. This contribution can arise in two different ways:
 \begin{itemize}
-	\item \textbf{Virtual}: internal lines in the Feynamn diagram, see \figRef{fig:feynman_Real_Virtual}a, that don't originate a real particle in the initial or in the final state (loops);
-	\item \textbf{Real}: external lines int the Feynamn diagram, see \figRef{fig:feynman_Real_Virtual}b, here the particle is real and participate to the initial or final state observed (real particles).
+	\item \textbf{Virtual}: internal lines in the Feynman diagram, see \figRef{fig:feynman_Real_Virtual}a, that don't originate a real particle in the initial or in the final state (loops);
+	\item \textbf{Real}: external lines int the Feynman diagram, see \figRef{fig:feynman_Real_Virtual}b, here the particle is real and participates in the observed initial- or final-state (real particles).
 \end{itemize}
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{img/feynman_Real_Virtual.pdf}
-	\caption{Feynamn diagrams for a virtual correction (a) the momentum circulating in the loop when integrated on the phase space take to a divergence; and a real correction (b) the particle emitted is real, participate to the initial or final state of the process.}
+	\caption{Feynman diagrams for a virtual correction (a) the momentum circulating in the loop when integrated on the phase space take to a divergence; and a real correction (b) the particle emitted is real, it participates to the initial or final state of the process.}
 	\label{fig:feynman_Real_Virtual}
 \end{figure}
 
-Virtual corrections contains infrared divergences, arising by integrating on the loop circulating momentum, that cancel against infrared singularities given by collinear  or soft emissions \cite{PhysRevBloch, KinoshitaToichiro, PhysRevLee}. 
+Virtual corrections contain infrared divergences, arising by integrating on the loop circulating momentum, that cancel against infrared singularities given by collinear  or soft emissions \cite{PhysRevBloch, KinoshitaToichiro, PhysRevLee}. 
 \\
-A common strategy for the renormalization is dimensional regularization: it consists into performing the calculation in a $D=4-2\epsilon$ dimensional space ($\epsilon<0$); in that way the singularities appear as single and double poles in $\epsilon$. Then, the limit $\epsilon\rightarrow0$ is taken after the divergences have cancelled.
+A common strategy for the renormalization is dimensional regularization: it consists of  performing the calculation in a $D=4-2\epsilon$ dimensional space ($\epsilon<0$); in that way the singularities appear as single and double poles in $\epsilon$. Then, the limit $\epsilon\rightarrow0$ is taken after the divergences have been cancelled.
 \\
-This NLO calculation with regularization allows to extend the treatment of these integrals up to zero transverse momentum.
+This NLO calculation with regularization allows  for extending the treatment of these integrals up to zero transverse momentum.
 
-The importance of higher-order calculation is that it allows too describe more processes, as can be shown with the following example. In a $Z$ boson production:
+The importance of higher-order calculation is that it allows to describe more processes, as can be shown with the following example. In a $Z$ boson production calculated at:
 \begin{enumerate}[label=$\arabic*)$]
 	\item \textbf{LO}: the $Z$ is produced without transverse momentum ($p_T$), and anything can recoil against the $Z$ for momentum conservation (\figRef{fig:Zprod_feynman_LO_NLO_NNLO}{\color{blue}{a}}). 
 	\item \textbf{NLO}: the $Z$ acquires a finite $p_T$. In this case the $Z$ boson $p_T$ is balanced by a single \mbox{parton/gluon} (\figRef{fig:Zprod_feynman_LO_NLO_NNLO}{\color{blue}{b}}).
@@ -253,16 +253,16 @@ The importance of higher-order calculation is that it allows too describe more p
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=12cm]{{img/feynman_ZpT.pdf}}
- \caption{Feynman diagrams for the Z production by annihilation of a quark and an antiquark at LO (a), NLO (b), NNLO (c). At LO the $Z$ can only be produced with a $p_T=0$ for the conservation of the momentum.}
+ \caption{Feynman diagrams for the Z production by the annihilation of a quark and an antiquark at LO (a), NLO (b) and NNLO (c). At LO the $Z$ can only be produced with a $p_T=0$ for the conservation of the momentum.}
  \label{fig:Zprod_feynman_LO_NLO_NNLO}
 \end{figure}
-Another important benefit of performing a NLO calculation is the the reduction of the dependence of calculation on the unphysical renormalization ($\mu_R$) and factorization ($\mu_F$) scales.
-It is proven that higher order calculations of observables calculated to order $\alpha_s^{\,n}$ are dependent upon the unphysical scales only at order higher than $\alpha_s^{\,n+1}$ \cite{Campbell2006}. The range of predictions corresponding to different scale choices is usually attributed to \textit{theoretical uncertainties}, as is shown in \figRef{fig:ZRapidityDistributionLO_NLO_NNLO}, where the uncertainties reduce from the LO calculation to the NLO and even more to the NNLO.
+Another important benefit of performing an NLO calculation is the reduction of the dependence of calculation on the unphysical renormalization ($\mu_R$) and factorization ($\mu_F$) scales.
+It is proven that higher-order calculations of observables calculated to order $\alpha_s^{\,n}$ are dependent upon the unphysical scales only at order higher than $\alpha_s^{\,n+1}$ \cite{Campbell2006}. The range of predictions corresponding to different scale choices is usually attributed to \textit{theoretical uncertainties}, as is shown in \figRef{fig:ZRapidityDistributionLO_NLO_NNLO}, where the uncertainties reduce from the LO calculation to the NLO and even more to the NNLO.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=12cm]{{img/ZRapidityDistributionLO_NLO_NNLO.png}}
-	\caption{The rapidity distribution predictions at LO (blue) NLO (green) and NNLO (red) for the Z production at the center of mass energy$\sqrt{s}=14\ \mathrm{TeV}$. The band width is related to the uncertainties. Going from LO to NLO there is a increase in the cross section prediction and a reduction on the scales uncertainties, the NNLO prediction is in the NLO error band width but there is a further increase in the precision of the prediction. Figure from \cite{Campbell2006}, section 6.}
+	\caption{The rapidity distribution predictions at LO (blue) NLO (green) and NNLO (red) for the Z production at the center of mass energy$\sqrt{s}=14\ \mathrm{TeV}$. The band width is related to the uncertainties. Going from LO to NLO there is an increase in the cross-section prediction and a reduction in the scales uncertainties, the NNLO prediction is in the NLO error band width but there is a further increase in the precision of the prediction. Figure from \cite{Campbell2006}, section 6.}
 	\label{fig:ZRapidityDistributionLO_NLO_NNLO}
 \end{figure}
 
