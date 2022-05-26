@@ -1,0 +1,704 @@
+# BEGIN PLOT
+LegendOnly=/CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+DrawOnly=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_] //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_] /CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01 //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+XLabelSep=4.4
+ConnectBins=0
+RatioPlot=1
+LogX=0
+LogY=1
+YLabelSep=5.4
+RatioPlotSameStyle=0
+RatioPlotErrorBandColor=grey!40!yellow!60
+FullRange=1
+XTwosidedTicks=1
+YTwosidedTicks=1
+RatioPlotReference=/CMS_2018_I1667854/d10-x01-y01
+Title=\large{$\sqrt{s}=13\,\text{TeV}$}
+LegendXPos=0.5
+XLabel=\large{$H_{\text{T}}, N_{jet} \ge 1$ [GeV]}
+YLabel=\large{$d\sigma/dH_{\text{T}}$ [pb/GeV]}
+LegendYPos=0.9
+Legend=1
+# END PLOT
+
+# BEGIN HISTO1D /CMS_2018_I1667854/d10-x01-y01
+ConnectBins=0
+ErrorBars=1
+IsRef=1
+Path=/CMS_2018_I1667854/d10-x01-y01
+PolyMarker=*
+Title=Data
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	3.710910e+00	2.205860e-01	2.205860e-01
+4.100000e+01	5.900000e+01	1.678220e+00	7.960060e-02	7.960060e-02
+5.900000e+01	8.300000e+01	8.515080e-01	4.550610e-02	4.550610e-02
+8.300000e+01	1.180000e+02	4.489440e-01	2.732680e-02	2.732680e-02
+1.180000e+02	1.680000e+02	1.985820e-01	1.187240e-02	1.187240e-02
+1.680000e+02	2.200000e+02	8.858360e-02	5.731930e-03	5.731930e-03
+2.200000e+02	3.000000e+02	3.734990e-02	2.633600e-03	2.633600e-03
+3.000000e+02	4.000000e+02	1.481710e-02	1.065660e-03	1.065660e-03
+4.000000e+02	5.500000e+02	4.491750e-03	3.598240e-04	3.598240e-04
+5.500000e+02	7.800000e+02	1.333260e-03	1.295040e-04	1.295040e-04
+7.800000e+02	1.100000e+03	3.057560e-04	4.415410e-05	4.415410e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ScaledBy=5.24412431781598106e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.443100e+00	8.329739e-03	8.329739e-03
+4.100000e+01	5.900000e+01	1.999974e+00	4.388237e-03	4.388237e-03
+5.900000e+01	8.300000e+01	9.863871e-01	2.724301e-03	2.724301e-03
+8.300000e+01	1.180000e+02	5.004394e-01	1.711715e-03	1.711715e-03
+1.180000e+02	1.680000e+02	2.207792e-01	9.542945e-04	9.542945e-04
+1.680000e+02	2.200000e+02	1.052205e-01	6.244255e-04	6.244255e-04
+2.200000e+02	3.000000e+02	4.361447e-02	3.210102e-04	3.210102e-04
+3.000000e+02	4.000000e+02	1.825049e-02	1.721841e-04	1.721841e-04
+4.000000e+02	5.500000e+02	5.651767e-03	8.173083e-05	8.173083e-05
+5.500000e+02	7.800000e+02	1.883953e-03	3.226436e-05	3.226436e-05
+7.800000e+02	1.100000e+03	4.006759e-04	1.387206e-05	1.387206e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ScaledBy=5.24410697844025437e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	3.967652e+00	7.602727e-03	7.602727e-03
+4.100000e+01	5.900000e+01	1.837281e+00	7.892638e-03	7.892638e-03
+5.900000e+01	8.300000e+01	9.491929e-01	9.712605e-03	9.712605e-03
+8.300000e+01	1.180000e+02	4.548229e-01	2.051804e-03	2.051804e-03
+1.180000e+02	1.680000e+02	2.017192e-01	1.079557e-03	1.079557e-03
+1.680000e+02	2.200000e+02	9.685415e-02	5.250382e-04	5.250382e-04
+2.200000e+02	3.000000e+02	4.008029e-02	2.710715e-04	2.710715e-04
+3.000000e+02	4.000000e+02	1.699413e-02	1.577473e-04	1.577473e-04
+4.000000e+02	5.500000e+02	5.384609e-03	7.851998e-05	7.851998e-05
+5.500000e+02	7.800000e+02	1.793562e-03	3.038835e-05	3.038835e-05
+7.800000e+02	1.100000e+03	3.783266e-04	1.219986e-05	1.219986e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ScaledBy=5.24411623751701440e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.243013e+00	8.804503e-03	8.804503e-03
+4.100000e+01	5.900000e+01	1.957076e+00	8.785905e-03	8.785905e-03
+5.900000e+01	8.300000e+01	1.018886e+00	1.070637e-02	1.070637e-02
+8.300000e+01	1.180000e+02	4.894177e-01	2.379977e-03	2.379977e-03
+1.180000e+02	1.680000e+02	2.190360e-01	1.266083e-03	1.266083e-03
+1.680000e+02	2.200000e+02	1.064045e-01	6.438380e-04	6.438380e-04
+2.200000e+02	3.000000e+02	4.425829e-02	3.327563e-04	3.327563e-04
+3.000000e+02	4.000000e+02	1.903233e-02	1.892911e-04	1.892911e-04
+4.000000e+02	5.500000e+02	5.937043e-03	9.292618e-05	9.292618e-05
+5.500000e+02	7.800000e+02	2.011207e-03	3.574582e-05	3.574582e-05
+7.800000e+02	1.100000e+03	4.102484e-04	1.470636e-05	1.470636e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ScaledBy=5.24415645289392769e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.815322e+00	1.278609e-02	1.278609e-02
+4.100000e+01	5.900000e+01	2.109867e+00	1.155009e-02	1.155009e-02
+5.900000e+01	8.300000e+01	9.863088e-01	1.365868e-02	1.365868e-02
+8.300000e+01	1.180000e+02	5.360277e-01	3.178260e-03	3.178260e-03
+1.180000e+02	1.680000e+02	2.373074e-01	1.668466e-03	1.668466e-03
+1.680000e+02	2.200000e+02	1.129267e-01	8.443306e-04	8.443306e-04
+2.200000e+02	3.000000e+02	4.734325e-02	4.215605e-04	4.215605e-04
+3.000000e+02	4.000000e+02	1.968414e-02	2.263364e-04	2.263364e-04
+4.000000e+02	5.500000e+02	5.968379e-03	1.089600e-04	1.089600e-04
+5.500000e+02	7.800000e+02	2.000922e-03	3.912076e-05	3.912076e-05
+7.800000e+02	1.100000e+03	4.308459e-04	1.671869e-05	1.671869e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ScaledBy=5.24412724317677626e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.370037e+00	8.028954e-03	8.028954e-03
+4.100000e+01	5.900000e+01	1.943018e+00	5.864380e-03	5.864380e-03
+5.900000e+01	8.300000e+01	9.190617e-01	6.171953e-03	6.171953e-03
+8.300000e+01	1.180000e+02	4.782114e-01	1.715917e-03	1.715917e-03
+1.180000e+02	1.680000e+02	2.057016e-01	9.085025e-04	9.085025e-04
+1.680000e+02	2.200000e+02	9.539902e-02	5.059976e-04	5.059976e-04
+2.200000e+02	3.000000e+02	3.904150e-02	2.585373e-04	2.585373e-04
+3.000000e+02	4.000000e+02	1.574865e-02	1.394797e-04	1.394797e-04
+4.000000e+02	5.500000e+02	4.907072e-03	6.622390e-05	6.622390e-05
+5.500000e+02	7.800000e+02	1.578935e-03	2.588045e-05	2.588045e-05
+7.800000e+02	1.100000e+03	3.559337e-04	1.099407e-05	1.099407e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ScaledBy=5.24413957151676965e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.606838e+00	9.789791e-03	9.789791e-03
+4.100000e+01	5.900000e+01	2.037632e+00	8.090310e-03	8.090310e-03
+5.900000e+01	8.300000e+01	9.618417e-01	9.164982e-03	9.164982e-03
+8.300000e+01	1.180000e+02	5.116806e-01	2.278026e-03	2.278026e-03
+1.180000e+02	1.680000e+02	2.229400e-01	1.201178e-03	1.201178e-03
+1.680000e+02	2.200000e+02	1.044689e-01	6.331805e-04	6.331805e-04
+2.200000e+02	3.000000e+02	4.315363e-02	3.218471e-04	3.218471e-04
+3.000000e+02	4.000000e+02	1.761762e-02	1.734445e-04	1.734445e-04
+4.000000e+02	5.500000e+02	5.422005e-03	8.292559e-05	8.292559e-05
+5.500000e+02	7.800000e+02	1.774069e-03	3.119962e-05	3.119962e-05
+7.800000e+02	1.100000e+03	3.924466e-04	1.332417e-05	1.332417e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ScaledBy=5.24413963705541703e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.684717e+00	1.059684e-02	1.059684e-02
+4.100000e+01	5.900000e+01	2.090307e+00	5.680789e-03	5.680789e-03
+5.900000e+01	8.300000e+01	1.028537e+00	3.990661e-03	3.990661e-03
+8.300000e+01	1.180000e+02	5.254617e-01	2.271265e-03	2.271265e-03
+1.180000e+02	1.680000e+02	2.349034e-01	1.268633e-03	1.268633e-03
+1.680000e+02	2.200000e+02	1.138412e-01	8.208032e-04	8.208032e-04
+2.200000e+02	3.000000e+02	4.776140e-02	4.160243e-04	4.160243e-04
+3.000000e+02	4.000000e+02	2.038885e-02	2.196214e-04	2.196214e-04
+4.000000e+02	5.500000e+02	6.206896e-03	1.036258e-04	1.036258e-04
+5.500000e+02	7.800000e+02	2.121482e-03	3.967369e-05	3.967369e-05
+7.800000e+02	1.100000e+03	4.348638e-04	1.736257e-05	1.736257e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ScaledBy=5.24411372299760910e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.189176e+00	7.084100e-03	7.084100e-03
+4.100000e+01	5.900000e+01	1.894795e+00	3.825208e-03	3.825208e-03
+5.900000e+01	8.300000e+01	9.321479e-01	2.567670e-03	2.567670e-03
+8.300000e+01	1.180000e+02	4.670297e-01	1.402367e-03	1.402367e-03
+1.180000e+02	1.680000e+02	2.037626e-01	7.749800e-04	7.749800e-04
+1.680000e+02	2.200000e+02	9.603290e-02	5.052142e-04	5.052142e-04
+2.200000e+02	3.000000e+02	3.950869e-02	2.602329e-04	2.602329e-04
+3.000000e+02	4.000000e+02	1.631558e-02	1.415060e-04	1.415060e-04
+4.000000e+02	5.500000e+02	5.123234e-03	6.754406e-05	6.754406e-05
+5.500000e+02	7.800000e+02	1.678654e-03	2.720366e-05	2.720366e-05
+7.800000e+02	1.100000e+03	3.663650e-04	1.148297e-05	1.148297e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=red!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ScaledBy=5.24412431781598106e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.443100e+00	8.329739e-03	8.329739e-03
+4.100000e+01	5.900000e+01	1.999974e+00	4.388237e-03	4.388237e-03
+5.900000e+01	8.300000e+01	9.863871e-01	2.724301e-03	2.724301e-03
+8.300000e+01	1.180000e+02	5.004394e-01	1.711715e-03	1.711715e-03
+1.180000e+02	1.680000e+02	2.207792e-01	9.542945e-04	9.542945e-04
+1.680000e+02	2.200000e+02	1.052205e-01	6.244255e-04	6.244255e-04
+2.200000e+02	3.000000e+02	4.361447e-02	3.210102e-04	3.210102e-04
+3.000000e+02	4.000000e+02	1.825049e-02	1.721841e-04	1.721841e-04
+4.000000e+02	5.500000e+02	5.651767e-03	8.173083e-05	8.173083e-05
+5.500000e+02	7.800000e+02	1.883953e-03	3.226436e-05	3.226436e-05
+7.800000e+02	1.100000e+03	4.006759e-04	1.387206e-05	1.387206e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ErrorBars=1
+LineColor=red
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/PerBin_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ScaledBy=5.24412431792582238e-09
+Title=PerBin_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.443103e+00	8.329741e-03	8.329741e-03
+4.100000e+01	5.900000e+01	1.999974e+00	4.388238e-03	4.388238e-03
+5.900000e+01	8.300000e+01	9.863871e-01	2.724301e-03	2.724301e-03
+8.300000e+01	1.180000e+02	5.004394e-01	1.711716e-03	1.711716e-03
+1.180000e+02	1.680000e+02	2.207792e-01	9.542947e-04	9.542947e-04
+1.680000e+02	2.200000e+02	1.052205e-01	6.244255e-04	6.244255e-04
+2.200000e+02	3.000000e+02	4.361449e-02	3.210102e-04	3.210102e-04
+3.000000e+02	4.000000e+02	1.825049e-02	1.721842e-04	1.721842e-04
+4.000000e+02	5.500000e+02	5.651771e-03	8.173086e-05	8.173086e-05
+5.500000e+02	7.800000e+02	1.883953e-03	3.226437e-05	3.226437e-05
+7.800000e+02	1.100000e+03	4.006712e-04	1.387198e-05	1.387198e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ScaledBy=5.71460240114827396e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.448693e+00	8.702805e-03	8.702805e-03
+4.100000e+01	5.900000e+01	2.008901e+00	4.585449e-03	4.585449e-03
+5.900000e+01	8.300000e+01	9.916633e-01	2.844975e-03	2.844975e-03
+8.300000e+01	1.180000e+02	4.995974e-01	1.788214e-03	1.788214e-03
+1.180000e+02	1.680000e+02	2.214386e-01	9.967307e-04	9.967307e-04
+1.680000e+02	2.200000e+02	1.056281e-01	6.516973e-04	6.516973e-04
+2.200000e+02	3.000000e+02	4.398117e-02	3.354965e-04	3.354965e-04
+3.000000e+02	4.000000e+02	1.787934e-02	1.801661e-04	1.801661e-04
+4.000000e+02	5.500000e+02	5.729560e-03	8.511793e-05	8.511793e-05
+5.500000e+02	7.800000e+02	1.942590e-03	3.387558e-05	3.387558e-05
+7.800000e+02	1.100000e+03	4.120903e-04	1.447206e-05	1.447206e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ScaledBy=5.71458126622592766e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	3.986956e+00	1.032042e-02	1.032042e-02
+4.100000e+01	5.900000e+01	1.845815e+00	7.913223e-03	7.913223e-03
+5.900000e+01	8.300000e+01	9.529675e-01	9.994716e-03	9.994716e-03
+8.300000e+01	1.180000e+02	4.526454e-01	1.851546e-03	1.851546e-03
+1.180000e+02	1.680000e+02	2.017954e-01	8.068182e-04	8.068182e-04
+1.680000e+02	2.200000e+02	9.699571e-02	5.469297e-04	5.469297e-04
+2.200000e+02	3.000000e+02	4.047911e-02	2.833096e-04	2.833096e-04
+3.000000e+02	4.000000e+02	1.668174e-02	1.654764e-04	1.654764e-04
+4.000000e+02	5.500000e+02	5.482465e-03	8.329877e-05	8.329877e-05
+5.500000e+02	7.800000e+02	1.833872e-03	3.110909e-05	3.110909e-05
+7.800000e+02	1.100000e+03	3.882131e-04	1.312854e-05	1.312854e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ScaledBy=5.71458945708740926e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.261412e+00	1.169750e-02	1.169750e-02
+4.100000e+01	5.900000e+01	1.965804e+00	8.814640e-03	8.814640e-03
+5.900000e+01	8.300000e+01	1.023275e+00	1.101685e-02	1.101685e-02
+8.300000e+01	1.180000e+02	4.873206e-01	2.187124e-03	2.187124e-03
+1.180000e+02	1.680000e+02	2.189136e-01	1.000910e-03	1.000910e-03
+1.680000e+02	2.200000e+02	1.066657e-01	6.716466e-04	6.716466e-04
+2.200000e+02	3.000000e+02	4.473619e-02	3.474032e-04	3.474032e-04
+3.000000e+02	4.000000e+02	1.864854e-02	1.986025e-04	1.986025e-04
+4.000000e+02	5.500000e+02	6.034080e-03	9.814121e-05	9.814121e-05
+5.500000e+02	7.800000e+02	2.054081e-03	3.680846e-05	3.680846e-05
+7.800000e+02	1.100000e+03	4.252231e-04	1.572212e-05	1.572212e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ScaledBy=5.71463912417561418e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.798232e+00	1.621987e-02	1.621987e-02
+4.100000e+01	5.900000e+01	2.117958e+00	1.164742e-02	1.164742e-02
+5.900000e+01	8.300000e+01	9.934237e-01	1.406348e-02	1.406348e-02
+8.300000e+01	1.180000e+02	5.373640e-01	2.961306e-03	2.961306e-03
+1.180000e+02	1.680000e+02	2.384850e-01	1.358134e-03	1.358134e-03
+1.680000e+02	2.200000e+02	1.137893e-01	8.798830e-04	8.798830e-04
+2.200000e+02	3.000000e+02	4.764089e-02	4.414467e-04	4.414467e-04
+3.000000e+02	4.000000e+02	1.924032e-02	2.377206e-04	2.377206e-04
+4.000000e+02	5.500000e+02	6.018908e-03	1.146191e-04	1.146191e-04
+5.500000e+02	7.800000e+02	2.085277e-03	4.027339e-05	4.027339e-05
+7.800000e+02	1.100000e+03	4.448284e-04	1.785262e-05	1.785262e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ScaledBy=5.71461230088668042e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.370807e+00	9.283906e-03	9.283906e-03
+4.100000e+01	5.900000e+01	1.951276e+00	5.975751e-03	5.975751e-03
+5.900000e+01	8.300000e+01	9.239371e-01	6.362055e-03	6.362055e-03
+8.300000e+01	1.180000e+02	4.779437e-01	1.670943e-03	1.670943e-03
+1.180000e+02	1.680000e+02	2.069246e-01	8.229501e-04	8.229501e-04
+1.680000e+02	2.200000e+02	9.573035e-02	5.278301e-04	5.278301e-04
+2.200000e+02	3.000000e+02	3.928455e-02	2.700891e-04	2.700891e-04
+3.000000e+02	4.000000e+02	1.546055e-02	1.459795e-04	1.459795e-04
+4.000000e+02	5.500000e+02	4.975183e-03	6.937579e-05	6.937579e-05
+5.500000e+02	7.800000e+02	1.640183e-03	2.724817e-05	2.724817e-05
+7.800000e+02	1.100000e+03	3.610937e-04	1.151636e-05	1.151636e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ScaledBy=5.71462395586956969e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.600952e+00	1.190131e-02	1.190131e-02
+4.100000e+01	5.900000e+01	2.045906e+00	8.192842e-03	8.192842e-03
+5.900000e+01	8.300000e+01	9.676650e-01	9.439854e-03	9.439854e-03
+8.300000e+01	1.180000e+02	5.120171e-01	2.162567e-03	2.162567e-03
+1.180000e+02	1.680000e+02	2.242112e-01	1.025362e-03	1.025362e-03
+1.680000e+02	2.200000e+02	1.050093e-01	6.604939e-04	6.604939e-04
+2.200000e+02	3.000000e+02	4.342315e-02	3.364971e-04	3.364971e-04
+3.000000e+02	4.000000e+02	1.726378e-02	1.818616e-04	1.818616e-04
+4.000000e+02	5.500000e+02	5.485103e-03	8.699515e-05	8.699515e-05
+5.500000e+02	7.800000e+02	1.845587e-03	3.255200e-05	3.255200e-05
+7.800000e+02	1.100000e+03	4.010400e-04	1.406900e-05	1.406900e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ScaledBy=5.71461589548720139e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.683024e+00	1.115337e-02	1.115337e-02
+4.100000e+01	5.900000e+01	2.099231e+00	5.916408e-03	5.916408e-03
+5.900000e+01	8.300000e+01	1.034929e+00	4.155306e-03	4.155306e-03
+8.300000e+01	1.180000e+02	5.252560e-01	2.363659e-03	2.363659e-03
+1.180000e+02	1.680000e+02	2.353270e-01	1.315707e-03	1.315707e-03
+1.680000e+02	2.200000e+02	1.145037e-01	8.568524e-04	8.568524e-04
+2.200000e+02	3.000000e+02	4.819334e-02	4.349508e-04	4.349508e-04
+3.000000e+02	4.000000e+02	1.992294e-02	2.300474e-04	2.300474e-04
+4.000000e+02	5.500000e+02	6.273935e-03	1.077462e-04	1.077462e-04
+5.500000e+02	7.800000e+02	2.187781e-03	4.156424e-05	4.156424e-05
+7.800000e+02	1.100000e+03	4.527656e-04	1.813138e-05	1.813138e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ScaledBy=5.71459278041948127e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.198715e+00	7.448069e-03	7.448069e-03
+4.100000e+01	5.900000e+01	1.903544e+00	3.988458e-03	3.988458e-03
+5.900000e+01	8.300000e+01	9.366104e-01	2.673327e-03	2.673327e-03
+8.300000e+01	1.180000e+02	4.658369e-01	1.457973e-03	1.457973e-03
+1.180000e+02	1.680000e+02	2.044814e-01	8.034296e-04	8.034296e-04
+1.680000e+02	2.200000e+02	9.627367e-02	5.268385e-04	5.268385e-04
+2.200000e+02	3.000000e+02	3.982438e-02	2.720130e-04	2.720130e-04
+3.000000e+02	4.000000e+02	1.601347e-02	1.479165e-04	1.479165e-04
+4.000000e+02	5.500000e+02	5.204379e-03	7.055564e-05	7.055564e-05
+5.500000e+02	7.800000e+02	1.730506e-03	2.856492e-05	2.856492e-05
+7.800000e+02	1.100000e+03	3.736041e-04	1.198921e-05	1.198921e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=blue!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ScaledBy=5.71460240114827396e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.448693e+00	8.702805e-03	8.702805e-03
+4.100000e+01	5.900000e+01	2.008901e+00	4.585449e-03	4.585449e-03
+5.900000e+01	8.300000e+01	9.916633e-01	2.844975e-03	2.844975e-03
+8.300000e+01	1.180000e+02	4.995974e-01	1.788214e-03	1.788214e-03
+1.180000e+02	1.680000e+02	2.214386e-01	9.967307e-04	9.967307e-04
+1.680000e+02	2.200000e+02	1.056281e-01	6.516973e-04	6.516973e-04
+2.200000e+02	3.000000e+02	4.398117e-02	3.354965e-04	3.354965e-04
+3.000000e+02	4.000000e+02	1.787934e-02	1.801661e-04	1.801661e-04
+4.000000e+02	5.500000e+02	5.729560e-03	8.511793e-05	8.511793e-05
+5.500000e+02	7.800000e+02	1.942590e-03	3.387558e-05	3.387558e-05
+7.800000e+02	1.100000e+03	4.120903e-04	1.447206e-05	1.447206e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ErrorBars=1
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/Inverse_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ScaledBy=5.71460240122503053e-09
+Title=Inverse_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.448695e+00	8.702808e-03	8.702808e-03
+4.100000e+01	5.900000e+01	2.008901e+00	4.585450e-03	4.585450e-03
+5.900000e+01	8.300000e+01	9.916637e-01	2.844975e-03	2.844975e-03
+8.300000e+01	1.180000e+02	4.995974e-01	1.788215e-03	1.788215e-03
+1.180000e+02	1.680000e+02	2.214386e-01	9.967309e-04	9.967309e-04
+1.680000e+02	2.200000e+02	1.056282e-01	6.516973e-04	6.516973e-04
+2.200000e+02	3.000000e+02	4.398119e-02	3.354966e-04	3.354966e-04
+3.000000e+02	4.000000e+02	1.787934e-02	1.801661e-04	1.801661e-04
+4.000000e+02	5.500000e+02	5.729563e-03	8.511796e-05	8.511796e-05
+5.500000e+02	7.800000e+02	1.942590e-03	3.387558e-05	3.387558e-05
+7.800000e+02	1.100000e+03	4.120856e-04	1.447198e-05	1.447198e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1009__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.50000E_00_]
+ScaledBy=5.71787843688704534e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.410603e+00	8.690308e-03	8.690308e-03
+4.100000e+01	5.900000e+01	1.996264e+00	4.573461e-03	4.573461e-03
+5.900000e+01	8.300000e+01	9.860658e-01	2.841416e-03	2.841416e-03
+8.300000e+01	1.180000e+02	4.995377e-01	1.783459e-03	1.783459e-03
+1.180000e+02	1.680000e+02	2.191824e-01	9.939891e-04	9.939891e-04
+1.680000e+02	2.200000e+02	1.061611e-01	6.505721e-04	6.505721e-04
+2.200000e+02	3.000000e+02	4.286579e-02	3.343504e-04	3.343504e-04
+3.000000e+02	4.000000e+02	1.815281e-02	1.800077e-04	1.800077e-04
+4.000000e+02	5.500000e+02	5.566836e-03	8.483081e-05	8.483081e-05
+5.500000e+02	7.800000e+02	1.919362e-03	3.369776e-05	3.369776e-05
+7.800000e+02	1.100000e+03	4.097150e-04	1.456019e-05	1.456019e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1008__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.50000E_00_]
+ScaledBy=5.71785602446880562e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	3.939384e+00	7.092220e-03	7.092220e-03
+4.100000e+01	5.900000e+01	1.826184e+00	6.832412e-03	6.832412e-03
+5.900000e+01	8.300000e+01	9.436463e-01	9.548391e-03	9.548391e-03
+8.300000e+01	1.180000e+02	4.554423e-01	2.488428e-03	2.488428e-03
+1.180000e+02	1.680000e+02	1.999691e-01	8.059727e-04	8.059727e-04
+1.680000e+02	2.200000e+02	9.739269e-02	5.455765e-04	5.455765e-04
+2.200000e+02	3.000000e+02	3.954401e-02	2.820402e-04	2.820402e-04
+3.000000e+02	4.000000e+02	1.695076e-02	1.653612e-04	1.653612e-04
+4.000000e+02	5.500000e+02	5.311593e-03	8.093646e-05	8.093646e-05
+5.500000e+02	7.800000e+02	1.832732e-03	3.246783e-05	3.246783e-05
+7.800000e+02	1.100000e+03	3.819762e-04	1.276449e-05	1.276449e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1007__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.50000E_00_]
+ScaledBy=5.71786770096002615e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.211734e+00	8.317817e-03	8.317817e-03
+4.100000e+01	5.900000e+01	1.945228e+00	7.652779e-03	7.652779e-03
+5.900000e+01	8.300000e+01	1.012545e+00	1.052994e-02	1.052994e-02
+8.300000e+01	1.180000e+02	4.906137e-01	2.846490e-03	2.846490e-03
+1.180000e+02	1.680000e+02	2.170306e-01	1.000255e-03	1.000255e-03
+1.680000e+02	2.200000e+02	1.071566e-01	6.694385e-04	6.694385e-04
+2.200000e+02	3.000000e+02	4.357834e-02	3.458675e-04	3.458675e-04
+3.000000e+02	4.000000e+02	1.898990e-02	1.982780e-04	1.982780e-04
+4.000000e+02	5.500000e+02	5.835601e-03	9.585661e-05	9.585661e-05
+5.500000e+02	7.800000e+02	2.055426e-03	3.796675e-05	3.796675e-05
+7.800000e+02	1.100000e+03	4.201934e-04	1.545560e-05	1.545560e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1006__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.20000E_01_]
+ScaledBy=5.71791799244882600e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.776739e+00	1.240926e-02	1.240926e-02
+4.100000e+01	5.900000e+01	2.116019e+00	1.024909e-02	1.024909e-02
+5.900000e+01	8.300000e+01	9.931483e-01	1.344967e-02	1.344967e-02
+8.300000e+01	1.180000e+02	5.330566e-01	3.753828e-03	3.753828e-03
+1.180000e+02	1.680000e+02	2.357904e-01	1.353757e-03	1.353757e-03
+1.680000e+02	2.200000e+02	1.145358e-01	8.786271e-04	8.786271e-04
+2.200000e+02	3.000000e+02	4.627289e-02	4.395797e-04	4.395797e-04
+3.000000e+02	4.000000e+02	1.950598e-02	2.370735e-04	2.370735e-04
+4.000000e+02	5.500000e+02	5.864061e-03	1.123179e-04	1.123179e-04
+5.500000e+02	7.800000e+02	2.032810e-03	4.171923e-05	4.171923e-05
+7.800000e+02	1.100000e+03	4.474831e-04	1.759921e-05	1.759921e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1005__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.20000E_01_]
+ScaledBy=5.71788341364832910e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.339486e+00	8.088726e-03	8.088726e-03
+4.100000e+01	5.900000e+01	1.942777e+00	5.468403e-03	5.468403e-03
+5.900000e+01	8.300000e+01	9.220108e-01	6.108825e-03	6.108825e-03
+8.300000e+01	1.180000e+02	4.756129e-01	1.943754e-03	1.943754e-03
+1.180000e+02	1.680000e+02	2.044650e-01	8.199700e-04	8.199700e-04
+1.680000e+02	2.200000e+02	9.622252e-02	5.276188e-04	5.276188e-04
+2.200000e+02	3.000000e+02	3.840805e-02	2.690905e-04	2.690905e-04
+3.000000e+02	4.000000e+02	1.562968e-02	1.457416e-04	1.457416e-04
+4.000000e+02	5.500000e+02	4.856327e-03	6.869168e-05	6.869168e-05
+5.500000e+02	7.800000e+02	1.605060e-03	2.720712e-05	2.720712e-05
+7.800000e+02	1.100000e+03	3.588563e-04	1.148922e-05	1.148922e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1004__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.20000E_01_]
+ScaledBy=5.71789794393824681e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.573459e+00	9.671181e-03	9.671181e-03
+4.100000e+01	5.900000e+01	2.039782e+00	7.325794e-03	7.325794e-03
+5.900000e+01	8.300000e+01	9.664321e-01	9.040767e-03	9.040767e-03
+8.300000e+01	1.180000e+02	5.088803e-01	2.645074e-03	2.645074e-03
+1.180000e+02	1.680000e+02	2.215860e-01	1.022287e-03	1.022287e-03
+1.680000e+02	2.200000e+02	1.056056e-01	6.595958e-04	6.595958e-04
+2.200000e+02	3.000000e+02	4.234216e-02	3.351957e-04	3.351957e-04
+3.000000e+02	4.000000e+02	1.747401e-02	1.814563e-04	1.814563e-04
+4.000000e+02	5.500000e+02	5.350025e-03	8.575697e-05	8.575697e-05
+5.500000e+02	7.800000e+02	1.802995e-03	3.298013e-05	3.298013e-05
+7.800000e+02	1.100000e+03	4.006397e-04	1.398019e-05	1.398019e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1003__group_=_scale_variation____1___dyn=___1_muR=0.50000E_00_muF=0.10000E_01_]
+ScaledBy=5.71789721729476402e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.647063e+00	1.105139e-02	1.105139e-02
+4.100000e+01	5.900000e+01	2.088652e+00	5.843879e-03	5.843879e-03
+5.900000e+01	8.300000e+01	1.028886e+00	4.102622e-03	4.102622e-03
+8.300000e+01	1.180000e+02	5.249280e-01	2.382041e-03	2.382041e-03
+1.180000e+02	1.680000e+02	2.330736e-01	1.311537e-03	1.311537e-03
+1.680000e+02	2.200000e+02	1.151781e-01	8.552012e-04	8.552012e-04
+2.200000e+02	3.000000e+02	4.677958e-02	4.334916e-04	4.334916e-04
+3.000000e+02	4.000000e+02	2.027421e-02	2.295473e-04	2.295473e-04
+4.000000e+02	5.500000e+02	6.084869e-03	1.074446e-04	1.074446e-04
+5.500000e+02	7.800000e+02	2.161007e-03	4.143053e-05	4.143053e-05
+7.800000e+02	1.100000e+03	4.531116e-04	1.828623e-05	1.828623e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1002__group_=_scale_variation____1___dyn=___1_muR=0.20000E_01_muF=0.10000E_01_]
+ScaledBy=5.71786563393451601e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.159583e+00	7.373989e-03	7.373989e-03
+4.100000e+01	5.900000e+01	1.890021e+00	3.944321e-03	3.944321e-03
+5.900000e+01	8.300000e+01	9.312908e-01	2.643717e-03	2.643717e-03
+8.300000e+01	1.180000e+02	4.659534e-01	1.470140e-03	1.470140e-03
+1.180000e+02	1.680000e+02	2.023332e-01	8.008718e-04	8.008718e-04
+1.680000e+02	2.200000e+02	9.671052e-02	5.263931e-04	5.263931e-04
+2.200000e+02	3.000000e+02	3.892154e-02	2.710531e-04	2.710531e-04
+3.000000e+02	4.000000e+02	1.623077e-02	1.479295e-04	1.479295e-04
+4.000000e+02	5.500000e+02	5.062721e-03	7.015456e-05	7.015456e-05
+5.500000e+02	7.800000e+02	1.710353e-03	2.847638e-05	2.847638e-05
+7.800000e+02	1.100000e+03	3.696494e-04	1.200168e-05	1.200168e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ErrorBars=1
+LineColor=green!30
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01[LHE__id_=_1001__group_=_scale_variation____1___dyn=___1_muR=0.10000E_01_muF=0.10000E_01_]
+ScaledBy=5.71787843688704534e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.410603e+00	8.690308e-03	8.690308e-03
+4.100000e+01	5.900000e+01	1.996264e+00	4.573461e-03	4.573461e-03
+5.900000e+01	8.300000e+01	9.860658e-01	2.841416e-03	2.841416e-03
+8.300000e+01	1.180000e+02	4.995377e-01	1.783459e-03	1.783459e-03
+1.180000e+02	1.680000e+02	2.191824e-01	9.939891e-04	9.939891e-04
+1.680000e+02	2.200000e+02	1.061611e-01	6.505721e-04	6.505721e-04
+2.200000e+02	3.000000e+02	4.286579e-02	3.343504e-04	3.343504e-04
+3.000000e+02	4.000000e+02	1.815281e-02	1.800077e-04	1.800077e-04
+4.000000e+02	5.500000e+02	5.566836e-03	8.483081e-05	8.483081e-05
+5.500000e+02	7.800000e+02	1.919362e-03	3.369776e-05	3.369776e-05
+7.800000e+02	1.100000e+03	4.097150e-04	1.456019e-05	1.456019e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ErrorBars=1
+LineColor=green
+LineStyle=solid
+Path=//eos/home-m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/Final_Results_MCNNTUNES/results_FxFx_ext_ext/CP5_default_FxFx.yoda/CMS_2018_I1667854/d10-x01-y01
+ScaledBy=5.71787843701412013e-09
+Title=CP5_default_FxFx
+# xlow	 xhigh	 val	 errminus	 errplus
+3.000000e+01	4.100000e+01	4.410605e+00	8.690310e-03	8.690310e-03
+4.100000e+01	5.900000e+01	1.996265e+00	4.573461e-03	4.573461e-03
+5.900000e+01	8.300000e+01	9.860663e-01	2.841416e-03	2.841416e-03
+8.300000e+01	1.180000e+02	4.995377e-01	1.783460e-03	1.783460e-03
+1.180000e+02	1.680000e+02	2.191824e-01	9.939893e-04	9.939893e-04
+1.680000e+02	2.200000e+02	1.061612e-01	6.505724e-04	6.505724e-04
+2.200000e+02	3.000000e+02	4.286580e-02	3.343504e-04	3.343504e-04
+3.000000e+02	4.000000e+02	1.815281e-02	1.800077e-04	1.800077e-04
+4.000000e+02	5.500000e+02	5.566840e-03	8.483086e-05	8.483086e-05
+5.500000e+02	7.800000e+02	1.919362e-03	3.369778e-05	3.369778e-05
+7.800000e+02	1.100000e+03	4.097106e-04	1.456011e-05	1.456011e-05
+# END HISTO1D
+

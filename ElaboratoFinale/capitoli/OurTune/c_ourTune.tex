@@ -1,18 +1,18 @@
 \chapter{Tune for the Underlying Event}
 \label{chap:OurTunefortheUnderlyingEvent}
 
-This section focus on our work in order to reproduce a similar tune to CP5 one for the underlying event and minimum bias obseravbles. This is done to test the ability of \textsc{mcnntunes} of being one valid tool for the tuning of Monte Carlo generator with real data. 
+This section focuses on the work in order to reproduce a similar tune to CP5 for the underlying event and minimum bias observables. This is done to test the ability of \textsc{mcnntunes} of being a valid tool for the tuning of Monte Carlo generators with real data. 
 \\
-In order to validate \textsc{mcnntunes} as a good tool for the tuning we decide to firstly performer a simpler tune with only two free parameters and then try to reproduce CP5 \cite{CPtunes} with all the five parameters variation.
+In order to validate \textsc{mcnntunes} is has been decided to first perform a simpler tune with only two free parameters and then try to reproduce CP5 \cite{CPtunes} with all the five parameters variation.
 
 
 \section{Introduction}
 
-We have performed a different tune for the underlying event and minimum bias observables using the same distributions, listed in \chapRef{sec:Thedistributionsused} and used in CP5 tune, so we expect to get a similar result from the tune using  \textsc{mcnntunes}.
+A different tune has been performed for the underlying event and minimum bias observables using the same distributions, listed in \chapRef{sec:Thedistributionsused} and used in CP5 tune, so we expect to get a similar result from the tune using  \textsc{mcnntunes}.
 \\
-Just a quick reminder for the \textsc{pythia8} settings used in CP5 and in our tune:
+Here is reported a quick reminder for the \textsc{pythia8} settings used in CP5 and in \textsc{mcnntune} tunes:
 \begin{itemize}
-	\item The PDF set used is \textsc{nnpdf}3.1 calculated to the NNLO \cite{NNPDF:2017mvq}; 
+	\item The NNLO PDF set used is \textsc{nnpdf}3.1 \cite{NNPDF:2017mvq}; 
 	\item an $\alpha_s$ value equal for all the processes set to $0.118$ and running with a NLO evolution.
 	\item The ISR is also ordered according to rapidity.
 \end{itemize}
@@ -20,10 +20,10 @@ In the tuning procedure we employed both the \textsc{mcnntunes} operation modes 
 
 \section{First test: only two parameters variation}
 
-The first simplified test we perform is the tuning varying of only two parameters. The parameter chosen are the \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{pT0Ref} and 
+The first simplified test we perform is the tuning varying only two parameters. The parameter chosen are the \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{pT0Ref} and 
 \texttt{Multiparton}\-\texttt{Interactions:}\-\texttt{ecmPow}. These two parameters have been introduced in \secRef{sec:BasicConcepts}.
 \\
-The aim of this simplified test is to check the correct operation of \textsc{mcnntunes} in fact in a restricted parameters space it is simpler to learn the generator behavior and predict the corrects best values for the parameters. 
+The aim of this simplified test is to check the correct operation of \textsc{mcnntunes}  in a restricted parameters space.% it is simpler to learn the generator behavior and predict the corrects best values for the parameters. 
 \\
 \tableRef{table:variation_2params} shows the parameters space used in this first case. The other parameters are set to the CP5 values (also these are reported in the table as a reminder).
 
@@ -43,7 +43,7 @@ Parameter Name & Value \\
 \label{table:variation_2params}
 \end{table}
 
-\noindent Note: during this first part we don't use the two distributions related to the single diffractive and non single diffractive event selection for a bug on the routine of the analyses that have been fixed up before the real tune.  
+\noindent During this first part we don't use the two distributions related to the single diffractive and non single diffractive event selection for a bug on the routine of the analyses that has been fixed up before the real tune.  
 \\
 Let now discuss the results obtained for the test with the two models.
 
@@ -67,28 +67,28 @@ The result we obtain for the PerBin model are reported in \tableRef{table:result
 	\label{fig:resultPerBin_2param}
 \end{figure}
 
-\noindent The estimated parameters for the tune are also reported in \tableRef{table:resultPerBin_2param} with a comparison on CP5 boundary for each parameter. To be notice that the errors on the parameter estimated with PerBin model are not reported here because a correct error implementation, as the one described in \secRef{sec:PerBinModel}, was not yet implemented in the software at the moment of this test, but here we can see an example of the old error estimation. The old errors estimation process was not working in fact the errors lines (dashed red lines) are overlapped to the line of the parameter estimation in both the figures. The predicted errors were 3 or 4 orders of magnitude smaller then the parameter values. 
+\noindent The estimated parameters for the tune are also reported in \tableRef{table:ResultInverse_2params} with a comparison on CP5 boundary for each parameter. The errors on the parameter estimated with PerBin model are not reported here because a correct error implementation, as the one described in \secRef{sec:PerBinModel}, was not yet implemented in the software at the moment of this test, but here we can see an example of the old error estimation. The errors estimated with the old method are too small to represent a credible interval, in fact the errors lines (dashed red lines) are overlapped to the line of the parameter estimation in both the figures. The predicted errors were 3 or 4 orders of magnitude smaller than the parameter values. 
 \\
-But as we expected the results we get are similar to the ones obtained from the CP5 tune. The distributions obtained from the simulation using this parameters are shown below (\secRef{subsec:Overall2PARAMS}) together with results from Inverse model and CP5.
+As we expected the results we get are similar to the ones obtained from the CP5 tune. The distributions obtained from the simulation using this parameters are shown below (\secRef{subsec:Overall2PARAMS}) together with results from Inverse model and CP5.
 
-\begin{table}[!htb]
-\centering
-	\begin{tabular}{l | c | c}
-		Parameter & Value & CP5 (down \& up) \\ \hline\hline
-		\\[-0.85em]		
-		\texttt{MultipartonInteractions:pT0Ref} & $ 1.46064$ & $1.41-1.46$\\
-		\texttt{MultipartonInteractions:ecmPow} & $ 0.04771$ & $0.03$\\
-	\end{tabular}
-	\caption{Results for the PerBin model in two parameter variation test. The error evaluation was not correctly implemented yet and so the PerBin errors omitted in this table. The upper and lower limit for CP5 are also reported here for a direct comparison between the two tunes.}
-	\label{table:resultPerBin_2param}
-\end{table}
+%\begin{table}[!htb]
+%\centering
+%	\begin{tabular}{l | c | c}
+%		Parameter & Value & CP5 (down \& up) \\ \hline\hline
+%		\\[-0.85em]		
+%		\texttt{MultipartonInteractions:pT0Ref} & $ 1.46064$ & $1.41-1.46$\\
+%		\texttt{MultipartonInteractions:ecmPow} & $ 0.04771$ & $0.03$\\
+%	\end{tabular}
+%	\caption{Results for the PerBin model in two parameter variation test. The error evaluation was not correctly implemented yet and so the PerBin errors omitted in this table. The upper and lower limit for CP5 are also reported here for a direct comparison between the two tunes.}
+%	\label{table:resultPerBin_2param}
+%\end{table}
 
 \medskip
 
 An important observation is that our model is more sensible to some parameter respect to others.
 \\
 As an example, in \figRef{fig:param_vs_distributions} it is clear that our model is more sensible to the parameter \texttt{MultipartonInteractions:pT0Ref} (top) respect to 
-\texttt{MultipartonInteractions:}\-\texttt{ecmPow} (bottom). This is reflected in the output of the minimizer a greater sensibility gives a better defined minimum and vice versa. The top two panels show what happen when the distribution are very sensitive to the variation of the parameter as we can see on the left side the variation of the \texttt{pT0Ref} parameter leads to very different scenarios. This is reflected by the minimizer out in a well defined minimum and a smaller error on the parameter determination. A different scenario is displayed on the bottom panels of \figRef{fig:param_vs_distributions} where the distribution is less sensitive to the variation of the parameter \texttt{ecmPow} and so the minimum is less defined and so we are going to have a larger error on the estimation.
+\texttt{MultipartonInteractions:}\-\texttt{ecmPow} (bottom). This is reflected in the output of the minimizer, in which a larger sensitivity corresponds to a better defined minimum and vice versa. The top two panels show what happens when the distribution are very sensitive to the variation of the parameter as we can see on the left side the variation of the \texttt{pT0Ref} parameter leads to very different scenarios. This is reflected by the minimizer out in a well defined minimum and a smaller error on the parameter determination. A different scenario is displayed on the bottom panels of \figRef{fig:param_vs_distributions} where the distribution is less sensitive to the variation of the parameter \texttt{ecmPow} and so the minimum is less defined and so we are going to have a larger error on the estimation.
 
  
 \begin{figure}[!htb]
@@ -119,7 +119,7 @@ As an example, in \figRef{fig:param_vs_distributions} it is clear that our model
 		\centering
 		\includegraphics[width=\textwidth]{{img/Plots_ecmPow/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf}}
 	\end{subfigure}
-	\caption{the sensibility of the tuned distributions respect to the variation of the parameters in related to the output of the minimizer. The top panels are related to \texttt{pT0Ref} while the bottom ones to \texttt{ecmPow}. The different colored lines in the 2 distributions (on the right) are the simulations with different values for the parameter. The black point are the data. }
+	\caption{the sensibility of the tuned distributions respect to the variation of the parameters related to the output of the minimizer. The top panels are related to \texttt{pT0Ref} while the bottom ones to \texttt{ecmPow}. The different colored lines in the 2 distributions (on the right) are the simulations with different values for the parameter. The black points are the data. }
 	\label{fig:param_vs_distributions}
 \end{figure}
 
@@ -129,7 +129,7 @@ As an example, in \figRef{fig:param_vs_distributions} it is clear that our model
 The other operation mode offered by \textsc{mcnntunes} is the Inverse model. 
 The results we get from the first test of the Inverse model are described here while the overall distribution are reported in next section together the ones from the PerBin Model. 
 \\
-As mentioned before to make this model work properly one have to perform a hyperparameters optimization. our hyperparameter optimization was a scan of the architecture parameters shown in \tableRef{table:hyperpar_MinBias_2par} the number of trials (combinations of these parameters) was $1000$. in this case the best model we found is the one reported in \tableRef{table:hyperpar_2parTEST}.
+As mentioned before to make this model work properly a hyperparameter optimization is necessary. The hyperparameter optimization used here was a scan of the architecture parameters shown in \tableRef{table:hyperpar_MinBias_2par}, where the number of trials (combinations of these parameters) was $1000$. In this case the best model we found is the one reported in \tableRef{table:hyperpar_2parTEST}.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{| l | c |}
@@ -159,7 +159,7 @@ As mentioned before to make this model work properly one have to perform a hyper
 	Epochs & 1000\\[2pt]
 	Batch size & 500\\[2pt]
 	\end{tabular}
-	\caption{Best hyperparameters model found for the test with 2 parameters variation.}
+	\caption{Best hyperparameters model found for the test with 2 parameters variation. The "Units layers" row indicates the number of units in each layer.}
 	\label{table:hyperpar_2parTEST}
 \end{table}
 
@@ -178,26 +178,41 @@ In this case the error estimation is correctly implemented and a direct comparis
 
 
 
-\begin{table}[!htb]
-\centering
-	\begin{tabular}{l | c | c}
-		Parameter & Value & CP5 (down \& up)\\ \hline\hline
-		\\[-0.85em]		
-		\texttt{MultipartonInteractions:pT0Ref} & $ 1.43 \pm 0.14 $ & $1.41 - 1.46$ \\[2pt]
-		\texttt{MultipartonInteractions:ecmPow} & $ 0.0298 \pm 0.0095 $ & $0.03$\\[2pt]
-	\end{tabular}
-	\caption{Results for the Inverse model in two parameter variation test. The upper and lower limit for CP5 are also reported here for a direct comparison between the two tunes. The two predicted parameters are compatible to the one in CP5.}
-	\label{table:ResultInverse_2params}
-\end{table}
+%\begin{table}[!htb]
+%\centering
+%	\begin{tabular}{l | c | c}
+%		Parameter & PerBin & Inverse & CP5 (down \& up)\\ \hline\hline
+%		\\[-0.85em]		
+%		\texttt{MPI:pT0Ref} & $ 1.46064$ & $ 1.43 \pm 0.14 $ & $1.41 - 1.46$ \\[2pt]
+%		\texttt{MPI:ecmPow} & $ 0.04771$ & $ 0.0298 \pm 0.0095 $ & $0.03$\\[2pt]
+%	\end{tabular}
+%	\caption{Results for the PerBin and Inverse models in two parameter variation test. The upper and lower limit for CP5 are also reported here for a direct comparison between the two tunes.
+%The two predicted parameters for the Inverse model are compatible to the one in CP5. While a direct comparison is not possible for the PerBin model, due to the not properly evaluated error, but the parameters are quite similar to the expected ones.}
+%	\label{table:ResultInverse_2params}
+%\end{table}
 
 
 \clearpage
 \subsection{Overall results}
 \label{subsec:Overall2PARAMS}
 
-In this section we are going to show some overall results for the first test with only two free parameters. We are not going to show all the graphs here we list them all in the appendix \refApp{appendix:test}.
-\\
-From the graphs in \figRef{fig:result_2params_1} is clear that \textsc{mcnntunes} gives some good result for the test. 
+In this section we are going to show some overall results for the first test with only two free parameters. We are not going to show all the graphs here, we list them all in the  \refApp{appendix:test}.
+
+\begin{table}[!htb]
+\centering
+	\begin{tabular}{l | c | c}
+		Parameter & PerBin & Inverse & CP5 (down \& up)\\ \hline\hline
+		\\[-0.85em]		
+		\texttt{MPI:pT0Ref} & $ 1.46064$ & $ 1.43 \pm 0.14 $ & $1.41 - 1.46$ \\[2pt]
+		\texttt{MPI:ecmPow} & $ 0.04771$ & $ 0.0298 \pm 0.0095 $ & $0.03$\\[2pt]
+	\end{tabular}
+	\caption{Results for the PerBin and Inverse models in two parameter variation test. The upper and lower limit for CP5 are also reported here for a direct comparison between the two tunes.
+The two predicted parameters for the Inverse model are compatible to the one in CP5. While a direct comparison is not possible for the PerBin model, due to the not properly evaluated error, but the parameters are quite similar to the expected ones.}
+	\label{table:ResultInverse_2params}
+\end{table}
+
+
+\noindent From the graphs in \figRef{fig:result_2params_1} is clear that \textsc{mcnntunes} gives a good agreement between the experimental data and the MC points.
 \begin{figure}[!htb]
 	\centering
 	\noindent
@@ -221,17 +236,17 @@ From the graphs in \figRef{fig:result_2params_1} is clear that \textsc{mcnntunes
 	\label{fig:result_2params_1}
 \end{figure}
 
-\noindent The result we get from PerBin model (green line) and from Inverse model (blue line) are similar to the result obtained from CP5 tune (red line). our tune describe the low region ($p_T\lesssim 5\ \mathrm{GeV}$) very well this region is very important because is the region with lower error on the experimental data.
+\noindent The result obtained from PerBin model (green line) and from Inverse model (blue line) are similar to the result from CP5 tune (red line). Tune employing \textsc{mcnntunes} describe the low region ($p_T\lesssim 5\ \mathrm{GeV}$) with a good agreement, this region is very important because is the region with lower error on the experimental data.
 
-Overall, we can consider this test successfully passed from \textsc{mcnntunes}, it gives result similar to the standard tool \textsc{professor}. This was only a simplified test to check the correct operation for the tool. So, passed the test we decide to extend our analysis to a complete tune for the underlying event.
+Overall, since the MC points are describing the experimental data well, the test can be considered successfully passed from \textsc{mcnntunes}. It gives result similar to the standard tool \textsc{professor}. This was only a simplified test to check the correct operation for the tool. So, given  the good result of the test phase, next step is to extend the analysis to a complete tune for the underlying event trying to reproduce the CP5 tune.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Tune for the UE in Minimum Bias Observations}
+\section{Tune for the Underlying Event}
 
-Given the good results for the test we extend our analysis to the variation of five parameters. The interested parameter are the ones related to the Multi Parton Interaction and to the Color Reconnection. The ranges of variation for these parameters are the same used for CP5 and summarized in \tableRef{table:ranges5params}.
+Given the good results for the test the analysis have been extended to the variation of five parameters. The interesting  parameter are the ones related to the Multi Parton Interaction and to the Color Reconnection. The ranges of variation for these parameters are the same used for CP5 and summarized in \tableRef{table:ranges5params}.
 
 \begin{table}[!htb]
 \centering
@@ -250,12 +265,13 @@ Parameter Name & Value \\
 \end{table}
 
 \noindent As the parameters space increase we need to increase also the number of samples and then the size of the training set in order to have a sufficient granularity in the sampling of the space. 
-The training set we use for the PerBin model with five parameters variation is composed from approximately $2000$ MC runs, instead for the Inverse model we try also larger training set. 
+The training set we use for the PerBin model with five parameters variation is composed from approximately $2000$ MC runs. 
 
 \subsection{Per Bin Model results}
 
-The PerBin model is the model that give to us the best results, the parameters estimation we get from the PerBin model loss function minimization is reported in \figRef{fig:minimization_5_params_PerBin}. In the figure the five parameters $\chi^2/\mathrm{DoF}$ functions are reported with a blue line. The predicted value is indicated by the solid red line while the $1-\sigma$ range with the dotted lines. 
-It is clear that also in this case the most sensible parameter is the \texttt{MultipartonInteractions:pT0Ref} (\ref{fig:minimization_5_params_PerBin}e) the minimum in that case is very well defined and the error small. The parameters in \figRef{fig:minimization_5_params_PerBin}c and \figRef{fig:minimization_5_params_PerBin}d are also well defined the error is not to big. The not so good defined parameters are  the \texttt{MultipartonInteractions:coreFraction}, that is in a minimum but with a larger error than the other parameters which is why the distribution under analysis are less sensitive to the variation of this parameter, and the \texttt{ColorReconnection:range}. The last one is not actually in a real minimum, in this case also the error evaluation, as a confidence interval is not possible. This indicated a saturation of this parameter, over a certain value all the possible reconnection have already occured, and so a consequent small sensitivity to this parameter variation.
+%The PerBin model is the model that give us the best results. 
+The parameters estimation we get from the PerBin model loss function minimization is reported in \figRef{fig:minimization_5_params_PerBin}. In the figure the five parameters $\chi^2/\mathrm{DoF}$ functions are reported with a blue line. The predicted value is indicated by the solid red line while the $1-\sigma$ range with the dotted lines. 
+It is clear that also in this case the most sensible parameter is the \texttt{MultipartonInteractions:pT0Ref} (\ref{fig:minimization_5_params_PerBin}e) the minimum in that case is very well defined and the error small. The parameters in \figRef{fig:minimization_5_params_PerBin}c and \figRef{fig:minimization_5_params_PerBin}d are also well defined the error is not to big. The worse defined parameters are  the \texttt{MultipartonInteractions:coreFraction}, that is in a minimum but with a larger error than the other parameters which is why the distribution under analysis are less sensitive to the variation of this parameter, and the \texttt{ColorReconnection:range}. The last one is not actually in a real minimum, in this case also the error evaluation, as a confidence interval is not possible. This could indicate that above a certain value the MC distributions are no longer  sensitive to the variation of this parameter. In fact, over a certain value all the possible reconnections have already occurred, and taking a larger values of this parameter does not improve nor worsen the description of the data distribution by means of the MC simulation.
   
 \begin{figure}[!htb]
 	%\captionsetup[subfigure]{labelformat=empty}
@@ -288,11 +304,11 @@ It is clear that also in this case the most sensible parameter is the \texttt{Mu
 		\includegraphics[width=\textwidth]{{img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.png}}
 		\caption{\texttt{MultipartonInteractions:pT0Ref}}
 	\end{subfigure}
-	\caption{The minimizer output for every tuned parameter. The blue line is the $\chi2/DoF$ as a function of the parameter value. The solid vertical line indicate the best estimation for the parameter value while the errors are indicated by the dashed red lines. In the graph (a) it is clear that a saturation in the parameter is reached after a certain value this lead to a small sensitivity to the parameter variation and so a non-well defined minimum. The upper limit in this case cannot be calculated. The other parameters are all in a real minimum and with a concrete error evaluation. }
+	\caption{The minimizer output for every tuned parameter. The blue line is the $\chi2/DoF$ as a function of the parameter value. The solid vertical line indicates the best estimation for the parameter value while the errors are indicated by the dashed red lines. In the graph (a) it is clear that over a certain value of this parameter the description of the data by the MC simulation with respect this parameter variation have a small sensitivity, and this leads to a non-well defined minimum. The upper uncertainty in this case cannot be calculated. The other parameters are all in a real minimum and with a reliable error evaluation. }
 	\label{fig:minimization_5_params_PerBin}
 \end{figure}
 
-\noindent The value we get for the parameter are reported also in \tableRef{table:result_PerBin_5params} and compared to the CP5 limits. 
+The value we get for the parameter are reported also in \tableRef{table:result_PerBin_5params} and compared to the CP5 limits. 
 It is easy to see that all the parameters are compatible with the CP5 except for the \texttt{ColorReconnection:range}. 
 \begin{table}[!htb]
 \centering
@@ -305,13 +321,13 @@ It is easy to see that all the parameters are compatible with the CP5 except for
 \texttt{MultipartonInteractions:coreRadius} & $ 0.58_{-0.05}^{+0.06} $ & $0.67 - 0.69$\\[3pt]
 \texttt{ColorReconnection:range} & $ 8.6 ^{-3.5}_{+null} $ & $4.88 - 4.69$\\[2pt]
 \end{tabular}
-\caption{The results of the tune using PerBin Model. All the values are compatible with the one with the CP5 using a $Z$ test with a significance level of $0.05$. But the value predicted for the Color Reconnection have a very large error and is not as similar to the one obtained from CP5. The $null$ subscript indicates that the definition of the confidence region exceed the scanned space for the parameters defined for each parameter in \tableRef{table:ranges5params}.}
+\caption{The results of the tune using the PerBin Model. All the values are compatible with respect to those of CP5 using a $Z$ test with a significance level of $0.05$. But the value predicted for the Color Reconnection have a very large error and is not as similar to the one obtained from CP5. The $null$ subscript indicates that the definition of the confidence region exceeds the scanned space for the parameters defined for each parameter in \tableRef{table:ranges5params}.}
 \label{table:result_PerBin_5params}
 \end{table}
 
-The distribution we get are reported in the \secRef{sec:result5params} as we can see in the \figRef{fig:result_5params_5} the PerBin model does not describe very well this distribution for the pseudorapidity of the inelastic production of hadrons. A possible explanation is that the experimental uncertainties on the bins of this distribution are higher than the ones in others and so this distribution be less important in the overall loss function.
+The distribution obtained are reported in the \secRef{sec:result5params} as can be seen in the \figRef{fig:result_5params_5} the PerBin model does not describe very well this distribution for the pseudorapidity of the inelastic production of hadrons. There is a high discrepancy between MC and data points in this distribution. A possible explanation is that the experimental uncertainties on the bins of this distribution are larger and so this distribution be less important in the overall loss function.
 \\
-So, we decide to perform a second tune using PerBin Model. In the second tune we give to all \figRef{fig:result_5params_5} bins an higher weight using the weightrules implemented in \textsc{mcnntunes}, we give a weight of 5 to all bins of this distribution. In this way we are giving a greater importance to this distribution and so we are going to describe those data better.
+So, another tune using PerBin Model has been performed. In this  second tune it has been given to all \figRef{fig:result_5params_5} bins an higher weight using the weightrules implemented in \textsc{mcnntunes}, a weight of 5 in the minimization function has been given to all bins of this distribution. In this way a greater importance is given to this distribution and so the MC simulation will try to describe these data better as a consequence of the larger importance in the final loss function for these bins.
 \\
 The output of the mimization step is reported in \figRef{fig:minimization_5_params_PerBinReweight}. 
 The value we get from the weighted tune are also reported in \tableRef{table:result_PerBin_5params_rew}. The values we get are compatible also in this case with CP5 except for the \mbox{\texttt{MultipartonInteractions:coreRadius}} that is higher than the one predict from CP5.
@@ -363,7 +379,7 @@ the PerBin Model with different weights give a result more similar to CP5 in alm
 \texttt{MPI:pT0Ref} & $ 1.50^{+0.02}_{-0.02}$ & $ 1.42_{-0.01}^{+0.01} $ & $1.41 - 1.46$\\[3pt]
 \texttt{MPI:ecmPow} & $ 0.049_{-0.019}^{+0.018} $ & $ 0.0342_{-0.014}^{+0.014} $ & $0.03$\\[3pt]
 \texttt{MPI:coreFraction} & $ 0.51_{-0.16}^{+0.17} $ & $ 0.34_{-0.17}^{+0.14} $ & $0.43 - 0.73$\\[3pt]
-\texttt{MPI:coreRadius} & $ 0.58_{-0.05}^{+0.06} $ & $ 0.9_{-0.1}^{+null} $ & $0.67 - 0.69$\\[3pt]
+\texttt{MPI:coreRadius} & $ 0.58_{-0.05}^{+0.06} $ & $ 0.9_{-0.097}^{+null} $ & $0.67 - 0.69$\\[3pt]
 \texttt{CR:range} & $ 8.6 ^{-3.5}_{+null} $ & $ 5.6_{-0.9}^{+1.0} $ & $4.88 - 4.69$\\[2pt]
 \end{tabular}
 \caption{The results of the tune using PerBin model + re-weight are compared to the ones with PerBin model and CP5. except for the coreRadius parameter, all the predicted values are compatible with the one with the CP5 using a $Z$ test with a significance level of $0.05$. The PerBin + re-weight gives results more similar to the one obtained from CP5 this is also clear watching to the overall resulting distribution. The $null$ subscript indicates that the definition of the confidence region exceed the scanned space for the parameters defined for each parameter in \tableRef{table:ranges5params}}
@@ -373,7 +389,8 @@ the PerBin Model with different weights give a result more similar to CP5 in alm
 \clearpage
 \subsection{Inverse Model results}
 
-On the other hand if the PerBin model gives to us very good result, we cannot tell the same for the Inverse Model. In this case the Inverse Model gives very bad results. Also after the hyperparameters optimization, using the scan space described in \tableRef{table:hyperpar_MinBias_2par}, the model fails.
+In the case of five free parameters, the performance of the Inverse model is not as good as the one of the PerBin model.
+In this case the Inverse Model gives a bad description of the data the MC points are far from the experimental data. Also after the hyperparameters optimization, using the scan space described in \tableRef{table:hyperpar_MinBias_2par}, the model fails.
 \\
 The distributions of predictions are reported for each parameter in \figRef{fig:result_INV_5params} and the actual parameters in \tableRef{table:result_INV_5params} as we can see the predicted values are in most of the cases out of the variation ranges set for the sampling and (also to the maximum possible value in \textsc{pythia8}). 
 Some other parameter are determined with a very large distribution and so very large errors. 

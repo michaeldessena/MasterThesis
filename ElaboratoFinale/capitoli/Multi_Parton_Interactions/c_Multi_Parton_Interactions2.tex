@@ -624,8 +624,34 @@ This was the last step at the partonic level simulated by \textsc{pythia}, then 
 %\end{figure}
 
 
-\noindent All these processes simulated by \textsc{pythia} are described mainly by phenomenological models, due to the not-known-by-first-principles soft QCD description. The use of these phenomenological models introduces lots of free parameters (some are been pointed out in these sections) that have to be tuned with data to give  \textsc{pythia} the ability to reproduce real data observed experiments. The simulation is necessary to understand the observables histograms that are collected at colliders experiments in particular for the study of the UE.
+\noindent All these processes simulated by \textsc{pythia} are described mainly by phenomenological models, due to the not-known-by-first-principles soft QCD description. The use of these phenomenological models introduces lots of free parameters (some are been pointed out in these sections) that have to be tuned with data to give  \textsc{pythia} the ability to reproduce real data observed experiments. The simulation is necessary to understand the observables histograms that are collected at colliders experiments in particular for the study of the UE.  
 
-\medskip
+\section{Validation and tuning of a Monte Carlo generator}
 
-The next chapter will focus on the study of the underlying event and so on all the soft events related to a hard scattering in a hadron-hadron collision with the description of the analyses used in our tune and the effects of some of these \textsc{pythia}8 parameters on these observables distributions. 
+Validating a Monte Carlo generator means to confront a model with all the relevant data that it claims to be able to describe. It is really important that the validation of the MC generator is global, if one want a predictive power from this generator. Otherwise the generator is just parameterizing the data and not simulating the UE. 
+\\
+The validation is important for developing new models and debugging physics models. 
+Tuning the generator refers to the operation of adjusting the parameters of the generator to improve the description of the relevant data.
+\\
+To perform both the validation and the tune of the generator a range of observables have to be simulated and analyzed. The various tuning computational procedure used for the optimization over the possible space of parameters are better described in \chapRef{chap:TuneprocedureCP5TuneandMCNNTUNES}.
+\\
+A general-purpose event generator contains lot of parameters and so this parameters space to investigate is too large, it is impossible to investigate it in a comprehensive way. The strategy is to factorize the parameters into different sets based on the group of observables has been found to be important.
+
+So, usually the tuning of the generators proceeds in consecutive steps:
+\begin{itemize}
+	\item \textit{Hadronization and final-state:} This step is performed employing data from $e^+e^-$ colliders. In fact, these observables are not sensible to initial-state hadron effects. So, the typical parameters tuned in this type of events are the $\alpha_s^{FSR}$ value, the cutoff of the FSR and the parameters related to the hadronization process to: the string tension and the fragmentation functions.
+	\item \textit{initial-state shower:} Parameters related to final-state effects have been fixed. Now, the initial-state ones are investigated, typically in observables of jet shapes. The analysis of these parameters is performed before the analysis of the MPI-related ones. In this way, it is avoided the risk of absorbing effects which should be perturbatively describable into the relatively unconstrained MPI modelling. The parameters tuned in this phase are the cutoff for the ISR, the $\alpha_s^{ISR}$ value and other related to the inital-state effects.
+	\item \textit{MPI and BBR:} The parameters related to the MPI and BBR are the last tuned because they are the less constrained by the QCD calculation and have lots of free parameters that absorb all the non-perturabtive effects.  
+The typical observables for MPI and BBR tuning  are underlying event data from various hadron colliders. 	
+\end{itemize}
+This thesis focus on this last step. The next chapter will focus on the study of the underlying event with the description of all the distributions used in the tune and the effects of some of these \textsc{pythia}8 parameters on these observables distributions. 
+
+The histograms of the observables useful for testing the physics of MC generator are encoded in the tool: \textit{Rivet} \cite{RivetPaiper}.
+
+\subsection{Rivet and Yoda format}
+
+Rivet is a Monte Carlo event generators validation tool. It provides a large set of experimental analysis that can be used for development, validation and tuning of event generators.   Rivet structure contains different layers. A C++ shared library is the core, it is supplemented by C++ “plugin” libraries containing collider analysis routines. Then a Python programming interface  and a set of Python and shell script are the interfaces to it. 
+
+The MC simulated events are passed into rivet that, thanks to the I/O interface based on \textsc{HepMC} \cite{HepMC} and \textsc{yoda} \cite{YODA} libraries, perform the analysis and organize them into histograms that are saved into the \textsc{yoda} format.
+
+These \textsc{yoda} files are the input format for the tools used for the tune of MC event generators: \textsc{professor} \cite{Buckley:2009bj} and \textsc{mcnntunes} \cite{MCNNTUNESarticle}.
