@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.5.3}Impact Parameter Dependence}{24}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Parton rescattering}{25}{subsection.2.5.4}%
 \contentsline {subsection}{\numberline {2.5.5}Interplay of Multiple Interaction and Parton Shower}{26}{subsection.2.5.5}%
-\contentsline {section}{\numberline {2.6}Primordial $k_T$ and Color reconnection}{27}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Primordial $k_T$ and Color reconnection in PYTHIA8}{27}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Color Reconnection}{28}{subsection.2.6.1}%
 \contentsline {section}{\numberline {2.7}Hadronization}{29}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}String model}{29}{subsection.2.7.1}%

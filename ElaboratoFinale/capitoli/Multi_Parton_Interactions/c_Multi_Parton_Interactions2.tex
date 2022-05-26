@@ -128,7 +128,7 @@ a good description for jet production from QCD.
 %%%% AGGIUNTA
 \section{Soft QCD processes}
 
-Lots of physics processes and modeling issues are related to "soft QCD". In the following, firstly, is performed a brief introduction of different QCD processes that form the dominant part of the total hadron-hadron cross-section. Then, the model of the Multi Parton Interaction and its implementation in pyhtia8 are described. Lastly, the primordial $k_T$ concept, the color reconnection and the hadronization processes are introduced. All these contributions have to be understood if one wants to have a good description of the soft QCD contribution to what is observed, in particular for the description of the UE.
+Lots of physics processes and modeling issues are related to as "soft QCD". In the following, firstly, is performed a brief introduction of different QCD processes that form the dominant part of the total hadron-hadron cross-section. Then, the model of the Multi Parton Interaction and its implementation in pyhtia8 are described. Lastly, the primordial $k_T$ concept, the color reconnection and the hadronization processes are introduced. All these contributions have to be understood if one wants to have a good description of the soft QCD contribution to what is observed, in particular for the description of the UE.
 
 \subsection{Various contributions to hadron-hadron cross-section}
 
@@ -162,14 +162,14 @@ The inelastic contribution can be further subdivide into \textit{diffractive} an
 
 \subsection{Diffractive cross-section} 
 
-Once a event has been classified as diffractive it is possible to distinguish between three possible classes of diffractive events: double-diffractive (DD), single-diffractive (SD) and central-diffractive (CD). 
-In DD events both the beams' particles are excited and both are fragmented in the collision, on the other hand in SD dissociation just one of the two hadrons get excited while the other survives the collision intact. In the last case, CD, both the beam particles survive intact, but they leave an excited state in the central region that then decays.
+Once a event has been classified as diffractive it is possible to distinguish between three possible classes of diffractive events: \textit{double-diffractive} (DD), \textit{single-diffractive} (SD) and \textit{central-diffractive} (CD). 
+In DD events both the particles of the beams are excited and both are fragmented in the collision, on the other hand in SD dissociation just one of the two hadrons get excited while the other survives the collision intact. In the last case, CD, both the beam particles survive intact, but they leave an excited state in the central region that then decays.
 \\
-So, the inelastic cross-section in \eqRef{eq:cross_section_elastic_inelastic} can be re-written as:
+So, the inelastic cross-section in \eqRef{eq:cross_section_elastic_inelastic} can be rewritten as:
 \begin{equation}
 	\sigma_{\text{inel}}(s) = \sigma_{\text{SD}}(s)+\sigma_{\text{DD}}(s)+\sigma_{\text{CD}}(s)+\sigma_{\text{ND}}(s)  \quad,
 \end{equation}
-where ND are all the non-diffractive inelastic events\footnote{It has to be mentioned that other topologies are possible defined as multi-diffractive events whit various  rapidity gap observed. These types of events have a very low cross-section ($\ll 1 \ \mathrm{mb}$) with respect to the other considered.}, these types of events are the dominants in proton-proton collisions at LHC.
+where ND are all the \textit{non-diffractive} inelastic events\footnote{It has to be mentioned that other topologies are possible defined as multi-diffractive events whit various  rapidity gap observed. These types of events have a very low cross-section ($\ll 1 \ \mathrm{mb}$) with respect to the other considered.}, these types of events are the dominants in proton-proton collisions at LHC.
 
 \begin{figure}[!htb]
 	\centering
@@ -368,7 +368,7 @@ One needs to take into account the momentum fraction $x_i$ removed from the hadr
 \end{equation}
 So, by using these quantities, we can rewrite our PDFs as:
 \begin{equation}
-	f_i(x,Q^2)\ \longrightarrow\ \frac{1}{X}f_0\left(\frac{x}{X}\right)\quad ,
+	f_i(x,Q^2)\ \longrightarrow\ \frac{1}{X}f_0\left(\frac{x}{X},Q^2\right)\quad ,
 \end{equation}
 where $f_0$ is the original one-parton inclusive PDFs.
 \\
@@ -502,12 +502,12 @@ The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother pa
 This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 
-\section{Primordial $k_T$ and Color reconnection}
-\label{sec:Beam Beam Remnants and primordial kT in PYTHIA8}
+\section{Primordial $k_T$ and Color reconnection in PYTHIA8}
+\label{sec:Beam Beam Remnants and primordial kT}
 
 What is left after that the $p_T$ evolution is ended?
 The evolution in $p_T$ can create an arbitrary complicated final state. 
-This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last ones are the so-called \textit{Beam Beam Remnants} (BBR). 
+This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last ones are the so-called \textit{Beam Beam Remnants}. 
 BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation and, to ensure momentum conservation. So, once the evolution ended, a set of partons is added to the BBR. The BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators to ensure the overall momentum conservation.
 \\
 The showering process plus the MPI introduction lead to a large number of partons in the final states. Then, in the simulation, all the partons take the contribution from the primordial $k_T$ (originating from the Fermi motion) this is described in the next section.    
@@ -532,14 +532,14 @@ In \textsc{pythia} the primordial kT is assigned to all shower initiators sampli
 	\sigma(Q,\widehat{m})=\frac{Q_{1/2}\,\sigma_{\text{soft}}+Q\,\sigma_{\text{soft}}}{Q_{1/2}+Q}\,\frac{\widehat{m}}{\widehat{m}_{1/2}+\widehat{m}}
 \end{equation}
 Where $Q$ is the hard-process renormalization scale for the main hard process and the $p_T$ scale for subsequent MPI. $\sigma_{\text{soft}}$, $\sigma_{\text{hard}}$ are the minimum and maximum width, $\widehat{m}$ is the invariant mass, while $Q_{1/2}$ and $\widehat{m}_{1/2}$ the halfway values between the two extremes.
-
+\\
 In \textsc{pythia} the maximum width parameters is called \texttt{Beam}\-\texttt{Remnants:}\-\texttt{primordialKT}\-\texttt{hard}.
-
+\\
 Note that in \textsc{pythia8} simulation the addition of the primordial kT to all shower initiators does not automatically guarantee overall $p_T$ conservation. To minimize the mismatch lot of tricks are used in the generator, and as the final step, a brute force shift is imposed on all the final state particles. 
 
 \subsection{Color Reconnection}
 
-The last important step at parton level is the \textit{color reconnection} (CR). CR is motivated by the fact that MPI leads to different color strings. In the previous steps, the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$  during the development of the parton shower, partons are
+The last important step at parton level is the \textit{color reconnection}. CR is motivated by the fact that MPI leads to different color strings. In the previous steps, the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$  during the development of the parton shower, partons are
 represented and also connected by colour lines as it is shown in \figRef{fig:CRrecon}. Quark and anti-quarks are described by a single color line with an arrow that describes the direction of the color flow, while gluons are represented by a pair of color lines pointing in opposite directions. 
 
 \begin{figure}[!htb]
@@ -556,7 +556,7 @@ In \textsc{pythia8} different models for the CR exist. In the default model (\te
 \begin{equation}
 	\mathcal{P}_{\text{rec}}=\frac{p_{T\,\text{rec}}^2}{\left(p_{T\,\text{rec}}^2 + p_T^2\right)} \qquad\quad p_{T\,\text{rec}}=R\times p_{T\,0}\quad,
 \end{equation} 
-the \texttt{ColorReconnection:range} $R$ is a user-tunable parameter while $p_{T\,0}$ is the same parameter defined in MPI simulation.
+the \texttt{ColorReconnection:range}, $R$, is a user-tunable parameter while $p_{T\,0}$ is the same parameter defined in MPI simulation.
 \\
 With this definition for the probability, it is clear that systems with low $p_T$ are more likely to reconnect to others, while the higher-$p_T$ systems tend to escape from the interaction point without being reconnected. This idea finds its justification in the fact that lower $p_T$ values correspond to larger spatial extension and so these strings have more chance to overlap with others and so the systems to reconnect.
 
@@ -571,7 +571,7 @@ There are two main hadronization model classes in current use: the \textit{strin
 
 \subsection{String model}
 
-In Pythia Hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
+In Pythia hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
 \\
 The Lund model's basic idea is to break the color lines that connect the quarks to reduce the total string length, where the string is representative of the potential:
 \begin{equation}
