@@ -132,7 +132,7 @@ Note that the prediction capability of the Neural Network is dependent on the se
 
 %%%%%%%\section{Previous Tune for the Underlying Event} OLD
 
-In the next section, \texttt{mcnntunes} is introduced and all its working modes are explained in detail. 
+In the next section, \textsc{mcnntunes} is introduced and all its working modes are explained in detail. 
 
 \section{MCNNTUNES}
 
@@ -177,7 +177,7 @@ Then, this surrogate loss function is defined as:
 \begin{equation}
 	\chi^2=\displaystyle\sum_{i=1}^N\frac{\left( h^{(i)}(\mathbf{p})-h_{exp}^{(i)}\right)^2}{\sigma_{(i)}^2}
 \end{equation}
-need to be minimized in order to evaluate the best estimation for the parameters. In \texttt{mcnntunes} this minimization is performed using the CMA-ES algorithm \cite{CMAES}.
+need to be minimized in order to evaluate the best estimation for the parameters. In \textsc{mcnntunes} this minimization is performed using the CMA-ES algorithm \cite{CMAES}.
 \\
 So the best estimation for the parameters is the configuration of parameters that minimizes this $\chi^2$.  
 
@@ -223,12 +223,12 @@ The variation is dependent on the number of parameters and on the chosen confide
 
 \noindent Then, the error is defined as the value of the parameters that give a deviation from the minimum value of the $\chi^2/N_{dof}$ equal to the $Q_\gamma/N_{dof}$ value for a confidence level of $0.683$, as defined in \eqRef{eq:chi2_variation}.
 \\
-An example for the evaluation in \texttt{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the deviation from the minimum value of the $\chi^2$ defined in \eqRef{eq:chi2_variation} and the errors are given by the points where the $\chi^2/DoF$ reaches these values, in the figure given by the intersection of the blue and the green line.
+An example for the evaluation in \textsc{mcnntunes} is shown in \figRef{fig:exampleChi2Variation} where the green line is the deviation from the minimum value of the $\chi^2$ defined in \eqRef{eq:chi2_variation} and the errors are given by the points where the $\chi^2/DoF$ reaches these values, in the figure given by the intersection of the blue and the green line.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.6\textwidth]{{img/exampleChi2Variation.png}}
-	\caption{This figure shows the error evaluation in \texttt{mcnntunes} for the \texttt{MultipartonInteractions:ecmPow} \texttt{Pythia8} parameter. The blue line is the value of the $\chi^2/N_{dof}$ evaluated for different parameter values. The best estimation is indicated by the vertical red line, while the green line is the quantity in \eqRef{eq:chi2_variation}. The error is evaluated from the intersection of blue and green lines.
+	\caption{This figure shows the error evaluation in \textsc{mcnntunes} for the \texttt{MultipartonInteractions:ecmPow} \texttt{Pythia8} parameter. The blue line is the value of the $\chi^2/N_{dof}$ evaluated for different parameter values. The best estimation is indicated by the vertical red line, while the green line is the quantity in \eqRef{eq:chi2_variation}. The error is evaluated from the intersection of blue and green lines.
 	}
 	\label{fig:exampleChi2Variation}
 \end{figure}
@@ -242,7 +242,7 @@ This can impose some limitations on the model performance that cannot get its ma
 
 \subsection{Inverse Model}
 
-The Inverse Model is the most innovative tuning procedure introduced by \texttt{mcnntunes}. This model contrarily to the PerBin Model takes the bins of the histograms as input and returns parameter values as output. For the Inverse Model the NN used is only one as shown schematically in \figRef{fig:InverseModel_schematic}. What the Inverse Model tries to do is to learn the inverted model of the generator. So starting from the observed values the model tries to reproduce the parameters values necessary to get the histograms we use as input.
+The Inverse Model is the most innovative tuning procedure introduced by \textsc{mcnntunes}. This model contrarily to the PerBin Model takes the bins of the histograms as input and returns parameter values as output. For the Inverse Model the NN used is only one as shown schematically in \figRef{fig:InverseModel_schematic}. What the Inverse Model tries to do is to learn the inverted model of the generator. So starting from the observed values the model tries to reproduce the parameters values necessary to get the histograms we use as input.
 \\
 The model is built and then trained with the training set introduced before. Once the model is trained feeding the experimental data to the NN this can try to infer the values of the parameters required to get the output. 
 
