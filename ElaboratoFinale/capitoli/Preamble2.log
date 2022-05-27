@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  27 MAY 2022 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  27 MAY 2022 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,7 +1231,7 @@ File: ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf Graphic
 file (type pdf)
 <use ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CP5_with_witho
-ut_MPI.pdf  used on input line 143.
+ut_MPI.pdf  used on input line 144.
 (pdftex.def)             Requested size: 384.1096pt x 262.37177pt.
 <ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf, id=1082, 344.99991pt x 3
 34.00883pt>
@@ -1239,7 +1239,7 @@ File: ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf Graphic file (type p
 df)
 <use ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf  
-used on input line 152.
+used on input line 153.
 (pdftex.def)             Requested size: 384.1096pt x 371.90091pt.
  [39 <./ObservableToStudyTheUnderlyingEvent/img/CP5_with_without_MPI.pdf>] [40 
 <./ObservableToStudyTheUnderlyingEvent/img/CPECMdep.pdf>]
@@ -1249,7 +1249,7 @@ File: ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf Graphic file (type pdf
 )
 <use ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf  us
-ed on input line 186.
+ed on input line 187.
 (pdftex.def)             Requested size: 206.99406pt x 98.04791pt.
 <ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf, id=1290, 523.53073pt x 344
 .27835pt>
@@ -1257,7 +1257,7 @@ File: ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf Graphic file (type pdf
 )
 <use ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/Angle2.pdf  us
-ed on input line 190.
+ed on input line 191.
 (pdftex.def)             Requested size: 206.99406pt x 136.1224pt.
  [41 <./ObservableToStudyTheUnderlyingEvent/img/Angle1.pdf> <./ObservableToStud
 yTheUnderlyingEvent/img/Angle2.pdf
@@ -1273,7 +1273,7 @@ xFx.pdf Graphic file (type pdf)
 <use ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_distributionUsed_noFx
 Fx.pdf>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/PrimordialkT_d
-istributionUsed_noFxFx.pdf  used on input line 207.
+istributionUsed_noFxFx.pdf  used on input line 208.
 (pdftex.def)             Requested size: 384.1096pt x 173.72087pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1286,7 +1286,7 @@ File: ObservableToStudyTheUnderlyingEvent/img/CPtunes1.png Graphic file (type p
 ng)
 <use ObservableToStudyTheUnderlyingEvent/img/CPtunes1.png>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CPtunes1.png  
-used on input line 290.
+used on input line 291.
 (pdftex.def)             Requested size: 405.45047pt x 184.53479pt.
 <ObservableToStudyTheUnderlyingEvent/img/CPtunes2.png, id=1356, 1531.7225pt x 5
 41.02126pt>
@@ -1294,10 +1294,10 @@ File: ObservableToStudyTheUnderlyingEvent/img/CPtunes2.png Graphic file (type p
 ng)
 <use ObservableToStudyTheUnderlyingEvent/img/CPtunes2.png>
 Package pdftex.def Info: ObservableToStudyTheUnderlyingEvent/img/CPtunes2.png  
-used on input line 296.
+used on input line 297.
 (pdftex.def)             Requested size: 405.45047pt x 143.20483pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--303
+Underfull \hbox (badness 10000) in paragraph at lines 288--304
 
  []
 
@@ -1853,6 +1853,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
+
+Overfull \hbox (0.92642pt too wide) in paragraph at lines 4--20
+\T1/cmr/m/n/12 The \T1/cmr/m/sc/12 mcnntunes\T1/cmr/m/n/12 -based tune, per-for
+med here, fo-cuses on the dis-tri-bu-tions in []
+ []
+
 <PrimordialkT_tune/img/CPpaper_zjet1.png, id=2265, 756.8275pt x 696.6025pt>
 File: PrimordialkT_tune/img/CPpaper_zjet1.png Graphic file (type png)
 <use PrimordialkT_tune/img/CPpaper_zjet1.png>
@@ -1913,18 +1919,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [77
 
-]
-<PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf, id=2284, 368.90121pt x 145.99846
+] [78 <./PrimordialkT_tune/img/CPpaper_zjet1.png> <./PrimordialkT_tune/img/CPpa
+per_zjet2.png> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_only_CP5defaul
+t/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-Primo
+rdialkT_only_CP5default/CMS_2019_I1753680/d28-x01-y03.pdf>]
+<PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf, id=2333, 368.90121pt x 145.99846
 pt>
 File: PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf Graphic file (type pdf)
 <use PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf>
 Package pdftex.def Info: PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf  used on 
 input line 63.
 (pdftex.def)             Requested size: 341.43437pt x 135.13556pt.
- [78 <./PrimordialkT_tune/img/CPpaper_zjet1.png> <./PrimordialkT_tune/img/CPpap
-er_zjet2.png> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_only_CP5default
-/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-Primor
-dialkT_only_CP5default/CMS_2019_I1753680/d28-x01-y03.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 75.
@@ -1976,28 +1986,28 @@ nput line 133.
 (pdftex.def)             Requested size: 405.45047pt x 155.51028pt.
 [80 <./PrimordialkT_tune/img/chi2_0.png> <./PrimordialkT_tune/img/chi2_1.png>]
 <PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_e
-xt_ext_noWeights/CMS_2019_I1753680/d27-x01-y03.pdf, id=2386, 337.16966pt x 304.
-4474pt>
+xt_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pdf, id=2386, 337.16966pt 
+x 304.4474pt>
 File: PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_F
-xFx_ext_ext_noWeights/CMS_2019_I1753680/d27-x01-y03.pdf Graphic file (type pdf)
-
+xFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pdf Graphic file (typ
+e pdf)
 <use PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_Fx
-Fx_ext_ext_noWeights/CMS_2019_I1753680/d27-x01-y03.pdf>
+Fx_ext_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pdf>
 Package pdftex.def Info: PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_
-vs_Inverse_vs_CP5_FxFx_ext_ext_noWeights/CMS_2019_I1753680/d27-x01-y03.pdf  use
-d on input line 214.
+vs_Inverse_vs_CP5_FxFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pd
+f  used on input line 214.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_e
-xt_ext_noWeights/CMS_2019_I1753680/d28-x01-y03.pdf, id=2387, 337.16966pt x 304.
-4474pt>
+xt_ext_noWeights_Final/CMS_2019_I1753680/d28-x01-y03.pdf, id=2387, 337.16966pt 
+x 304.4474pt>
 File: PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_F
-xFx_ext_ext_noWeights/CMS_2019_I1753680/d28-x01-y03.pdf Graphic file (type pdf)
-
+xFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d28-x01-y03.pdf Graphic file (typ
+e pdf)
 <use PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_Fx
-Fx_ext_ext_noWeights/CMS_2019_I1753680/d28-x01-y03.pdf>
+Fx_ext_ext_noWeights_Final/CMS_2019_I1753680/d28-x01-y03.pdf>
 Package pdftex.def Info: PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_
-vs_Inverse_vs_CP5_FxFx_ext_ext_noWeights/CMS_2019_I1753680/d28-x01-y03.pdf  use
-d on input line 218.
+vs_Inverse_vs_CP5_FxFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d28-x01-y03.pd
+f  used on input line 218.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 
 
@@ -2013,7 +2023,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 227.
 
 
-Underfull \vbox (badness 2277) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81 <./PrimordialkT_tune/img/prediction_spread.png>]
 <PrimordialkT_tune/img/rivet-plots-PrimordialkT_with_without_MPI_yellowBand/CMS
@@ -2056,21 +2066,21 @@ finale/CMS_2019_I1753680/d28-x01-y03.pdf  used on input line 261.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 ) (./Conclusions/c_conclusions.tex
 [82 <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_
-FxFx_ext_ext_noWeights/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/
-img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_ext_ext_noWeights/CM
-S_2019_I1753680/d28-x01-y03.pdf>] [83 <./PrimordialkT_tune/img/rivet-plots-Prim
-ordialkT_with_without_MPI_yellowBand/CMS_2019_I1753680/d27-x01-y03.pdf> <./Prim
-ordialkT_tune/img/rivet-plots-PrimordialkT_with_without_MPI_yellowBand/CMS_2019
-_I1753680/d28-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-primordialkT_vs
-_MPI_finale/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-p
-lots-primordialkT_vs_MPI_finale/CMS_2019_I1753680/d28-x01-y03.pdf>] [84
+FxFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT
+_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_FxFx_ext_ext_noWeig
+hts_Final/CMS_2019_I1753680/d28-x01-y03.pdf>] [83 <./PrimordialkT_tune/img/rive
+t-plots-PrimordialkT_with_without_MPI_yellowBand/CMS_2019_I1753680/d27-x01-y03.
+pdf> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_with_without_MPI_yellowB
+and/CMS_2019_I1753680/d28-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-pri
+mordialkT_vs_MPI_finale/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune
+/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680/d28-x01-y03.pdf>]
+[84
 
 ]
-Overfull \hbox (2.62743pt too wide) in paragraph at lines 4--10
-\T1/cmr/m/n/12 met-ers \T1/cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -
-\T1/cmtt/m/n/12 core\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 Radius\T1/cmr/m/n/12 , \T1/
-cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 core\T1/cmr
-/m/n/12 -
+Overfull \hbox (98.16753pt too wide) in paragraph at lines 4--10
+\T1/cmr/m/n/12 ment-a-tion. So, the para-met-ers \T1/cmtt/m/n/12 MultipartonInt
+eractions:\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 core\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 R
+adius\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -
  []
 
 ) (./Apendix/a_test2param.tex [85] [86
@@ -2224,8 +2234,8 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  13304 strings out of 481239
- 237775 string characters out of 5920377
- 531722 words of memory out of 5000000
+ 237847 string characters out of 5920377
+ 532123 words of memory out of 5000000
  27747 multiletter control sequences out of 15000+600000
  571592 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2274,7 +2284,7 @@ sr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1728.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfxc2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Preamble2.pdf (105 pages, 11654711 bytes).
+Output written on Preamble2.pdf (105 pages, 11655704 bytes).
 PDF statistics:
  3081 PDF objects out of 3580 (max. 8388607)
  2448 compressed objects within 25 object streams
