@@ -65,5 +65,5 @@
 \contentsline {section}{\numberline {6.2}Primordial $k_T$ tune}{79}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Primordial $k_T$ tune vs MPI}{82}{section.6.3}%
 \contentsline {chapter}{Conclusions}{85}{chapter*.79}%
-\contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Events}{87}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Test with two free parameters for the Underlying Event}{87}{appendix.A}%
 \contentsline {chapter}{Bibliography}{91}{appendix*.85}%
