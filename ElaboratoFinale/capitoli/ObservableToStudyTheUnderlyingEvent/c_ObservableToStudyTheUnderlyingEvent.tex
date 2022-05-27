@@ -39,7 +39,7 @@ Instead, the HCAL barrel cover the pseudorapidity range $|\eta|<1.3$ while the e
 \\
 Another main feature of the CMS detector is obviously the muon system it has three main functions: muon detection, momentum measurement and triggering, totally the muon system covers the pseudorapidity up to $|\eta|<2.4$
 \\
-The LHC provide proton-proton collision at very high interaction rates, the beam crossing interval is $25\ \mathrm{ns}$). So, it is impossible to store all the data, the rate is reduced in two steps: Level-1 (L1) Trigger and High-Level Trigger (HLT).
+The LHC provide proton-proton collision at very high interaction rates, the beam crossing interval is $25\ \mathrm{ns}$). So, it is impossible to store all the data, the rate is reduced in two steps: Level-1 (L1) trigger and High-Level Trigger (HLT).
 These two steps perform an events selection keeping only the interest interactions.
 The L1 receives data from the detectors and decide if the event contains important information, for example high transverse energy particle/jets, or high missing transverse energy.
 The HLT , instead, is a software running on a large computer farm that receives and processes complete events with a resolution comparable to the final detector one.
@@ -197,7 +197,7 @@ with $\eta^+$ and $\eta^-$ the pseudorapidities of the two leptons \cite{phistar
 The $Z$ boson is a very massive boson,$m=91.1876 \pm 0.002\ \mathrm{GeV}$ \cite{PDG}, which can be produced only in the hard  scattering of two partons of the hadron undergoing the collision, then after a very short lifetime the $Z$ boson decay in a couple of leptons: $e^+\,e^-$ or $\mu^+\,\mu^-$. The measurement of this final state takes information on the $Z$ boson that is not directly observed by experiments. 
 It is a matter of fact that the production of the $Z$ boson can be affected by all the other soft processes taking place along with this production that can change the topology of the initial state. In the last chapter it is investigated the effect of ISR and Primordial $k_T$ on the $Z$ boson production in the low region of the spectrum.  
 \\
-Since the $Z$ boson production is a hard process to full simulate the Z production spectrum it is necessary to merge matrix element calculation and space shower to do this it is employed the use of a margin scheme. To have a good description of the high region of the spectrum ($p_T^Z > 2\ \mathrm{GeV}$) one have to include higher-order calculation to consider NLO and NNLO processes and so we have to adopt a more complex merging scheme as the FxFx merging scheme that has been introduced in \chapRef{chap:Hadron-HadronScattering}. 
+Since the $Z$ boson production is a hard process to full simulate the Z production spectrum it is necessary to merge matrix element calculation and space shower to do this it is employed the use of a margin scheme. To have a good description of the high region of the spectrum ($p_T^Z > 2\ \mathrm{GeV}$) one have to include higher-order calculations (NLO and NNLO processes) and, consequentially, a more complex merging scheme as the FxFx merging scheme that has been introduced in \chapRef{chap:Hadron-HadronScattering}. 
 \\
 As shown in \figRef{fig:PrimordialkT_distributionUsed_noFxFx} the description at LO (and without the need for FxFx) is good only in the first bins that are the ones of interest for the study of underlying event effects and it is less computationally expensive than running all the FxFx merging scheme. So, the strategy followed for the tuning of the primordial kT in the \chapRef{chap:primordialkTtune} is to tune the Primordial $k_T$ in this low region, the one of interest, taking only the first 5 bins from each distribution.
 \\
@@ -206,12 +206,12 @@ Then the full simulation with FxFx is run only for the comparison once the param
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.9\textwidth]{{img/PrimordialkT_distributionUsed_noFxFx.pdf}}
-	\caption{Here are shown the distribution, from the \cite{ZpT_distributions} CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$, which we are going to use for the tune of the primordial $k_T$. The left one is the $Z$ boson production cross-section as a function of the transverse momentum of the $Z$ boson. On the right the differential cross-section for the $Z$ boson production as a function of the $\phi_\eta^*$ angle. The red line is the \textsc{pythia8} description before the tune of the primordial $k_T$ and without the FxFx merging scheme so only the first bins have to be taken into account.}
+	\caption{The distributions shown are from \cite{ZpT_distributions} CMS analysis at $\sqrt{s}=13\ \mathrm{TeV}$, these will be used for the tune of the primordial $k_T$. The left one is the $Z$ boson production cross-section as a function of the transverse momentum of the $Z$ boson. On the right the differential cross-section for the $Z$ boson production as a function of the $\phi_\eta^*$ angle. The red line is the \textsc{pythia8} description before the tune of the primordial $k_T$ and without the FxFx merging scheme so only the first bins have to be taken into account.}
 	\label{fig:PrimordialkT_distributionUsed_noFxFx}
 \end{figure}
 
 
-In the following section, we will introduce the existing CMS tunes for the  UE in minimum bias observations. These tunes are able to reproduce very well the observables described in \secRef{sec:Minimum Bias Measurements and Underlying Event topology} at $1.96$, $7$ and $13\ \mathrm{TeV}$. 
+The following section will introduce the existing CMS tunes for the  UE in minimum bias observations. These tunes are able to reproduce very well the observables described in \secRef{sec:Minimum Bias Measurements and Underlying Event topology} at $1.96$, $7$ and $13\ \mathrm{TeV}$. 
 %But as we are going to see in \chapRef{chap:Hadron-HadronScattering} the tunes do not describe well the low region of the $Z$ boson production cross section so a further tune on these observable is performed.
 
 
@@ -299,12 +299,12 @@ On the top section of \tableRef{fig:CPtunes1} and \tableRef{fig:CPtunes2} are re
 	\label{fig:CPtunes2}
 \end{table}
 \\
-Below we are going to focus on the CP5 tune. We are going to reproduce this tune using the same settings for \textsc{pythia8} but using a different tuning software: \textsc{mcnntunes}. 
+CP5 is the main tune on which this thesis focuses. The aim of the first part of this thesis is to reproduce this tune using the same settings for \textsc{pythia8} but using a different tuning software: \textsc{mcnntunes}. 
 \\
 
 %%%% INTRODUCTION to the next chapter
 
 \medskip
 
-The next chapter discusses the general approaches to the tune and why we use machine learning and on the description of the main tool used for the tuning in this work \textsc{mcnntunes}. 
+The next chapter discusses the general approaches to the tune, gives the reason why one want to use the machine-learning-based approach and a description of the main tool used for the tuning in this thesis \textsc{mcnntunes}. 
 %\textsc{mcnntunes} is also introduced together with the already existing CP* tunes in particular the CP5 tune.

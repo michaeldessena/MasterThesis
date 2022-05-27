@@ -104,7 +104,7 @@ All the contributions to this formula are described in more detail one by one in
 
 \subsection{Parton distribution functions}
 
-The first ingredient in our recipe is the knowledge of the quark and gluon distributions inside the two hadrons that undergo the scattering. 
+The first ingredient in the recipe is the knowledge of the quark and gluon distributions inside the two hadrons that undergo the scattering. 
 \\
 The PDFs used to describe a hard scattering are solutions to the DGLAP (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) equations \cite{Lipatov:400357, Gribov:427157, ALTARELLI1977298, Dokshitzer:1977sg}
 \\
@@ -134,12 +134,12 @@ A lot of processes are available for the PDFs evaluation and a lot of PDFs set h
 	\centering
 	\includegraphics[width=12cm]{{img/NNPDF3.1.png}}
 	\caption{The NNPDF3.1 NNLO PDFs set, evaluated at $Q^2 = 10\ \mathrm{GeV}^2$
-(left) and $Q^2=10^4\ \mathrm{GeV}^2$ (right). At low $x$ the contribution from the gluons is the dominating one while at higher x the dominant contribution is from the valence quarks. The PDF $Q$ evolution shows that when our proton is probed to higher $Q^2$ the resolution increase (higher $Q$ correspond to smaller distance resolution) and so we have a bigger contribution from the sea quarks at low $x$ values.}
+(left) and $Q^2=10^4\ \mathrm{GeV}^2$ (right). At low $x$ the contribution from the gluons is the dominating one, while at higher x the dominant contribution is from the valence quarks. The PDF $Q$ evolution shows that when the proton is probed to higher $Q^2$ the resolution increases (higher $Q$ correspond to smaller distance resolution) and so one has a bigger contribution from the sea quarks at low $x$ values.}
 	\label{fig:NNPDF31}
 \end{figure}
 Note that the gluon contribution has been scaled by a factor of 10: in fact, in the low $x$ region, $x<0.01$, the gluon contribution is the dominating one, while at high $x$ value the valence quarks dominate the PDF. 
 \\
-In \figRef{fig:NNPDF31} we can also see that with increasing virtuality ($Q^2$) at low $x$ the density of the sea quarks increases: this is related to the fact that our hadrons are probed at higher energy and the probe resolution is proportional to the energy. 
+In \figRef{fig:NNPDF31} is also displayed that with increasing virtuality ($Q^2$) at low $x$ the density of the sea quarks increases: this is related to the fact that the hadrons are probed at higher energy and the probe resolution is proportional to the energy. 
 \begin{equation}
 	\text{Resolution}\sim\frac{\hbar}{Q}\quad .
 \end{equation}
@@ -206,19 +206,19 @@ So, when probed at higher energy, the hadrons appear denser\footnote{This densit
 
 \subsection{Partonic cross-section}
 
-Partonic cross-section is another fundamental ingredient in our recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So our hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
+Partonic cross-section is another fundamental ingredient in the recipe for the description of hadron-hadron interactions. It can be calculated as a perturbative expansion in $\alpha_s$ from QCD first principles using quantum field theory. So the hadron-hadron cross-section can be written as a sum of different contributions, as shown in the following formula:
 \begin{equation}
 	\sigma_{AB}=\displaystyle\int dx_a\,dx_b\,f_{a/A}(x_a,\mu_F^2)\,f_{b/B}(x_b,\mu_F^2)\,\left[\hat{\sigma}_0+\alpha_s(\mu_R^2)\hat{\sigma}_1+\dots\right]\quad .
 \label{eq:factorization3}
 \end{equation}
-Where we have introduced the dependencies on the two unphysical scales:
+Where the dependencies on the two unphysical scales, $\mu_F$ and $\mu_R$, have been introduced. These two  scales are:
 \begin{itemize}
 	\item[--] The \textit{factorization scale} $\mu_F$: this scale is related to the resolution with which the hadron is being probed, and separates long- and short-distance physics processes.
 	\item[--] The \textit{renormalization scale} $\mu_R$: the scale at which is evaluated the strong coupling constant $\alpha_s$. The dependence of $\alpha_s$ on the renormalization scale is related to different effects such as the vacuum polarization, the quark self-energy, the vertex corrections, and the gluon loop corrections to the elementary three-gluon and four-gluon couplings.
 \end{itemize}
 The calculation of such expansion at the leading order (LO) is performed by evaluating all the possible tree-level Feynman diagrams for every process. Then the calculation proceeds by computing the squared matrix element and by integrating it over the available phase space (analytically or numerically).
 \\
-At this point, we can already encounter some divergence that can be avoided by imposing some  restrictions on the phase space.
+At this point, some divergences may have already been encountered but they can be avoided by imposing  restrictions on the phase space.
 % restriction or constraints
 
 \subsubsection{Higher order calculations}
