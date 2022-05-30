@@ -37,11 +37,13 @@ This chapter, in the first part, focuses on a theoretical introduction to some b
 %and finally the all-orders approaches (e.g. the parton showers).
 
 \noindent In the second part, it is described the parton shower where the parton emission is described in terms of splitting probability for the Initial State Radiation and Final State Radiations. Then, the effects of Multi Parton Interactions and other important processes are described in the simulation of high energy physics events. Lastly, a look at the hadronization process and at the model implemented in \textsc{pythia} is given.
+\\
+The chapter ends with a description of the ideas  behind the validation and tuning of MC event generators.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Structure of Monte Carlo event generators}
 
-Monte Carlo event generators build up the structure of a hadron-hadron collision in many  different steps. Firstly, a primary hard subprocess is generated to it is attached the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect the to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly, all the processes at the hadron level take part in the simulation, e.g. the decays of unstable particles. A schematic representation of all these processes is shown in \figRef{fig:Processes}.
+Monte Carlo event generators build up the structure of a hadron-hadron collision in many  different steps. Firstly, a primary hard subprocess is generated and to it is attached the parton shower associated to the incoming and outgoing coloured participants. Then, all the non-perturbative interactions that convert the showers into outgoing hadrons and connect them to the incoming beam hadrons, also the extra interactions that give rise to the UE are simulated. Lastly, all the processes at the hadron level take part in the simulation, e.g. the decays of unstable particles. A schematic representation of all these processes is shown in \figRef{fig:Processes}.
 
 \begin{figure}[!htb]
 	\centering
@@ -50,12 +52,12 @@ Monte Carlo event generators build up the structure of a hadron-hadron collision
 	\label{fig:Processes}
 \end{figure}
 
-Usually, one is interested in the simulation of events of a particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all types of events and selecting only the one of interest, in fact, this would lead to a very low statistics in case of rare events. Due to the fact that partons entering in the hard scattering are coloured, they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as a downward evolution in some momentum-transfer-like variable starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
+Usually, one is interested in the simulation of events of a particular type. The strategy followed is to select the type of hard process and generate the event on the basis of this selection, rather than simulating all types of events and selecting only the one of interest, in fact, this would lead to a very low statistics in the case of rare events. Due to the fact that partons entering in the hard scattering are coloured, they can radiate gluons, this gluon can radiate other gluons or produce quark-antiquark couples, and so on generating showers of outgoing particles. This is simulated by a Markov chain used to choose if add one more parton to the final-state at a certain time. This is called the parton shower algorithm and as will be discussed below it is formulated as a downward evolution in some momentum-transfer-like variable starting from a hard scale defined by the main hard interaction, and as both a forwards evolution of the outgoing 
 partons and a backwards evolution of the incoming partons progressively towards the incoming hadrons.
 \\
 To be notice that, incoming hadrons are composite particles, i.e. bounded state of partons. So, it is likely to have more than one interaction between partons in the same hadron-hadron collision. Also, these interactions are simulated according to the momentum-transfer-like variable downward evolution. 
 \\
-As the evolution goes on is reached the region of order $1\ \mathrm{GeV}$ ($\approx \Lambda_{\text{QCD}}$), in which QCD became strongly interacting and perturbation theory breaks down. At this scale, the perturbative description in terms of partons must be terminated and replaced by a non-perturbative hadronization model in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation, they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
+As the downward evolution goes on is reached the region of order $1\ \mathrm{GeV}$ ($\approx \Lambda_{\text{QCD}}$), in which QCD became strongly interacting and perturbation theory breaks down. At this scale, the perturbative description in terms of partons must be terminated and replaced by a non-perturbative hadronization model in order to describe the colour confinement. Unluckily, these models are not derived directly from QCD and so have more free parameters than the preceding ones. But, to a good approximation, they are universal so once they have been tuned to a data set they can be used to predict new collision data. 
 
 %%%%%%%%%% END STRUCTURE OF MONTE CARLO EVENT GENERATORS
 
@@ -70,7 +72,7 @@ As the evolution goes on is reached the region of order $1\ \mathrm{GeV}$ ($\app
 
 A large number of interesting processes at LHC involve a high transferred-momentum scale, e.g. the production of heavy particles or jets with high transverse momentum. 
 \\
-The fundamental idea for the description of hard processes in a hadron-hadron collision is that hadrons are made-up of partons that, at some high energy scale, can be seen as free. So the hadron-hadron interaction can be seen as an interaction between two free partons if given a sufficiently high energy scale for the interaction.
+The fundamental idea for the description of hard processes in a hadron-hadron collision is that hadrons are made-up of partons that, at some high energy scale, can be seen as free. So the hadron-hadron interaction can be seen as an interaction between two free partons if a sufficiently high energy scale for the interaction is given.
 \\
 This idea was developed in the framework of the deep inelastic scattering, and the Bjorken scaling observation confirms it \cite{Bjorken:1968dy}. The generalization of this concept leads to the \textit{QCD factorization theorem}. 
 \\   
@@ -121,7 +123,7 @@ The splitting functions have the following perturbative expansions in $\alpha_s$
 \end{equation}
 
 
-The information on the quark distribution inside a hadron $f_{q/p}(x,Q^2)$ arises from lepton-hadron DIS experiments, lepton-pair production in hadron-hadron collisions (Drell-Yan processes) and jet measurements to study gluon distribution $f_{g/p}(x,Q^2)$. All these quantities are the experimental input in order to evaluate the PDF inside the hadron while the $Q$-evolution is described by the DGLAP equation as discussed above.
+The information on the quark distribution inside a hadron $f_{q/p}(x,Q^2)$ arises from lepton-hadron DIS experiments and lepton-pair production in hadron-hadron collisions (Drell-Yan processes), while to study gluon distribution, $f_{g/p}(x,Q^2)$, information arising from jet measurements are used. All these quantities are the experimental input in order to evaluate the PDF inside the hadron while the $Q$-evolution is described by the DGLAP equation as discussed above.
 
 
 %The kinematic region covered by experiments is shown in \figRef{figure:xQ2planeCoverage}. At very low x and $Q^2$ the DGLAP evolution is believed to be no longer applicable and a BFKL (Balitsky-Fadin-Kuraev-Lipatov) \cite{BFKL1,BFKL2} description must be used.

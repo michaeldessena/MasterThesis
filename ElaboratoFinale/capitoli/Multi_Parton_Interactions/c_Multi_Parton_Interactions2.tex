@@ -116,17 +116,18 @@ An example of merging approach is the FxFx merging scheme, developed by Frixione
 	\centering
 	\includegraphics[width=12cm]{{img/feynman_doubleCounting_FxFx_curved-cropped.pdf}}
 	%\includegraphics[width=14cm]{{img/feynman_doubleCounting_FxFx-cropped.pdf}}
-	\caption{The FxFx margin scheme have to avoid this double counting. Feynman diagrams that can lead to a double counting are grouped with the violet arrow, the blue emission are related to the parton shower while the red ones to the NLO process.}
+	\caption{The FxFx margin scheme have to avoid this double counting. Feynman diagrams that can lead to a double counting are grouped with a blue arrow, the blue emission are related to the parton shower while the red ones to the NLO process.}
 	\label{fig:DoubleCounting}
 \end{figure}
 %%%
 
-So, it is clear that the matrix element calculations cannot be blindly combined with parton showers. The combination of these two approaches is a very active research topic, and is important for giving
+\noindent So, it is clear that the matrix element calculations cannot be blindly combined with parton showers. The combination of these two approaches is a very active research topic, and is important for giving
 a good description for jet production from QCD.
 
 
 %%%% AGGIUNTA
 \section{Soft QCD processes}
+
 
 Lots of physics processes and modeling issues are related to as "soft QCD". In the following, firstly, is performed a brief introduction of different QCD processes that form the dominant part of the total hadron-hadron cross-section. Then, the model of the Multi Parton Interaction and its implementation in pyhtia8 are described. Lastly, the primordial $k_T$ concept, the color reconnection and the hadronization processes are introduced. All these contributions have to be understood if one wants to have a good description of the soft QCD contribution to what is observed, in particular for the description of the UE.
 
@@ -162,14 +163,14 @@ The inelastic contribution can be further subdivide into \textit{diffractive} an
 
 \subsection{Diffractive cross-section} 
 
-Once a event has been classified as diffractive it is possible to distinguish between three possible classes of diffractive events: \textit{double-diffractive} (DD), \textit{single-diffractive} (SD) and \textit{central-diffractive} (CD). 
-In DD events both the particles of the beams are excited and both are fragmented in the collision, on the other hand in SD dissociation just one of the two hadrons get excited while the other survives the collision intact. In the last case, CD, both the beam particles survive intact, but they leave an excited state in the central region that then decays.
+Once an event has been classified as diffractive it is possible to distinguish between three possible classes of diffractive events: \textit{double-diffractive} (DD), \textit{single-diffractive} (SD) and \textit{central-diffractive} (CD). 
+In DD events both the particles of the beams are excited and both are fragmented in the collision (\figRef{fig:NONdif_CD_DD_SD}b), on the other hand in SD dissociation just one of the two hadrons get excited while the other survives the collision intact (\figRef{fig:NONdif_CD_DD_SD}a). In the last case, CD, both the beam particles survive intact, but they leave an excited state in the central region that then decays (\figRef{fig:NONdif_CD_DD_SD}c).
 \\
 So, the inelastic cross-section in \eqRef{eq:cross_section_elastic_inelastic} can be rewritten as:
 \begin{equation}
 	\sigma_{\text{inel}}(s) = \sigma_{\text{SD}}(s)+\sigma_{\text{DD}}(s)+\sigma_{\text{CD}}(s)+\sigma_{\text{ND}}(s)  \quad,
 \end{equation}
-where ND are all the \textit{non-diffractive} inelastic events\footnote{It has to be mentioned that other topologies are possible defined as multi-diffractive events whit various  rapidity gap observed. These types of events have a very low cross-section ($\ll 1 \ \mathrm{mb}$) with respect to the other considered.}, these types of events are the dominants in proton-proton collisions at LHC.
+where ND are all the \textit{non-diffractive} inelastic events\footnote{It has to be mentioned that other topologies are possible defined as multi-diffractive events whit various  rapidity gap observed. These types of events have a very low cross-section ($\ll 1 \ \mathrm{mb}$) with respect to the other considered.} (\figRef{fig:NONdif_CD_DD_SD}d), these types of events are the dominants in proton-proton collisions at LHC.
 
 \begin{figure}[!htb]
 	\centering
@@ -195,6 +196,7 @@ where ND are all the \textit{non-diffractive} inelastic events\footnote{It has t
 		\caption*{d)}
 	\end{subfigure}
 	\caption{The figure shows: a) an SD event with a rapidity gap in the region $-10<\eta<3.5$; b) a DD event where all the two hadrons fragment and is formed a rapidity gap $|\eta|<3.5$; c) the two hadrons survive but a central excitation is produced (CD event); d) an ND event all the $\phi-\eta$ region is covered by the products of the collision. Figure from \cite{DiffractionInPythia}}
+	\label{fig:NONdif_CD_DD_SD}
 \end{figure}
 
 The next section will focus on the description of the non-diffractive part of the total cross-section using the MPI model. In very rough terms, this means that the non-diffractive cross-section is saturated by more than a single partonic scattering and that the number of partonic interactions is determined by a Poisson distribution. This model has been very successful in the description of many experimental measurements at hadron colliders.

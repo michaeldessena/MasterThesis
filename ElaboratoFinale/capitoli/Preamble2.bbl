@@ -326,21 +326,8 @@ Stefano Carrazza and Marco Lazzarin.
 \newblock N3pdf/mcnntunes: mcnntunes 0.1.0, October 2020.
 \newblock URL \url{https://doi.org/10.5281/zenodo.4071125}.
 
-\bibitem[Abadi et~al.(2015)Abadi, Agarwal, Barham, Brevdo, Chen, Citro,
-  Corrado, Davis, Dean, Devin, Ghemawat, Goodfellow, Harp, Irving, Isard, Jia,
-  Jozefowicz, Kaiser, Kudlur, Levenberg, Man\'{e}, Monga, Moore, Murray, Olah,
-  Schuster, Shlens, Steiner, Sutskever, Talwar, Tucker, Vanhoucke, Vasudevan,
-  Vi\'{e}gas, Vinyals, Warden, Wattenberg, Wicke, Yu, and
-  Zheng]{tensorflow2015-whitepaper}
-Mart\'{i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
-  Craig Citro, Greg~S. Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin,
-  Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael Isard,
-  Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh
-  Levenberg, Dandelion Man\'{e}, Rajat Monga, Sherry Moore, Derek Murray, Chris
-  Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever, Kunal
-  Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Vi\'{e}gas,
-  Oriol Vinyals, Pete Warden, Martin Wattenberg, Martin Wicke, Yuan Yu, and
-  Xiaoqiang Zheng.
+\bibitem[et~al.(2015)]{tensorflow2015-whitepaper}
+Mart\'{i}n~Abadi et~al.
 \newblock {TensorFlow}: Large-scale machine learning on heterogeneous systems,
   2015.
 \newblock URL \url{https://www.tensorflow.org/}.
