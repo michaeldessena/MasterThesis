@@ -493,7 +493,7 @@ The total interaction probability is given from the composition of the various c
 %
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=12cm]{{img/PartonShower.png}}
+	\includegraphics[width=12cm]{{img/PartonShower_pT.png}}
 	\caption{An example of Multiple Partons Interactions and associated radiations. The downward evolution in $p_T$ is shown here by reading the graph from top to bottom. The 4 parton-parton interactions occur to $p_{T1}$, $p_{T2}$, $p_{T3}$ and $p_{T4}$.}
 	\label{fig:PartonShower}
 \end{figure}
@@ -505,15 +505,15 @@ The scatterings at $p_{T2}$ and $p_{T3}$ are originating from the same mother pa
 This diagram is related to one of the two hadrons. The full event can be illustrated if a similar diagram is drawn for the other hadron and connected to the full black circles.
 
 
-\section{Primordial $k_T$ and Color reconnection in PYTHIA8}
+\section{Primordial $k_T$ and Color reconnection in\\ \mbox{PYTHIA8}}
 \label{sec:Beam Beam Remnants and primordial kT}
 
 What is left after that the $p_T$ evolution is ended?
 The evolution in $p_T$ can create an arbitrary complicated final state. 
 This final state contains contributions from the scattered and unscattered partons that don't enter the $p_T$ evolution. The last ones are the so-called \textit{Beam Beam Remnants}. 
-BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation and, to ensure momentum conservation. So, once the evolution ended, a set of partons is added to the BBR. The BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators to ensure the overall momentum conservation.
+BBR take into account the number of valence quarks remaining and the number of sea quarks required for the overall flavour conservation and to ensure momentum conservation. So, once the evolution ended, a set of partons is added to the BBR. The BBR have to take all the remaining longitudinal momentum that is not extracted by the MPI initiators to ensure the overall momentum conservation.
 \\
-The showering process plus the MPI introduction lead to a large number of partons in the final states. Then, in the simulation, all the partons take the contribution from the primordial $k_T$ (originating from the Fermi motion) this is described in the next section.    
+The showering process plus the MPI introduction leads to a large number of partons in the final states. Then, in the simulation, all the partons take the contribution from the primordial $k_T$ (originating from the Fermi motion) this is described in the next section.    
 
 \subsection*{Primordial $k_T$}
 
@@ -542,7 +542,7 @@ Note that in \textsc{pythia8} simulation the addition of the primordial kT to al
 
 \subsection{Color Reconnection}
 
-The last important step at parton level is the \textit{color reconnection}. CR is motivated by the fact that MPI leads to different color strings. In the previous steps, the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case where $N_c=3$  during the development of the parton shower, partons are
+The last important step at parton level is the \textit{color reconnection}. CR is motivated by the fact that MPI leads to different color strings. In the previous steps, the planar limit of the QCD was assumed where $N_c\rightarrow\infty$. Now, moving to real case $N_c=3$,  during the development of the parton shower, partons are
 represented and also connected by colour lines as it is shown in \figRef{fig:CRrecon}. Quark and anti-quarks are described by a single color line with an arrow that describes the direction of the color flow, while gluons are represented by a pair of color lines pointing in opposite directions. 
 
 \begin{figure}[!htb]
@@ -570,13 +570,13 @@ The hadronization process takes all these partons (colored strings) and transfor
 \\
 Hadronization is one of the most non-understood process in high energy physics. Due to the intrinsically non-perturbative nature of the phenomenon, it cannot be derived by QCD fundamental principles. A good description of the hadronization is needed it participate in all the interaction that contain a final-state composed of colored partons. So, necessarily, the simulated final-state depends strongly on the hadronization model used.  
 \\
-There are two main hadronization model classes in current use: the \textit{string} and the \textit{cluster model}. \textsc{pythia8} is based on the former. the following will describe the string model.
+There are two main hadronization model classes in current use: the \textit{string} and the \textit{cluster model}. \textsc{pythia8} is based on the former. The following will describe the string model in more detail.
 
 \subsection{String model}
 
 In Pythia hadronization is based solely on the \textit{Lund string fragmentation model} \cite{ANDERSSON198331, Sjostrand:1984ic}. 
 \\
-The Lund model's basic idea is to break the color lines that connect the quarks to reduce the total string length, where the string is representative of the potential:
+The Lund model's basic idea is to break the color  strings that connect the quarks to reduce the total string length, where the string is representative of the potential:
 \begin{equation}
 	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}\quad,
 \end{equation}
@@ -592,9 +592,9 @@ The simplest case is the one in \figRef{fig:StringBreakings}: the back-to-back p
 \end{figure}
 
 %So the hadronization try to reduce the string length.
-\begin{equation}
-	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}
-\end{equation}
+%\begin{equation}
+%	V(r)=-\frac{a}{r}+\kappa r \qquad\qquad \text{with}\quad \kappa\approx1\ \mathrm{GeV/fm}
+%\end{equation}
 The hadronization step confines the quark into hadrons, then these hadrons can undergo to hadron rescattering and decay. These are the hadrons that are revealed by the detectors.
 
 \section{\textsc{pythia} summary}

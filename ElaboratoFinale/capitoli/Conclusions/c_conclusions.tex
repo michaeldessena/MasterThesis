@@ -1,18 +1,21 @@
 \chapter*{Conclusions}
 \addcontentsline{toc}{chapter}{Conclusions}
 
-In this work it has been validated \textsc{mcnntunes} against the tuning of the high energy physics Monte Carlo generator \textsc{pythia8}. Firstly, in order to validate it, the underlying event was tuned trying to reproduce the results obtained with the already existing CMS tune for the underlying event: CP5. The work started with a test phase with the variation of only two parameters: \texttt{MultipartonInteractions:}\-\texttt{pT0Ref} and \texttt{MultipartonInteractions:}\-\texttt{ecmPow}. Both the \textsc{mcnntunes} models perform very well in this test phase. 
+In this work, the use of the \textsc{mcnntunes} as a tuning tool for the HEP Monte Carlo generator \textsc{pythia8} has been tested. 
+Firstly, in order to validate it, the results of \textsc{mcnntunes} were compared to those of an already existing CMS tune for the underlying event parameters: CP5. The work started with a test phase with the variation of only two parameters: \texttt{Multi}\-\texttt{parton}\-\texttt{Interactions:}\-\texttt{pT0Ref} and \texttt{Multi}\-\texttt{parton}\-\texttt{Interactions:}\-\texttt{ecmPow}. Both \textsc{mcnntunes} models perform very well in this test phase. 
 \\
-After this test, the number of parameters was extended to five as in the CP5 implementation. So, the parameters \texttt{MultipartonInteractions:}\-\texttt{core}\-\texttt{Radius}, \texttt{MultipartonInteractions:}\-\texttt{core}\-\texttt{Fraction} and \texttt{ColorReconnection:}\-\texttt{range} have been added to the two parameters already tuned. In this phase we obtain very good results from the PerBin model. It describes data also better then CP5, in particular the low-$p_T$ regions of the charged particle density and charged particle $p_T$ sum distributions are well described.  But not in all the distributions used in the tune, in particular the distributions with larger experimental uncertainties. So, it was decided to include a re-weight for some bins. This leads to overall results more similar to the CP5 ones.
+After this test, the number of parameters was extended to five as in the CP5 implementation. So, the parameters \texttt{Multi}\-\texttt{parton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Radius}, \texttt{Multi}\-\texttt{parton}\-\texttt{Interactions:}\-\texttt{core}\-\texttt{Fraction} and \texttt{Color}\-\texttt{Reconnection:}\-\texttt{range} have been added to the two parameters already tuned. In this phase we obtain very good results from the PerBin model. In particular the low-$p_T$ regions of the charged particle density and charged particle $p_T$ sum distributions are better described than in the original CP5 tune.  
+In order to investigate the cause of a discrepancy in pseudorapidity distributions of charged hadron production and non-single diffractive event selection, a reweighting technique was introdcued.
+This leads to overall results more similar to the CP5 ones.
 \\
-On the other hands the Inverse model results are not as solid, in this case it is not able to reproduce the observed experimental data.
-This can be related to the complexity of the operation performed by this model: to learn the function that describe the generator respond and try to invert it. This operation is very hard and the complexity increase a lot with the number of parameters.
-
-Once the tool has been validated it is used to improve the description of the distributions of $Z$ boson production events in the low transverse momentum region. To do that the effect of the parameters \texttt{BeamRemnants:}\-\texttt{primordialKT}\-\texttt{hard} and \texttt{SpaceShower:}\-\texttt{pT0Ref} on these distributions was investigated. In fact, the CP5 tune does not describe these distribution very well, the values for these two parameters were inherited by the older Monash Tune. 
-The new tune presented here for these two parameters was performed with both the models offered by \textsc{mcnntunes} and the results obtained are compatible each other. 
-
+On the other hand the Inverse model results are not as solid, in this case the parameters found by \textsc{mcnntunes} cannot reproduce the observed experimental data.
+This can be related to the complexity of the operation performed by this model: to learn the function that describes the generator respond and try to invert it. The complexity of this procedure  increases a lot with the number of parameters.
+\\
+Once the tool has been validated, it is used to improve the description of the distributions of $Z$ boson production events in the low transverse momentum region. To do that the effect of the parameters \texttt{BeamRemnants:}\-\texttt{primordialKT}\-\texttt{hard} and \texttt{SpaceShower:}\-\texttt{pT0Ref} on these distributions was investigated. CMS tunes inherit the values of such parameters from the Monash 2013  tune and no attempt is made in CP5 to fit them. 
+The new tune presented here for these two parameters was performed with both models offered by \textsc{mcnntunes} and the results obtained are compatible with each other. 
+\\
 In the future, the correlation between the MPI and the tuning of the primordial $k_T$ has to be investigated. In the last chapter it was showed that the effect of MPI is not negligible in the low transverse momentum region.
 \\
-Overall \textsc{mcnntunes} can be considered a valid tool for future tunes and it can become a cross check to the already existing and consolidated tool \textsc{professor}. 
+Overall \textsc{mcnntunes} can be considered a valid tool for future tunes and it is shown to be an alternative to the already existing and consolidated tool \textsc{professor}. 
 %Moreover, if some more attention is given to the Inverse model it can become a new powerful approach to the tuning procedure.
  

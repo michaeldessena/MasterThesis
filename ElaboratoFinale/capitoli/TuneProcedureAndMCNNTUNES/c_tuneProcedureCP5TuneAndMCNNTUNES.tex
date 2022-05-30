@@ -34,20 +34,20 @@ In the end, to find the best parameters estimation, this loss function needs to 
 	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
 \end{equation}
 In this thesis instead of the common software \textsc{professor} based on the polynomial parameterization, it is used the machine learning approach implemented in \textsc{mcnntunes} software \cite{MCNNTUNESonGitHub}
-using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks that are trained in order to learn the generator behaviour with respect to the parameter variations. This removes the polynomial constraint in the fit of the generator response function in fact one of the main features of the Neural Networks (NNs) is that they are universal function approximators.
+using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks that are trained in order to learn the generator behaviour with respect to the parameter variations. This removes the polynomial constraint in the fit of the generator response function; in fact, one of the main features of the Neural Networks (NNs) is that they are universal function approximators.
 \\
 A brief introduction follows on machine learning and in particular on NNs in order to understand better how \textsc{mcnntunes} works.
 
 \section{Machine Learning and Neural Networks}
   
-Machine learning (ML) is a particular type of Artificial Intelligence and consists of the implementation of systems that learn automatically by the data that are fed into them and not by the explicit programming of the algorithm. ML requires the training of the algorithm in order to have a predictive output related to the problem under analysis. The training is the most important step in the ML approach, in fact, this is the step that gives to the ML the ability to return a predictive output; without it, the outcome of the machine learning algorithm is not able to give us a meaningful result.
+Machine learning (ML) is a particular type of Artificial Intelligence, it consists of the implementation of systems that learn automatically by the data that are fed into them and not by the explicit programming of the algorithm. ML requires the training of the algorithm in order to have a predictive output related to the problem under analysis. The training is the most important step in the ML approach, in fact, this is the step that gives to the ML the ability to return a predictive output; without it, the outcome of the machine learning algorithm is not able to give us a meaningful result.
 \\
-A particular type of ML is Deep Learning which uses neural networks with more than one layer organized in a hierarchical structure to solve the problem. This is the type of ML interesting for this work. In the next section the simple possible neural network that can be created is explained, this is useful to understand the basis in the logic of each unit that is going to compose the neural network. 
+A particular type of ML is Deep Learning which uses neural networks with more than one layer organized in a hierarchical structure to solve the problem. This is the type of ML interesting for this work. In the next section the simple possible "neural network" that can be created is explained, this is useful to understand the basis in the logic of each unit that is going to compose the network. 
 
 
 \subsection{Neural Networks - Perceptron}
 
-The concept of the Neural Network (NN) was developed in 1958 by Frank Rosenblatt. He introduces the simpler example of NN: the perceptron \cite{Perceptron}. A representation of a percepton is shown in \figRef{fig:Perceptron} the input values are weighted and summed, an additional offset $b$ can be introduced, and then the weighted-sum is passed to an activation function (step function). So, the output that the perceptron returns is:
+The concept of the Neural Network was developed in 1958 by Frank Rosenblatt. He introduces the simpler example of NN: the perceptron \cite{Perceptron}. A representation of a percepton is shown in \figRef{fig:Perceptron} the input values are weighted and summed, an additional offset $b$ can be introduced, and then the weighted-sum is passed to an activation function (step function). So, the output that the perceptron returns is:
 \begin{equation}
 	h(x)= \text{step}\bigg(\displaystyle\sum_j w^j\, x_j + b\bigg)
 \end{equation}
