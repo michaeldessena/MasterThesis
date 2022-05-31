@@ -34,7 +34,7 @@ In the end, to find the best parameters estimation, this loss function needs to 
 	p_{\text{best}}=\arg\,\min_p\ \mathcal{L}(\overline{h}(p),h_{\text{data}})\quad.
 \end{equation}
 In this thesis instead of the common software \textsc{professor} based on the polynomial parameterization, it is used the machine learning approach implemented in \textsc{mcnntunes} software \cite{MCNNTUNESonGitHub}
-using Feed Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks that are trained in order to learn the generator behaviour with respect to the parameter variations. This removes the polynomial constraint in the fit of the generator response function; in fact, one of the main features of the Neural Networks (NNs) is that they are universal function approximators.
+using Feed-Forward Neural Networks. \textsc{mcnntunes} is a software developed by S. Carrazza, S. Alioli and M. Lazzarin presented in \cite{MCNNTUNESarticle} based on machine learning library TensorFlow \cite{tensorflow2015-whitepaper}. \textsc{mcnntunes} is written in Python and uses Feed Forward Neural Networks that are trained in order to learn the generator behaviour with respect to the parameter variations. This removes the polynomial constraint in the fit of the generator response function; in fact, one of the main features of the Neural Networks (NNs) is that they are universal function approximators.
 \\
 A brief introduction follows on machine learning and in particular on NNs in order to understand better how \textsc{mcnntunes} works.
 
@@ -68,11 +68,11 @@ The concept of the Neural Network was developed in 1958 by Frank Rosenblatt. He 
 	\label{fig:XORproblem}
 \end{figure}
 
-To describe more complex problems, the concept of NN with more than one unit has been introduced: this is necessary if one wants to eliminate these limitations and approximate every type of function.
+\noindent To describe more complex problems, the concept of NN with more than one unit has been introduced: this is necessary if one wants to eliminate these limitations and approximate every type of function.
 
 \subsection{Feed-Forward Neural Networks}
 
-In a Neural Network different units called "neurons" are linked together. Different types of NNs exist and they are classified according to the various ways the neurons are linked to each other. \textit{fully-connected Feed-Forward NNs} are the ones of interest, since are the ones used in \textsc{mcnntunes}. 
+In a Neural Network different units called "neurons" are linked together. Different types of NNs exist and they are classified according to the various ways the neurons are linked to each other. \textit{fully-connected feed-forward NNs} are the ones of interest, since are the ones used in \textsc{mcnntunes}. 
 \\
 In fully-connected NNs each neuron from a layer is connected to every neuron in the next layer, while the Feed Forward attribute refers to the fact that the NN have no internal recursions (loops) between neurons but all the neurons from a layer are connected forward to the ones of the next layer.
 \\
@@ -109,7 +109,7 @@ In the back-propagation algorithm the weight and the coefficients are updated us
 	\vartheta_{j}^{(i+1)}=\vartheta_{j}^{(i)}-\lambda\left( \frac{\partial E}{\partial \vartheta_{j}} \right)^{(i)}
 	\label{eq:learning_bp}
 \end{equation}
-where $\lambda$ is the \textit{learning rate} and is a user-tunable free parameter and it controls how much change the weights each time the weights are updated.
+where $\lambda$ is the \textit{learning rate}, it is a user-tunable free parameter and controls how much  the weights change each time they are updated.
 It is one of the main parameters in the neural networks a too small value for it can lead to a failure in the training procedure while a too large one can lead to unstable results. 
 \\
 The \textit{mini-batches} are subsets of the training set that contains the Monte Carlo simulations that are used to calculate the gradient. The size of the mini-batches used to train the NN is also a free parameter: smaller batches are faster to compute but the gradient direction is not the real one just an approximation; while a bigger batch size gives a good approximation of the direction of the steepest-descent but can be computationally expensive. 
@@ -149,7 +149,7 @@ The two approaches have the same starting point that is a sampling of the parame
 All these MC runs are going to build the dataset which is called \textit{training set}.
 \\
 \figRef{fig:worksampling} shows a schematic explanation of how the sampling phase and the training set generation were performed using the CMS software environment referred as CMSSW. CMSSW is present on the public machine cluster of the \textsc{cern} called LXPLUS (LinuX Public Login User Service). 
-In more detail the sampling starts by means of the  \textsc{mcnntunes} script called \textsc{mcnntemplate} with a sampling of the defined parameter space. The sampling generates  $N$ different configurations for the parameters to tune, these are then encapsulated in a runcard for \textsc{pythia} that contains all the necessary information to make \textsc{pythia} work properly (beams energies, type of event to simulate etc.). Once these runcard are saved the \textsc{pythia} generator is run with every configuration generated and this is performed not locally but on a computers batch (e.g. the \textsc{cern} one CondorHT) in order to gets all the results in few days. The runcards passed to Condor contain also the information on the analysis to perform and on how to fill the various histograms for the observables. Once the generators runs end the outputs are saved in the \textsc{yoda} format \cite{YODA}, that is a standard type of data file for these analyses also used in Rivet. The set of these \textsc{yoda} files, containing the information on the MC runs, composes the training set that then can be used for the tuning procedure.
+In more detail the sampling starts by means of the  \textsc{mcnntunes} script called \textsc{mcnntemplate} with a sampling of the defined parameter space. The sampling generates  $N$ different configurations for the parameters to tune, these are then encapsulated in a runcard for \textsc{pythia} that contains all the necessary information to make \textsc{pythia} work properly (beams energies, type of event to simulate etc.). Once these runcard are saved the \textsc{pythia} generator is run with every configuration generated and this is performed not locally but on a computers batch (e.g. CondorHT) in order to gets all the results in few days. The runcards passed to CondorHT contain also the information on the analysis to perform and on how to fill the various histograms for the observables. Once the generators runs end the outputs are saved in the \textsc{yoda} format \cite{YODA}, that is a standard type of data file for these analyses also used in Rivet. The set of these \textsc{yoda} files, containing the information on the MC runs, composes the training set that then can be used for the tuning procedure.
 
 \begin{figure}[!htb]
 	\centering
@@ -173,7 +173,7 @@ All these NNs are then trained feeding the MC runs from the training set and  us
 \\
 Once, the NN is trained, the last step is the tune in which one actually gets the best parameters estimation.  This step defines a surrogate loss function for the tuning problem. In fact, the parameterization step returns a model $h^{(i)}(\mathbf{p})$ for each bin, $i$, where $\mathbf{p}$ is the vector of the parameters. 
 \\
-Then, this surrogate loss function is defined as:
+Then, this surrogate loss function that is defined as:
 \begin{equation}
 	\chi^2=\displaystyle\sum_{i=1}^N\frac{\left( h^{(i)}(\mathbf{p})-h_{exp}^{(i)}\right)^2}{\sigma_{(i)}^2}
 \end{equation}
@@ -193,7 +193,7 @@ So the best estimation for the parameters is the configuration of parameters tha
 \textsc{mcnntunes} PerBin model as introduced in \cite{MCNNTUNESarticle} did not have a proper error evaluation on the minimized parameters. In fact it was using as error the final width of the distribution of sampled point in the CMA-ES algorithm. But, this was not working the errors were underestimated on all the minimized parameters. Thanks to S. Carrazza and with the help of M. Lazzarin it has been possible to handle the code and add a proper error estimation.
 
 Now, the error evaluation for the PerBin model is given by the definition of a confidence interval using the $\chi^2$ function.
-In fact, as shown in section 9.6 and 9.7 of \cite{cowan}, for an estimators vector $\hat{h}(\mathbf{p})=(\hat{h}^{(1)}(\mathbf{p}),\hat{h}^{(2)}(\mathbf{p}),\dots,\hat{h}^{(n)}(\mathbf{p}))$ for the parameters $\mathbf{p}$ the probability distribution function and the likelihood (the $\chi^2$ in this case) in limit of a large set of estimators and so of degrees of freedom ($\nu$)\footnote{In other cases this is a good approximation.} is approximately Gaussian distributed with mean $\nu$ and variance $2\nu$. The probability distribution function for the estimators is then:
+In fact, as shown in section 9.6 and 9.7 of \cite{cowan}, for an estimators vector $\hat{h}(\mathbf{p})=(\hat{h}^{(1)}(\mathbf{p}),\hat{h}^{(2)}(\mathbf{p}),\dots,\hat{h}^{(n)}(\mathbf{p}))$ for the parameters $\mathbf{p}$ the probability distribution function and the likelihood (the $\chi^2$ in this case) in limit of a large set of estimators and so of degrees of freedom ($\nu$) is approximately Gaussian distributed\footnote{In other cases this is a good approximation.} with mean $\nu$ and variance $2\nu$. The probability distribution function for the estimators is then:
 \begin{equation}
 f(\hat{h}(\mathbf{p})|h(\mathbf{p})) = \frac{1}{(2\pi)^{n/2}|V|^{1/2}}\exp\left[ -\frac{1}{2}\left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right)^T V^{-1} \left(\hat{h}(\mathbf{p}) - h(\mathbf{p})\right) \right] \ ,
 \end{equation}
@@ -238,7 +238,8 @@ An example for the evaluation in \textsc{mcnntunes} is shown in \figRef{fig:exam
 One of the negative aspects is that this model is more computationally expensive than the Inverse model discussed below. This is due to the large number of NNs built and trained from this model. 
 The high cost in terms of time required to get the model work do not give the possibility for a scan in the hyperparameters space in order to obtain the best configuration for the NN architecture. 
 \\
-This can impose some limitations on the model performance that cannot get its maximum  performance.
+This can impose some limitations on the model performance that cannot reach its maximum potential.
+%get its maximum  performance.
 
 \subsection{Inverse Model}
 
@@ -271,7 +272,7 @@ So, a set of histograms is generated, then this is fed to the NN and a distribut
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.6\textwidth]{{img/InverseModel_predictionsSpread.png}}
-	\caption{Predictions spread for the inverse model after that a Gaussian resample is performed}
+	\caption{Predictions spread for the inverse model after that a Gaussian resample is performed on experimental data. The errors on the predicted parameter are compute by means of the standard deviation and are indicated by the dashed black lines.}
 	\label{fig:InverseModel_predictionsSpread}
 \end{figure}
 
@@ -284,7 +285,7 @@ With respect to the PerBin Model this method is faster in the training step. The
 
 A really important step in the Inverse model is \textit{hyperparameter optimization}. It is required to get the method working. 
 
-The procedure consists in building a \textit{validation set } containing some Monte Carlo simulations as the training set (e.g. $10\%$ of the simulations in the training set) and retrain the model with different choices for the NN architecture. Then a closure test is performed in order to estimate the performance of the NN. The test is performed using these validation set MC runs as input instead of the real experimental data, the closure test is done by computing a loss function between the predicted value and the Monte Carlo truth defined as:
+The procedure consists in building a \textit{validation set} containing some Monte Carlo simulations as the training set (e.g. $10\%$ of the simulations in the training set) and retrain the model with different choices for the NN architecture. Then a closure test is performed in order to estimate the performance of the NN. The test is performed using these validation set MC runs as input instead of the real experimental data, the closure test is done by computing a loss function between the predicted value and the Monte Carlo truth defined as:
 \begin{equation}
 	L=\displaystyle\sum_i \frac{\big|p_i^{\text{true}} - p_i^{\text{pred}} \big|}{p_i^{\text{true}}}
 \end{equation} 

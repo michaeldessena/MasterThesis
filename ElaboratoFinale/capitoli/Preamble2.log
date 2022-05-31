@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  30 MAY 2022 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.9.21)  31 MAY 2022 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,27 +1358,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--143
  []
 
 
-Underfull \vbox (badness 1902) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50 <./TuneProcedureAndMCNNTUNES/img/Training2.pdf>]
-<TuneProcedureAndMCNNTUNES/img/Worksampling.pdf, id=1557, 583.2815pt x 312.9803
+ [50]
+<TuneProcedureAndMCNNTUNES/img/Worksampling.pdf, id=1513, 583.2815pt x 312.9803
 3pt>
 File: TuneProcedureAndMCNNTUNES/img/Worksampling.pdf Graphic file (type pdf)
 <use TuneProcedureAndMCNNTUNES/img/Worksampling.pdf>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/Worksampling.pdf  used o
 n input line 156.
 (pdftex.def)             Requested size: 405.45047pt x 217.56606pt.
- [51]
-<TuneProcedureAndMCNNTUNES/img/PerBinModel.png, id=1567, 543.4704pt x 318.7107p
+
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [51 <./TuneProcedureAndMCNNTUNES/img/Training2.pdf>] [52 <./TuneProcedureAndMC
+NNTUNES/img/WorkSampling.pdf>]
+<TuneProcedureAndMCNNTUNES/img/PerBinModel.png, id=1611, 543.4704pt x 318.7107p
 t>
 File: TuneProcedureAndMCNNTUNES/img/PerBinModel.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/PerBinModel.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/PerBinModel.png  used on
  input line 186.
 (pdftex.def)             Requested size: 341.43437pt x 200.22952pt.
- [52 <./TuneProcedureAndMCNNTUNES/img/WorkSampling.pdf>] [53 <./TuneProcedureAn
-dMCNNTUNES/img/PerBinModel.png>]
-<TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png, id=1635, 578.16pt x 43
+ [53 <./TuneProcedureAndMCNNTUNES/img/PerBinModel.png>]
+<TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png, id=1632, 578.16pt x 43
 3.62pt>
 File: TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png Graphic file (type
  png)
@@ -1387,21 +1390,18 @@ Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png
   used on input line 230.
 (pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
 
-Overfull \hbox (11.36205pt too wide) in paragraph at lines 245--248
+[54 <./TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png>]
+Overfull \hbox (11.36205pt too wide) in paragraph at lines 246--249
 \T1/cmr/m/n/12 The In-verse Model is the most in-nov-at-ive tun-ing pro-ced-ure
  in-tro-duced by \T1/cmr/m/sc/12 mcnntunes\T1/cmr/m/n/12 .
  []
 
-
-Underfull \vbox (badness 1769) has occurred while \output is active []
-
- [54 <./TuneProcedureAndMCNNTUNES/img/exampleChi2Variation.png>]
 <TuneProcedureAndMCNNTUNES/img/InverseModel.png, id=1644, 536.2434pt x 189.3474
 pt>
 File: TuneProcedureAndMCNNTUNES/img/InverseModel.png Graphic file (type png)
 <use TuneProcedureAndMCNNTUNES/img/InverseModel.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/InverseModel.png  used o
-n input line 251.
+n input line 252.
 (pdftex.def)             Requested size: 341.43437pt x 120.56361pt.
 <TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png, id=1649, 103
 4.86626pt x 753.81625pt>
@@ -1409,22 +1409,22 @@ File: TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png Graphic
 file (type png)
 <use TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/InverseModel_predictions
-Spread.png  used on input line 273.
+Spread.png  used on input line 274.
 (pdftex.def)             Requested size: 256.07741pt x 186.53271pt.
- [55 <./TuneProcedureAndMCNNTUNES/img/InverseModel.png>]
+[55 <./TuneProcedureAndMCNNTUNES/img/InverseModel.png>]
 <TuneProcedureAndMCNNTUNES/img/workflow.pdf, id=1660, 600.35315pt x 415.41025pt
 >
 File: TuneProcedureAndMCNNTUNES/img/workflow.pdf Graphic file (type pdf)
 <use TuneProcedureAndMCNNTUNES/img/workflow.pdf>
 Package pdftex.def Info: TuneProcedureAndMCNNTUNES/img/workflow.pdf  used on in
-put line 301.
+put line 302.
 (pdftex.def)             Requested size: 384.1096pt x 265.77924pt.
- [56 <./TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png>]) (./
-OurTune/c_ourTune.tex [57 <./TuneProcedureAndMCNNTUNES/img/workflow.pdf>] [58
+ [56 <./TuneProcedureAndMCNNTUNES/img/InverseModel_predictionsSpread.png>] [57 
+<./TuneProcedureAndMCNNTUNES/img/workflow.pdf>]) (./OurTune/c_ourTune.tex [58]
+Chapter 5.
+[59
 
 ]
-Chapter 5.
-[59]
 <OurTune/img/Plots_2params_Finale/chi2_0.jpg, id=1714, 578.16pt x 433.62pt>
 File: OurTune/img/Plots_2params_Finale/chi2_0.jpg Graphic file (type jpg)
 <use OurTune/img/Plots_2params_Finale/chi2_0.jpg>
@@ -1439,11 +1439,6 @@ nput line 65.
 (pdftex.def)             Requested size: 192.0548pt x 144.0412pt.
  [60 <./OurTune/img/Plots_2params_Finale/chi2_0.jpg> <./OurTune/img/Plots_2para
 ms_Finale/chi2_1.jpg>]
-Overfull \hbox (25.74545pt too wide) in paragraph at lines 89--93
-\T1/cmr/m/n/12 meter \T1/cmtt/m/n/12 MultipartonInteractions:pT0Ref \T1/cmr/m/n
-/12 (top) re-spect to \T1/cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -
- []
-
 File: OurTune/img/Plots_2params_Finale/chi2_1.jpg Graphic file (type jpg)
 <use OurTune/img/Plots_2params_Finale/chi2_1.jpg>
 Package pdftex.def Info: OurTune/img/Plots_2params_Finale/chi2_1.jpg  used on i
@@ -1477,8 +1472,8 @@ File: OurTune/img/Plots_ecmPow/d01-x01-y01.png Graphic file (type png)
 Package pdftex.def Info: OurTune/img/Plots_ecmPow/d01-x01-y01.png  used on inpu
 t line 121.
 (pdftex.def)             Requested size: 170.71393pt x 154.4207pt.
-[61 <./OurTune/img/blueRightarrow.pdf> <./OurTune/img/Plots_pTzero/d01-x01-y01.
-png> <./OurTune/img/Plots_ecmPow/d01-x01-y01.png>]
+ [61 <./OurTune/img/blueRightarrow.pdf> <./OurTune/img/Plots_pTzero/d01-x01-y01
+.png> <./OurTune/img/Plots_ecmPow/d01-x01-y01.png>]
 <OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg, id=1744, 1180.
 41pt x 449.7603pt>
 File: OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg Graphic fi
@@ -1487,11 +1482,12 @@ le (type jpg)
 Package pdftex.def Info: OurTune/img/Plots_2params_Finale/2params_prediction_sp
 read.jpg  used on input line 171.
 (pdftex.def)             Requested size: 384.1096pt x 146.34879pt.
- [62
 
-] [63 <./OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg>]
+[62
+
+]
 <OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf, id=1
-760, 337.16966pt x 304.4474pt>
+755, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf 
 Graphic file (type pdf)
 <use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf>
@@ -1499,7 +1495,7 @@ Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d01-x01-y01.pdf  used on input line 222.
 (pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
 <OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf, id=1
-761, 337.16966pt x 304.4474pt>
+756, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf 
 Graphic file (type pdf)
 <use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf>
@@ -1507,7 +1503,7 @@ Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d02-x01-y01.pdf  used on input line 226.
 (pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
 <OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf, id=1
-762, 337.16966pt x 304.4474pt>
+757, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf 
 Graphic file (type pdf)
 <use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf>
@@ -1515,24 +1511,20 @@ Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d05-x01-y01.pdf  used on input line 230.
 (pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
 <OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf, id=1
-763, 337.16966pt x 304.4474pt>
+758, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf 
 Graphic file (type pdf)
 <use OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>
 Package pdftex.def Info: OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d06-x01-y01.pdf  used on input line 234.
 (pdftex.def)             Requested size: 192.0548pt x 173.42068pt.
- [64
-
-]
-Underfull \vbox (badness 1701) has occurred while \output is active []
-
- [65 <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pd
-f> <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf>
- <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf> <
-./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>]
+ [63 <./OurTune/img/Plots_2params_Finale/2params_prediction_spread.jpg>]
+[64 <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf
+> <./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf> 
+<./OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf> <.
+/OurTune/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>]
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.png, i
-d=1853, 578.16pt x 433.62pt>
+d=1847, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.p
 ng Graphic file (type png)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.pn
@@ -1541,7 +1533,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/chi2_0.png  used on input line 285.
 (pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.png, i
-d=1854, 578.16pt x 433.62pt>
+d=1848, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.p
 ng Graphic file (type png)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1.pn
@@ -1555,7 +1547,7 @@ Overfull \hbox (1.98036pt too wide) in paragraph at lines 291--291
  []
 
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.png, i
-d=1855, 578.16pt x 433.62pt>
+d=1849, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.p
 ng Graphic file (type png)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_2.pn
@@ -1564,7 +1556,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/chi2_2.png  used on input line 296.
 (pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.png, i
-d=1856, 578.16pt x 433.62pt>
+d=1850, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.p
 ng Graphic file (type png)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_3.pn
@@ -1573,7 +1565,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/chi2_3.png  used on input line 301.
 (pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.png, i
-d=1857, 578.16pt x 433.62pt>
+d=1851, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.p
 ng Graphic file (type png)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_4.pn
@@ -1581,7 +1573,17 @@ g>
 Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/chi2_4.png  used on input line 307.
 (pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
-[66]
+[65
+
+]
+Underfull \vbox (badness 3168) has occurred while \output is active []
+
+ [66 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0
+.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_
+1.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2
+_2.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi
+2_3.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/ch
+i2_4.png>]
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/Rewchi2/chi2_
 0.png, id=1875, 578.16pt x 433.62pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/Rewchi2/
@@ -1632,18 +1634,13 @@ hi2_4.png>
 Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/Rewchi2/chi2_4.png  used on input line 369.
 (pdftex.def)             Requested size: 204.85802pt x 153.64174pt.
-[67 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_0.
-png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_1
-.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2_
-2.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi2
-_3.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/chi
-2_4.png>] [68 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_C
-P5/Rewchi2/chi2_0.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinRewei
-ghts_vs_CP5/Rewchi2/chi2_1.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_Pe
-rBinReweights_vs_CP5/Rewchi2/chi2_2.png> <./OurTune/img/rivet-plots-MinBias_Per
-Bin_vs_PerBinReweights_vs_CP5/Rewchi2/chi2_3.png> <./OurTune/img/rivet-plots-Mi
-nBias_PerBin_vs_PerBinReweights_vs_CP5/Rewchi2/chi2_4.png>] [69]
-<OurTune/img/Plots_Totali_ext/prediction_spread.jpg, id=1901, 940.96024pt x 360
+[67] [68 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/Re
+wchi2/chi2_0.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_
+vs_CP5/Rewchi2/chi2_1.png> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinR
+eweights_vs_CP5/Rewchi2/chi2_2.png> <./OurTune/img/rivet-plots-MinBias_PerBin_v
+s_PerBinReweights_vs_CP5/Rewchi2/chi2_3.png> <./OurTune/img/rivet-plots-MinBias
+_PerBin_vs_PerBinReweights_vs_CP5/Rewchi2/chi2_4.png>]
+<OurTune/img/Plots_Totali_ext/prediction_spread.jpg, id=1896, 940.96024pt x 360
 .8666pt>
 File: OurTune/img/Plots_Totali_ext/prediction_spread.jpg Graphic file (type jpg
 )
@@ -1651,11 +1648,11 @@ File: OurTune/img/Plots_Totali_ext/prediction_spread.jpg Graphic file (type jpg
 Package pdftex.def Info: OurTune/img/Plots_Totali_ext/prediction_spread.jpg  us
 ed on input line 420.
 (pdftex.def)             Requested size: 384.1096pt x 147.31201pt.
- [70
+ [69
 
  <./OurTune/img/Plots_Totali_ext/prediction_spread.jpg>]
 <OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/d01-x
-01-y01.pdf, id=1912, 337.16966pt x 304.4474pt>
+01-y01.pdf, id=1908, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/
 d01-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_007/d
@@ -1664,7 +1661,7 @@ Package pdftex.def Info: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2
 015_PAS_FSQ_15_007/d01-x01-y01.pdf  used on input line 448.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/d06-x
-01-y01.pdf, id=1913, 337.16966pt x 304.4474pt>
+01-y01.pdf, id=1909, 337.16966pt x 304.4474pt>
 File: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/
 d06-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012_PAS_FSQ_12_020/d
@@ -1672,11 +1669,11 @@ d06-x01-y01.pdf Graphic file (type pdf)
 Package pdftex.def Info: OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2
 012_PAS_FSQ_12_020/d06-x01-y01.pdf  used on input line 452.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
- [71 <./OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_00
+ [70 <./OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2015_PAS_FSQ_15_00
 7/d01-x01-y01.pdf> <./OurTune/img/Plots_Totali_ext/rivet-plots_5params/CMS_2012
 _PAS_FSQ_12_020/d06-x01-y01.pdf>]
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
-FSQ_15_007/d01-x01-y01.pdf, id=1955, 337.16966pt x 304.4474pt>
+FSQ_15_007/d01-x01-y01.pdf, id=1951, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
 _PAS_FSQ_15_007/d01-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
@@ -1685,7 +1682,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf  used on input line 473.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
-FSQ_15_007/d02-x01-y01.pdf, id=1956, 337.16966pt x 304.4474pt>
+FSQ_15_007/d02-x01-y01.pdf, id=1952, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
 _PAS_FSQ_15_007/d02-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
@@ -1694,7 +1691,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf  used on input line 477.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
-FSQ_15_007/d05-x01-y01.pdf, id=1957, 337.16966pt x 304.4474pt>
+FSQ_15_007/d05-x01-y01.pdf, id=1953, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
 _PAS_FSQ_15_007/d05-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
@@ -1703,7 +1700,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf  used on input line 481.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_
-FSQ_15_007/d06-x01-y01.pdf, id=1958, 337.16966pt x 304.4474pt>
+FSQ_15_007/d06-x01-y01.pdf, id=1954, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
 _PAS_FSQ_15_007/d06-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
@@ -1712,7 +1709,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf  used on input line 485.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
-FSQ_12_020/d05-x01-y01.pdf, id=1962, 337.16966pt x 304.4474pt>
+FSQ_12_020/d05-x01-y01.pdf, id=1958, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
 _PAS_FSQ_12_020/d05-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
@@ -1721,7 +1718,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d05-x01-y01.pdf  used on input line 501.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
-FSQ_12_020/d08-x01-y01.pdf, id=1963, 337.16966pt x 304.4474pt>
+FSQ_12_020/d08-x01-y01.pdf, id=1959, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
 _PAS_FSQ_12_020/d08-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
@@ -1730,7 +1727,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf  used on input line 505.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
-FSQ_12_020/d06-x01-y01.pdf, id=1964, 337.16966pt x 304.4474pt>
+FSQ_12_020/d06-x01-y01.pdf, id=1960, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
 _PAS_FSQ_12_020/d06-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
@@ -1739,7 +1736,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d06-x01-y01.pdf  used on input line 509.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_
-FSQ_12_020/d09-x01-y01.pdf, id=1965, 337.16966pt x 304.4474pt>
+FSQ_12_020/d09-x01-y01.pdf, id=1961, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012
 _PAS_FSQ_12_020/d09-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_
@@ -1748,7 +1745,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf  used on input line 513.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
-8868/d01-x01-y01.pdf, id=1968, 337.16966pt x 304.4474pt>
+8868/d01-x01-y01.pdf, id=1964, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
 _I1388868/d01-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
@@ -1757,7 +1754,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CDF_2015_I1388868/d01-x01-y01.pdf  used on input line 528.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
-8868/d05-x01-y01.pdf, id=1969, 337.16966pt x 304.4474pt>
+8868/d05-x01-y01.pdf, id=1965, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
 _I1388868/d05-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
@@ -1766,7 +1763,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CDF_2015_I1388868/d05-x01-y01.pdf  used on input line 532.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
-8868/d02-x01-y01.pdf, id=1970, 337.16966pt x 304.4474pt>
+8868/d02-x01-y01.pdf, id=1966, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
 _I1388868/d02-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
@@ -1775,7 +1772,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CDF_2015_I1388868/d02-x01-y01.pdf  used on input line 536.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I138
-8868/d06-x01-y01.pdf, id=1971, 337.16966pt x 304.4474pt>
+8868/d06-x01-y01.pdf, id=1967, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015
 _I1388868/d06-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_
@@ -1790,7 +1787,7 @@ if-fract-ive events
  []
 
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I168
-0318/d01-x02-y01.pdf, id=1978, 337.16966pt x 304.4474pt>
+0318/d01-x02-y01.pdf, id=1974, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018
 _I1680318/d01-x02-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_
@@ -1799,7 +1796,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2018_I1680318/d01-x02-y01.pdf  used on input line 555.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I168
-0318/d01-x03-y01.pdf, id=1979, 337.16966pt x 304.4474pt>
+0318/d01-x03-y01.pdf, id=1975, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018
 _I1680318/d01-x03-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_
@@ -1808,7 +1805,7 @@ Package pdftex.def Info: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweig
 hts_vs_CP5/CMS_2018_I1680318/d01-x03-y01.pdf  used on input line 559.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_I138
-4119/d01-x01-y01.pdf, id=1982, 337.16966pt x 304.4474pt>
+4119/d01-x01-y01.pdf, id=1978, 337.16966pt x 304.4474pt>
 File: OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015
 _I1384119/d01-x01-y01.pdf Graphic file (type pdf)
 <use OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_
@@ -1823,10 +1820,10 @@ e \T1/cmtt/m/n/12 Color\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 Reconnection:\T1/cmr/m/n
 /12 -
  []
 
-[72]
+[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
+ [72 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
 15_PAS_FSQ_15_007/d01-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs
 _PerBinReweights_vs_CP5/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf> <./OurTune/img
 /rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2015_PAS_FSQ_15_007/d
@@ -1834,22 +1831,24 @@ _PerBinReweights_vs_CP5/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf> <./OurTune/img
 _CP5/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
+ [73 <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_20
 12_PAS_FSQ_12_020/d05-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs
 _PerBinReweights_vs_CP5/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf> <./OurTune/img
 /rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2012_PAS_FSQ_12_020/d
 06-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs
 _CP5/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf>])
-(./PrimordialkT_tune/c_primordialkTTune.tex [75 <./OurTune/img/rivet-plots-MinB
+(./PrimordialkT_tune/c_primordialkTTune.tex [74 <./OurTune/img/rivet-plots-MinB
 ias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/d01-x01-y01.pdf> <./OurT
 une/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/
 d05-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_v
 s_CP5/CDF_2015_I1388868/d02-x01-y01.pdf> <./OurTune/img/rivet-plots-MinBias_Per
-Bin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/d06-x01-y01.pdf>] [76 <./OurTun
+Bin_vs_PerBinReweights_vs_CP5/CDF_2015_I1388868/d06-x01-y01.pdf>] [75 <./OurTun
 e/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_CP5/CMS_2018_I1680318/d0
 1-x02-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBin_vs_PerBinReweights_vs_
 CP5/CMS_2018_I1680318/d01-x03-y01.pdf> <./OurTune/img/rivet-plots-MinBias_PerBi
-n_vs_PerBinReweights_vs_CP5/CMS_2015_I1384119/d01-x01-y01.pdf>]
+n_vs_PerBinReweights_vs_CP5/CMS_2015_I1384119/d01-x01-y01.pdf>] [76
+
+]
 Chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1927,12 +1926,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 52.
 
-[77
-
-] [78 <./PrimordialkT_tune/img/CPpaper_zjet1.png> <./PrimordialkT_tune/img/CPpa
-per_zjet2.png> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_only_CP5defaul
-t/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-Primo
-rdialkT_only_CP5default/CMS_2019_I1753680/d28-x01-y03.pdf>]
+[77] [78 <./PrimordialkT_tune/img/CPpaper_zjet1.png> <./PrimordialkT_tune/img/C
+Ppaper_zjet2.png> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_only_CP5def
+ault/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-Pr
+imordialkT_only_CP5default/CMS_2019_I1753680/d28-x01-y03.pdf>]
 <PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf, id=2338, 368.90121pt x 145.99846
 pt>
 File: PrimordialkT_tune/img/feynman_ZpT_2_blue.pdf Graphic file (type pdf)
@@ -2056,24 +2053,24 @@ Package pdftex.def Info: PrimordialkT_tune/img/rivet-plots-PrimordialkT_with_wi
 thout_MPI_yellowBand/CMS_2019_I1753680/d28-x01-y03.pdf  used on input line 243.
 
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680
-/d27-x01-y03.pdf, id=2404, 337.16966pt x 304.4474pt>
-File: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I17
-53680/d27-x01-y03.pdf Graphic file (type pdf)
-<use PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I175
-3680/d27-x01-y03.pdf>
+<PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d27-x01-y03.png, 
+id=2404, 108.405pt x 98.0463pt>
+File: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d27-x01-y03.
+png Graphic file (type png)
+<use PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d27-x01-y03.p
+ng>
 Package pdftex.def Info: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_
-finale/CMS_2019_I1753680/d27-x01-y03.pdf  used on input line 257.
-(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680
-/d28-x01-y03.pdf, id=2405, 337.16966pt x 304.4474pt>
-File: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I17
-53680/d28-x01-y03.pdf Graphic file (type pdf)
-<use PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I175
-3680/d28-x01-y03.pdf>
+finale/d27-x01-y03.png  used on input line 257.
+(pdftex.def)             Requested size: 204.85802pt x 185.30545pt.
+<PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d28-x01-y03.png, 
+id=2405, 108.405pt x 98.0463pt>
+File: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d28-x01-y03.
+png Graphic file (type png)
+<use PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_finale/d28-x01-y03.p
+ng>
 Package pdftex.def Info: PrimordialkT_tune/img/rivet-plots-primordialkT_vs_MPI_
-finale/CMS_2019_I1753680/d28-x01-y03.pdf  used on input line 261.
-(pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
+finale/d28-x01-y03.png  used on input line 261.
+(pdftex.def)             Requested size: 204.85802pt x 185.30545pt.
 ) (./Conclusions/c_conclusions.tex
 [82 <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_PerBin_vs_Inverse_vs_CP5_
 FxFx_ext_ext_noWeights_Final/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT
@@ -2082,15 +2079,15 @@ hts_Final/CMS_2019_I1753680/d28-x01-y03.pdf>] [83 <./PrimordialkT_tune/img/rive
 t-plots-PrimordialkT_with_without_MPI_yellowBand/CMS_2019_I1753680/d27-x01-y03.
 pdf> <./PrimordialkT_tune/img/rivet-plots-PrimordialkT_with_without_MPI_yellowB
 and/CMS_2019_I1753680/d28-x01-y03.pdf> <./PrimordialkT_tune/img/rivet-plots-pri
-mordialkT_vs_MPI_finale/CMS_2019_I1753680/d27-x01-y03.pdf> <./PrimordialkT_tune
-/img/rivet-plots-primordialkT_vs_MPI_finale/CMS_2019_I1753680/d28-x01-y03.pdf>]
-[84
+mordialkT_vs_MPI_finale/d27-x01-y03.png> <./PrimordialkT_tune/img/rivet-plots-p
+rimordialkT_vs_MPI_finale/d28-x01-y03.png>] [84
 
 ]
-Overfull \hbox (98.16753pt too wide) in paragraph at lines 4--10
-\T1/cmr/m/n/12 ment-a-tion. So, the para-met-ers \T1/cmtt/m/n/12 MultipartonInt
-eractions:\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 core\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 R
-adius\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -
+Overfull \hbox (1.85962pt too wide) in paragraph at lines 4--21
+\T1/cmtt/m/n/12 parton\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 Interactions:\T1/cmr/m/n/
+12 -\T1/cmtt/m/n/12 core\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 Fraction \T1/cmr/m/n/12
+ and \T1/cmtt/m/n/12 Color\T1/cmr/m/n/12 -\T1/cmtt/m/n/12 Reconnection:\T1/cmr/
+m/n/12 -\T1/cmtt/m/n/12 range \T1/cmr/m/n/12 have been ad-
  []
 
 ) (./Apendix/a_test2param.tex [85] [86
@@ -2098,7 +2095,7 @@ adius\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 MultipartonInteractions:\T1/cmr/m/n/12 -
 ]
 Appendix A.
 <Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf, id=2
-550, 337.16966pt x 304.4474pt>
+512, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d01-x01-y01.pdf>
@@ -2106,7 +2103,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d01-x01-y01.pdf  used on input line 33.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf, id=2
-551, 337.16966pt x 304.4474pt>
+513, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d02-x01-y01.pdf>
@@ -2114,7 +2111,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d02-x01-y01.pdf  used on input line 37.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf, id=2
-552, 337.16966pt x 304.4474pt>
+514, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d05-x01-y01.pdf>
@@ -2122,7 +2119,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d05-x01-y01.pdf  used on input line 41.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf, id=2
-553, 337.16966pt x 304.4474pt>
+515, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_007/d06-x01-y01.pdf>
@@ -2130,7 +2127,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2015_PAS_FSQ_15_0
 07/d06-x01-y01.pdf  used on input line 45.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d05-x01-y01.pdf, id=2
-556, 337.16966pt x 304.4474pt>
+518, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d05-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d05-x01-y01.pdf>
@@ -2138,7 +2135,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_0
 20/d05-x01-y01.pdf  used on input line 57.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf, id=2
-557, 337.16966pt x 304.4474pt>
+519, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d08-x01-y01.pdf>
@@ -2146,7 +2143,7 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_0
 20/d08-x01-y01.pdf  used on input line 61.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d06-x01-y01.pdf, id=2
-558, 337.16966pt x 304.4474pt>
+520, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d06-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d06-x01-y01.pdf>
@@ -2154,14 +2151,14 @@ Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_0
 20/d06-x01-y01.pdf  used on input line 65.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
 <Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf, id=2
-559, 337.16966pt x 304.4474pt>
+521, 337.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf 
 Graphic file (type pdf)
 <use Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_020/d09-x01-y01.pdf>
 Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CMS_2012_PAS_FSQ_12_0
 20/d09-x01-y01.pdf  used on input line 69.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d01-x01-y01.pdf, id=2562, 3
+<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d01-x01-y01.pdf, id=2524, 3
 37.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d01-x01-y01.pdf Graphi
 c file (type pdf)
@@ -2169,7 +2166,7 @@ c file (type pdf)
 Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d01
 -x01-y01.pdf  used on input line 81.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d05-x01-y01.pdf, id=2563, 3
+<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d05-x01-y01.pdf, id=2525, 3
 37.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d05-x01-y01.pdf Graphi
 c file (type pdf)
@@ -2177,7 +2174,7 @@ c file (type pdf)
 Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d05
 -x01-y01.pdf  used on input line 85.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d02-x01-y01.pdf, id=2564, 3
+<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d02-x01-y01.pdf, id=2526, 3
 37.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d02-x01-y01.pdf Graphi
 c file (type pdf)
@@ -2185,7 +2182,7 @@ c file (type pdf)
 Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d02
 -x01-y01.pdf  used on input line 89.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d06-x01-y01.pdf, id=2565, 3
+<Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d06-x01-y01.pdf, id=2527, 3
 37.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d06-x01-y01.pdf Graphi
 c file (type pdf)
@@ -2193,7 +2190,7 @@ c file (type pdf)
 Package pdftex.def Info: Apendix/img/Plots_2params_Finale/CDF_2015_I1388868/d06
 -x01-y01.pdf  used on input line 93.
 (pdftex.def)             Requested size: 204.85802pt x 184.98329pt.
-<Apendix/img/Plots_2params_Finale/CMS_2015_I1384119/d01-x01-y01.pdf, id=2568, 3
+<Apendix/img/Plots_2params_Finale/CMS_2015_I1384119/d01-x01-y01.pdf, id=2530, 3
 37.16966pt x 304.4474pt>
 File: Apendix/img/Plots_2params_Finale/CMS_2015_I1384119/d01-x01-y01.pdf Graphi
 c file (type pdf)
@@ -2244,8 +2241,8 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  13305 strings out of 481239
- 237876 string characters out of 5920377
- 531194 words of memory out of 5000000
+ 237612 string characters out of 5920377
+ 531463 words of memory out of 5000000
  27749 multiletter control sequences out of 15000+600000
  571592 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2294,10 +2291,10 @@ sr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfxc1728.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfxc2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Preamble2.pdf (105 pages, 11655047 bytes).
+Output written on Preamble2.pdf (105 pages, 11798739 bytes).
 PDF statistics:
- 3086 PDF objects out of 3580 (max. 8388607)
- 2453 compressed objects within 25 object streams
+ 3048 PDF objects out of 3580 (max. 8388607)
+ 2417 compressed objects within 25 object streams
  388 named destinations out of 1000 (max. 500000)
  1130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
