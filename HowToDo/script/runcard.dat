@@ -2,6 +2,7 @@ source = cms.Source("LHESource",
     fileNames = cms.untracked.vstring(
     ### Add here a list with all the paths to lhe files ###
     #e.g. : 'file:/eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/DY-13TeV/DY-13TeV-NNPDF3.0-amcatnlo-P8-1.lhe',
+    'file:/eos/user/m/mdessena/CMSSW_MEPythia8/CMSSW_11_2_4/src/DY-13TeV/DY-13TeV-NNPDF3.0-amcatnlo-P8-1.lhe',
     )
 )
 
