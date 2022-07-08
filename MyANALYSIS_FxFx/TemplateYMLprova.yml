@@ -1,0 +1,36 @@
+input:
+  runcard_template: runcard13TeV_primordial_kT_SpaceShower_2.dat
+  variations_file: variation2_BBR_SS.yml
+  save_eos: True
+  path_eos: /eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/provaMyANALYSIS
+
+cmsDriver_command: 
+  seed: GEN
+  datatier: GEN-SIM-RAW
+  conditions: auto:mc
+  eventcontent: RAWSIM
+  number_events: 3500000
+
+parameters:
+  sed_command:
+    - sed -i "/ColourReconnection:range/a \ \ \ \ \ \ \ \ \ \ \ \ 'BeamRemnants:primordialKThard= {{primordialKThard}}',"
+    - sed -i "/ColourReconnection:range/a \ \ \ \ \ \ \ \ \ \ \ \ 'SpaceShower:pT0Ref= {{SpaceShowerPT0ReF}}',"
+  
+mcnntemplate:
+  type: sampling #sampling or combinations
+  number: 50 # only for sampling
+  seed: 100 # only for sampling 
+  output_name: output #default output
+  
+
+rivet_customize:
+  data: 
+    - 'CMS_2019_I1753680'
+    - 'CMS_2018_I1667854'
+
+condor:
+  jobflavour: testmatch 
+  queue: 50
+
+
+  

@@ -14,10 +14,10 @@ Setup Rivet and Run Generator
 
 .. code-block:: bash
 
-    cmsrel CMSSW_11_0_1
-    cd CMSSW_11_0_1/src
+    cmsrel CMSSW_11_2_4
+    cd CMSSW_11_2_4/src
     cmsenv
-    
+
     git-cms-init
     git-cms-addpkg GeneratorInterface/RivetInterface
     git-cms-addpkg Configuration/Generator
@@ -26,4 +26,10 @@ Setup Rivet and Run Generator
     source Rivet/rivetSetup.sh
     scram b -j8
 
+To install MCNNTUNES you can use pip:
 
+.. code-block:: bash
+
+	pip3 install mcnntunes
+
+    
