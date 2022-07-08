@@ -1,15 +1,15 @@
 input:
-  runcard_template: # path to file containing the runcard e.g.: PrimordialKTResults/runcard13TeV_primordial_kT_SpaceShower.dat
-  variations_file: # path to file containing the variation ranges e.g.: PrimordialKTResults/variations_MinBias_and_PrimkT.yml
-  save_eos: # True # if true save in EOS 
-  path_eos: # Path to eos directory where to save all the simulations e.g.:/eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/PrimordialKTResults
+  runcard_template: runcard.dat # path to file containing the runcard e.g.: PrimordialKTResults/runcard13TeV_primordial_kT_SpaceShower.dat
+  variations_file: variation.yml # path to file containing the variation ranges e.g.: PrimordialKTResults/variations_MinBias_and_PrimkT.yml
+  #save_eos: # True # if true save in EOS 
+  #path_eos: # Path to eos directory where to save all the simulations e.g.:/eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/PrimordialKTResults
 
 cmsDriver_command: 
   seed: GEN
   datatier: GEN-SIM-RAW
   conditions: auto:mc
   eventcontent: RAWSIM
-  number_events: 3500000  # select the number of event to generate
+  number_events: 50000  # select the number of event to generate
 
 parameters:
   sed_command:
@@ -23,7 +23,7 @@ parameters:
   
 mcnntemplate:
   type: sampling #sampling or combinations
-  number: 250 # only for sampling 
+  number: 25 # only for sampling 
   seed: 180 # only for sampling 
   output_name: output #default output
   
@@ -35,4 +35,4 @@ rivet_customize:
 
 condor:
   jobflavour: testmatch # the time on condor
-  queue: 250  # the same of the mcnntemplate number
+  queue: 25  # the same of the mcnntemplate number
