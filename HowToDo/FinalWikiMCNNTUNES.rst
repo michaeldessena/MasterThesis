@@ -38,19 +38,21 @@ Download the MyAnalysis_FxFx.sh script, runcard.dat (Need to be edited), templat
 
 .. code-block:: bash
 
-    curl -s https://github.com/michaeldessena/MasterThesis/blob/8ce8884fb9f20ddf24b8f3f01e69a1af09168ab8/MyANALYSIS_FxFx/MyAnalysis_FxFx.py -o MyAnalysis_FxFx.py
-    curl -s https://github.com/michaeldessena/MasterThesis/blob/8ce8884fb9f20ddf24b8f3f01e69a1af09168ab8/HowToDo/script/runcard.dat -o runcard.dat
-    curl -s https://github.com/michaeldessena/MasterThesis/blob/8ce8884fb9f20ddf24b8f3f01e69a1af09168ab8/HowToDo/script/template.yml -o template.yml
-    curl -s https://github.com/michaeldessena/MasterThesis/blob/8ce8884fb9f20ddf24b8f3f01e69a1af09168ab8/HowToDo/script/variation.yml -o variation.yml
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/MyANALYSIS_FxFx/MyAnalysis_FxFx.py -O MyAnalysis_FxFx.py
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/runcard.dat -O runcard.dat
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/template.yml -O template.yml
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/variation.yml -O variation.yml
 
 .. code-block:: bash
 
     chmod +rx MyAnalysis_FxFx.py
     ./MyANALYSIS_FxFx.py PrimordialkToutput -c template.yml
 
-Check that the files are submitted to condor correctly! Wait that condor returns all the yoda files..
+Check that the files are submitted to condor correctly! Wait that condor returns all the yoda files (the output is displayed in )..
 
 .. code-block:: bash
+
+    
 
 
 
