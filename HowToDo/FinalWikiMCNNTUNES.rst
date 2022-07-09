@@ -204,7 +204,10 @@ On local pc download the following script:
 .. code-block:: bash
 
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/runTuningProcess.py -O runTuningProcess.py
-    
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/MY-mcnntunes-buildruns.py -O MY-mcnntunes-buildruns.py
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/checkMySimulation.py -O checkMySimulation.py 
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/checkEMPTYyodaFILE.py -O checkEMPTYyodaFILE.py 
+
     chmod +rx checkMySimulation.py
     chmod +rx checkEMPTYyodaFILE.py    
     ./checkMySimulation PrimordialkToutput

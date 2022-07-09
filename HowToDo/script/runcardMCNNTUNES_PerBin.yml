@@ -2,7 +2,7 @@ input:
   expfiles:
   - experimental_data/CMS_2019_I1753680.yoda
   folders:
-  - ./training_set_noBins
+  - ./training_set
   patterns:
   - CMS_2019_I1753680/d27-x01-y03
   - CMS_2019_I1753680/d28-x01-y03
