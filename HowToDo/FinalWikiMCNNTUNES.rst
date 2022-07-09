@@ -200,6 +200,7 @@ On local pc download the following script:
     mkdir PrimordialkTTunes
     cd PrimordialkTTunes
     scp -r <name>@lxplus.cern.ch:<path_to_PrimordialkToutput> .
+    scp -r <name>@lxplus.cern.ch:<path_to_Rivet> .
 
 .. code-block:: bash
 
@@ -207,6 +208,7 @@ On local pc download the following script:
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/MY-mcnntunes-buildruns.py -O MY-mcnntunes-buildruns.py
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/checkMySimulation.py -O checkMySimulation.py 
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/checkEMPTYyodaFILE.py -O checkEMPTYyodaFILE.py 
+    wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/runcardMCNNTUNES_PerBin.yml -O runcardMCNNTUNES_PerBin.yml
 
     chmod +rx checkMySimulation.py
     chmod +rx checkEMPTYyodaFILE.py    
@@ -216,5 +218,8 @@ On local pc download the following script:
 
     python3 MY-mcnntunes-buildruns.py -n <number_of_folder_in_PrimordialkToutput> -d PrimordialkToutput -f result.yoda -p params.dat --patterns CMS_2019_I1753680/d27-x01-y03@0.1:5.0d CMS_2019_I1753680/d28-x01-y03@0.001:0.006 --unpatterns RAW -o training_set --expData ../Rivet
     
+The following script run all MCNNTUNES steps:
 
-    ./runTuningProcess.py -r 
+.. code-block:: bash
+
+    ./runTuningProcess.py PrimordialkToutput -r runcardMCNNTUNES_PerBin.yml -o TunePerBinModel 
