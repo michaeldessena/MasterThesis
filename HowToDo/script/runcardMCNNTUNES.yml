@@ -1,0 +1,25 @@
+input:
+  expfiles:
+  - experimental_data/CMS_2019_I1753680.yoda
+  folders:
+  - ./training_set_noBins
+  patterns:
+  - CMS_2019_I1753680/d27-x01-y03
+  - CMS_2019_I1753680/d28-x01-y03
+  unpatterns:
+  - None
+minimizer:
+  bounds: true
+  restarts: 5
+  type: CMAES
+model:
+  noscan_setup:
+    actfunction: tanh
+    architecture:
+    - 3
+    - 5
+    batch_size: 256
+    epochs: 5000
+    optimizer: adam
+  seed: 10
+  type: PerBinModel
