@@ -1,8 +1,8 @@
 input:
   runcard_template: runcard.dat # path to file containing the runcard e.g.: PrimordialKTResults/runcard13TeV_primordial_kT_SpaceShower.dat
   variations_file: variation.yml # path to file containing the variation ranges e.g.: PrimordialKTResults/variations_MinBias_and_PrimkT.yml
-  #save_eos: # True # if true save in EOS 
-  #path_eos: # Path to eos directory where to save all the simulations e.g.:/eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/PrimordialKTResults
+  save_eos: True # True # if true save in EOS 
+  path_eos: /eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/ # Path to eos directory where to save all the simulations e.g.:/eos/user/m/mdessena/CMSSW_eos/CMSSW_11_2_4/src/PrimordialKTResults
 
 cmsDriver_command: 
   seed: GEN
