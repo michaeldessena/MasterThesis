@@ -28,8 +28,7 @@ Setup Rivet and Run Generator
     git-cms-addpkg Configuration/Generator
     git clone ssh://git@gitlab.cern.ch:7999/${USER}/Rivet.git
     git remote add cms-gen ssh://git@gitlab.cern.ch:7999/cms-gen/Rivet.git
-    wget -r --no-parent https://gitlab.com/hepcedar/rivet/-/raw/release-3-1-x/analyses/pluginCMS -P Rivet/
-    wget -r --no-parent https://gitlab.com/hepcedar/rivet/-/raw/release-3-1-x/analyses/pluginCDF -P Rivet/
+    cp -r afs/cern.ch/user/m/mdessena/public/Rivet .
     source Rivet/rivetSetup.sh
     scram b -j8
 
@@ -189,7 +188,7 @@ try tipe **rivet + TAB** if completetion is avaiable everythings go well!
 
 .. _run MCNNTUNES:
 
-run MCNNTUNES
+run MCNNTUNES [locally]
 ----------------------------------------------------
 
 Now you can run mcnntunes!! check by running. 
