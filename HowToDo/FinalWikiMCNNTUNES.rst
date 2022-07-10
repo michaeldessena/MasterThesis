@@ -28,9 +28,11 @@ Setup Rivet and Run Generator
     git-cms-addpkg Configuration/Generator
     git clone ssh://git@gitlab.cern.ch:7999/${USER}/Rivet.git
     git remote add cms-gen ssh://git@gitlab.cern.ch:7999/cms-gen/Rivet.git
-    cp -r afs/cern.ch/user/m/mdessena/public/Rivet .
+    cp -r /afs/cern.ch/user/m/mdessena/public/Rivet .
     source Rivet/rivetSetup.sh
     scram b -j8
+    mkdir Configuration/GenProduction
+    mkdir Configuration/GenProduction/python
 
 To install MCNNTUNES you can use pip:
 
@@ -50,7 +52,7 @@ Download the MyAnalysis_FxFx.sh script, runcard.dat (Need to be edited), templat
 .. code-block:: bash
 
     chmod +rx MyAnalysis_FxFx.py
-    ./MyANALYSIS_FxFx.py PrimordialkToutput -c template.yml
+    ./MyAnalysis_FxFx.py PrimordialkToutput -c template.yml
 
 Check that the files are submitted to condor correctly! Wait that condor returns all the yoda files (the output is displayed in )..
 
