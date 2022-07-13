@@ -215,11 +215,11 @@ On local pc download the following script:
     chmod +rx runTuningProcess.py
     chmod +rx checkMySimulation.py
     chmod +rx checkEMPTYyodaFILE.py    
-    ./checkMySimulation PrimordialkToutput
-    ./checkEMPTYyodaFILE PrimordialkToutput
-    ./checkMySimulation PrimordialkToutput
+    ./checkMySimulation.py PrimordialkToutput
+    ./checkEMPTYyodaFILE.py PrimordialkToutput
+    ./checkMySimulation.py PrimordialkToutput
 
-    python3 MY-mcnntunes-buildruns.py -n <number_of_folder_in_PrimordialkToutput> -d PrimordialkToutput -f result.yoda -p params.dat --patterns CMS_2019_I1753680/d27-x01-y03@0.1:5.0d CMS_2019_I1753680/d28-x01-y03@0.001:0.006 --unpatterns RAW -o training_set --expData ../Rivet
+    python3 MY-mcnntunes-buildruns.py -n <number_of_folder_in_PrimordialkToutput> -d PrimordialkToutput -f result.yoda -p params.dat --patterns CMS_2019_I1753680/d27-x01-y03@0.1:5.0d CMS_2019_I1753680/d28-x01-y03@0.001:0.006 --unpatterns RAW -o training_set --expData Rivet
     
 The following script run all MCNNTUNES steps:
 
