@@ -130,6 +130,7 @@ than in the pyhton session type:
 	
 	import yoda
 	print(yoda.__file__)
+    exit()
 
 
 Now need to append output path to the $PYTHONPATH variable
@@ -158,7 +159,7 @@ now, to install locally:
 
 	./rivet-bootstrap
 
-to change location and install options use:
+OR to change location and install options use:
 
 .. code-block:: bash
 
@@ -193,15 +194,15 @@ try tipe **rivet + TAB** if completetion is avaiable everythings go well!
 run MCNNTUNES [locally]
 ----------------------------------------------------
 
-Now you can run mcnntunes!! check by running. 
-
-On local pc download the following script:
+Now you can run mcnntunes and perform the tune!! **Download the folder with the result of the simulation**
 
 .. code-block:: bash
     mkdir PrimordialkTTunes
     cd PrimordialkTTunes
     scp -r <name>@lxplus.cern.ch:<path_to_PrimordialkToutput> .
     scp -r <name>@lxplus.cern.ch:<path_to_Rivet> .
+
+On local pc download the following script:
 
 .. code-block:: bash
 
@@ -211,6 +212,7 @@ On local pc download the following script:
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/checkEMPTYyodaFILE.py -O checkEMPTYyodaFILE.py 
     wget https://raw.githubusercontent.com/michaeldessena/MasterThesis/main/HowToDo/script/runcardMCNNTUNES_PerBin.yml -O runcardMCNNTUNES_PerBin.yml
 
+    chmod +rx runTuningProcess.py
     chmod +rx checkMySimulation.py
     chmod +rx checkEMPTYyodaFILE.py    
     ./checkMySimulation PrimordialkToutput
