@@ -38,7 +38,8 @@ To install MCNNTUNES you can use pip:
 
 .. code-block:: bash
 
-	pip3 install mcnntunes
+	pip3 install --user mcnntunes
+	export PATH=${PATH}:${USER}/.local/bin
 
 Download the MyAnalysis_FxFx.sh script, runcard.dat (Need to be edited), template.yml (Need to be edited) and variation.yml 
 
